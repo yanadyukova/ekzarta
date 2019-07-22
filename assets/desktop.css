@@ -14,4 +14,9 @@
 @import url(css/desktop/header.css);
 @import url(css/desktop/menu.css);
 @import url(css/desktop/footer.css);
+@import url(css/desktop/buttons.css);
 
+@import url(css/desktop/landing-ekzarta/main.css);
+@import url(css/desktop/landing-ekzarta/directions.css);
+@import url(css/desktop/landing-ekzarta/funds.css);
+@import url(css/desktop/landing-ekzarta/partners.css);

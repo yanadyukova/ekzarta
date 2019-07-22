@@ -1,0 +1,98 @@
+.landing-partners {
+    font-family: 'DIN Pro Cond';
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.27;
+    letter-spacing: 0.47px;
+    color: #002337;
+    &__inner {
+        padding: 80px 52px;
+    }
+    &__title {
+         font-family: 'DIN Pro';
+         font-size: 24px;
+         font-weight: 900;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: 1.17;
+         letter-spacing: 1.3px;
+         margin-bottom: 40px;
+         text-transform: uppercase;
+    }
+    &__partners {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         margin-bottom: 20px;
+    }
+    &__partner {
+         width: 20%;
+         margin-bottom: 34px;
+         margin-right: 44px;
+        &:nth-child(1) {
+            .partner__image{
+                background-image: url("/images/desktop/partners/partner-1@2x.jpg");
+            }
+        }
+        &:nth-child(2) {
+            .partner__image{
+                background-image: url("/images/desktop/partners/partner-2@2x.jpg");
+            }
+        }
+        &:nth-child(3) {
+            .partner__image{
+                background-image: url("/images/desktop/partners/partner-3@2x.jpg");
+            }
+        }
+        &:nth-child(4) {
+             margin-right: 0;
+            .partner__image{
+                background-image: url("/images/desktop/partners/partner-4@2x.jpg");
+            }
+        }
+        &:nth-child(5) {
+            .partner__image{
+                background-image: url("/images/desktop/partners/partner-5@2x.jpg");
+            }
+        }
+        &:nth-child(6) {
+            .partner__image{
+                background-image: url("/images/desktop/partners/partner-6@2x.jpg");
+
+            }
+        }
+        &:nth-child(7) {
+            .partner__image{
+                background-image: url("/images/desktop/partners/partner-8@2x.jpg");
+                background-size: 136px 67px;
+            }
+        }
+        &:nth-child(8) {
+             margin-right: 0;
+            .partner__image{
+                background-image: url("/images/desktop/partners/partner-7@2x.jpg");
+                background-size: 136px 67px;
+            }
+        }
+    }
+}
+
+.partner {
+    &__image {
+         width: 186px;
+         height: 90px;
+         border-radius: 3px;
+         box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+         background-color: #ffffff;
+         background-size: contain;
+         background-position: 50% 50%;
+         background-repeat: no-repeat;
+         margin-bottom: 7px;
+    }
+    p {
+        margin: 0;
+        max-width: 186px;
+    }
+}

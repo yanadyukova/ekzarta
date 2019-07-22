@@ -36,7 +36,7 @@
         width: 50%;
     }
     &__logo {
-        @mixin io footer-logo, svg;
+        @mixin io icons/footer-logo, svg;
         width: 66px;
         height: 66px;
         background-size: contain;

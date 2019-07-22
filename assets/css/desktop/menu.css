@@ -42,7 +42,7 @@
          }
          &:last-child {margin-right: 0;}
          &_basket {
-            @mixin io basket, svg;
+            @mixin io icons/basket, svg;
             margin: 0 60px;
             cursor: pointer;
             &:after {

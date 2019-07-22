@@ -1,0 +1,121 @@
+.landing-funds {
+    background-color: #f8f6f0;
+    font-family: 'DIN Pro Cond';
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.27;
+    letter-spacing: 0.47px;
+    color: #002337;
+    &__inner {
+        padding: 57px 52px 63px;
+    }
+    &__title {
+         font-family: 'DIN Pro';
+         font-size: 24px;
+         font-weight: 900;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: 1.17;
+         letter-spacing: 1.3px;
+         margin-bottom: 40px;
+         text-transform: uppercase;
+    }
+    &__funds {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    &__fund {
+        width: 18%;
+        margin-right: 44px;
+        &:nth-child(1) {
+            .fund__image{
+                background-image: url("/images/desktop/funds/fund-1@2x.jpg");
+            }
+        }
+        &:nth-child(2) {
+            .fund__image{
+                background-image: url("/images/desktop/funds/fund-2@2x.jpg");
+            }
+        }
+        &:nth-child(3) {
+            .fund__image{
+                background-image: url("/images/desktop/funds/fund-3@2x.jpg");
+            }
+        }
+        &:nth-child(4) {
+            .fund__image{
+                background-image: url("/images/desktop/funds/fund-4@2x.jpg");
+            }
+        }
+        &:nth-child(5) {
+            .fund__image{
+                background-image: url("/images/desktop/funds/fund-5@2x.jpg");
+            }
+        }
+        &:nth-child(6) {
+            .fund__image{
+                background-image: url("/images/desktop/funds/fund-6@2x.jpg");
+                background-size: 150px 63px;
+            }
+        }
+        &:nth-child(7) {
+            .fund__image{
+                background-image: url("/images/desktop/funds/fund-7@2x.jpg");
+                background-size: 136px 67px;
+            }
+        }
+    }
+    &__description {
+         column-count: 2;
+         column-gap: 34px;
+         margin-bottom: 64px;
+    }
+    &__contacts {
+         column-count: 2;
+         column-gap: 34px;
+        div {
+            font-family: 'DIN Pro';
+            font-size: 18px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.28;
+            letter-spacing: 0.97px;
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.fund {
+    margin-bottom: 34px;
+    &__image {
+         width: 186px;
+         height: 90px;
+         border-radius: 3px;
+         box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+         background-color: #ffffff;
+         background-size: contain;
+         background-position: 50% 50%;
+         background-repeat: no-repeat;
+         margin-bottom: 7px;
+    }
+    p {
+        margin: 0;
+    }
+    &__title {}
+    &__phone {}
+    &__site {color: #002337;}
+}
+
+.contact {
+    &__phone {margin-bottom: 6px;}
+    &__email {
+        color: #e61841;
+        text-transform: uppercase;
+    }
+}

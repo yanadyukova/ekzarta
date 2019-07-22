@@ -1,0 +1,108 @@
+.landing-directions {
+    position: relative;
+    height: 241px;
+    background-color: #ffffff;
+    z-index: 5;
+    &__inner {
+        padding-top: 35px;
+    }
+    &__items {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 39px;
+        bottom: -46px;
+        z-index: 5;
+    }
+    &__item {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin-right: 11px;
+        padding: 28px 0 0;
+        flex-grow: 1;
+        border-radius: 3px;
+        box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+        background-color: #ffffff;
+        &:last-child {
+            margin-right: 0;
+        }
+        p {
+            font-family: 'DIN Pro';
+            font-size: 24px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 1.3px;
+            color: #002337;
+            margin-left: 32px;
+            text-transform: uppercase;
+        }
+        ul {
+            margin-left: 32px;
+            li {
+                list-style: none;
+                a {
+                    font-family: 'DIN Pro Cond';
+                    font-size: 16px;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.44;
+                    letter-spacing: 0.7px;
+                    color: #e61841;
+                    text-decoration: underline;
+                    &:hover {
+                         text-decoration: none;
+                    }
+                }
+            }
+        }
+        a.item__button {
+            display: block;
+            margin-top: auto;
+            padding: 22px 0;
+            background-color: #e61841;
+            font-family: 'DIN Pro';
+            font-size: 16px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.38;
+            letter-spacing: 0.44px;
+            text-align: center;
+            color: #ffffff;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        &:nth-child(1) {
+             &:before {
+                position: absolute;
+                content: '';
+                @mixin i 1;
+                top: -235px;
+                left: calc(50% - 84.5px);
+             }
+        }
+        &:nth-child(2) {
+             &:before {
+                 position: absolute;
+                 content: '';
+                 @mixin i 2;
+                 top: -238px;
+                 left: calc(50% - 105.5px);
+             }
+        }
+        &:nth-child(3) {
+             &:before {
+                 position: absolute;
+                 content: '';
+                 @mixin i 3;
+                 top: -236px;
+                 left: calc(50% - 89.5px);
+             }
+        }
+    }
+
+}
