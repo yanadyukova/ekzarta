@@ -1,0 +1,21 @@
+.header {
+    width: 100%;
+    height: 103px;
+    opacity: 0.8;
+    background-color: #ffffff;
+    &__inner {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 72px;
+    }
+    &__logo {
+         @mixin i logo;
+         width: 155px;
+         height: 59px;
+         background-size: contain;
+         margin-right: 34px;
+         flex-shrink: 0;
+    }
+}

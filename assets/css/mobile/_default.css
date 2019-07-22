@@ -1,0 +1,45 @@
+:root {
+    --font-base: 'Gill Sans for Oriflame', Verdana, sans-serif, Arial;
+    --font: 'Oriflame Sans', Verdana, sans-serif, Arial;
+    --font-title: 'Garamond for Oriflame', Verdana, sans-serif, Arial;
+    --height-header: 48px;
+    --max-width: 600px;
+    --font-serif: 'PT Serif', serif;
+    --font-obaum: 'Oranienbaum', serif;
+    --font-roboto: 'Roboto', sans-serif;
+}
+
+html, body {
+    font-family: var(--font-base);
+    min-width: 320px;
+    line-height: 1.16;
+    height: 100%;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+input, button {
+    font-family: var(--font-base);
+    &:focus {
+      outline: 3px auto #ea808c;
+    }
+}
+
+button {
+    cursor: pointer;
+    &[disabled] {
+        color: inherit;
+        cursor: default;
+    }
+}
+
+a {
+    font-family: var(--font-base);
+    &:focus {
+      outline: 3px auto #ea808c;
+    }
+}
+
+::selection {
+  background: color(#ea808c tint(75%));
+}
