@@ -1,0 +1,6 @@
+.landing-reviews {
+    background-color: #f8f6f0;
+    &__inner {
+        padding: 133px 71px 47px;
+    }
+}

@@ -9,7 +9,7 @@
     letter-spacing: 0.47px;
     color: #002337;
     &__inner {
-        padding: 57px 52px 63px;
+        padding: 57px 8px 63px 52px;
     }
     &__title {
          font-family: 'DIN Pro';
@@ -29,6 +29,7 @@
     }
     &__fund {
         width: 18%;
+        min-width: 186px;
         margin-right: 44px;
         &:nth-child(1) {
             .fund__image{

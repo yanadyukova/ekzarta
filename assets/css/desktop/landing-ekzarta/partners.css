@@ -34,11 +34,13 @@
         &:nth-child(1) {
             .partner__image{
                 background-image: url("/images/desktop/partners/partner-1@2x.jpg");
+                background-size: 166px 47px;
             }
         }
         &:nth-child(2) {
             .partner__image{
                 background-image: url("/images/desktop/partners/partner-2@2x.jpg");
+                background-size: 158px 48px;
             }
         }
         &:nth-child(3) {
@@ -60,20 +62,21 @@
         &:nth-child(6) {
             .partner__image{
                 background-image: url("/images/desktop/partners/partner-6@2x.jpg");
+                background-size: 226px 139px;
 
             }
         }
         &:nth-child(7) {
             .partner__image{
                 background-image: url("/images/desktop/partners/partner-8@2x.jpg");
-                background-size: 136px 67px;
+                background-size: 126px 78px;
             }
         }
         &:nth-child(8) {
              margin-right: 0;
             .partner__image{
                 background-image: url("/images/desktop/partners/partner-7@2x.jpg");
-                background-size: 136px 67px;
+                background-size: 173px 57px;
             }
         }
     }
