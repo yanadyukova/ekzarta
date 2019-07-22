@@ -1,0 +1,108 @@
+.landing-about {
+    background-color: #f8f6f0;
+    color: #002337;
+    &__inner {
+        padding: 182px 73px 100px;
+    }
+    &__title {
+         font-family: 'DIN Pro';
+         font-size: 24px;
+         font-weight: 900;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: 1.17;
+         letter-spacing: 1.3px;
+    }
+    &__desc {
+         font-family: 'DIN Pro Cond';
+         font-size: 17px;
+         font-weight: 500;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: 1.27;
+         letter-spacing: 0.47px;
+         column-count: 2;
+         column-gap: 72px;
+         margin-bottom: 40px;
+         span {
+             color: #e61841;
+         }
+    }
+    &__vacancy {
+         font-family: 'DIN Pro Cond';
+         font-size: 16px;
+         font-weight: normal;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: 1.44;
+         letter-spacing: 0.7px;
+         color: #e61841;
+         text-transform: uppercase;
+    }
+    &__video {
+         width: 876px;
+         height: 411px;
+         border-radius: 3px;
+         box-shadow: 0 10px 24px -4px rgba(8, 41, 67, 0.37), 0 6px 4px -5px rgba(0, 0, 0, 0.12);
+         background-color: #000000;
+         margin: 0 auto 81px;
+    }
+    &__rehabilitation {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__block {
+        width: 50%;
+        img {
+            width: 80%;
+            max-width: 440px;
+            height: auto;
+            margin-top: 62px;
+        }
+        ul {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-family: 'DIN Pro';
+            font-style: normal;
+            font-stretch: normal;
+            li {
+                position: relative;
+                margin-bottom: 26px;
+                padding-left: 56px;
+                list-style: none;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                b {
+                    position: absolute;
+                    left: 0;
+                    top: -6px;
+                    font-size: 80px;
+                    font-weight: bold;
+                    line-height: 70px;
+                    letter-spacing: normal;
+                    color: #c5f0bd;
+                }
+                p {
+                    font-size: 18px;
+                    font-weight: 900;
+                    line-height: 1.28;
+                    letter-spacing: 0.97px;
+                    text-transform: uppercase;
+                    margin-bottom: 4px;
+                }
+                span {
+                    display: block;
+                    max-width: 370px;
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 1.36;
+                    letter-spacing: normal;
+                    color: #000000;
+                }
+            }
+        }
+    }
+}

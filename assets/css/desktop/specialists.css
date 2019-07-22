@@ -1,0 +1,117 @@
+.specialists {
+    &__inner {
+        padding: 0 73px 100px;
+    }
+    &__title {
+         font-family: 'DIN Pro';
+         font-size: 40px;
+         font-weight: 900;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: normal;
+         letter-spacing: 2.5px;
+         color: #002337;
+         margin-bottom: 65px;
+    }
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__card {
+        width: 25%;
+    }
+}
+
+.card {
+    margin-bottom: 45px;
+    text-align: center;
+    &__image {
+         width: 104px;
+         height: 104px;
+         margin: 0 auto 12px;
+         img {
+             width: 100%;
+             height: inherit;
+             border: 6px solid #fff;
+             border-radius: 50%;
+             box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.12);
+         }
+    }
+    &__name {
+         font-family: 'DIN Pro';
+         font-size: 16px;
+         font-weight: 500;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: 1.19;
+         letter-spacing: normal;
+         text-align: center;
+         color: #000000;
+    }
+    &__position {
+         width: 80%;
+         font-family: 'DIN Pro Cond';
+         font-size: 13px;
+         font-weight: normal;
+         font-style: italic;
+         font-stretch: normal;
+         line-height: 1.23;
+         letter-spacing: 0.41px;
+         text-align: center;
+         color: #7b919e;
+         margin: 0 auto;
+    }
+}
+
+.specialist {
+    &__inner {
+        padding: 31px 73px 50px;
+    }
+    &__data {
+         display: flex;
+         margin-bottom: 50px;
+        &_inner {
+             width: 35%;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+        }
+    }
+    &__name {
+         font-family: 'DIN Pro';
+         font-size: 30px;
+         font-weight: 500;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: normal;
+         letter-spacing: normal;
+         color: #000000;
+         text-transform: uppercase;
+         margin-bottom: 15px;
+    }
+    &__position {
+         font-family: 'DIN Pro';
+         font-size: 14px;
+         font-weight: 300;
+         font-style: italic;
+         font-stretch: normal;
+         line-height: 1.36;
+         letter-spacing: 0.5px;
+         color: #000000;
+    }
+    &__photo {
+        margin: 0;
+    }
+    &__info {
+         padding-left: 72px;
+         width: 62%;
+         font-family: 'DIN Pro Cond';
+         font-size: 17px;
+         font-weight: 500;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: 1.27;
+         letter-spacing: 0.47px;
+         color: #002337;
+    }
+}

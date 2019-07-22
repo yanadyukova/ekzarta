@@ -1,0 +1,53 @@
+.landing-header {
+    position: relative;
+    @mixin i pic/header-bg, jpg;
+    width: 100%;
+    height: 317px;
+    background-size: cover;
+    background-position: 50% 50%;
+    color: #002337;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 46px 73px;
+    }
+    &__title {
+         width: 485px;
+         font-family: 'DIN Pro';
+         font-size: 40px;
+         font-weight: 900;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: normal;
+         letter-spacing: 2.5px;
+         text-transform: uppercase;
+    }
+    &__contacts {
+        text-align: right;
+         font-family: 'DIN Pro Cond';
+         font-size: 15px;
+         font-weight: 500;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: 1.27;
+         letter-spacing: 0.47px;
+    }
+    &__phones {
+        margin-bottom: 10px;
+        p {margin: 0;}
+    }
+    &__opening {
+        margin-bottom: 32px;
+    }
+    &__button {}
+    &:after {
+         position: absolute;
+         content: '';
+         background-image: url("images/desktop/icons/clouds.svg");
+         width: 100%;
+         height: 121px;
+         background-repeat: repeat-x;
+         /*background-size: contain;*/
+         bottom: -20px;
+    }
+}
