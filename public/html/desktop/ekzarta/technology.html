@@ -16,20 +16,67 @@
     <link href="/bundles/css/desktop.min.css" rel="stylesheet">
 </head>
 <body>
-<div style="padding: 150px;">
-
-    <div style="padding: 30px;">
-        <a href="" class="button">Подробнее</a>
+<header class="header">
+    <div class="header__inner">
+        <a href="" class="header__logo"></a>
+        <nav class="menu">
+            <li class="menu__item"><a href="">Пациентам</a></li>
+            <li class="menu__item"><a href="">Специалистам</a></li>
+            <li class="menu__item"><a href="">Бизнесу</a></li>
+            <li class="menu__item menu__item_basket"><a href=""></a></li>
+            <li class="menu__item"><a href="">Отзывы</a></li>
+            <li class="menu__item"><a href="">События</a></li>
+            <li class="menu__item"><a href="">Контакты</a></li>
+        </nav>
     </div>
-    <br>
-    <div style="padding: 30px;">
-        <a href="" class="button button_logo">Подробнее</a>
+</header>
+
+<section class="technology-header">
+    <div class="technology-header__desc">
+        <p class="technology-header__title">Технология «Экзарта»™<br>
+            включает в себя три<br>
+            компонента:</p>
+        <ul>
+            <li>Методика «Экзарта»™</li>
+            <li>Кинезотерапевтическая установка «Экзарта»™</li>
+            <li>Обучение специалистов для реабилитации, фитнеса и спорта</li>
+        </ul>
     </div>
+    <div class="technology-header__image"></div>
+</section>
 
-    <br>
-
-    <div style="padding: 30px;">
-        <a href="" class="button button_red">Записаться</a>
+<footer class="footer">
+    <div class="footer__inner">
+        <nav class="footer__menu">
+            <div class="footer__menu_col">
+                <li><a href="">Пациентам</a></li>
+                <li><a href="">Специалистам</a></li>
+                <li><a href="">Бизнесу</a></li>
+            </div>
+            <div class="footer__menu_col">
+                <li><a href="">Отзывы</a></li>
+                <li><a href="">События</a></li>
+                <li><a href="">Контакты</a></li>
+            </div>
+        </nav>
+        <div class="footer__info">
+            <div class="footer__logo"></div>
+            <div class="footer__links">
+                <a href="">ГК Мадин</a>
+                <a href="">Написать веб-мастеру</a>
+            </div>
+        </div>
     </div>
+</footer>
 
-</div>
+<!-- ########### -->
+<!-- CONTENT END -->
+<!-- ########### -->
+
+
+
+<script src="/bundles/webpack/vendor.bundle.js"></script>
+<script src="/bundles/webpack/desktop.bundle.js"></script>
+
+</body>
+</html>

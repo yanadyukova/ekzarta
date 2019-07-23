@@ -1,0 +1,123 @@
+.promotions {
+    &-banners {
+         &__banner {
+             width: 857px;
+             height: 300px;
+             background-image: radial-gradient(circle at 70% 3%, #03688b, #003751 64%, #002337);
+             margin: 0 auto 51px;
+             img {
+                 width: 100%;
+                 height: auto;
+             }
+         }
+    }
+    &-events {
+        margin-top: 86px;
+        &__inner {
+            max-width: 1024px;
+            padding: 0 73px 61px;
+            margin: 0 auto;
+        }
+        &__title {
+             font-family: 'DIN Pro';
+             font-size: 40px;
+             font-weight: 900;
+             font-style: normal;
+             font-stretch: normal;
+             line-height: normal;
+             letter-spacing: 2.5px;
+             color: #002337;
+             margin-bottom: 38px;
+        }
+        &__event {}
+        &_past {
+             background-color: #f8f6f0;
+             padding-top: 70px;
+             margin-top: 0;
+             padding-bottom: 40px;
+        }
+    }
+}
+
+.event {
+    font-family: 'DIN Pro Cond';
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.27;
+    letter-spacing: 0.47px;
+    margin-bottom: 40px;
+    &__date {
+         color: #7b919e;
+         margin-bottom: 4px;
+    }
+    &__name {
+         display: block;
+         max-width: 850px;
+         font-family: 'DIN Pro';
+         font-size: 24px;
+         font-weight: 900;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: 1.17;
+         letter-spacing: 1.3px;
+         color: #002337;
+         text-transform: uppercase;
+         margin-bottom: 13px;
+         transition: all .1s linear;
+         &:hover {color: #e61841;}
+    }
+    &__desc {
+         max-width: 850px;
+         color: #002337;
+         padding-left: 73px;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .promotions {
+        &__adaptiv {
+            display: flex;
+            &_block {
+                flex-grow: 1;
+            }
+        }
+        &-banners {
+            margin-right: 63px;
+            padding-left: 73px;
+            &__banner {width: 857px;}
+        }
+        &-events {
+             &__inner {
+                &_adaptiv {
+                    padding: 0;
+                    padding-right: 73px;
+                }
+             }
+             &__title {
+                  line-height: 40px;
+             }
+             &_past {
+                  max-width: 500px;
+                  padding-top: 0;
+                  background-color: #fff;
+             }
+        }
+    }
+    .event {
+        min-width: 380px;
+        &__name {
+            &_adaptiv {
+                 font-size: 18px;
+                 line-height: 1.28;
+                 letter-spacing: 0.97px;
+            }
+        }
+        &__desc {
+            &_adaptiv {
+                padding-left: 0;
+            }
+        }
+    }
+}
