@@ -3,10 +3,14 @@
         position: relative;
         display: flex;
         &__desc {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             width: 40%;
             padding: 48px 26px 0 73px;
             background-image: radial-gradient(circle at 143% 0, #03688b, #003751 64%, #002337);
             ul {
+                width: 260px;
                 padding-left: 34px;
                 li {
                     list-style: none;
@@ -23,11 +27,6 @@
             }
         }
         &__title {
-             font-family: 'DIN Pro';
-             font-size: 18px;
-             font-weight: 900;
-             font-style: normal;
-             font-stretch: normal;
              line-height: 1.39;
              letter-spacing: 0.97px;
              color: #ffffff;
@@ -47,6 +46,136 @@
              height: 121px;
              background-repeat: repeat-x;
              bottom: -20px;
+        }
+    }
+    &-ekzarta {
+        max-width: 1300px;
+        margin: 0 auto;
+        &__inner {
+            padding: 48px 73px;
+        }
+        &__title {
+             margin-bottom: 30px;
+        }
+        &__about {
+            font-weight: 500;
+            p {
+                padding-left: 72px;
+                margin-bottom: 30px;
+            }
+            div {
+                display: flex;
+                justify-content: space-between;
+            }
+            ul {
+                width: 50%;
+                padding-left: 72px;
+                li {
+                    list-style: disc;
+                    color: #7b919e;
+                    margin-bottom: 14px;
+                    span{
+                        color: #002337;
+                    }
+                }
+            }
+        }
+        &__desc {
+            display: flex;
+            align-items: center;
+            p {
+                position: relative;
+                width: 50%;
+                font-weight: 500;
+                padding-left: 73px;
+                padding-right: 93px;
+                &:before {
+                    position: absolute;
+                    content: '';
+                    @mixin io icons/logo-small, svg;
+                    width: 65px;
+                    height: 53px;
+                    background-size: contain;
+                    top: -79px;
+                }
+            }
+            div {
+                text-align: center;
+                width: 50%;
+                img {
+                    max-width: 450px;
+                }
+            }
+        }
+    }
+    &-about {
+        position: relative;
+        top: -80px;
+        padding: 0 73px;
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1300px;
+            padding: 45px 73px 45px;
+            margin: 0 auto;
+            background-color: #f8f6f0;
+        }
+        &__column {
+            width: 45%;
+        }
+        &__item {
+            margin-bottom: 38px;
+        }
+    }
+    &-equipment {
+        max-width: 1300px;
+        margin: 0 auto;
+        &__inner {
+            display: flex;
+            padding: 0 73px 79px;
+        }
+        &__column {
+            font-weight: 500;
+            p {
+                max-width: 90%;
+                margin-bottom: 17px;
+            }
+            div {
+                img {
+                    max-width: 450px;
+                }
+            }
+            ul {
+                margin-bottom: 53px;
+                padding-left: 36px;
+                li {
+                    margin-bottom: 17px;
+                    color: #7b919e;
+                    list-style: disc;
+                    span {
+                        color: #002337;
+                    }
+                }
+            }
+        }
+        &__button {
+            margin-top: 54px;
+            margin-bottom: 54px;
+            a {
+                padding: 24px 50px;
+                box-shadow: 0 5px 10px -5px #e61841, 0 10px 20px -5px rgba(230,24,65,.61);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .technology {
+        &-ekzarta {
+            &__desc {
+                div {order: 2;}
+                p {order: 1;}
+            }
         }
     }
 }

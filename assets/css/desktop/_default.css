@@ -40,6 +40,35 @@ a {
     }
 }
 
+.text-content {
+    font-family: 'DIN Pro Cond';
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.27;
+    letter-spacing: 0.47px;
+    color: #002337;
+}
+
+.text-title {
+    font-family: 'DIN Pro';
+    font-size: 18px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.28;
+    letter-spacing: 0.97px;
+    color: #002337;
+    text-transform: uppercase;
+    &_big {
+         font-size: 24px;
+         line-height: 1.17;
+         letter-spacing: 1.3px;
+    }
+}
+
+
 ::selection {
   background: color(#83c1c4 tint(75%));
 }

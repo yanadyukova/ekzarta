@@ -75,6 +75,7 @@
              display: flex;
              flex-direction: column;
              justify-content: center;
+             margin-right: 77px;
         }
     }
     &__name {
@@ -99,12 +100,32 @@
          letter-spacing: 0.5px;
          color: #000000;
     }
+    &__site {
+        margin-top: 31px;
+        span {
+            display: inline-block;
+            padding-right: 38px;
+        }
+        a {
+            color: #e61841;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    &__phone {
+        span {
+            display: inline-block;
+            padding-right: 38px;
+        }
+     }
     &__photo {
         margin: 0;
     }
     &__info {
          padding-left: 72px;
-         width: 62%;
+         width: 85%;
          font-family: 'DIN Pro Cond';
          font-size: 17px;
          font-weight: 500;
