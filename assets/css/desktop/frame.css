@@ -1,0 +1,73 @@
+.frame {
+    position: relative;
+    height: 375px;
+    background:
+            url("images/desktop/icons/clouds-big.svg") 50% 100%/contain no-repeat,
+            linear-gradient(to bottom, #83c1c4, #f8f6f0);
+    &:before {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: url("images/desktop/icons/clouds-middle.svg") 50% 100%/contain no-repeat;
+    }
+    &:after {
+         position: absolute;
+         content: '';
+         bottom: 0;
+         width: 100%;
+         height: 100%;
+         background: url("images/desktop/icons/clouds-small.svg") 50% 100%/contain no-repeat;
+    }
+    &__inner {
+        display: flex;
+        width: 928px;
+        margin: 0 auto;
+    }
+    &__title {
+         padding-top: 61px;
+         font-family: 'DIN Pro';
+         font-size: 40px;
+         font-weight: 900;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: normal;
+         letter-spacing: 2.5px;
+         color: #002337;
+    }
+    &__desc {
+         font-family: 'DIN Pro Cond';
+         font-size: 15px;
+         font-weight: normal;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: 1.27;
+         letter-spacing: 0.47px;
+         color: #002337;
+         padding-left: 72px;
+         width: 368px;
+         margin-bottom: 100px;
+    }
+    &__button {
+         position: relative;
+         padding-left: 72px;
+         z-index: 10;
+        a {
+            width: 269px;
+            height: 70px;
+            padding: 30px;
+            box-shadow: 0 5px 10px -5px #e61841, 0 10px 20px -5px rgba(230,24,65,.61);
+        }
+    }
+    &__image {
+        width: 283px;
+        height: 100%;
+        align-self: flex-end;
+        margin-left: 42px;
+        /*padding-top: auto;*/
+        img {
+            width: 100%;
+        }
+    }
+}
