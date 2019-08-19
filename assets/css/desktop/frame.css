@@ -71,8 +71,9 @@
             width: 100%;
         }
     }
-    &-tabs {
-
+    &-content {
+         clear:both;
+         position: relative;
     }
 }
 
@@ -80,6 +81,7 @@
     padding-top: 10px;
     margin-bottom: 45px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     input {
         display: none;
@@ -106,27 +108,29 @@
         cursor: pointer;
         transition: all .5s linear;
     }
-    input[id="courses"]:checked ~ .frame-content .courses,
-    input[id="schedule"]:checked ~ .frame-content .schedule,
-    input[id="teachers"]:checked ~ .frame-content .teachers,
-    input[id="methods"]:checked ~ .frame-content .methods,
-    input[id="training"]:checked ~ .frame-content .training{
-        display: block;
+    input[id="courses"]:checked ~ .content .courses,
+    input[id="schedule"]:checked ~ .content .schedule,
+    input[id="teachers"]:checked ~ .content .teachers,
+    input[id="methods"]:checked ~ .content .methods,
+    input[id="training"]:checked ~ .content .training{
+        /*display: block;*/
+        height: auto;
+        right: 0;
+        /*transition: all .5s linear;*/
     }
-    .frame-content {
-        clear:both;
-        position: relative;
-    }
+}
+
+.content {
+    width: 100%;
+    margin-top: 45px;
     article {
+        position: relative;
         width: 100%;
-        padding: 70px 50px;
-        position: absolute;
-        top: 0;
-        left: 0;
         background-color: #fff;
-        display: none;
-        min-height: 200px;
-        border-top:5px solid #e74c3c;
-        border-radius:0 10px 10px 10px;
+        /*display: none;*/
+        height: 0;
+        transition: all .5s linear;
+        right: -100px;
+        overflow: hidden;
     }
 }

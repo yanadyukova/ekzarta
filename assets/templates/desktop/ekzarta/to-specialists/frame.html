@@ -17,7 +17,7 @@
     </div>
 </section>
 
-<section class="frame-tabs">
+<section class="frame-content">
     <div class="tabs">
         <input type="radio" name="tab" id="courses" checked>
         <label for="courses">КУРСЫ</label>
@@ -29,26 +29,26 @@
         <label for="methods">МЕТОДИКИ</label>
         <input type="radio" name="tab" id="training">
         <label for="training">ПОДГОТОВКА</label>
-    </div>
 
-    <div class="frame-content">
-        <article class="courses">
-            @@include('templates/desktop/ekzarta/to-specialists/courses.html')
-        </article>
-        <article class="schedule">
-            @@include('templates/desktop/ekzarta/to-specialists/schedule.html')
-        </article>
-        <article class="teachers">
-            @@include('templates/desktop/ekzarta/to-specialists/teachers.html')
-        </article>
-        <article class="methods">
-            @@include('templates/desktop/ekzarta/to-specialists/methods.html')
-        </article>
-        <article class="training">
-            @@include('templates/desktop/ekzarta/to-specialists/training.html')
-        </article>
+        <div class="content">
+            <article class="courses">
+                @@include('templates/desktop/ekzarta/to-specialists/courses.html')
+            </article>
+            <article class="schedule">
+                @@include('templates/desktop/ekzarta/to-specialists/schedule.html')
+            </article>
+            <article class="teachers">
+                @@include('templates/desktop/ekzarta/to-specialists/teachers.html')
+            </article>
+            <article class="methods">
+                @@include('templates/desktop/ekzarta/to-specialists/methods.html')
+            </article>
+            <article class="training">
+                @@include('templates/desktop/ekzarta/to-specialists/training.html')
+            </article>
+        </div>
+        <br class="clear:both" />
     </div>
-    <br class="clear:both" />
 </section><!-- //wrapper -->
 
 @@include('templates/desktop/include/footer.html')
