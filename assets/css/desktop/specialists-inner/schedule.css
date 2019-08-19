@@ -1,0 +1,27 @@
+.schedule {
+    text-align: center;
+    &-table {
+         table {
+            width: 82%;
+            max-width: 1200px;
+            margin: 0 auto;
+            td:first-child,
+            td:nth-child(4){
+                 color: #e61841;
+            }
+            td, th {
+                text-align: left;
+                width: auto;
+            }
+            th:last-child,
+            td:last-child {
+                text-align: right;
+            }
+            tr {
+                &:hover {
+                    td {background: rgba(230,24,65,.1);}
+                }
+            }
+         }
+    }
+}

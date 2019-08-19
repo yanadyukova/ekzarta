@@ -15,14 +15,15 @@
     &:after {
          position: absolute;
          content: '';
-         bottom: 0;
+         bottom: -2px;
          width: 100%;
          height: 100%;
          background: url("images/desktop/icons/clouds-small.svg") 50% 100%/contain no-repeat;
     }
     &__inner {
         display: flex;
-        width: 928px;
+        width: 876px;
+        height: 100%;
         margin: 0 auto;
     }
     &__title {
@@ -47,7 +48,7 @@
          color: #002337;
          padding-left: 72px;
          width: 368px;
-         margin-bottom: 100px;
+         margin-bottom: 50px;
     }
     &__button {
          position: relative;
@@ -56,18 +57,76 @@
         a {
             width: 269px;
             height: 70px;
-            padding: 30px;
+            padding: 25px;
             box-shadow: 0 5px 10px -5px #e61841, 0 10px 20px -5px rgba(230,24,65,.61);
         }
     }
     &__image {
+        display: flex;
         width: 283px;
         height: 100%;
-        align-self: flex-end;
+        align-items: flex-end;
         margin-left: 42px;
-        /*padding-top: auto;*/
         img {
             width: 100%;
         }
+    }
+    &-tabs {
+
+    }
+}
+
+.tabs {
+    padding-top: 10px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: space-evenly;
+    input {
+        display: none;
+        &:checked+label {
+             box-shadow: inset 0 2px 5px 0 rgba(162, 0, 44, 0.59);
+             background-color: #e61841;
+             color: #ffffff;
+        }
+    }
+    label {
+        padding: 6px 15px;
+        border-radius: 18.5px;
+        box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+        background-color: #ffffff;
+        font-family: 'DIN Pro';
+        font-size: 20px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #e61841;
+        cursor: pointer;
+        transition: all .5s linear;
+    }
+    input[id="courses"]:checked ~ .frame-content .courses,
+    input[id="schedule"]:checked ~ .frame-content .schedule,
+    input[id="teachers"]:checked ~ .frame-content .teachers,
+    input[id="methods"]:checked ~ .frame-content .methods,
+    input[id="training"]:checked ~ .frame-content .training{
+        display: block;
+    }
+    .frame-content {
+        clear:both;
+        position: relative;
+    }
+    article {
+        width: 100%;
+        padding: 70px 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        display: none;
+        min-height: 200px;
+        border-top:5px solid #e74c3c;
+        border-radius:0 10px 10px 10px;
     }
 }
