@@ -1,0 +1,63 @@
+.methods {
+    &__inner {
+    }
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px 56px;
+    }
+    &__card {
+        flex-grow: 1;
+        padding: 30px 25px;
+        width: 33%;
+        border: 1px solid rgba(174, 148, 113, 0.15);
+        min-height: 240px;
+        transition: all .2s linear;
+        h2 {
+            font-family: 'DIN Pro';
+            font-size: 18px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.06;
+            letter-spacing: 0.5px;
+            color: #002337;
+        }
+        p {
+            font-family: 'DIN Pro Cond';
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.27;
+            letter-spacing: 0.47px;
+            color: #002337;
+        }
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+            border-top: none;
+        }
+        &:nth-child(3n+1) {
+            border-left: none;
+            /*padding-left: 0;*/
+            /*&:hover {*/
+                /*padding-left: 31px;*/
+            /*}*/
+        }
+        &:nth-child(3n+3) {
+             border-right: none;
+        }
+        &:nth-last-child(-n+3) {
+             border-bottom: none;
+        }
+        &:hover {
+            transform: scale(1.08);
+            border: none;
+            border-radius: 3px;
+            box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+            background-color: #ffffff;
+        }
+    }
+}

@@ -26,8 +26,8 @@
     margin-bottom: 45px;
     text-align: center;
     &__image {
-         width: 104px;
-         height: 104px;
+         width: 116px;
+         height: 116px;
          margin: 0 auto 12px;
          img {
              width: 100%;
@@ -47,6 +47,8 @@
          letter-spacing: normal;
          text-align: center;
          color: #000000;
+         margin: 0 auto 13px;
+         max-width: 90%;
     }
     &__position {
          width: 80%;
