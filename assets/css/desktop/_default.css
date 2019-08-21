@@ -1,5 +1,5 @@
 :root {
-    --font-base: 'DIN Pro Cond', Verdana, sans-serif, Arial;
+    --font-base: 'PF Din Text Cond Pro', Verdana, sans-serif, Arial;
     /*--font: 'Oriflame Sans', Verdana, sans-serif, Arial;*/
     /*--font-title: 'Garamond for Oriflame', Verdana, sans-serif, Arial;*/
     /*--font-serif: 'PT Serif', serif;*/
@@ -41,7 +41,7 @@ a {
 }
 
 .text-content {
-    font-family: 'DIN Pro Cond';
+    font-family: 'PF Din Text Cond Pro';
     font-size: 15px;
     font-weight: normal;
     font-style: normal;
@@ -52,7 +52,7 @@ a {
 }
 
 .text-title {
-    font-family: 'DIN Pro';
+    font-family: 'PF DinDisplay Pro';
     font-size: 18px;
     font-weight: 900;
     font-style: normal;

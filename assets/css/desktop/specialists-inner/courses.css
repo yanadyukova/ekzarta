@@ -1,0 +1,133 @@
+.courses {
+    &__inner {
+        padding: 0 74px;
+    }
+    &-about {
+        display: flex;
+         &__desc {
+            width: 60%;
+            h2 {
+                text-transform: uppercase;
+                margin-bottom: 17px;
+            }
+            p {
+                padding-left: 74px;
+                max-width: 600px;
+            }
+         }
+         &__image {
+            width: 40%;
+            max-width: 400px;
+            img {
+                width: 100%;
+            }
+         }
+    }
+    &-advantages {
+        position: relative;
+        min-height: 367px;
+        border-radius: 3px;
+        background-image: radial-gradient(circle at 20% 99%, #c5f0bd, #8cde98);
+        padding-left: 40%;
+        padding-top: 51px;
+        margin: 92px 0 72px;
+        color: #002337;
+        p {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 30px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 1.88px;
+            text-transform: uppercase;
+            margin-bottom: 19px;
+        }
+        ul {
+            max-width: 450px;
+            font-size: 16px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.25;
+            letter-spacing: normal;
+            color: #002337;
+            li {
+                margin-bottom: 18px;
+                padding-left: 68px;
+            }
+        }
+        a {
+            position: relative;
+            padding: 30px;
+            margin-left: 68px;
+            bottom: -39px;
+        }
+        &:before {
+            @mixin i pic/education-girl;
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: calc(20% - 160px);
+        }
+    }
+    &-reviews {
+        display: flex;
+        &__reviews {
+            width: 50%;
+        }
+        &__review {
+            margin-bottom: 60px;
+        }
+        &__title {
+            margin-bottom: 7px;
+        }
+        &__author {
+             color: #7b919e;
+             margin:  0 0 16px;
+        }
+        &__desc {
+            padding-left: 74px;
+        }
+        &__more {
+             font-family: 'PF Din Text Cond Pro';
+             font-size: 16px;
+             font-weight: normal;
+             font-style: normal;
+             font-stretch: normal;
+             line-height: 1.44;
+             letter-spacing: 0.7px;
+             color: #e61841;
+             padding-left: 74px;
+             text-decoration: underline;
+        }
+        &__announcements {
+             width: 50%;
+             padding-left: 74px;
+        }
+        &__announcement {
+            padding-top: 73px;
+            margin-bottom: 117px;
+            p {
+                font-family: 'PF Din Text Cond Pro';
+                font-size: 15px;
+                font-weight: normal;
+                font-style: italic;
+                font-stretch: normal;
+                line-height: 1.27;
+                letter-spacing: 0.47px;
+                color: #7b919e;
+                margin: 0;
+                span {color: #002337;}
+                a {
+                    color: #e61841;
+                    text-decoration: underline;
+                }
+                &:first-child {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        &__thanks {}
+    }
+}

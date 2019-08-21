@@ -1,6 +1,6 @@
 .table {
     table {
-        font-family: 'DIN Pro Cond';
+        font-family: 'PF Din Text Cond Pro';
         background: white;
         max-width: 800px;
         width: 70%;
@@ -10,7 +10,7 @@
             caption-side: top;
             text-align: left;
             padding: 0 0 20px;
-            font-family: 'DIN Pro';
+            font-family: 'PF DinDisplay Pro';
             font-size: 24px;
             font-weight: 900;
             font-style: normal;
@@ -20,7 +20,7 @@
             color: #002337;
             text-transform: uppercase;
             span {
-                font-family: 'DIN Pro Cond';
+                font-family: 'PF Din Text Cond Pro';
                 font-size: 13px;
                 font-weight: normal;
                 font-style: normal;

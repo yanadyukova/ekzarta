@@ -3,7 +3,7 @@
         padding: 0 73px 100px;
     }
     &__title {
-         font-family: 'DIN Pro';
+         font-family: 'PF DinDisplay Pro';
          font-size: 40px;
          font-weight: 900;
          font-style: normal;
@@ -38,7 +38,7 @@
          }
     }
     &__name {
-         font-family: 'DIN Pro';
+         font-family: 'PF DinDisplay Pro';
          font-size: 16px;
          font-weight: 500;
          font-style: normal;
@@ -52,7 +52,7 @@
     }
     &__position {
          width: 80%;
-         font-family: 'DIN Pro Cond';
+         font-family: 'PF Din Text Cond Pro';
          font-size: 13px;
          font-weight: normal;
          font-style: italic;
@@ -81,7 +81,7 @@
         }
     }
     &__name {
-         font-family: 'DIN Pro';
+         font-family: 'PF DinDisplay Pro';
          font-size: 30px;
          font-weight: 500;
          font-style: normal;
@@ -93,7 +93,7 @@
          margin-bottom: 15px;
     }
     &__position {
-         font-family: 'DIN Pro';
+         font-family: 'PF DinDisplay Pro';
          font-size: 14px;
          font-weight: 300;
          font-style: italic;
@@ -128,7 +128,7 @@
     &__info {
          padding-left: 72px;
          width: 85%;
-         font-family: 'DIN Pro Cond';
+         font-family: 'PF Din Text Cond Pro';
          font-size: 17px;
          font-weight: 500;
          font-style: normal;

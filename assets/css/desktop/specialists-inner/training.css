@@ -14,7 +14,7 @@
     &__direction {
         margin-bottom: 50px;
         h2 {
-            font-family: 'DIN Pro';
+            font-family: 'PF DinDisplay Pro';
             font-size: 24px;
             font-weight: 900;
             font-style: normal;
@@ -28,7 +28,7 @@
             list-style: decimal;
             padding-left: 20px;
             li {
-                font-family: 'DIN Pro Cond';
+                font-family: 'PF Din Text Cond Pro';
                 font-size: 15px;
                 font-weight: normal;
                 font-style: normal;

@@ -28,7 +28,7 @@
             margin-right: 0;
         }
         p {
-            font-family: 'DIN Pro';
+            font-family: 'PF DinDisplay Pro';
             font-size: 24px;
             font-weight: 900;
             font-style: normal;
@@ -44,9 +44,9 @@
             li {
                 list-style: none;
                 a {
-                    font-family: 'DIN Pro Cond';
+                    font-family: 'PF Din Text Cond Pro';
                     font-size: 16px;
-                    font-weight: 500;
+                    font-weight: normal;
                     font-style: normal;
                     font-stretch: normal;
                     line-height: 1.44;
@@ -64,7 +64,7 @@
             margin-top: auto;
             padding: 22px 0;
             background-color: #e61841;
-            font-family: 'DIN Pro';
+            font-family: 'PF DinDisplay Pro';
             font-size: 16px;
             font-weight: bold;
             font-style: normal;

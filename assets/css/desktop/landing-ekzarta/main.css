@@ -8,12 +8,12 @@
         padding: 59px 73px 203px;
     }
     &__desription {
-        width: 330px;
+        width: 357px;
         margin-bottom: 24px;
         p {
             font-family: var(--font-base);
-            font-size: 18px;
-            font-weight: 500;
+            font-size: 17px;
+            font-weight: normal;
             font-style: normal;
             font-stretch: normal;
             line-height: 1.41;

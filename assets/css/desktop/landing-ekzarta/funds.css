@@ -1,8 +1,8 @@
 .landing-funds {
     background-color: #f8f6f0;
-    font-family: 'DIN Pro Cond';
-    font-size: 17px;
-    font-weight: 500;
+    font-family: 'PF Din Text Cond Pro';
+    font-size: 15px;
+    font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.27;
@@ -12,7 +12,7 @@
         padding: 57px 8px 63px 71px;
     }
     &__title {
-         font-family: 'DIN Pro';
+         font-family: 'PF DinDisplay Pro';
          font-size: 24px;
          font-weight: 900;
          font-style: normal;
@@ -73,12 +73,13 @@
          column-count: 2;
          column-gap: 34px;
          margin-bottom: 64px;
+         padding-right: 47px;
     }
     &__contacts {
          column-count: 2;
          column-gap: 34px;
         div {
-            font-family: 'DIN Pro';
+            font-family: 'PF DinDisplay Pro';
             font-size: 18px;
             font-weight: 900;
             font-style: normal;

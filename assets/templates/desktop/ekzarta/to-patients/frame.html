@@ -1,24 +1,43 @@
 @@include('templates/desktop/include/header-ekzarta.html')
 
 
-<section class="specialist-header frame">
-    <div class="specialist-header__inner frame__inner">
+<section class="patient-header frame">
+    <div class="patient-header__inner frame__inner">
         <div>
-            <p class="specialist-header__title frame__title">ПАЦИЕНТАМ</p>
-            <div class="specialist-header__desc frame__desc">
+            <p class="patient-header__title frame__title">ПАЦИЕНТАМ</p>
+            <div class="patient-header__desc frame__desc">
                 <p>Экзарта помогает взрослым и детям
                     в таких и сяких случаях.
                     Эта же технология используется
                     при реабилитации профессиональных
                     спортсменов.</p>
             </div>
-            <div class="specialist-header__button frame__button">
+            <div class="patient-header__button frame__button">
                 <a href="" class="button button_red">ЗАПИСАТЬСЯ НА ПРИЁМ</a>
             </div>
         </div>
-        <div class="specialist-header__image frame__image">
+        <div class="patient-header__image frame__image">
             <img src="/images/desktop/1@2x.png" alt="">
         </div>
+    </div>
+</section>
+
+<section class="frame-content">
+    <div class="tabs">
+        <input type="radio" name="tab" id="adults" checked>
+        <label for="adults">ВЗРОСЛЫЕ</label>
+        <input type="radio" name="tab" id="children">
+        <label for="children">ДЕТИ</label>
+
+        <div class="content">
+            <article class="adults.">
+                <!--@@include('templates/desktop/ekzarta/to-patients/adults.html')-->
+            </article>
+            <article class="children">
+                <!--@@include('templates/desktop/ekzarta/to-patients/children.html')-->
+            </article>
+        </div>
+        <!--<br class="clear:both" />-->
     </div>
 </section>
 

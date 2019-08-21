@@ -19,7 +19,7 @@
             margin: 0 auto;
         }
         &__title {
-             font-family: 'DIN Pro';
+             font-family: 'PF DinDisplay Pro';
              font-size: 40px;
              font-weight: 900;
              font-style: normal;
@@ -40,7 +40,7 @@
 }
 
 .event {
-    font-family: 'DIN Pro Cond';
+    font-family: 'PF Din Text Cond Pro';
     font-size: 15px;
     font-weight: normal;
     font-style: normal;
@@ -55,7 +55,7 @@
     &__name {
          display: block;
          max-width: 850px;
-         font-family: 'DIN Pro';
+         font-family: 'PF DinDisplay Pro';
          font-size: 24px;
          font-weight: 900;
          font-style: normal;

@@ -28,7 +28,7 @@
     }
     &__title {
          padding-top: 61px;
-         font-family: 'DIN Pro';
+         font-family: 'PF DinDisplay Pro';
          font-size: 40px;
          font-weight: 900;
          font-style: normal;
@@ -38,7 +38,7 @@
          color: #002337;
     }
     &__desc {
-         font-family: 'DIN Pro Cond';
+         font-family: 'PF Din Text Cond Pro';
          font-size: 15px;
          font-weight: normal;
          font-style: normal;
@@ -96,7 +96,7 @@
         border-radius: 18.5px;
         box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
         background-color: #ffffff;
-        font-family: 'DIN Pro';
+        font-family: 'PF DinDisplay Pro';
         font-size: 20px;
         font-weight: bold;
         font-style: normal;
