@@ -78,6 +78,7 @@
 }
 
 .tabs {
+    max-width: 1440;
     padding-top: 10px;
     margin-bottom: 60px;
     display: flex;
@@ -112,7 +113,9 @@
     input[id="schedule"]:checked ~ .content .schedule,
     input[id="teachers"]:checked ~ .content .teachers,
     input[id="methods"]:checked ~ .content .methods,
-    input[id="training"]:checked ~ .content .training{
+    input[id="training"]:checked ~ .content .training,
+    input[id="adults"]:checked ~ .content .adults,
+    input[id="children"]:checked ~ .content .children{
         height: auto;
         opacity: 1;
     }

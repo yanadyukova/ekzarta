@@ -1,0 +1,20 @@
+.adults {
+    &__inner {}
+    &-directions {
+        padding: 0 74px;
+        max-width: 1440px;
+        display: flex;
+        justify-content: space-between;
+        &__direction {
+             max-width: 30%;
+            ul {
+                li {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    &-about {
+
+    }
+}
