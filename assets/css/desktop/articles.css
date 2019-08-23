@@ -1,19 +1,43 @@
-.methods {
+.articles {
+     margin-bottom: 20px;
     &__inner {
+         border-radius: 3px;
+         background-color: #f8f6f0;
+         max-width: 1440px;
+         margin:  0 auto;
+         padding: 51px 51px;
+    }
+    &__title {
+         font-size: 40px;
+         line-height: normal;
+         letter-spacing: 2.5px;
     }
     &__cards {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 20px 56px;
     }
     &__card {
+        display: block;
+        text-decoration: none;
         padding: 30px 25px;
         width: 33.33%;
         border-right: 1px solid rgba(174, 148, 113, 0.15);
         border-bottom: 1px solid rgba(174, 148, 113, 0.15);
-        min-height: 275px;
+        min-height: 300px;
         transition: all .2s linear;
+        span {
+            display: block;
+            margin-bottom: 5px;
+            font-family: 'PF Din Text Cond Pro';
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.46;
+            letter-spacing: 0.41px;
+            color: #7b919e;
+        }
         h2 {
             font-family: 'PF DinDisplay Pro';
             font-size: 18px;

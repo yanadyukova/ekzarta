@@ -1,0 +1,74 @@
+.fund-page {
+    &__inner {
+         padding: 31px 73px 50px;
+         max-width: 1440px;
+         margin: 0 auto;
+    }
+    &__data {
+        display: flex;
+        margin-bottom: 50px;
+        &_inner {
+             width: 50%;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             margin-right: 77px;
+        }
+    }
+    &__name {
+         font-family: 'PF DinDisplay Pro';
+         font-size: 30px;
+         font-weight: 500;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: normal;
+         letter-spacing: normal;
+         color: #000000;
+         text-transform: uppercase;
+         margin-bottom: 15px;
+    }
+    &__position {
+         font-family: 'PF DinDisplay Pro';
+         font-size: 14px;
+         font-weight: 300;
+         font-style: italic;
+         font-stretch: normal;
+         line-height: 1.36;
+         letter-spacing: 0.5px;
+         color: #7b919e;
+    }
+    &__contacts {
+        display: table;
+        margin-top: 30px;
+    }
+    &__row {
+        display: table-row;
+    }
+    &__cell {
+        display: table-cell;
+        &:first-child {
+             color: #7b919e;
+        }
+    }
+    &__photo {
+         width: 264px;
+         margin: 0;
+         img {
+             width: 100%;
+         }
+    }
+    &__info {
+         padding-left: 72px;
+         width: 85%;
+         ul {
+             padding-left: 30px;
+             li {
+                 list-style: disc;
+                 color: #7b919e;
+                 span {
+                     color: #002337;
+                 }
+             }
+         }
+    }
+}

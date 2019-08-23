@@ -302,8 +302,15 @@ SliderReviews = new Swiper('.landing-reviews__slider .swiper-container', {
     speed: 500,
     slidesPerView: 1.5,
     spaceBetween: 60,
-    loop: true
-    // centeredSlides: true
+    // loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true
+    }
+    // navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    // },
 });
 // import Modal from 'modal';
 // import Swiper from 'swiper/dist/js/swiper.js';

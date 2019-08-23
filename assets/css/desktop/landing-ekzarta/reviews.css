@@ -1,9 +1,12 @@
 .landing-reviews {
     background-color: #f8f6f0;
     &__inner {
+        position: relative;
         display: flex;
         flex-wrap: wrap;
-        padding: 133px 71px 47px;
+        padding: 133px 71px 20px;
+        max-width: 1440px;
+        margin: 0 auto;
     }
     &__title {
         margin-right: 65px;
@@ -11,5 +14,69 @@
     &__more {}
     &__slider {
         width: 100%;
+        .swiper {
+            &-container {}
+            &-wrapper {}
+            &-slide {}
+            &-pagination-bullet-active {
+                background-color: #e61841;
+            }
+            /*&-button {*/
+                /*&-prev {*/
+                     /*top: 50%;*/
+                     /*left: 0;*/
+                     /*width: 16px;*/
+                     /*height: 16px;*/
+                     /*margin-top: -22px;*/
+                     /*z-index: 10;*/
+                     /*background-size: contain;*/
+                     /*background-position: center;*/
+                     /*background-repeat: no-repeat;*/
+                     /*background-image: url("images/desktop/icons/arrow.svg");*/
+                     /*transform: rotate(180deg);*/
+                /*}*/
+                /*&-next {*/
+                     /*top: 50%;*/
+                     /*right: 0;*/
+                     /*width: 16px;*/
+                     /*height: 16px;*/
+                     /*margin-top: -22px;*/
+                     /*z-index: 10;*/
+                     /*background-size: contain;*/
+                     /*background-position: center;*/
+                     /*background-repeat: no-repeat;*/
+                     /*background-image: url("images/desktop/icons/arrow.svg");*/
+                /*}*/
+                /*&-disabled {*/
+                    /*display: none;*/
+                /*}*/
+            /*}*/
+        }
+        /*&:after {*/
+            /*position: absolute;*/
+            /*content: '';*/
+            /*width: 228px;*/
+            /*height: 295px;*/
+            /*background-image: linear-gradient(to right, rgba(248, 246, 240, 0), #f8f6f0);*/
+            /*bottom: 0;*/
+            /*right: 71px;*/
+            /*z-index: 10;*/
+        /*}*/
+    }
+    &__review {
+        padding-bottom: 47px;
+        span {
+            display: block;
+            opacity: 0.44;
+            font-family: 'PF DinDisplay Pro';
+            font-size: 14px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.36;
+            letter-spacing: normal;
+            text-align: right;
+            color: #000000;
+        }
     }
 }

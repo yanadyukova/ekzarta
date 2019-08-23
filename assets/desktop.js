@@ -266,6 +266,13 @@ let ww = $(window).width(),
         speed: 500,
         slidesPerView: 1.5,
         spaceBetween: 60,
-        loop: true,
-        // centeredSlides: true
+        // loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
+        },
+        // navigation: {
+        //     nextEl: '.swiper-button-next',
+        //     prevEl: '.swiper-button-prev',
+        // },
     });

@@ -25,6 +25,7 @@
 .card {
     margin-bottom: 45px;
     text-align: center;
+    text-decoration: none;
     &__image {
          width: 116px;
          height: 116px;
@@ -68,6 +69,8 @@
 .specialist {
     &__inner {
         padding: 31px 73px 50px;
+        max-width: 1440px;
+        margin: 0 auto;
     }
     &__data {
          display: flex;
@@ -100,13 +103,14 @@
          font-stretch: normal;
          line-height: 1.36;
          letter-spacing: 0.5px;
-         color: #000000;
+         color: #7b919e;
     }
     &__site {
         margin-top: 31px;
         span {
             display: inline-block;
             padding-right: 38px;
+            color: #7b919e;
         }
         a {
             color: #e61841;
@@ -120,6 +124,7 @@
         span {
             display: inline-block;
             padding-right: 38px;
+            color: #7b919e;
         }
      }
     &__photo {
@@ -127,14 +132,6 @@
     }
     &__info {
          padding-left: 72px;
-         width: 85%;
-         font-family: 'PF Din Text Cond Pro';
-         font-size: 17px;
-         font-weight: 500;
-         font-style: normal;
-         font-stretch: normal;
-         line-height: 1.27;
-         letter-spacing: 0.47px;
-         color: #002337;
+         width: 75%;
     }
 }
