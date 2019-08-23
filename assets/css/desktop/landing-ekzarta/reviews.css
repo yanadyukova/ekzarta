@@ -1,6 +1,15 @@
 .landing-reviews {
     background-color: #f8f6f0;
     &__inner {
+        display: flex;
+        flex-wrap: wrap;
         padding: 133px 71px 47px;
+    }
+    &__title {
+        margin-right: 65px;
+    }
+    &__more {}
+    &__slider {
+        width: 100%;
     }
 }

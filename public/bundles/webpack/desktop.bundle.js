@@ -1,23 +1,53 @@
 var desktop =
-webpackJsonp_name_([2],[
+webpackJsonp_name_([0],[
 /* 0 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-// import 'babel-polyfill';
-// // import Promise from 'es6-promise-promise'; // нужен^ если используется require.ensure, для ie11-
-// import 'expose-loader?$!expose-loader?jQuery!jquery';
-// import Modal from 'modal';
-// // import Swiper from 'swiper/dist/js/swiper.js';
-// import 'expose-loader?Swiper!swiper/dist/js/swiper.js';
+
+
+__webpack_require__(2);
+
+__webpack_require__(5);
+
 // // import skrollr from 'skrollr';
 // // import isotope from 'isotope-layout/dist/isotope.pkgd.js';
 // import gridstack from 'gridstack/dist/gridstack.js';
 // import selectize from 'selectize';
 //
-// let ww = $(window).width(),
-//     wh = $(window).height(),
-//     isMobile = $('body').hasClass('mobile'),
+// import 'babel-polyfill';
+// // import Promise from 'es6-promise-promise'; // нужен^ если используется require.ensure, для ie11-
+var ww = $(window).width(),
+    wh = $(window).height(),
+    isMobile = $('body').hasClass('mobile'),
+
 //     loader = (function() {
 //         if ($('[data-page="test"]').length) {
 //             require.ensure([], () => {
@@ -268,7 +298,38 @@ webpackJsonp_name_([2],[
 //         });
 //     })();
 
+SliderReviews = new Swiper('.landing-reviews__slider .swiper-container', {
+    speed: 500,
+    slidesPerView: 1.5,
+    spaceBetween: 60,
+    loop: true
+    // centeredSlides: true
+});
+// import Modal from 'modal';
+// import Swiper from 'swiper/dist/js/swiper.js';
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["$"] = __webpack_require__(3);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["jQuery"] = __webpack_require__(4);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 4 */,
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["Swiper"] = __webpack_require__(6);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ })
-],[0]);
+],[1]);
 //# sourceMappingURL=desktop.bundle.map

@@ -3,6 +3,7 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         padding: 45px 73px 91px;
         max-width: 1440px;
         margin: 0 auto;
@@ -13,40 +14,24 @@
         width: 45%;
     }
     &__title{
-         font-family: 'PF DinDisplay Pro';
-         font-size: 24px;
-         font-weight: 900;
-         font-style: normal;
-         font-stretch: normal;
-         line-height: 1.17;
-         letter-spacing: 1.3px;
-         color: #002337;
          margin-right: 65px;
          text-transform: uppercase;
     }
-    &__more {
-         font-family: 'PF Din Text Cond Pro';
-         font-size: 16px;
-         font-weight: normal;
-         font-style: normal;
-         font-stretch: normal;
-         line-height: 1.44;
-         letter-spacing: 0.7px;
-         color: #e61841;
-         text-decoration: underline;
-         &:hover {
-            text-decoration: none;
-         }
-    }
+    &__more {}
     &__events {
         width: 100%;
     }
     &__event {
+         display: block;
          margin-bottom: 20px;
+         text-decoration: none;
     }
     &__info {
          color: #7b919e;
          margin-bottom: 8px;
+        span {
+            margin-right: 30px;
+        }
     }
     &__name {
          font-size: 16px;
@@ -56,5 +41,6 @@
     &__teacher {
         color: #e61841;
         text-decoration: underline;
+        padding-left: 15px;
     }
 }

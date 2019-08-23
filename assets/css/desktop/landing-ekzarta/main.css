@@ -23,7 +23,13 @@
             color: #002337;
         }
     }
-    &__button {}
+    &__button {
+        a {
+            &:hover {
+                 color: #e61841;
+             }
+        }
+    }
     &__image {
         position: absolute;
         width: 555.5px;

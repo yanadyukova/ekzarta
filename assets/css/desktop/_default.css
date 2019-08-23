@@ -31,12 +31,21 @@ button {
 }
 
 a {
-    font-family: var(--font-base);
+    font-family: 'PF Din Text Cond Pro';
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.44;
+    letter-spacing: 0.7px;
+    color: #e61841;
+    text-decoration: underline;
     &:focus {
       outline: 3px auto #ea808c;
     }
     &:hover {
         text-decoration: none;
+        color: #e61841;
     }
 }
 

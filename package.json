@@ -47,6 +47,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-smushit": "^1.2.0",
     "gulp-sourcemaps": "^2.6.3",
+    "jquery": "^3.4.1",
     "lost": "^8.2.0",
     "postcss-assets": "^5.0.0",
     "postcss-base64": "^0.7.1",
@@ -58,6 +59,7 @@
     "postcss-nested": "^3.0.0",
     "postcss-nested-ancestors": "^1.0.0",
     "rucksack-css": "^1.0.2",
+    "swiper": "^4.5.0",
     "uglifyjs-webpack-plugin": "^1.1.6",
     "webpack": "^3.10.0",
     "webpack-stream": "^4.0.0"

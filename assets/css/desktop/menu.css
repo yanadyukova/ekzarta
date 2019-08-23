@@ -22,6 +22,7 @@
              line-height: 1.38;
              letter-spacing: 0.89px;
              color: #002337;
+             text-decoration: none;
          }
          &:after {
              position: absolute;
@@ -29,7 +30,7 @@
              width: 0;
              height: 2px;
              bottom: -4.8px;
-             left: 0;
+             left: 50%;
              border-radius: 0.8px;
              background-color: #e61841;
              transition: all .5s easeInOutCubic;
@@ -37,7 +38,7 @@
          &:hover {
              &:after {
                  width: 100%;
-                 /*left: 0;*/
+                 left: 0;
              }
          }
          &:last-child {margin-right: 0;}

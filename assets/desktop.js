@@ -1,17 +1,17 @@
 // import 'babel-polyfill';
 // // import Promise from 'es6-promise-promise'; // нужен^ если используется require.ensure, для ie11-
-// import 'expose-loader?$!expose-loader?jQuery!jquery';
+import 'expose-loader?$!expose-loader?jQuery!jquery';
 // import Modal from 'modal';
-// // import Swiper from 'swiper/dist/js/swiper.js';
-// import 'expose-loader?Swiper!swiper/dist/js/swiper.js';
+// import Swiper from 'swiper/dist/js/swiper.js';
+import 'expose-loader?Swiper!swiper/dist/js/swiper.js';
 // // import skrollr from 'skrollr';
 // // import isotope from 'isotope-layout/dist/isotope.pkgd.js';
 // import gridstack from 'gridstack/dist/gridstack.js';
 // import selectize from 'selectize';
 //
-// let ww = $(window).width(),
-//     wh = $(window).height(),
-//     isMobile = $('body').hasClass('mobile'),
+let ww = $(window).width(),
+    wh = $(window).height(),
+    isMobile = $('body').hasClass('mobile'),
 //     loader = (function() {
 //         if ($('[data-page="test"]').length) {
 //             require.ensure([], () => {
@@ -261,3 +261,11 @@
 //             $('.hint[data-event-id="' + event_id + '"]').addClass('active');
 //         });
 //     })();
+
+    SliderReviews = new Swiper('.landing-reviews__slider .swiper-container', {
+        speed: 500,
+        slidesPerView: 1.5,
+        spaceBetween: 60,
+        loop: true,
+        // centeredSlides: true
+    });
