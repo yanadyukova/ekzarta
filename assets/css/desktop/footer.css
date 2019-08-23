@@ -3,6 +3,8 @@
     &__inner {
         display: flex;
         padding: 57px 93px 64px 74px;
+        max-width: 1440px;
+        margin: 0 auto;
     }
     &__menu {
         display: flex;

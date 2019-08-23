@@ -1,4 +1,10 @@
 .children {
+    &-directions {
+        flex-wrap: wrap;
+        p {
+            width: 100%;
+        }
+    }
     &-about {
          &__treatment {
             width: 100%;

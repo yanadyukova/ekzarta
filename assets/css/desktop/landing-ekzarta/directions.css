@@ -5,6 +5,8 @@
     z-index: 5;
     &__inner {
         padding-top: 35px;
+        max-width: 1440px;
+        margin: 0 auto;
     }
     &__items {
         position: relative;

@@ -9,6 +9,8 @@
     color: #002337;
     &__inner {
         padding: 80px 71px;
+        max-width: 1440px;
+        margin: 0 auto;
     }
     &__title {
          font-family: 'PF DinDisplay Pro';

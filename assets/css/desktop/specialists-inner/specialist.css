@@ -3,6 +3,8 @@
         margin-bottom: 20px;
         background-color: #f8f6f0;
         &__inner {
+            max-width: 1440px;
+            margin: 0 auto;
             padding: 40px 74px;
         }
         &__title {

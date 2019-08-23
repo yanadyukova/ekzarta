@@ -11,6 +11,8 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 72px;
+         max-width: 1440px;
+         margin: 0 auto;
     }
     &__logo {
          @mixin i logo;

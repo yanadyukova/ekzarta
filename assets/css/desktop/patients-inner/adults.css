@@ -1,10 +1,12 @@
 .adults {
-    &__inner {}
+    &__inner {
+    }
     &-directions {
         padding: 0 74px;
         max-width: 1440px;
         display: flex;
         justify-content: space-between;
+        margin: 0 auto;
         &__direction {
              max-width: 30%;
             ul {

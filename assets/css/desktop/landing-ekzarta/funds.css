@@ -10,6 +10,8 @@
     color: #002337;
     &__inner {
         padding: 57px 8px 63px 71px;
+        max-width: 1440px;
+        margin: 0 auto;
     }
     &__title {
          font-family: 'PF DinDisplay Pro';
