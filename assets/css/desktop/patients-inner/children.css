@@ -1,0 +1,14 @@
+.children {
+    &-about {
+         &__treatment {
+            width: 100%;
+         }
+         &__content {
+              column-count: 2;
+              column-gap: 45px;
+         }
+         &__button {
+            margin-left: calc(50% + 59.5px);
+         }
+    }
+}

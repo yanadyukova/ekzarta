@@ -9,12 +9,97 @@
              max-width: 30%;
             ul {
                 li {
-                    margin-bottom: 15px;
+                    margin-bottom: 10px;
                 }
             }
         }
     }
     &-about {
-
+         margin-bottom: 60px;
+         background-color: #f8f6f0;
+         margin-top: 75px;
+        &__inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 74px 40px;
+        }
+        &__ekzarta {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__text {
+            width: 50%;
+            padding-top: 60px;
+        }
+        &__title {}
+        &__content {
+            padding-left: 74px;
+        }
+        &__image {
+            width: 40%;
+            img {
+                position: relative;
+                width: 436px;
+                top: -56px;
+            }
+        }
+        &__treatment {
+            width: 45%;
+        }
+        &__rehabilitation {
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                flex-grow: 1;
+                li {
+                    position: relative;
+                    b {
+                        position: absolute;
+                        font-family: 'PF DinDisplay Pro';
+                        font-size: 100px;
+                        font-weight: bold;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 70px;
+                        letter-spacing: normal;
+                        color: #e3ddcd;
+                        left: -30px;
+                    }
+                    p {
+                        position: relative;
+                        margin-bottom: 7px;
+                        z-index: 5;
+                        font-family: 'PF Din Text Cond Pro';
+                        font-size: 18px;
+                        font-weight: bold;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1.06;
+                        letter-spacing: 0.56px;
+                        color: #002337;
+                    }
+                    span {
+                        display: block;
+                        position: relative;
+                        margin-bottom: 7px;
+                        z-index: 5;
+                    }
+                }
+            }
+        }
+        &__button {
+            display: block;
+            position: relative;
+            bottom: -50px;
+            a {
+                padding: 26px 42px;
+            }
+        }
     }
 }

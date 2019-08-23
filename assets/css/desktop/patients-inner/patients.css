@@ -16,9 +16,8 @@
     &-content {
         .tabs {
             justify-content: flex-start;
-            padding-left: 74px;
             label {
-                margin-right: 30px;
+                margin-left: 74px;
             }
         }
     }
