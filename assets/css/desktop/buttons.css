@@ -12,6 +12,7 @@
     line-height: 1.28;
     letter-spacing: 0.98px;
     color: #e61841;
+    white-space: nowrap;
     &_logo {
          position: relative;
          padding: 19px 56px 15px 19px;

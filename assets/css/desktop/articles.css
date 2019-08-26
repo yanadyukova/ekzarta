@@ -14,8 +14,15 @@
     }
     &__cards {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: space-between;
+    }
+    &__row {
+        display: flex;
+        border-bottom: 1px solid rgba(174, 148, 113, 0.15);
+        &:last-child {
+            border-bottom: none;
+        }
     }
     &__card {
         display: block;
@@ -23,7 +30,6 @@
         padding: 30px 25px;
         width: 33.33%;
         border-right: 1px solid rgba(174, 148, 113, 0.15);
-        border-bottom: 1px solid rgba(174, 148, 113, 0.15);
         min-height: 300px;
         transition: all .2s linear;
         span {
@@ -58,11 +64,8 @@
             letter-spacing: 0.47px;
             color: #002337;
         }
-        &:nth-child(3n+3) {
+        &:nth-child(3) {
              border-right: none;
-        }
-        &:nth-last-child(-n+3) {
-             border-bottom: none;
         }
         &:hover {
             transform: scale(1.08);
