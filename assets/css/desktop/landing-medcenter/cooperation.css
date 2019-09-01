@@ -33,6 +33,7 @@
     &__image {
         @mixin i pic/5, jpg;
         width: 50%;
+        height: auto;
         background-size: cover;
         background-position: 50% 50%;
     }

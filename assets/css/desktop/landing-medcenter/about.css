@@ -2,9 +2,16 @@
     background-color: #f8f6f0;
     color: #002337;
     &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1440px;
+        margin: 0 auto;
         padding: 182px 73px 100px;
     }
     &__title {
+         width: 50%;
+         display: inline-block;
+         vertical-align: top;
          font-family: 'PF DinDisplay Pro';
          font-size: 24px;
          font-weight: 900;
@@ -15,6 +22,8 @@
          text-transform: uppercase;
     }
     &__desc {
+         width: 100%;
+         padding-left: 73px;
          font-family: 'PF Din Text Cond Pro';
          font-size: 15px;
          font-weight: normal;
@@ -30,6 +39,9 @@
          }
     }
     &__vacancy {
+         position: relative;
+         width: 50%;
+         text-align: right;
          font-family: 'PF Din Text Cond Pro';
          font-size: 16px;
          font-weight: normal;
@@ -39,6 +51,25 @@
          letter-spacing: 0.7px;
          color: #e61841;
          text-transform: uppercase;
+         padding-right: 30px;
+         &:after {
+             position: absolute;
+             content: '';
+             width: 16px;
+             height: 16px;
+             right: 0;
+             top: 4px;
+             background: url("/images/desktop/icons/arrow.svg") 50% 50%/contain no-repeat;
+             transition: all .2s linear;
+         }
+         &:hover {
+            &:after {
+                 right: -5px;
+                 top: 5px;
+                 width: 14px;
+                 height: 14px;
+            }
+         }
     }
     &__video {
          width: 876px;
@@ -49,6 +80,7 @@
          margin: 0 auto 81px;
     }
     &__rehabilitation {
+        width: 100%;
         display: flex;
         justify-content: space-between;
     }

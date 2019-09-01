@@ -1,7 +1,8 @@
 .button {
     padding: 15px 19px;
     border-radius: 10px;
-    box-shadow: 0 5px 10px -5px #5f9d97, 0 10px 20px -5px rgba(123, 145, 158, 0.61);
+    /*box-shadow: 0 5px 10px -5px #5f9d97, 0 10px 20px -5px rgba(123, 145, 158, 0.61);*/
+    box-shadow: 0 5px 10px -5px #e61841, 0 10px 20px -5px rgba(230,24,65,.61);
     background-color: #ffffff;
     text-transform: uppercase;
     font-family: 'PF DinDisplay Pro';

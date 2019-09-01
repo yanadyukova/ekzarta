@@ -8,8 +8,11 @@
     color: #002337;
     &__inner {
         display: flex;
+        height: 100%;
         justify-content: space-between;
         padding: 46px 73px;
+        max-width: 1440px;
+        margin: 0 auto;
     }
     &__title {
          width: 485px;
@@ -37,9 +40,14 @@
         p {margin: 0;}
     }
     &__opening {
-        margin-bottom: 32px;
+        margin-bottom: 22px;
     }
-    &__button {}
+    &__button {
+        a {
+            display: block;
+            text-decoration: none;
+        }
+    }
     &:after {
          position: absolute;
          content: '';

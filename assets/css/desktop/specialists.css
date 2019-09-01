@@ -132,6 +132,7 @@
     }
     &__info {
          padding-left: 72px;
-         width: 75%;
+         width: 85%;
+         color: #002337;
     }
 }

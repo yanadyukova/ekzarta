@@ -48,30 +48,30 @@
     line-height: 1.27;
     letter-spacing: 0.47px;
     margin-bottom: 40px;
+    padding-left: 73px;
     &__date {
          color: #7b919e;
-         margin-bottom: 4px;
+         margin-bottom: 8px;
     }
     &__name {
          display: block;
          max-width: 850px;
          font-family: 'PF DinDisplay Pro';
-         font-size: 24px;
-         font-weight: 900;
+         font-size: 18px;
+         font-weight: bold;
          font-style: normal;
          font-stretch: normal;
-         line-height: 1.17;
-         letter-spacing: 1.3px;
+         line-height: 1.06;
+         letter-spacing: 0.5px;
          color: #002337;
-         text-transform: uppercase;
-         margin-bottom: 13px;
+         margin-bottom: 8px;
          transition: all .1s linear;
+         text-decoration: none;
          &:hover {color: #e61841;}
     }
     &__desc {
          max-width: 850px;
          color: #002337;
-         padding-left: 73px;
     }
 }
 
@@ -79,6 +79,8 @@
     .promotions {
         &__adaptiv {
             display: flex;
+            max-width: 1440px;
+            margin: 0 auto;
             &_block {
                 flex-grow: 1;
             }
@@ -107,6 +109,7 @@
     }
     .event {
         min-width: 380px;
+        padding-left: 0;
         &__name {
             &_adaptiv {
                  font-size: 18px;
