@@ -1,4 +1,11 @@
 .specialist {
+    &-header {
+        &__button {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
     &-footer {
         margin-bottom: 20px;
         background-color: #f8f6f0;

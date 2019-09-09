@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="94" height="86" viewBox="0 0 94 86">
+    <defs>
+        <path id="b" d="M73.255 43.614A27.376 27.376 0 0 0 87 53.67 27.282 27.282 0 0 1 78.557 55c-5.083 0-9.84-1.389-13.916-3.808a27.181 27.181 0 0 1-13.325 3.467C36.23 54.659 24 42.423 24 27.329 24 12.236 36.23 0 51.316 0 66.402 0 78.63 12.236 78.63 27.33a27.217 27.217 0 0 1-5.376 16.284z"/>
+        <filter id="a" width="181.4%" height="205.4%" x="-46%" y="-34.5%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1.5" result="shadowSpreadOuter1"/>
+            <feOffset dy="5" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2.5"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.117773889 0 0 0 0 0.323312953 0 0 0 0 0.216893935 0 0 0 0.187144886 0"/>
+            <feMorphology in="SourceAlpha" radius="1.5" result="shadowSpreadOuter2"/>
+            <feOffset dy="10" in="shadowSpreadOuter2" result="shadowOffsetOuter2"/>
+            <feGaussianBlur in="shadowOffsetOuter2" result="shadowBlurOuter2" stdDeviation="9.5"/>
+            <feColorMatrix in="shadowBlurOuter2" result="shadowMatrixOuter2" values="0 0 0 0 0.444177113 0 0 0 0 0.684131567 0 0 0 0 0.583451376 0 0 0 0.221590909 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="shadowMatrixOuter2"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#8CDE98" d="M22.103 63.935A27.374 27.374 0 0 1 8.5 67.53c-2.966 0-5.823-.47-8.5-1.339a27.56 27.56 0 0 0 13.834-10.113A27.373 27.373 0 0 1 9 40.5C9 25.312 21.312 13 36.5 13S64 25.312 64 40.5 51.688 68 36.5 68a27.371 27.371 0 0 1-14.397-4.065z"/>
+        <g transform="translate(0 6)">
+            <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+            <use fill="#FFF" xlink:href="#b"/>
+        </g>
+        <g transform="translate(38 22)">
+            <path stroke="#8CDE98" stroke-linecap="round" stroke-width="3" d="M0 12.27c0 7.732 6.088 14 13.597 14 7.51 0 13.597-6.268 13.597-14"/>
+            <rect width="4" height="10" x="5" fill="#8CDE98" rx="2"/>
+            <rect width="4" height="10" x="18.083" fill="#8CDE98" rx="2"/>
+        </g>
+    </g>
+</svg>

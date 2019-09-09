@@ -1,0 +1,77 @@
+.equipment {
+    &__inner {}
+    &__cards {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         padding: 20px 56px;
+    }
+    &__row {
+         display: flex;
+         border-bottom: 1px solid rgba(174, 148, 113, 0.15);
+         &:last-child {
+              border-bottom: none;
+         }
+    }
+    &__card {
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-end;
+         padding: 30px 20px;
+         width: 33.33%;
+         border-right: 1px solid rgba(174, 148, 113, 0.15);
+         min-height: 275px;
+         transition: all .2s linear;
+         text-decoration: none;
+         div {
+             height: 164px;
+             margin-bottom: 20px;
+             img {
+                 width: auto;
+                 height: 100%;
+             }
+         }
+         h2 {
+             font-family: 'PF DinDisplay Pro';
+             font-size: 20px;
+             font-weight: bold;
+             font-style: normal;
+             font-stretch: normal;
+             line-height: 1.25;
+             letter-spacing: normal;
+             color: #000000;
+             margin-bottom: auto;
+         }
+         p {
+             font-family: 'PF Din Text Cond Pro';
+             font-size: 15px;
+             font-weight: normal;
+             font-style: normal;
+             font-stretch: normal;
+             line-height: 1.27;
+             letter-spacing: 0.47px;
+             color: #002337;
+             margin: 20px 0;
+             &.price {
+                  font-family: 'PF DinDisplay Pro';
+                  font-size: 24px;
+                  font-weight: bold;
+                  line-height: 0.79;
+                  letter-spacing: normal;
+                  text-align: right;
+                  color: #000000;
+                  margin: 0;
+             }
+         }
+         &:nth-child(3) {
+              border-right: none;
+         }
+         &:hover {
+              transform: scale(1.08);
+              border: none;
+              border-radius: 3px;
+              box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+              background-color: #ffffff;
+         }
+    }
+}

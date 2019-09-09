@@ -16,12 +16,12 @@
 @import url(css/desktop/footer.css);
 @import url(css/desktop/buttons.css);
 @import url(css/desktop/specialists.css);
-@import url(css/desktop/ekzarta/fund-page.css);
 @import url(css/desktop/promotions.css);
 @import url(css/desktop/technology.css);
 @import url(css/desktop/table.css);
 @import url(css/desktop/frame.css);
 @import url(css/desktop/articles.css);
+@import url(css/desktop/form.css);
 
 @import url(css/desktop/landing-ekzarta/main.css);
 @import url(css/desktop/landing-ekzarta/directions.css);
@@ -38,6 +38,10 @@
 @import url(css/desktop/medcenter/contacts.css);
 @import url(css/desktop/medcenter/services.css);
 
+@import url(css/desktop/ekzarta/reviews.css);
+@import url(css/desktop/ekzarta/events.css);
+@import url(css/desktop/ekzarta/fund-page.css);
+
 @import url(css/desktop/specialists-inner/courses.css);
 @import url(css/desktop/specialists-inner/methods.css);
 @import url(css/desktop/specialists-inner/schedule.css);
@@ -48,3 +52,7 @@
 @import url(css/desktop/patients-inner/patients.css);
 @import url(css/desktop/patients-inner/adults.css);
 @import url(css/desktop/patients-inner/children.css);
+
+@import url(css/desktop/businessmen-inner/businessmen.css);
+@import url(css/desktop/businessmen-inner/equipment.css);
+@import url(css/desktop/businessmen-inner/franchise.css);

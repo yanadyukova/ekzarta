@@ -115,7 +115,9 @@
     input[id="methods"]:checked ~ .content .methods,
     input[id="training"]:checked ~ .content .training,
     input[id="adults"]:checked ~ .content .adults,
-    input[id="children"]:checked ~ .content .children{
+    input[id="children"]:checked ~ .content .children,
+    input[id="franchise"]:checked ~ .content .franchise,
+    input[id="equipment"]:checked ~ .content .equipment{
         height: auto;
         opacity: 1;
     }

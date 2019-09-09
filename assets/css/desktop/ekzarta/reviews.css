@@ -1,0 +1,137 @@
+.reviews {
+    position: relative;
+    border-radius: 3px;
+    background-color: #f8f6f0;
+    max-width: 1440px;
+    margin: 0 auto 20px;
+    &-video {
+         margin-bottom: 45px;
+         &__inner {
+         }
+         &__video {
+             width: 876px;
+             height: 493px;
+             margin: 0 auto 47px;
+             &-item {
+                  display: flex;
+                  margin-bottom: 38px;
+             }
+             &-image {
+                  position: relative;
+                  width: 136px;
+                  height: 86px;
+                  flex-shrink: 0;
+                  border-radius: 6px;
+                  /*background-color: #d8d8d8;*/
+                  margin-right: 23px;
+                  img {
+                      width: 100%;
+                      height: auto;
+                  }
+                  &:after {
+                      position: absolute;
+                      content: '';
+                      width: 100%;
+                      height: 100%;
+                      border-radius: 6px;
+                      background-color: #d8d8d8;
+                      transition: all .2s linear;
+                  }
+                  &:hover {
+                      &:after {
+                            opacity: 0;
+                      }
+                  }
+             }
+         }
+         &__list {
+              display: flex;
+              max-width: 1440px;
+              padding: 0 75px;
+              margin: 0 auto;
+         }
+         &__pdf {
+             width: 45%;
+             &-item {
+                 position: relative;
+                 display: flex;
+                 align-items: center;
+                 height: 66px;
+                 padding-left: 71px;
+                 margin-bottom: 33px;
+                 &:before {
+                      position: absolute;
+                      content: '';
+                      width: 48px;
+                      height: 66px;
+                      left: 0;
+                      top: 0;
+                      box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+                      background-color: #ffffff;
+                 }
+             }
+         }
+         &__videos {
+              width: 45%;
+         }
+         &__separator {
+              width: 2px;
+              margin: 0 35px;
+              background: #e8e8e8;
+         }
+    }
+    &__title {
+         height: 140px;
+         display: flex;
+         padding: 0 75px;
+         justify-content: space-between;
+         align-items: center;
+         font-family: 'PF DinDisplay Pro';
+         font-size: 40px;
+         font-weight: 900;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: normal;
+         letter-spacing: 2.5px;
+         color: #002337;
+         border-bottom: 1px solid #ffffff;
+         a {
+             display: flex;
+             align-items: center;
+             height: 71px;
+             padding: 30px 50px;
+             border-radius: 3px;
+             border: solid 1px #e61841;
+             background-color: #ffffff;
+             text-decoration: none;
+             font-family: 'PF DinDisplay Pro';
+             font-weight: bold;
+             line-height: normal;
+         }
+    }
+    &__reviews {
+    }
+    &__review {
+         padding: 34px 75px;
+         border-bottom: 1px solid #ffffff;
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+    &__author {
+        margin-right: 20px;
+    }
+    &__date {
+         color: #c0bbaa;
+    }
+    &__content {}
+    &__form {
+        position: absolute;
+        width: 950px;
+        top: -30px;
+        left: calc(50% - 475px);
+        background-color: #ffffff;
+        padding: 40px;
+    }
+}

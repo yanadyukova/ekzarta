@@ -1,0 +1,80 @@
+.franchise{
+    &-statistics {
+        padding-left: 74px;
+        &__title {
+            width: 60%;
+            margin-bottom: 42px;
+        }
+        ul {
+            width: 85%;
+            padding-left: 74px;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                width: 50%;
+                margin-bottom: 15px;
+                span {
+                    font-family: 'PF DinDisplay Pro';
+                    font-size: 40px;
+                    font-weight: 900;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: 2.5px;
+                    color: #8cde98;
+                }
+                p {
+                    width: 300px;
+                }
+            }
+        }
+    }
+    &-advantages {
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 3px;
+        background-color: #f8f6f0;
+        &__inner {
+            padding: 100px 40px;
+        }
+        &__title {
+             font-family: 'PF DinDisplay Pro';
+             font-size: 40px;
+             font-weight: 900;
+             font-style: normal;
+             font-stretch: normal;
+             line-height: normal;
+             letter-spacing: 2.5px;
+             color: #002337;
+             text-transform: uppercase;
+             margin-bottom: 31px;
+        }
+        &__block {
+            display: inline-block;
+            vertical-align: top;
+            width: 45%;
+            ul {
+                li {
+                    display: flex;
+                    align-items: center;
+                    span {
+                        margin-right: 17px;
+                    }
+                    p {}
+                    &:nth-child(4) {
+                        span {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        &__partners {
+
+        }
+        &__clients {
+            padding-left: 74px;
+        }
+
+    }
+}

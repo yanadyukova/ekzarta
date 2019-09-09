@@ -3,6 +3,7 @@
          overflow: hidden;
         &__button {
             a {
+                text-decoration: none;
                 padding: 25px 40px;
             }
         }
