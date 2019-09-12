@@ -13,9 +13,26 @@
                 text-align: left;
                 width: auto;
             }
+            th {
+                vertical-align: top;
+            }
             th:last-child,
             td:last-child {
                 text-align: right;
+            }
+            td:nth-last-child(2),
+            th:nth-last-child(2){
+                text-align: right;
+            }
+            td:last-child {
+                a {
+                    font-size: 0;
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    background: url("/images/desktop/icons/edit.svg") 50% 50%/contain no-repeat;
+                    margin: 0 auto;
+                }
             }
             tr {
                 &:hover {

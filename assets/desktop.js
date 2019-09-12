@@ -4,6 +4,7 @@ import 'expose-loader?$!expose-loader?jQuery!jquery';
 // import Modal from 'modal';
 // import Swiper from 'swiper/dist/js/swiper.js';
 import 'expose-loader?Swiper!swiper/dist/js/swiper.js';
+import 'jquery-ui';
 // // import skrollr from 'skrollr';
 // // import isotope from 'isotope-layout/dist/isotope.pkgd.js';
 // import gridstack from 'gridstack/dist/gridstack.js';
@@ -293,4 +294,72 @@ let ww = $(window).width(),
         pagination: {
             el: '.swiper-pagination',
         },
-    });
+    }),
+
+    Form = function () {
+
+        // $('.jsAppointmentFormPagination a').click(function() {
+        //     let index = $(this).parent().index();
+        //     $(this).parent().addClass('active').siblings().removeClass('active');
+        //
+        //     $('.jsAppointmentFormStage').removeClass('active').eq(index).addClass('active');
+        //
+        //     if (index) {
+        //         $('.jsAppointmentFormBack').removeClass('hidden');
+        //     } else {
+        //         $('.jsAppointmentFormBack').addClass('hidden');
+        //     }
+        //     return false;
+        // });
+
+        let form = $('form[data-form="appointment"]');
+
+        form.submit(function(e){
+            if (!form.attr('data-submit')) {
+                e.preventDefault();
+
+                let step = getCurrentFormStep();
+
+                if (step < 3) {
+                    step++;
+                    reInitFormStep(step);
+                } else {
+                    // нужно добавить валидацию, если все ок, то отправляет форму
+                    $('.appointment-form__button').prop('disabled', true);
+                    form.attr('data-submit', 'submit');
+                    form.submit();
+                }
+            }
+        });
+
+        $('.jsAppointmentFormBack').click(function(){
+            let step = getCurrentFormStep();
+            if (step > 1) {
+                step--;
+                reInitFormStep(step);
+            }
+        });
+
+        function getCurrentFormStep() {
+            return +form.find('.appointment-form__pagination ul li.active').attr('data-step-pagination');
+        }
+
+        function reInitFormStep(step) {
+            $('.jsAppointmentFormStage').removeClass('active');
+            form.find('[data-step="' + step + '"]').addClass('active');
+
+            form.find('.appointment-form__pagination ul li').removeClass('active');
+            form.find('.appointment-form__pagination ul li:nth-child(' + step + ')').addClass('active');
+
+
+            if (step == 1) {
+                $('.jsAppointmentFormBack').addClass('hidden');
+            } else {
+                $('.jsAppointmentFormBack').removeClass('hidden');
+            }
+
+            // Если форма валидна, то поменять текст кнопки "Далее" на "Записаться"
+
+        }
+
+    }();

@@ -93,6 +93,7 @@
         }
     }
     label {
+        position: relative;
         padding: 6px 15px;
         border-radius: 18.5px;
         box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);

@@ -1,5 +1,6 @@
 input,
-textarea {
+textarea,
+select {
     border-radius: 6px;
     box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.5);
     border: solid 1px #979797;
@@ -10,7 +11,7 @@ textarea {
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    line-height: normal;
+    line-height: 1.22;
     letter-spacing: normal;
     color: #002337;
     outline:none;
@@ -37,9 +38,124 @@ label {
     &-group {
         position: relative;
         padding-top: 20px;
+        margin-bottom:20px;
+    }
+    &__select {
+        margin-bottom: 42px;
+        select {
+            width: 100%;
+            appearance: none;
+            padding-right: 35px;
+        }
+        &:after {
+             position: absolute;
+             content: '';
+             width: 50px;
+             height: 39px;
+             background-color: #fff;
+             bottom: 0;
+             right: 0;
+             border: solid 1px #979797;
+             border-radius: 0 6px 6px 0;
+             pointer-events: none;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            width: 12px;
+            height: 12px;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            transform: rotate(45deg);
+            right: 19px;
+            bottom: 16px;
+            z-index: 5;
+            pointer-events: none;
+        }
     }
 }
 
 button {
     border: none;
+}
+
+.input {
+    &_radio {
+        padding-top: 0;
+        input {
+            appearance: none;
+            position: absolute;
+            &:checked + label:after {
+                opacity: 1;
+            }
+        }
+        label {
+            position: relative;
+            padding-left: 25px;
+            cursor: pointer;
+            &:before {
+                position: absolute;
+                content: '';
+                width: 16px;
+                height: 16px;
+                top: 4px;
+                left: 0;
+                box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+                border: solid 1px #7b919e;
+                background-color: #f8f6f0;
+                border-radius: 50%;
+            }
+            &:after {
+                 position: absolute;
+                 content: '';
+                 width: 8px;
+                 height: 8px;
+                 top: 4px;
+                 left: 4px;
+                 background-color: #002337;
+                 border-radius: 50%;
+                 opacity: 0;
+                 transition: opacity .1s linear;
+            }
+        }
+    }
+    &_checkbox {
+        input {
+            appearance: none;
+            position: absolute;
+            &:checked + label:after {
+                 opacity: 1;
+            }
+        }
+        label {
+            position: relative;
+            padding-left: 25px;
+            cursor: pointer;
+            color: #979797;
+            &:before {
+                 position: absolute;
+                 content: '';
+                 width: 16px;
+                 height: 16px;
+                 top: 3px;
+                 left: 0;
+                 background-color: #f8f6f0;
+                 border-radius: 3px;
+                 border: solid 1px #979797;
+            }
+            &:after {
+                 position: absolute;
+                 content: '';
+                 width: 6px;
+                 height: 12px;
+                 top: 3px;
+                 left: 6px;
+                 border-right: 1px solid #000;
+                 border-bottom: 1px solid #000;
+                 transform: rotate(45deg);
+                 opacity: 0;
+                 transition: opacity .1s linear;
+            }
+        }
+    }
 }

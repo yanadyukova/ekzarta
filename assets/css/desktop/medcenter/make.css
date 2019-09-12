@@ -1,0 +1,212 @@
+.appointment-form {
+    &__inner {
+        padding: 45px 74px 60px;
+    }
+    &__close {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 60px;
+        a {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.22;
+            letter-spacing: normal;
+            color: #000000;
+            &:before {
+                position: absolute;
+                content: '';
+                width: 16px;
+                height: 16px;
+                top: calc(50% - 8px);
+                left: 0;
+                background: url("/images/desktop/icons/arrow-black.svg") 50% 50%/contain no-repeat;
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &__title {
+         font-family: 'PF DinDisplay Pro';
+         font-size: 40px;
+         font-weight: 900;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: normal;
+         letter-spacing: 2.5px;
+         color: #002337;
+         text-transform: uppercase;
+         margin-bottom: 60px;
+         padding-left: 188px;
+         position: relative;
+         &:before {
+              position: absolute;
+              content: '';
+              width: 155px;
+              height: 59px;
+              left: 0;
+              top: -13px;
+              background: url("/images/desktop/logo@2x.png") 50% 50%/contain no-repeat;
+         }
+    }
+    &__form {
+        padding: 0 74px;
+    }
+    &__pagination {
+        text-align: center;
+        margin-bottom: 78px;
+        ul {
+            width: 750px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            li {
+                position: relative;
+                &:first-child:before {
+                     content: none;
+                }
+                &:before {
+                     position: absolute;
+                     top: 50%;
+                     left: 0;
+                     margin-top: -1px;
+                     margin-left: -57px;
+                     width: 18px;
+                     height: 2px;
+                     background-color: #000000;
+                     content: '';
+                }
+                &.active {
+                    + li + li + li,
+                    + li + li,
+                    + li {
+                        &:before {
+                             background-color: #D8D8D8;
+                        }
+                        a {
+                            color: #D8D8D8;
+                        }
+                    }
+                    a {
+                        font-weight: bold;
+                        color: #000;
+                        /*pointer-events: none;*/
+                    }
+                }
+                &.success {
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        width: 8px;
+                        height: 14px;
+                        right: -20px;
+                        top: 0;
+                        margin-top: 3px;
+                        border-bottom: 2px solid #8cde98;
+                        border-right: 2px solid #8cde98;
+                        transform: rotate(45deg);
+                    }
+                    span {
+                        display: block;
+                    }
+                }
+                a {
+                    pointer-events: none;
+                    display: block;
+                    font-family: 'PF DinDisplay Pro';
+                    font-size: 20px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #002337;
+                    text-decoration: none;
+                }
+                span {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    top: 120%;
+                    font-family: 'PF DinDisplay Pro';
+                    font-size: 12px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.25;
+                    letter-spacing: normal;
+                    color: rgba(0, 0, 0, 0.5);
+                    text-align: left;
+                    display: none;
+                }
+            }
+        }
+    }
+    &__wrapper {}
+    &__body {}
+    &__step {
+        display: none;
+        min-height: 200px;
+        &.active {
+             display: block;
+        }
+        .form-group {
+            width: 349px;
+            input[type='text'] {
+                width: 100%;
+            }
+        }
+    }
+    &__branch {
+        label {
+            p.appointment-form__branch-name {
+                font-family: 'PF DinDisplay Pro';
+                font-size: 18px;
+                font-weight: 900;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.28;
+                letter-spacing: 0.97px;
+                color: #002337;
+                text-transform: uppercase;
+            }
+            &>div {
+                display: flex;
+                justify-content: flex-start;
+                div {
+                    max-width: 175px;
+                    flex-shrink: 0;
+                    margin-right: 30px;
+                    p {
+                        margin-bottom: 5px;
+                        font-family: 'PF Din Text Cond Pro';
+                        font-size: 13px;
+                        font-weight: normal;
+                        line-height: 1.54;
+                        letter-spacing: 0.44px;
+                        &:first-child {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__foot {
+         margin-top: 40px;
+         text-align: center;
+    }
+    &__button {
+        &.back {
+            border: 1px solid #e61841;
+            border-radius: 3px;
+            font-size: 16px;
+            padding: 14px 29px;
+            box-shadow: none;
+            &.hidden {
+                display: none;
+            }
+        }
+    }
+}

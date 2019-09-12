@@ -1,0 +1,135 @@
+@@include('templates/desktop/include/header-medcenter.html')
+
+<section class="appointment-form">
+    <div class="appointment-form__inner">
+        <!--<div class="appointment-form__close">-->
+            <!--<a href="">Закрыть форму и вернуться</a>-->
+        <!--</div>-->
+        <div class="appointment-form__title">Запись на приём</div>
+        <div class="appointment-form__form">
+            <form data-form="appointment">
+                <div class="appointment-form__pagination">
+                    <ul class="jsAppointmentFormPagination">
+                        <li class="success" data-step-pagination="1">
+                            <a href="#">Выбор услуги</a>
+                            <span>Прием врача по лечебной физкультуре</span>
+                        </li>
+                        <li class="active" data-step-pagination="2">
+                            <a href="#">Выбор города и медцентра</a>
+                            <span>Нижний Новгород<br>
+                                Медцентр «Медицинский центр братьев Алиевых» </span>
+                        </li>
+                        <li data-step-pagination="3">
+                            <a href="#">Контактная информация</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="appointment-form__wrapper">
+                    <div class="appointment-form__body">
+                        <div data-step="1" class="appointment-form__step jsAppointmentFormStage">
+                            <div class="form-group form__select">
+                                <label for="">Услуга</label>
+                                <select name="services" id="" class="jsAppointmentFormSelect">
+                                    <optgroup label="ОСМОТР, Консультация">
+                                        <option value="">Прием врача по лечебной физкультуре</option>
+                                        <option value="">Прием врача-невролога первичный</option>
+                                        <option value="">Прием врача – травматолога-ортопеда первичный</option>
+                                    </optgroup>
+                                    <optgroup label="Лечебная физкультура, кинезиотерапия">
+                                        <option value="">Индивидуальное занятие ЛФК (с применением вышеперечисленных методик)</option>
+                                        <option value="">Индивидуальное занятие по методике Войта</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div data-step="2" class="appointment-form__step jsAppointmentFormStage active">
+                            <div class="form-group form__select">
+                                <label for="">Ваш город</label>
+                                <select name="city" id="">
+                                    <option value="" selected>Нижний Новгород</option>
+                                    <option value="">Дзержинск</option>
+                                    <option value="" disabled>Москва</option>
+                                </select>
+                            </div>
+                            <div class="appointment-form__branch">
+                                <div class="form-group input_radio">
+                                    <input type="radio" name="branch" value="1" id="branch_1">
+                                    <label for="branch_1">
+                                        <p class="appointment-form__branch-name">Медицинский центр лечения заболеваний</p>
+                                        <div>
+                                            <div class="phone">
+                                                <p>Телефон:</p>
+                                                <p>(831) 429-01-15</p>
+                                                <p>(831) 230-50-18</p>
+                                            </div>
+                                            <div class="address">
+                                                <p>Адрес:</p>
+                                                <p>603087, Нижний Новгород,
+                                                    Казанское шоссе, д.18, корпус 1.</p>
+                                            </div>
+                                            <div class="work">
+                                                <p>График работы:</p>
+                                                <p>Пн-Пт с 8.00 до 20.00<br>
+                                                    Сб — по записи, с 8.00 до 14.00<br>
+                                                    Вс — выходной день.</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="appointment-form__branch">
+                                <div class="form-group input_radio">
+                                    <input type="radio" name="branch" value="2" id="branch_2">
+                                    <label for="branch_2">
+                                        <p class="appointment-form__branch-name">Медицинский центр лечения заболеваний</p>
+                                        <div>
+                                            <div class="phone">
+                                                <p>Телефон:</p>
+                                                <p>(831) 429-01-15</p>
+                                                <p>(831) 230-50-18</p>
+                                            </div>
+                                            <div class="address">
+                                                <p>Адрес:</p>
+                                                <p>603087, Нижний Новгород,
+                                                    Казанское шоссе, д.18, корпус 1.</p>
+                                            </div>
+                                            <div class="work">
+                                                <p>График работы:</p>
+                                                <p>Пн-Пт с 8.00 до 20.00<br>
+                                                    Сб — по записи, с 8.00 до 14.00<br>
+                                                    Вс — выходной день.</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-step="3" class="appointment-form__step jsAppointmentFormStage">
+                            <div class="form-group">
+                                <label for="">Как к вам обращаться?</label>
+                                <input type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Номер телефона</label>
+                                <input type="text" placeholder="+7 (       ) ____-____-__-__">
+                            </div>
+                            <div class="form-group input_checkbox">
+                                <input type="checkbox" checked id="appointment-form__agree">
+                                <label for="appointment-form__agree">Отправляя форму, вы соглашаетесь с политикой
+                                    конфиденциальности и пользовательским соглашением
+                                    данного сайта.</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="appointment-form__foot">
+                        <a href="#" class="button appointment-form__button back jsAppointmentFormBack hidden">назад</a>
+                        <button class="button button_red appointment-form__button">далее</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+@@include('templates/desktop/include/footer.html')
