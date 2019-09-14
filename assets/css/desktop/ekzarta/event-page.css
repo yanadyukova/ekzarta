@@ -1,0 +1,27 @@
+.event-page {
+    &__inner {
+        padding: 60px 74px;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    &__header {
+        margin-bottom: 40px;
+        h1 {
+            min-width: 745px;
+            width: 80%;
+        }
+        p {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 14px;
+            font-weight: 300;
+            font-style: italic;
+            font-stretch: normal;
+            line-height: 1.36;
+            letter-spacing: 0.5px;
+            color: #7b919e;
+        }
+    }
+    &__body {
+        padding-left: 74px;
+    }
+}

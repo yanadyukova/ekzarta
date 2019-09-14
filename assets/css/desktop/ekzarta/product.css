@@ -1,0 +1,126 @@
+.product {
+    &__inner {
+        padding: 60px 74px;
+        max-width: 1440px;
+        margin: 0 auto;
+        h1 {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 40px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 2.5px;
+            color: #002337;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+    }
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    &__photos {
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__photo {
+         width: 438px;
+         height: 273px;
+         margin: 0 40px 0 0;
+        .swiper-slide {
+            background-color: #f8f6f0;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+    &__thumbs {
+        width: 58px;
+         height: 273px;
+        box-sizing: border-box;
+        margin: 0;
+        .swiper-wrapper {
+            width: 58px;
+            display: flex;
+            flex-direction: column;
+            .swiper-slide {
+                width: 100% !important;
+                height: 57px;
+                background-color: #f8f6f0;
+                opacity: 0.4;
+                margin-bottom: 13.5px;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .swiper-slide-thumb-active {
+                opacity: 1;
+            }
+        }
+    }
+    &__order {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    &__cost {
+        margin-bottom: 5px;
+    }
+    &__sale {
+         font-family: 'PF DinDisplay Pro';
+         font-size: 14px;
+         font-weight: normal;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: 1.29;
+         letter-spacing: normal;
+         color: #002337;
+         max-width: 186px;
+         text-align: right;
+    }
+    &__amount {
+        margin-top: auto;
+        margin-bottom: 15px;
+        display: flex;
+        input {
+            width: 60px;
+            height: 42px;
+            border-radius: 0;
+            box-shadow: none;
+            border-right: 0;
+            border-left: 0;
+            text-align: center;
+            font-family: 'PF DinDisplay Pro';
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.22;
+            letter-spacing: normal;
+            text-align: center;
+            color: #000000;
+        }
+    }
+    &__button {
+        position: relative;
+        box-shadow: none;
+        font-size: 18px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.22;
+        letter-spacing: 0.2px;
+        padding: 25px 25px 25px 65px;
+        &:before {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 20px;
+            top: calc(50% - 10px);
+            left: 20px;
+            background: url("/images/desktop/icons/basket-white.svg") 50% 50%/contain no-repeat;
+        }
+    }
+}

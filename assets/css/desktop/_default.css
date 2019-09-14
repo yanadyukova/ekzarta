@@ -7,6 +7,16 @@
     /*--font-roboto: 'Roboto', sans-serif;*/
 }
 
+/** { background-color: rgba(255,0,0,.2); }*/
+/** * { background-color: rgba(0,255,0,.2); }*/
+/** * * { background-color: rgba(0,0,255,.2); }*/
+/** * * * { background-color: rgba(255,0,255,.2); }*/
+/** * * * * { background-color: rgba(0,255,255,.2); }*/
+/** * * * * * { background-color: rgba(255,255,0,.2); }*/
+/** * * * * * * { background-color: rgba(255,0,0,.2); }*/
+/** * * * * * * * { background-color: rgba(0,255,0,.2); }*/
+/** * * * * * * * * { background-color: rgba(0,0,255,.2); }*/
+
 html, body {
     font-family: var(--font-base);
     min-width: 1000px;
@@ -25,7 +35,10 @@ body {
 input, button {
     font-family: var(--font-base);
     &:focus {
-      outline: 3px auto #ea808c;
+         outline: none;
+    }
+    &::-moz-focus-inner {
+         border: none;
     }
 }
 

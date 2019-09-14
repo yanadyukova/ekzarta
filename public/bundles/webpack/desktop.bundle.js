@@ -333,6 +333,33 @@ SliderReviews = new Swiper('.landing-reviews__slider .swiper-container', {
         el: '.swiper-pagination'
     }
 }),
+    SliderProduct = function () {
+    var productThumbs = new Swiper('.product__thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        direction: 'vertical',
+        mousewheel: true,
+        keyboard: {
+            enabled: true
+        },
+        // loop: true,
+        freeMode: true,
+        loopedSlides: 5, //looped slides should be the same
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true
+    });
+    var productPhoto = new Swiper('.product__photo', {
+        spaceBetween: 10,
+        keyboard: {
+            enabled: true
+        },
+        // loop:true,
+        loopedSlides: 5, //looped slides should be the same
+        thumbs: {
+            swiper: productThumbs
+        }
+    });
+}(),
     Form = function () {
 
     // $('.jsAppointmentFormPagination a').click(function() {
