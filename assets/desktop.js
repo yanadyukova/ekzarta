@@ -324,6 +324,39 @@ let ww = $(window).width(),
         });
     }(),
 
+    AmountProduct = function() {
+        $('.button_minus').on('click', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            var $input = $this.closest('div').find('input');
+            var value = parseInt($input.val());
+
+            if (value > 2) {
+                value = value - 1;
+            } else {
+                value = 1;
+            }
+
+            $input.val(value);
+
+        });
+
+        $('.button_plus').on('click', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            var $input = $this.closest('div').find('input');
+            var value = parseInt($input.val());
+
+            if (value < 999) {
+                value = value + 1;
+            } else {
+                value = 999;
+            }
+
+            $input.val(value);
+        });
+    }(),
+
     Form = function () {
 
         // $('.jsAppointmentFormPagination a').click(function() {

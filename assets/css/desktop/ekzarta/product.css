@@ -1,7 +1,7 @@
 .product {
     &__inner {
         padding: 60px 74px;
-        max-width: 1440px;
+        max-width: 1024px;
         margin: 0 auto;
         h1 {
             font-family: 'PF DinDisplay Pro';
@@ -112,7 +112,7 @@
         font-stretch: normal;
         line-height: 1.22;
         letter-spacing: 0.2px;
-        padding: 25px 25px 25px 65px;
+        padding: 20px 25px 20px 65px;
         &:before {
             position: absolute;
             content: '';
@@ -121,6 +121,100 @@
             top: calc(50% - 10px);
             left: 20px;
             background: url("/images/desktop/icons/basket-white.svg") 50% 50%/contain no-repeat;
+        }
+    }
+    &__info {
+        max-width: 750px;
+        color: #002337;
+        h2 {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 24px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.17;
+            letter-spacing: 1.3px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 22px;
+            font-weight: 700;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.17;
+            letter-spacing: 1.3px;
+            margin-bottom: 20px;
+        }
+        h4 {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 20px;
+            font-weight: 700;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.17;
+            letter-spacing: 1.3px;
+            margin-bottom: 20px;
+        }
+        h5 {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 18px;
+            font-weight: 700;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.17;
+            letter-spacing: 1.3px;
+            margin-bottom: 20px;
+        }
+        h6 {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 16px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.17;
+            letter-spacing: 1.3px;
+            margin-bottom: 20px;
+        }
+        p {
+            padding-left: 74px;
+        }
+        ul {
+            padding-left: 94px;
+            li {
+                list-style: disc;
+                margin-bottom: 10px;
+                padding-left: 10px;
+            }
+        }
+        ol {
+            padding-left: 90px;
+            li {
+                list-style: decimal;
+                margin-bottom: 10px;
+                padding-left: 10px;
+            }
+        }
+        img {
+            padding: 0 74px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 40px;
+        }
+        blockquote {
+            background-color: #f8f6f0;
+            padding: 40px 74px;
+            p {
+                padding-left: 0;
+            }
+        }
+        hr {
+            appearance: none;
+            color: #e61841;
+            height: 2px;
+            background-color: #e61841;
+            border:none;
+            margin: 20px 0;
         }
     }
 }
