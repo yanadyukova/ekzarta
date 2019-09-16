@@ -355,6 +355,10 @@ SliderReviews = new Swiper('.landing-reviews__slider .swiper-container', {
         },
         // loop:true,
         loopedSlides: 5, //looped slides should be the same
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
         thumbs: {
             swiper: productThumbs
         }
@@ -389,6 +393,23 @@ SliderReviews = new Swiper('.landing-reviews__slider .swiper-container', {
         }
 
         $input.val(value);
+    });
+}(),
+    Basket = function () {
+    $('.menu__item_basket a').click(function (e) {
+        e.preventDefault();
+
+        $(this).parent().addClass('active');
+        $('body').addClass('layout');
+    });
+
+    $('.basket__close').click(function () {
+        $(this).closest('.menu__item_basket').removeClass('active');
+        $('body').removeClass('layout');
+    });
+
+    $('.basket__item-delete').click(function () {
+        $(this).closest('.basket__item').remove();
     });
 }(),
     Form = function () {

@@ -23,7 +23,43 @@
             <li class="menu__item"><a href="">Пациентам</a></li>
             <li class="menu__item"><a href="">Специалистам</a></li>
             <li class="menu__item"><a href="">Бизнесу</a></li>
-            <li class="menu__item menu__item_basket"><a href=""></a></li>
+            <li class="menu__item menu__item_basket not-empty">
+                <!--у menu__item_basket есть 3 дополнительных класса-->
+                <!--empty  - для пустой корзины, при нем кнопка "Оформить заказ неактивна"-->
+                <!--not-empty - кнопка "Оформить заказ" активна и над корзиной отображается количество товара в корзине-->
+                <!--active - добавляется при клике на корзину и показываются товары, которые в корзине-->
+                <a href="">Корзина</a>
+                <a href="" class="quantity">2</a>
+                <div class="basket">
+                    <div class="basket__inner">
+                        <div class="basket__buttons">
+                            <a href="" class="basket__checkout">Оформить заказ</a>
+                            <a href="" class="basket__close"></a>
+                        </div>
+                        <div class="basket__items">
+                            <div class="basket__item">
+                                <p class="basket__item-name">Тренажер Экзарта Мини</p>
+                                <p class="basket__item-price"><span>11295</span> Руб.</p>
+                                <p class="basket__item-amount">x<span>1</span></p>
+                                <button class="basket__item-delete"></button>
+                            </div>
+                            <div class="basket__item">
+                                <p class="basket__item-name">Тренажер Экзарта Мини</p>
+                                <p class="basket__item-price"><span>11295</span> Руб.</p>
+                                <p class="basket__item-amount">x<span>1</span></p>
+                                <button class="basket__item-delete"></button>
+                            </div>
+                        </div>
+                        <!--<div class="basket__empty">-->
+                            <!--<p>Добавьте товары</p>-->
+                        <!--</div>-->
+                        <div class="basket__total">
+                            <span>Итого:</span>
+                            <p><span>3000</span> Руб.</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
             <li class="menu__item"><a href="">Отзывы</a></li>
             <li class="menu__item"><a href="">События</a></li>
             <li class="menu__item"><a href="">Контакты</a></li>

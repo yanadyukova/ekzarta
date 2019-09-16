@@ -1,0 +1,67 @@
+@@include('templates/desktop/include/header-ekzarta.html')
+
+<section class="checkout">
+    <div class="checkout__inner">
+        <form action="">
+            <div class="checkout__basket">
+                <p class="checkout__title">Корзина</p>
+                <div class="checkout__items">
+                    <div class="checkout__item">
+                        <p class="checkout__item-name">Тренажер Экзарта Мини</p>
+                        <p class="checkout__item-price"><span>11295</span> Руб.</p>
+                        <p class="checkout__item-amount">
+                            <button class="button_minus" type="button" name="button"></button>
+                            <input type="text" name="name" value="1" disabled>
+                            <button class="button_plus" type="button" name="button"></button>
+                        </p>
+                        <p class="checkout__item-price checkout__item-total"><span>11295</span> Руб.</p>
+                        <button class="checkout__item-delete"></button>
+                    </div>
+                    <div class="checkout__item">
+                        <p class="checkout__item-name">Тренажер Экзарта Мини</p>
+                        <p class="checkout__item-price"><span>11295</span> Руб.</p>
+                        <p class="checkout__item-amount">
+                            <button class="button_minus" type="button" name="button"></button>
+                            <input type="text" name="name" value="1" disabled>
+                            <button class="button_plus" type="button" name="button"></button>
+                        </p>
+                        <p class="checkout__item-price checkout__item-total"><span>11295</span> Руб.</p>
+                        <button class="checkout__item-delete"></button>
+                    </div>
+                </div>
+                <!--<div class="basket__empty">-->
+                <!--<p>Добавьте товары</p>-->
+                <!--</div>-->
+                <div class="checkout__total">
+                    <span>Итого:</span>
+                    <p>3000 Руб.</p>
+                </div>
+            </div>
+            <div class="checkout__form">
+                <p class="checkout__title checkout__title-form">Оформить заказ</p>
+                <p>Заполните форму обратной связи,<br> и наши менеджеры с вами свяжутся. </p>
+                <div class="form-group">
+                    <label for="">Как к вам обращаться?</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label for="">Номер телефона</label>
+                    <input type="text" placeholder="+7 (       ) ____-____-__-__">
+                </div>
+                <div class="form-group">
+                    <label for="">E-mail</label>
+                    <input type="text">
+                </div>
+                <div class="form-group input_checkbox">
+                    <input type="checkbox" checked id="checkout__agree">
+                    <label for="checkout__agree">Отправляя форму, вы соглашаетесь с политикой
+                        конфиденциальности и пользовательским соглашением
+                        данного сайта.</label>
+                </div>
+                <button class="button button_red checkout__button">ОТПРАВИТЬ</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+@@include('templates/desktop/include/footer.html')

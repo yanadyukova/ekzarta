@@ -67,76 +67,67 @@
     </div>
 </header>
 
-<section class="events-subscription">
-    <div class="events-subscription__inner">
-        <div class="events-subscription__title">
-            <p class="text-title text-title_big">Будь в курсе событий</p>
-        </div>
-        <div class="events-subscription__form">
-            <form action="">
-                <div class="form-group">
-                    <label for="">Имя</label>
-                    <input type="text">
-                </div>
-                <div class="form-group">
-                    <label for="">Ваш e-mail</label>
-                    <input type="text">
-                </div>
-                <button class="button button_red">ПОДПИСАТЬСЯ</button>
-            </form>
-            <p class="events-subscription__agree text-content">Отправляя форму, вы соглашаетесь с политикой
-                конфиденциальности и пользовательским соглашением
-                данного сайта.</p>
-        </div>
-    </div>
-</section>
-
-<section class="events-current">
-    <div class="events-current__inner">
-        <div class="events-current__title">
-            <p>СОБЫТИЯ</p>
-        </div>
-        <div class="events-current__slider">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image:url(/images/desktop/pic/mtmt.jpg)">
-                        <p class="events-current__date">08 октября 2018, 14:59</p>
-                        <a href="" class="events-current__name">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
-                        <!--<p class="event__desc">21 февраля 2017 года на базе центра медицинской реабилитации «Экзарта» состоится бесплатный мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей методами мануальной терапии и ЛФК. Реабилитация после операций. </p>-->
+<section class="checkout">
+    <div class="checkout__inner">
+        <form action="">
+            <div class="checkout__basket">
+                <p class="checkout__title">Корзина</p>
+                <div class="checkout__items">
+                    <div class="checkout__item">
+                        <p class="checkout__item-name">Тренажер Экзарта Мини</p>
+                        <p class="checkout__item-price"><span>11295</span> Руб.</p>
+                        <p class="checkout__item-amount">
+                            <button class="button_minus" type="button" name="button"></button>
+                            <input type="text" name="name" value="1" disabled>
+                            <button class="button_plus" type="button" name="button"></button>
+                        </p>
+                        <p class="checkout__item-price checkout__item-total"><span>11295</span> Руб.</p>
+                        <button class="checkout__item-delete"></button>
                     </div>
-                    <div class="swiper-slide" style="background-image:url(/images/desktop/pic/pnf.jpg)">
-                        <p class="events-current__date">08 октября 2018, 14:59</p>
-                        <a href="" class="events-current__name">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
-                    </div>
-                    <div class="swiper-slide" style="background-image:url(/images/desktop/pic/vzros_dzhonston.jpg)">
-                        <p class="events-current__date">08 октября 2018, 14:59</p>
-                        <a href="" class="events-current__name">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
-                    </div>
-                    <div class="swiper-slide" style="background-image:url(/images/desktop/pic/vzros_hanke.jpg)">
-                        <p class="events-current__date">08 октября 2018, 14:59</p>
-                        <a href="" class="events-current__name">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
+                    <div class="checkout__item">
+                        <p class="checkout__item-name">Тренажер Экзарта Мини</p>
+                        <p class="checkout__item-price"><span>11295</span> Руб.</p>
+                        <p class="checkout__item-amount">
+                            <button class="button_minus" type="button" name="button"></button>
+                            <input type="text" name="name" value="1" disabled>
+                            <button class="button_plus" type="button" name="button"></button>
+                        </p>
+                        <p class="checkout__item-price checkout__item-total"><span>11295</span> Руб.</p>
+                        <button class="checkout__item-delete"></button>
                     </div>
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
+                <!--<div class="basket__empty">-->
+                <!--<p>Добавьте товары</p>-->
+                <!--</div>-->
+                <div class="checkout__total">
+                    <span>Итого:</span>
+                    <p>3000 Руб.</p>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="events-past">
-    <div class="events-past__inner">
-        <div class="events-past__title">ПРОШЕДШИЕ СОБЫТИЯ</div>
-        <div class="events-past__event event">
-            <p class="event__date">08 октября 2018, 14:59</p>
-            <a href="" class="event__name">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
-            <p class="event__desc">21 февраля 2017 года на базе центра медицинской реабилитации «Экзарта» состоится бесплатный мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей методами мануальной терапии и ЛФК. Реабилитация после операций. </p>
-        </div>
-        <div class="events-past__event event">
-            <p class="event__date">27.01 - 5.02</p>
-            <a href="" class="event__name">Образовательный курс по Бобат-терапии в Санкт-Петербургском педиатрическом медицинском университе</a>
-            <p class="event__desc">С 27 января по 5 февраля в Санкт-Петербургском государственном педиатрическом медицинском университете пройдет первый образовательный курс по подготовке Бобат-терапевтов.</p>
-        </div>
+            <div class="checkout__form">
+                <p class="checkout__title checkout__title-form">Оформить заказ</p>
+                <p>Заполните форму обратной связи,<br> и наши менеджеры с вами свяжутся. </p>
+                <div class="form-group">
+                    <label for="">Как к вам обращаться?</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label for="">Номер телефона</label>
+                    <input type="text" placeholder="+7 (       ) ____-____-__-__">
+                </div>
+                <div class="form-group">
+                    <label for="">E-mail</label>
+                    <input type="text">
+                </div>
+                <div class="form-group input_checkbox">
+                    <input type="checkbox" checked id="checkout__agree">
+                    <label for="checkout__agree">Отправляя форму, вы соглашаетесь с политикой
+                        конфиденциальности и пользовательским соглашением
+                        данного сайта.</label>
+                </div>
+                <button class="button button_red checkout__button">ОТПРАВИТЬ</button>
+            </div>
+        </form>
     </div>
 </section>
 
