@@ -328,6 +328,19 @@ let ww = $(window).width(),
         });
     }(),
 
+    SliderCities = function() {
+        var swiper = new Swiper('.map-cities .swiper-container', {
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            freeMode: true,
+            draggable: true,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            mousewheel: true,
+        });
+    }(),
+
     AmountProduct = function() {
         $('.button_minus').on('click', function(e) {
             e.preventDefault();

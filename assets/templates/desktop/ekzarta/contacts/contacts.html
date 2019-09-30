@@ -1,0 +1,22 @@
+@@include('templates/desktop/include/header-ekzarta.html')
+
+<section class="contacts-content frame-content">
+    <div class="tabs">
+        <input type="radio" name="tab" id="ekzarta" checked>
+        <label for="ekzarta">ЭКЗАРТА</label>
+        <input type="radio" name="tab" id="medcenters">
+        <label for="medcenters">МЕДЦЕНТРЫ</label>
+
+        <div class="content">
+            <article class="ekzarta">
+                @@include('templates/desktop/ekzarta/contacts/ekzarta.html')
+            </article>
+            <article class="medcenters">
+                @@include('templates/desktop/ekzarta/contacts/map.html')
+            </article>
+        </div>
+        <!--<br class="clear:both" />-->
+    </div>
+</section>
+
+@@include('templates/desktop/include/footer.html')

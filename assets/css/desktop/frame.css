@@ -118,7 +118,9 @@
     input[id="adults"]:checked ~ .content .adults,
     input[id="children"]:checked ~ .content .children,
     input[id="franchise"]:checked ~ .content .franchise,
-    input[id="equipment"]:checked ~ .content .equipment{
+    input[id="equipment"]:checked ~ .content .equipment,
+    input[id="ekzarta"]:checked ~ .content .ekzarta,
+    input[id="medcenters"]:checked ~ .content .medcenters {
         height: auto;
         opacity: 1;
     }

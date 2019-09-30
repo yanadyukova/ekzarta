@@ -1,0 +1,107 @@
+
+<div class="map-cities">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="map-cities__block">
+                    <p class="map-cities__alphabet">А</p>
+                    <div class="map-cities__city">
+                        <p>Арзамас</p>
+                        <span>1</span>
+                    </div>
+                    <div class="map-cities__city">
+                        <p>Архангельск</p>
+                        <span>3</span>
+                    </div>
+                    <div class="map-cities__city">
+                        <p>Астана</p>
+                        <span>1</span>
+                    </div>
+                </div>
+                <div class="map-cities__block">
+                    <p class="map-cities__alphabet">Б</p>
+                    <div class="map-cities__city">
+                        <p>Богородск</p>
+                        <span>1</span>
+                    </div>
+                </div>
+                <div class="map-cities__block">
+                    <p class="map-cities__alphabet">Д</p>
+                    <div class="map-cities__city">
+                        <p>Дзержинск</p>
+                        <span>1</span>
+                    </div>
+                </div>
+                <div class="map-cities__block">
+                    <p class="map-cities__alphabet">Н</p>
+                    <div class="map-cities__city">
+                        <p>Нижний Новгород</p>
+                        <span>1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Scroll Bar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+</div>
+
+
+
+<div id="map"></div>
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=9569328b-a568-4aca-869d-e5cca820a049" type="text/javascript"></script>
+
+<script>
+
+    var myMap;
+
+    // Дождёмся загрузки API и готовности DOM.
+    ymaps.ready(init);
+
+    function init () {
+        // Создание экземпляра карты и его привязка к контейнеру с
+        // заданным id ("map").
+        myMap = new ymaps.Map('map', {
+            // При инициализации карты обязательно нужно указать
+            // её центр и коэффициент масштабирования.
+            center: [56.32, 44.00], // Москва
+            zoom: 12,
+            controls: ['zoomControl']
+        });
+
+        var placemark = new ymaps.Placemark([56.283340, 44.081148], {
+            balloonContentBody: "<p class=\"balloon__header\">Медицинский центр лечения\n" +
+                "заболеваний</p>\n" +
+                "<div class=\"balloon__row\">\n" +
+                "    <div class=\"balloon__col\">\n" +
+                "        <p class=\"title\">Телефоны:</p>\n" +
+                "        <p>(831) 429-01-15</p>\n" +
+                "        <p>(831) 230-50-18</p>\n" +
+                "    </div>\n" +
+                "    <div class=\"balloon__col\">\n" +
+                "        <a href=\"\" class=\"button button_red\">ПЕРЕЙТИ</a>\n" +
+                "    </div>\n" +
+                "</div>\n" +
+                "<div class=\"balloon__row\">\n" +
+                "    <div class=\"balloon__col\">\n" +
+                "        <p class=\"title\">Адрес:</p>\n" +
+                "        <p>603087, Нижний Новгород,\n" +
+                "            Казанское шоссе, д.18, корпус 1.</p>\n" +
+                "    </div>\n" +
+                "</div>\n" +
+                "<div class=\"balloon__row\">\n" +
+                "    <div class=\"balloon__col\">\n" +
+                "        <p class=\"title\">График работы:</p>\n" +
+                "        <p>Пн-Пт с 8.00 до 20.00<br>\n" +
+                "            Сб — по записи, с 8.00 до 14.00<br>\n" +
+                "            Вс — выходной день.</p>\n" +
+                "    </div>\n" +
+                "</div>",
+            hintContent: "Хинт метки"
+        });
+
+        myMap.geoObjects.add(placemark);
+    }
+
+</script>

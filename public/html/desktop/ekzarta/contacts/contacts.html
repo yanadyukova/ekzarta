@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ekzarta</title>
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+    <!-- fonts -->
+    <style>@font-face{font-family:'PF Din Text Cond Pro XBlack';src:url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.eot?v16cb05c6548);src:url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.eot?v16cb05c6548#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.woff2?v16cb05c6d18) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.woff?v16cb05c6548) format('woff');font-weight:900;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Light.eot?v16cb05c6d18);src:url(/fonts/DIN/PFDinTextCondPro-Light.eot?v16cb05c6d18#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Light.woff2?v16cb05c74e8) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Light.woff?v16cb05c6d18) format('woff');font-weight:300;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-BoldItalic.eot?v16cb05c78d0);src:url(/fonts/DIN/PFDinDisplayPro-BoldItalic.eot?v16cb05c78d0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-BoldItalic.woff2?v16cb05c80a0) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-BoldItalic.woff?v16cb05c78d0) format('woff');font-weight:700;font-style:italic}@font-face{font-family:'PF DinDisplay Pro ExtraThin';src:url(/fonts/DIN/PFDinDisplayPro-ExtraThin.eot?v16cb05c80a0);src:url(/fonts/DIN/PFDinDisplayPro-ExtraThin.eot?v16cb05c80a0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-ExtraThin.woff2?v16cb05c8870) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-ExtraThin.woff?v16cb05c80a0) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro X';src:url(/fonts/DIN/PFDinTextCondPro-XThinItalic.eot?v16cb05c8870);src:url(/fonts/DIN/PFDinTextCondPro-XThinItalic.eot?v16cb05c8870#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XThinItalic.woff2?v16cb05c9040) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XThinItalic.woff?v16cb05c8870) format('woff');font-weight:100;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Medium.eot?v16cb05c9428);src:url(/fonts/DIN/PFDinTextCondPro-Medium.eot?v16cb05c9428#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Medium.woff2?v16cb05c9810) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Medium.woff?v16cb05c9428) format('woff');font-weight:500;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-LightItalic.eot?v16cb05c9bf8);src:url(/fonts/DIN/PFDinTextCondPro-LightItalic.eot?v16cb05c9bf8#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-LightItalic.woff2?v16cb05ca3c8) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-LightItalic.woff?v16cb05c9bf8) format('woff');font-weight:300;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Regular.eot?v16cb05ca3c8);src:url(/fonts/DIN/PFDinTextCondPro-Regular.eot?v16cb05ca3c8#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Regular.woff2?v16cb05cab98) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Regular.woff?v16cb05ca3c8) format('woff');font-weight:400;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Regular.eot?v16cb05cab98);src:url(/fonts/DIN/PFDinDisplayPro-Regular.eot?v16cb05cab98#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Regular.woff2?v16cb05cb368) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Regular.woff?v16cb05caf80) format('woff');font-weight:400;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-BoldItalic.eot?v16cb05cb368);src:url(/fonts/DIN/PFDinTextCondPro-BoldItalic.eot?v16cb05cb368#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-BoldItalic.woff2?v16cb05cbb38) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-BoldItalic.woff?v16cb05cb368) format('woff');font-weight:700;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Thin.eot?v16cb05cbb38);src:url(/fonts/DIN/PFDinDisplayPro-Thin.eot?v16cb05cbb38#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Thin.woff2?v16cb05cc6f0) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Thin.woff?v16cb05cbb38) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Medium.eot?v16cb05cc6f0);src:url(/fonts/DIN/PFDinDisplayPro-Medium.eot?v16cb05cc6f0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Medium.woff2?v16cb05ccec0) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Medium.woff?v16cb05cc6f0) format('woff');font-weight:500;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-LightItalic.eot?v16cb05ccec0);src:url(/fonts/DIN/PFDinDisplayPro-LightItalic.eot?v16cb05ccec0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-LightItalic.woff2?v16cb05cd690) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-LightItalic.woff?v16cb05ccec0) format('woff');font-weight:300;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Italic.eot?v16cb05cda78);src:url(/fonts/DIN/PFDinTextCondPro-Italic.eot?v16cb05cda78#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Italic.woff2?v16cb05ce248) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Italic.woff?v16cb05cda78) format('woff');font-weight:400;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Bold.eot?v16cb05ce248);src:url(/fonts/DIN/PFDinDisplayPro-Bold.eot?v16cb05ce248#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Bold.woff2?v16cb05cea18) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Bold.woff?v16cb05ce248) format('woff');font-weight:700;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro XBlack';src:url(/fonts/DIN/PFDinTextCondPro-XBlack.eot?v16cb05cea18);src:url(/fonts/DIN/PFDinTextCondPro-XBlack.eot?v16cb05cea18#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XBlack.woff2?v16cb05cf1e8) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XBlack.woff?v16cb05cea18) format('woff');font-weight:900;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-BlackItalic.eot?v16cb05cf1e8);src:url(/fonts/DIN/PFDinDisplayPro-BlackItalic.eot?v16cb05cf1e8#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-BlackItalic.woff2?v16cb05cf9b8) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-BlackItalic.woff?v16cb05cf1e8) format('woff');font-weight:900;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Light.eot?v16cb05cf9b8);src:url(/fonts/DIN/PFDinDisplayPro-Light.eot?v16cb05cf9b8#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Light.woff2?v16cb05d0188) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Light.woff?v16cb05cf9b8) format('woff');font-weight:300;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro X';src:url(/fonts/DIN/PFDinTextCondPro-XThin.eot?v16cb05d0188);src:url(/fonts/DIN/PFDinTextCondPro-XThin.eot?v16cb05d0188#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XThin.woff2?v16cb05d0d40) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XThin.woff?v16cb05d0188) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Bold.eot?v16cb05d0d40);src:url(/fonts/DIN/PFDinTextCondPro-Bold.eot?v16cb05d0d40#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Bold.woff2?v16cb05d1510) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Bold.woff?v16cb05d0d40) format('woff');font-weight:700;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-MediumItalic.eot?v16cb05d1510);src:url(/fonts/DIN/PFDinTextCondPro-MediumItalic.eot?v16cb05d1510#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-MediumItalic.woff2?v16cb05d1ce0) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-MediumItalic.woff?v16cb05d1510) format('woff');font-weight:500;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-ThinItalic.eot?v16cb05d1ce0);src:url(/fonts/DIN/PFDinTextCondPro-ThinItalic.eot?v16cb05d1ce0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-ThinItalic.woff2?v16cb05d2898) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-ThinItalic.woff?v16cb05d1ce0) format('woff');font-weight:100;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-ThinItalic.eot?v16cb05d2898);src:url(/fonts/DIN/PFDinDisplayPro-ThinItalic.eot?v16cb05d2898#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-ThinItalic.woff2?v16cb05d3068) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-ThinItalic.woff?v16cb05d2898) format('woff');font-weight:100;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Thin.eot?v16cb05d3450);src:url(/fonts/DIN/PFDinTextCondPro-Thin.eot?v16cb05d3450#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Thin.woff2?v16cb05d3c20) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Thin.woff?v16cb05d3450) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-MediumItalic.eot?v16cb05d3c20);src:url(/fonts/DIN/PFDinDisplayPro-MediumItalic.eot?v16cb05d3c20#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-MediumItalic.woff2?v16cb05d43f0) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-MediumItalic.woff?v16cb05d3c20) format('woff');font-weight:500;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Italic.eot?v16cb05d43f0);src:url(/fonts/DIN/PFDinDisplayPro-Italic.eot?v16cb05d43f0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Italic.woff2?v16cb05d4bc0) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Italic.woff?v16cb05d43f0) format('woff');font-weight:400;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Black.eot?v16cb05d4bc0);src:url(/fonts/DIN/PFDinDisplayPro-Black.eot?v16cb05d4bc0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Black.woff2?v16cb05d5390) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Black.woff?v16cb05d4bc0) format('woff');font-weight:900;font-style:normal}@font-face{font-family:'PF DinDisplay Pro ExtraThin';src:url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.eot?v16cb05d5778);src:url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.eot?v16cb05d5778#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.woff2?v16cb05d5f48) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.woff?v16cb05d5778) format('woff');font-weight:100;font-style:italic}</style>
+
+    <link href="/bundles/css/desktop.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header__inner">
+        <a href="" class="header__logo"></a>
+        <nav class="menu">
+            <li class="menu__item"><a href="">Пациентам</a></li>
+            <li class="menu__item"><a href="">Специалистам</a></li>
+            <li class="menu__item"><a href="">Бизнесу</a></li>
+            <li class="menu__item menu__item_basket not-empty">
+                <!--у menu__item_basket есть 3 дополнительных класса-->
+                <!--empty  - для пустой корзины, при нем кнопка "Оформить заказ неактивна"-->
+                <!--not-empty - кнопка "Оформить заказ" активна и над корзиной отображается количество товара в корзине-->
+                <!--active - добавляется при клике на корзину и показываются товары, которые в корзине-->
+                <a href="">Корзина</a>
+                <a href="" class="quantity">2</a>
+                <div class="basket">
+                    <div class="basket__inner">
+                        <div class="basket__buttons">
+                            <a href="" class="basket__checkout">Оформить заказ</a>
+                            <a href="" class="basket__close"></a>
+                        </div>
+                        <div class="basket__items">
+                            <div class="basket__item">
+                                <p class="basket__item-name">Тренажер Экзарта Мини</p>
+                                <p class="basket__item-price"><span>11295</span> Руб.</p>
+                                <p class="basket__item-amount">x<span>1</span></p>
+                                <button class="basket__item-delete"></button>
+                            </div>
+                            <div class="basket__item">
+                                <p class="basket__item-name">Тренажер Экзарта Мини</p>
+                                <p class="basket__item-price"><span>11295</span> Руб.</p>
+                                <p class="basket__item-amount">x<span>1</span></p>
+                                <button class="basket__item-delete"></button>
+                            </div>
+                        </div>
+                        <!--<div class="basket__empty">-->
+                            <!--<p>Добавьте товары</p>-->
+                        <!--</div>-->
+                        <div class="basket__total">
+                            <span>Итого:</span>
+                            <p><span>3000</span> Руб.</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="menu__item"><a href="">Отзывы</a></li>
+            <li class="menu__item"><a href="">События</a></li>
+            <li class="menu__item"><a href="">Контакты</a></li>
+        </nav>
+    </div>
+</header>
+
+<section class="contacts-content frame-content">
+    <div class="tabs">
+        <input type="radio" name="tab" id="ekzarta" checked>
+        <label for="ekzarta">ЭКЗАРТА</label>
+        <input type="radio" name="tab" id="medcenters">
+        <label for="medcenters">МЕДЦЕНТРЫ</label>
+
+        <div class="content">
+            <article class="ekzarta">
+                <div class="contacts-ekzarta">
+                    <div class="contacts-ekzarta__inner">
+                        <div class="contacts-ekzarta__block">
+                            <p class="contacts-ekzarta__title">ПО ВОПРОСАМ ОБУЧЕНИЯ</p>
+                            <div class="contacts-ekzarta__contact">
+                                <p class="contacts-ekzarta__position">Старший менеджер по развитию</p>
+                                <p class="contacts-ekzarta__employee">Севостьянов Роман Игоревич</p>
+                                <a href="" class="contacts-ekzarta__email">start@ekzarta.ru</a>
+                                <p class="contacts-ekzarta__phone">+7 (930) 273 00 82</p>
+                            </div>
+                        </div>
+
+                        <div class="contacts-ekzarta__block">
+                            <p class="contacts-ekzarta__title">ПО ВОПРОСАМ ПРИОБРЕТЕНИЯ ФРАНШИЗЫ</p>
+                            <div class="contacts-ekzarta__contact">
+                                <p class="contacts-ekzarta__position">Старший менеджер по развитию</p>
+                                <p class="contacts-ekzarta__employee">Феклистова Марианна Вениаминовна</p>
+                                <a href="" class="contacts-ekzarta__email">feklistova.m@madin.ru</a>
+                                <p class="contacts-ekzarta__phone">+7 (920) 250-77-83</p>
+                            </div>
+                            <div class="contacts-ekzarta__contact">
+                                <p class="contacts-ekzarta__position">Менеджер по развитию</p>
+                                <p class="contacts-ekzarta__employee">Зайцева Оксана Анатольевна</p>
+                                <a href="" class="contacts-ekzarta__email">zayceva.o@madin.ru</a>
+                                <p class="contacts-ekzarta__phone">+7 (920) 027-81-07</p>
+                            </div>
+                        </div>
+
+                        <div class="contacts-ekzarta__block">
+                            <p class="contacts-ekzarta__title">ПО ВОПРОСАМ ПРИОБРЕТЕНИЯ ОБОРУДОВАНИЯ</p>
+                            <div class="contacts-ekzarta__contact">
+                                <p class="contacts-ekzarta__position">Старший менеджер по развитию</p>
+                                <p class="contacts-ekzarta__employee">Феклистова Марианна Вениаминовна</p>
+                                <a href="" class="contacts-ekzarta__email">feklistova.m@madin.ru</a>
+                                <p class="contacts-ekzarta__phone">+7 (920) 250-77-83</p>
+                            </div>
+                            <div class="contacts-ekzarta__contact">
+                                <p class="contacts-ekzarta__position">Менеджер по развитию</p>
+                                <p class="contacts-ekzarta__employee">Зайцева Оксана Анатольевна</p>
+                                <a href="" class="contacts-ekzarta__email">zayceva.o@madin.ru</a>
+                                <p class="contacts-ekzarta__phone">+7 (920) 027-81-07</p>
+                            </div>
+                            <div class="contacts-ekzarta__contact">
+                                <p class="contacts-ekzarta__position">Старший менеджер по развитию</p>
+                                <p class="contacts-ekzarta__employee">Севостьянов Роман Игоревич</p>
+                                <a href="" class="contacts-ekzarta__email">start@ekzarta.ru</a>
+                                <p class="contacts-ekzarta__phone">+7 (930) 273 00 82</p>
+                            </div>
+                        </div>
+
+                        <div class="contacts-ekzarta__block">
+                            <p class="contacts-ekzarta__title">ПО ВОПРОСАМ РАБОТЫ С ФОНДАМИ
+                                И ПАРТНЕРАМИ</p>
+                            <div class="contacts-ekzarta__contact">
+                                <p class="contacts-ekzarta__position">Специалист</p>
+                                <p class="contacts-ekzarta__employee">Бойков Ярослав Витальевич</p>
+                                <a href="" class="contacts-ekzarta__email">yarboykov@mail.ru</a>
+                                <p class="contacts-ekzarta__phone">+7 951 904-40-03</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="medcenters">
+                
+                <div class="map-cities">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="map-cities__block">
+                                    <p class="map-cities__alphabet">А</p>
+                                    <div class="map-cities__city">
+                                        <p>Арзамас</p>
+                                        <span>1</span>
+                                    </div>
+                                    <div class="map-cities__city">
+                                        <p>Архангельск</p>
+                                        <span>3</span>
+                                    </div>
+                                    <div class="map-cities__city">
+                                        <p>Астана</p>
+                                        <span>1</span>
+                                    </div>
+                                </div>
+                                <div class="map-cities__block">
+                                    <p class="map-cities__alphabet">Б</p>
+                                    <div class="map-cities__city">
+                                        <p>Богородск</p>
+                                        <span>1</span>
+                                    </div>
+                                </div>
+                                <div class="map-cities__block">
+                                    <p class="map-cities__alphabet">Д</p>
+                                    <div class="map-cities__city">
+                                        <p>Дзержинск</p>
+                                        <span>1</span>
+                                    </div>
+                                </div>
+                                <div class="map-cities__block">
+                                    <p class="map-cities__alphabet">Н</p>
+                                    <div class="map-cities__city">
+                                        <p>Нижний Новгород</p>
+                                        <span>1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Scroll Bar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+
+
+
+                <div id="map"></div>
+
+                <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=9569328b-a568-4aca-869d-e5cca820a049" type="text/javascript"></script>
+
+                <script>
+
+                    var myMap;
+
+                    // Дождёмся загрузки API и готовности DOM.
+                    ymaps.ready(init);
+
+                    function init () {
+                        // Создание экземпляра карты и его привязка к контейнеру с
+                        // заданным id ("map").
+                        myMap = new ymaps.Map('map', {
+                            // При инициализации карты обязательно нужно указать
+                            // её центр и коэффициент масштабирования.
+                            center: [56.32, 44.00], // Москва
+                            zoom: 12,
+                            controls: ['zoomControl']
+                        });
+
+                        var placemark = new ymaps.Placemark([56.283340, 44.081148], {
+                            balloonContentBody: "<p class=\"balloon__header\">Медицинский центр лечения\n" +
+                                "заболеваний</p>\n" +
+                                "<div class=\"balloon__row\">\n" +
+                                "    <div class=\"balloon__col\">\n" +
+                                "        <p class=\"title\">Телефоны:</p>\n" +
+                                "        <p>(831) 429-01-15</p>\n" +
+                                "        <p>(831) 230-50-18</p>\n" +
+                                "    </div>\n" +
+                                "    <div class=\"balloon__col\">\n" +
+                                "        <a href=\"\" class=\"button button_red\">ПЕРЕЙТИ</a>\n" +
+                                "    </div>\n" +
+                                "</div>\n" +
+                                "<div class=\"balloon__row\">\n" +
+                                "    <div class=\"balloon__col\">\n" +
+                                "        <p class=\"title\">Адрес:</p>\n" +
+                                "        <p>603087, Нижний Новгород,\n" +
+                                "            Казанское шоссе, д.18, корпус 1.</p>\n" +
+                                "    </div>\n" +
+                                "</div>\n" +
+                                "<div class=\"balloon__row\">\n" +
+                                "    <div class=\"balloon__col\">\n" +
+                                "        <p class=\"title\">График работы:</p>\n" +
+                                "        <p>Пн-Пт с 8.00 до 20.00<br>\n" +
+                                "            Сб — по записи, с 8.00 до 14.00<br>\n" +
+                                "            Вс — выходной день.</p>\n" +
+                                "    </div>\n" +
+                                "</div>",
+                            hintContent: "Хинт метки"
+                        });
+
+                        myMap.geoObjects.add(placemark);
+                    }
+
+                </script>
+            </article>
+        </div>
+        <!--<br class="clear:both" />-->
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer__inner">
+        <nav class="footer__menu">
+            <div class="footer__menu_col">
+                <li><a href="">Пациентам</a></li>
+                <li><a href="">Специалистам</a></li>
+                <li><a href="">Бизнесу</a></li>
+            </div>
+            <div class="footer__menu_col">
+                <li><a href="">Отзывы</a></li>
+                <li><a href="">События</a></li>
+                <li><a href="">Контакты</a></li>
+            </div>
+        </nav>
+        <div class="footer__info">
+            <div class="footer__logo"></div>
+            <div class="footer__links">
+                <a href="">ГК Мадин</a>
+                <a href="">Написать веб-мастеру</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ########### -->
+<!-- CONTENT END -->
+<!-- ########### -->
+
+
+
+<script src="/bundles/webpack/vendor.bundle.js"></script>
+<script src="/bundles/webpack/desktop.bundle.js"></script>
+
+</body>
+</html>

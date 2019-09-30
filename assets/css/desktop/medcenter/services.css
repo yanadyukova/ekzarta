@@ -1,6 +1,60 @@
 .services {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 74px;
+    margin-bottom: 44px;
     &-table {
         margin-bottom: 60px;
-        padding: 0 73px;
+    }
+    &-price {
+         width: 70%;
+         margin-right: 37px;
+         table {
+             width: 100%;
+         }
+    }
+    &-filter {
+         width: 30%;
+         height: auto;
+         margin-top: 50px;
+         border-radius: 3px;
+         background-color: #f8f6f0;
+         &__inner {
+              padding: 30px;
+         }
+         &__block {
+              padding-bottom: 24px;
+              .form-group {
+                  padding-top: 0;
+                  margin-bottom: 5px;
+              }
+              .input_checkbox {
+                 input:checked + label:before {
+                     background-color: #c5f0bd;
+                 }
+                  label {
+                      padding-left: 33px;
+                      font-family: 'PF Din Text Cond Pro';
+                      font-size: 15px;
+                      line-height: 1.27;
+                      letter-spacing: 0.47px;
+                      color: #002337;
+                      &:before {
+                           width: 22px;
+                           height: 22px;
+                           top: -1px;
+                      }
+                      &:after {
+                           border-right: 2px solid #002337;
+                           border-bottom: 2px solid #002337;
+                           left: 8px;
+                      }
+                  }
+                  &:not(:first-child) {
+                       padding-left: 33px;
+                  }
+              }
+         }
     }
 }

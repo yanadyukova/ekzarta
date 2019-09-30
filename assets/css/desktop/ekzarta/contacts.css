@@ -1,0 +1,175 @@
+.contacts {
+    &-content {
+        .tabs {
+            justify-content: flex-start;
+            margin-bottom: 0;
+            label {
+                margin-left: 74px;
+                /*margin-right: 40px;*/
+            }
+            input[id=medcenters]:checked~.content .medcenters {
+                height: 100%;
+                display: flex;
+            }
+        }
+        .content {
+            margin-top: 25px;
+        }
+        #map {
+            width: 70%;
+            height: 100%;
+            flex-grow: 1;
+        }
+        .medcenters {
+            display: none;
+            align-items: stretch;
+            height: calc(100vh - 182px);
+            border-top: solid 1px #e3ddcd;
+        }
+    }
+    &-ekzarta {
+        &__inner {
+            padding: 0 74px;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        &__block {
+            margin-bottom: 12px;
+        }
+        &__title {
+             font-family: 'PF DinDisplay Pro';
+             font-size: 24px;
+             font-weight: 900;
+             font-style: normal;
+             font-stretch: normal;
+             line-height: 1.17;
+             letter-spacing: 1.3px;
+             color: #002337;
+             margin-bottom: 20px;
+        }
+        &__contact {
+             display: inline-block;
+             vertical-align: top;
+             margin-left: 74px;
+             margin-bottom: 50px;
+             font-family: 'PF Din Text Cond Pro';
+             font-size: 17px;
+             font-weight: normal;
+             font-style: normal;
+             font-stretch: normal;
+             line-height: 1.27;
+             letter-spacing: 0.47px;
+             color: #002337;
+             p {
+                 margin-bottom: 0;
+             }
+        }
+        &__position {}
+        &__employee {
+             font-weight: 500;
+        }
+        &__email {}
+        &__phone {}
+    }
+}
+
+.map {
+    &-cities {
+        width: 268px;
+        height: 100%;
+        flex-shrink: 0;
+        border-right: solid 1px #e3ddcd;
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            padding: 24px 35px 0 74px;
+            height: auto;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        &__inner {
+            padding: 24px 35px 0 74px;
+            height: 100%;
+        }
+        &__block {
+            margin-bottom: 40px;
+        }
+        &__alphabet {
+             font-family: 'PF DinDisplay Pro';
+             font-size: 24px;
+             font-weight: 900;
+             font-style: normal;
+             font-stretch: normal;
+             line-height: 1.17;
+             letter-spacing: 1.3px;
+             color: #002337;
+             margin-bottom: 20px;
+        }
+        &__city {
+            display: flex;
+            justify-content: space-between;
+            p {
+                font-family: 'PF Din Text Cond Pro';
+                font-size: 14px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.21;
+                letter-spacing: 0.44px;
+                color: #002337;
+                margin-bottom: 5px;
+            }
+            span {
+                font-family: 'PF Din Text Cond Pro';
+                font-size: 14px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.21;
+                letter-spacing: 0.44px;
+                text-align: right;
+                color: #7b919e;
+            }
+        }
+    }
+}
+
+.balloon {
+    &__header {
+         font-family: 'PF DinDisplay Pro';
+         font-size: 18px;
+         font-weight: 900;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: 1.28;
+         letter-spacing: 0.97px;
+         color: #002337;
+         margin-bottom: 16px;
+         text-transform: uppercase;
+    }
+    &__row {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         margin-bottom: 10px;
+    }
+    &__col {
+        p {
+            font-family: 'PF Din Text Cond Pro';
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.54;
+            letter-spacing: 0.44px;
+            color: #002337;
+            margin-bottom: 0;
+            &.title {
+                 font-weight: 500;
+                 letter-spacing: 0.41px;
+            }
+        }
+    }
+}
