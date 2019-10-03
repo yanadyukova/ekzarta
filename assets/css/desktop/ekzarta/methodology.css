@@ -1,6 +1,6 @@
 .methodology {
     &__inner {
-        padding: 60px 74px 60px;
+        padding: 0 74px 60px;
         max-width: 1440px;
         margin: 0 auto;
     }

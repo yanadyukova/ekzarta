@@ -1,6 +1,6 @@
 .event-page {
     &__inner {
-        padding: 60px 74px;
+        padding: 0 74px 60px;
         max-width: 1440px;
         margin: 0 auto;
     }
@@ -23,5 +23,9 @@
     }
     &__body {
         padding-left: 74px;
+    }
+    &__button {
+         display: inline-block;
+         padding: 20px 90px;
     }
 }

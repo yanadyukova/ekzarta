@@ -140,11 +140,11 @@ let ww = $(window).width(),
 
     AddReview = function () {
         $('.jsAddReview').click(function () {
-            $(this).parents('.reviews').find('.reviews__form').css('display', 'block');
+            $(this).parents('.reviews').find('.reviews__form').addClass('active');
         });
 
         $('.jsCloseReviewForm').click(function () {
-            $(this).parent().css('display', 'none');
+            $(this).parent().removeClass('active');
         });
     }(),
 

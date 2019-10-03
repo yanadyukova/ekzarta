@@ -58,7 +58,6 @@
              margin-bottom: 30px;
         }
         &__about {
-            font-weight: 500;
             p {
                 padding-left: 72px;
                 margin-bottom: 30px;
@@ -86,9 +85,8 @@
             p {
                 position: relative;
                 width: 50%;
-                font-weight: 500;
                 padding-left: 73px;
-                padding-right: 93px;
+                padding-right: 73px;
                 &:before {
                     position: absolute;
                     content: '';
@@ -131,11 +129,13 @@
         max-width: 1300px;
         margin: 0 auto;
         &__inner {
-            display: flex;
-            padding: 0 73px 79px;
+             display: flex;
+             justify-content: space-between;
+             padding: 0 73px 79px;
         }
         &__column {
-            font-weight: 500;
+            width: 45%;
+            flex-shrink: 0;
             p {
                 max-width: 90%;
                 margin-bottom: 17px;

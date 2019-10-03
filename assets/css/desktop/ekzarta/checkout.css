@@ -1,7 +1,7 @@
 .checkout {
     &__inner {
-        padding: 60px 74px;
-        max-width: 1024px;
+        padding: 0 74px 60px;
+        max-width: 1280px;
         margin: 0 auto;
     }
     &__title {
@@ -39,6 +39,7 @@
     }
     &__basket {
         margin-right: 120px;
+        flex-grow: 1;
     }
     &__items {}
     &__item {
@@ -145,6 +146,7 @@
     }
     &__form {
         width: 330px;
+        flex-grow: 1;
         input[type='text'] {
             width: 100%;
         }

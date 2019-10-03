@@ -68,7 +68,7 @@
 
 .specialist {
     &__inner {
-        padding: 31px 73px 50px;
+        padding: 0 73px 50px;
         max-width: 1440px;
         margin: 0 auto;
     }
@@ -92,7 +92,6 @@
          line-height: normal;
          letter-spacing: normal;
          color: #000000;
-         text-transform: uppercase;
          margin-bottom: 15px;
     }
     &__position {

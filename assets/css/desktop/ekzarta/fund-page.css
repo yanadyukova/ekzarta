@@ -1,6 +1,6 @@
 .fund-page {
     &__inner {
-         padding: 31px 73px 50px;
+         padding: 0 73px 50px;
          max-width: 1440px;
          margin: 0 auto;
     }
