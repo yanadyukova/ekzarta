@@ -34,7 +34,24 @@
             margin: 0 auto;
         }
         &__block {
+            position: relative;
             margin-bottom: 12px;
+            padding: 40px 30px 20px;
+            &:after {
+                 position: absolute;
+                 content: '';
+                 background-image: url("images/desktop/icons/clouds-small.svg");
+                 width: 100%;
+                 height: 88px;
+                 left: 0;
+                 background-repeat: repeat-x;
+                 /*background-size: contain;*/
+                 bottom: -20px;
+            }
+            &:nth-child(2n+1) {
+                 /*background-color: #f8f6f0;*/
+                 background-image: radial-gradient(circle at 46% 66%, #c8ede3, #83c1c4);
+            }
         }
         &__title {
              font-family: 'PF DinDisplay Pro';
@@ -53,7 +70,7 @@
              margin-left: 74px;
              margin-bottom: 50px;
              font-family: 'PF Din Text Cond Pro';
-             font-size: 17px;
+             font-size: 18px;
              font-weight: normal;
              font-style: normal;
              font-stretch: normal;
@@ -68,7 +85,9 @@
         &__employee {
              font-weight: 500;
         }
-        &__email {}
+        &__email {
+            font-size: 18px;
+        }
         &__phone {}
     }
 }

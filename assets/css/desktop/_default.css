@@ -81,6 +81,9 @@ a {
     &.button {
         text-decoration: none;
     }
+    &.course-teacher {
+        padding-left: 20px;
+    }
 }
 
 .text-content {

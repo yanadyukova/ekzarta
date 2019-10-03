@@ -18,22 +18,22 @@
 <body>
 <header class="header">
     <div class="header__inner">
-        <a href="" class="header__logo"></a>
+        <a href="../pages/index.html" class="header__logo"></a>
         <nav class="menu">
-            <li class="menu__item"><a href="">Пациентам</a></li>
-            <li class="menu__item"><a href="">Специалистам</a></li>
-            <li class="menu__item"><a href="">Бизнесу</a></li>
+            <li class="menu__item"><a href="../to-patients/frame.html">Пациентам</a></li>
+            <li class="menu__item"><a href="../to-specialists/frame.html">Специалистам</a></li>
+            <li class="menu__item"><a href="../to-businessmen/frame.html">Бизнесу</a></li>
             <li class="menu__item menu__item_basket not-empty">
                 <!--у menu__item_basket есть 3 дополнительных класса-->
                 <!--empty  - для пустой корзины, при нем кнопка "Оформить заказ неактивна"-->
                 <!--not-empty - кнопка "Оформить заказ" активна и над корзиной отображается количество товара в корзине-->
                 <!--active - добавляется при клике на корзину и показываются товары, которые в корзине-->
-                <a href="">Корзина</a>
-                <a href="" class="quantity">2</a>
+                <p>Корзина</p>
+                <p class="quantity">2</p>
                 <div class="basket">
                     <div class="basket__inner">
                         <div class="basket__buttons">
-                            <a href="" class="basket__checkout">Оформить заказ</a>
+                            <a href="../pages/checkout.html" class="basket__checkout">Оформить заказ</a>
                             <a href="" class="basket__close"></a>
                         </div>
                         <div class="basket__items">
@@ -60,125 +60,171 @@
                     </div>
                 </div>
             </li>
-            <li class="menu__item"><a href="">Отзывы</a></li>
-            <li class="menu__item"><a href="">События</a></li>
-            <li class="menu__item"><a href="">Контакты</a></li>
+            <li class="menu__item"><a href="../pages/reviews.html">Отзывы</a></li>
+            <li class="menu__item"><a href="../pages/events.html">События</a></li>
+            <li class="menu__item"><a href="../contacts/contacts.html">Контакты</a></li>
         </nav>
     </div>
 </header>
 
-<section class="services-table">
-    <div class="table">
-        <table>
-            <caption>ОСМОТР, Консультация</caption>
-            <tr>
-                <th>Наименование услуги</th>
-                <th>Длительность,<br>мин.</th>
-                <th>Стоимость,<br>руб.</th>
-            </tr>
-            <tr>
-                <td>Прием врача по лечебной физкультуре</td>
-                <td>30-50</td>
-                <td>1700</td>
-            </tr>
-            <tr>
-                <td>Прием врача-невролога первичный</td>
-                <td>30-50</td>
-                <td>1700</td>
-            </tr>
-            <tr>
-                <td>Прием врача – травматолога-ортопеда первичный</td>
-                <td>30</td>
-                <td>1700</td>
-            </tr>
-            <tr>
-                <td>Приём врача-физиотерапевта</td>
-                <td>30</td>
-                <td>1700</td>
-            </tr>
-            <tr>
-                <td>Прием врача по лечебной физкультуре повторный</td>
-                <td>30</td>
-                <td>1700</td>
-            </tr>
-            <tr>
-                <td>Прием врача-невролога повторный</td>
-                <td>30</td>
-                <td>1700</td>
-            </tr>
-            <tr>
-                <td>Прием врача – травматолога-ортопеда повторный</td>
-                <td>30</td>
-                <td>1700</td>
-            </tr>
-        </table>
-    </div>
-</section>
+<section class="services">
 
-<section class="services-table">
-    <div class="table">
-        <table>
-            <caption>Лечебная физкультура, кинезиотерапия<br><span>с применением методик Бобат, PNF, Экзарта</span></caption>
-            <tr>
-                <th>Наименование услуги</th>
-                <th>Длительность,<br>мин.</th>
-                <th>Стоимость,<br>руб.</th>
-            </tr>
-            <tr>
-                <td>Индивидуальное занятие ЛФК (с применением вышеперечисленных методик)</td>
-                <td>50</td>
-                <td>2100</td>
-            </tr>
-            <tr>
-                <td>Индивидуальное занятие по методике Войта</td>
-                <td>30</td>
-                <td>1500</td>
-            </tr>
-            <tr>
-                <td>Гипсование</td>
-                <td></td>
-                <td>3000</td>
-            </tr>
-        </table>
-    </div>
-</section>
+    <div class="services-price">
 
-<section class="services-table">
-    <div class="table">
-        <table>
-            <caption>Кинезиотерапевтическое тейпирование</caption>
-            <tr>
-                <th>Наименование услуги</th>
-                <th>Длительность,<br>мин.</th>
-                <th>Стоимость,<br>руб.</th>
-            </tr>
-            <tr>
-                <td>Кинезиотерапевтическое тейпирование (нанесение на 1 зону)</td>
-                <td>-</td>
-                <td>600</td>
-            </tr>
-            <tr>
-                <td>Кинезиотерапевтическое тейпирование (5-10 сеансов)</td>
-                <td>-</td>
-                <td>570*</td>
-            </tr>
-            <tr>
-                <td>Кинезиотерапевтическое тейпирование (10-20 сеансов)</td>
-                <td>-</td>
-                <td>550*</td>
-            </tr>
-            <tr>
-                <td>Кинезиотерапевтическое тейпирование (более 20 сеансов)</td>
-                <td>-</td>
-                <td>1700</td>
-            </tr>
-            <tr>
-                <td>Кинезиотерапевтическое тейпирование с использованием материала пациента</td>
-                <td>-</td>
-                <td>1700</td>
-            </tr>
-        </table>
+        <section class="services-table">
+            <div class="table">
+                <table>
+                    <caption>ОСМОТР, Консультация</caption>
+                    <tr>
+                        <th>Наименование услуги</th>
+                        <th>Длительность,<br>мин.</th>
+                        <th>Стоимость,<br>руб.</th>
+                    </tr>
+                    <tr>
+                        <td>Прием врача по лечебной физкультуре</td>
+                        <td>30-50</td>
+                        <td>1700</td>
+                    </tr>
+                    <tr>
+                        <td>Прием врача-невролога первичный</td>
+                        <td>30-50</td>
+                        <td>1700</td>
+                    </tr>
+                    <tr>
+                        <td>Прием врача – травматолога-ортопеда первичный</td>
+                        <td>30</td>
+                        <td>1700</td>
+                    </tr>
+                    <tr>
+                        <td>Приём врача-физиотерапевта</td>
+                        <td>30</td>
+                        <td>1700</td>
+                    </tr>
+                    <tr>
+                        <td>Прием врача по лечебной физкультуре повторный</td>
+                        <td>30</td>
+                        <td>1700</td>
+                    </tr>
+                    <tr>
+                        <td>Прием врача-невролога повторный</td>
+                        <td>30</td>
+                        <td>1700</td>
+                    </tr>
+                    <tr>
+                        <td>Прием врача – травматолога-ортопеда повторный</td>
+                        <td>30</td>
+                        <td>1700</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="services-table">
+            <div class="table">
+                <table>
+                    <caption>Лечебная физкультура, кинезиотерапия<br><span>с применением методик Бобат, PNF, Экзарта</span></caption>
+                    <tr>
+                        <th>Наименование услуги</th>
+                        <th>Длительность,<br>мин.</th>
+                        <th>Стоимость,<br>руб.</th>
+                    </tr>
+                    <tr>
+                        <td>Индивидуальное занятие ЛФК (с применением вышеперечисленных методик)</td>
+                        <td>50</td>
+                        <td>2100</td>
+                    </tr>
+                    <tr>
+                        <td>Индивидуальное занятие по методике Войта</td>
+                        <td>30</td>
+                        <td>1500</td>
+                    </tr>
+                    <tr>
+                        <td>Гипсование</td>
+                        <td></td>
+                        <td>3000</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="services-table">
+            <div class="table">
+                <table>
+                    <caption>Кинезиотерапевтическое тейпирование</caption>
+                    <tr>
+                        <th>Наименование услуги</th>
+                        <th>Длительность,<br>мин.</th>
+                        <th>Стоимость,<br>руб.</th>
+                    </tr>
+                    <tr>
+                        <td>Кинезиотерапевтическое тейпирование (нанесение на 1 зону)</td>
+                        <td>-</td>
+                        <td>600</td>
+                    </tr>
+                    <tr>
+                        <td>Кинезиотерапевтическое тейпирование (5-10 сеансов)</td>
+                        <td>-</td>
+                        <td>570*</td>
+                    </tr>
+                    <tr>
+                        <td>Кинезиотерапевтическое тейпирование (10-20 сеансов)</td>
+                        <td>-</td>
+                        <td>550*</td>
+                    </tr>
+                    <tr>
+                        <td>Кинезиотерапевтическое тейпирование (более 20 сеансов)</td>
+                        <td>-</td>
+                        <td>1700</td>
+                    </tr>
+                    <tr>
+                        <td>Кинезиотерапевтическое тейпирование с использованием материала пациента</td>
+                        <td>-</td>
+                        <td>1700</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
     </div>
+    <div class="services-filter">
+        <div class="services-filter__inner">
+            <form action="">
+                <div class="services-filter__block">
+                    <div class="form-group input_checkbox">
+                        <input id="filter_1" type="checkbox">
+                        <label for="filter_1">Голова и шея</label>
+                    </div>
+                    <div class="form-group input_checkbox">
+                        <input id="filter_2" type="checkbox">
+                        <label for="filter_2">Боль</label>
+                    </div>
+                    <div class="form-group input_checkbox">
+                        <input id="filter_3" type="checkbox">
+                        <label for="filter_3">Неврология</label>
+                    </div>
+                </div>
+                <div class="services-filter__block">
+                    <div class="form-group input_checkbox">
+                        <input id="filter_4" type="checkbox">
+                        <label for="filter_4">Верх спины и плечи</label>
+                    </div>
+                    <div class="form-group input_checkbox">
+                        <input id="filter_5" type="checkbox">
+                        <label for="filter_5">Боль</label>
+                    </div>
+                    <div class="form-group input_checkbox">
+                        <input id="filter_6" type="checkbox">
+                        <label for="filter_6">Неврология</label>
+                    </div>
+                    <div class="form-group input_checkbox">
+                        <input id="filter_7" type="checkbox">
+                        <label for="filter_7">Не гнется</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
 </section>
 
 <section class="articles">
@@ -283,14 +329,14 @@
     <div class="footer__inner">
         <nav class="footer__menu">
             <div class="footer__menu_col">
-                <li><a href="">Пациентам</a></li>
-                <li><a href="">Специалистам</a></li>
-                <li><a href="">Бизнесу</a></li>
+                <li><a href="../ekzarta/to-patients/frame.html">Пациентам</a></li>
+                <li><a href="../ekzarta/to-specialists/frame.html">Специалистам</a></li>
+                <li><a href="../ekzarta/to-businessmen/frame.html">Бизнесу</a></li>
             </div>
             <div class="footer__menu_col">
-                <li><a href="">Отзывы</a></li>
-                <li><a href="">События</a></li>
-                <li><a href="">Контакты</a></li>
+                <li><a href="../ekzarta/reviews.html">Отзывы</a></li>
+                <li><a href="../ekzarta/events.html">События</a></li>
+                <li><a href="../ekzarta/contacts/contacts.html">Контакты</a></li>
             </div>
         </nav>
         <div class="footer__info">

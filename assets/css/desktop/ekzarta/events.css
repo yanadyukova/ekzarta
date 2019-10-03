@@ -27,7 +27,7 @@
         &__form {
             form {
                 display: flex;
-                align-items: flex-end;
+                align-items: baseline;
                 .form-group {
                     flex-grow: 1;
                     margin-right: 30px;
@@ -39,6 +39,9 @@
         }
         &__agree {
             margin-top: 10px;
+            a {
+                font-size: 14px;
+            }
         }
     }
     &-current {
@@ -89,6 +92,9 @@
                 &-shadow-left {
                      background-image: linear-gradient(to left,rgba(255,255,255,.5),transparent);
                 }
+            }
+            .swiper-pagination-bullet-active {
+                background: #e61841;
             }
         }
         &__date {

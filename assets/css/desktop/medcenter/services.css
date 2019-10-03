@@ -32,6 +32,7 @@
               .input_checkbox {
                  input:checked + label:before {
                      background-color: #c5f0bd;
+                     border: solid 1px #002337;
                  }
                   label {
                       padding-left: 33px;
@@ -41,6 +42,7 @@
                       letter-spacing: 0.47px;
                       color: #002337;
                       &:before {
+                           /*box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.5);*/
                            width: 22px;
                            height: 22px;
                            top: -1px;

@@ -148,6 +148,13 @@
         input[type='text'] {
             width: 100%;
         }
+        .input_checkbox {
+            label {
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
     }
     &__button {
         width: 100%;

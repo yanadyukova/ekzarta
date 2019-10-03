@@ -18,22 +18,22 @@
 <body>
 <header class="header">
     <div class="header__inner">
-        <a href="" class="header__logo"></a>
+        <a href="../pages/index.html" class="header__logo"></a>
         <nav class="menu">
-            <li class="menu__item"><a href="../ekzarta/to-patients/frame.html">Пациентам</a></li>
-            <li class="menu__item"><a href="../ekzarta/to-specialists/frame.html">Специалистам</a></li>
-            <li class="menu__item"><a href="../ekzarta/to-businessmen/frame.html">Бизнесу</a></li>
+            <li class="menu__item"><a href="../to-patients/frame.html">Пациентам</a></li>
+            <li class="menu__item"><a href="../to-specialists/frame.html">Специалистам</a></li>
+            <li class="menu__item"><a href="../to-businessmen/frame.html">Бизнесу</a></li>
             <li class="menu__item menu__item_basket not-empty">
                 <!--у menu__item_basket есть 3 дополнительных класса-->
                 <!--empty  - для пустой корзины, при нем кнопка "Оформить заказ неактивна"-->
                 <!--not-empty - кнопка "Оформить заказ" активна и над корзиной отображается количество товара в корзине-->
                 <!--active - добавляется при клике на корзину и показываются товары, которые в корзине-->
-                <a href="">Корзина</a>
-                <a href="" class="quantity">2</a>
+                <p>Корзина</p>
+                <p class="quantity">2</p>
                 <div class="basket">
                     <div class="basket__inner">
                         <div class="basket__buttons">
-                            <a href="" class="basket__checkout">Оформить заказ</a>
+                            <a href="../pages/checkout.html" class="basket__checkout">Оформить заказ</a>
                             <a href="" class="basket__close"></a>
                         </div>
                         <div class="basket__items">
@@ -60,28 +60,82 @@
                     </div>
                 </div>
             </li>
-            <li class="menu__item"><a href="../ekzarta/reviews.html">Отзывы</a></li>
-            <li class="menu__item"><a href="../ekzarta/events.html">События</a></li>
-            <li class="menu__item"><a href="../ekzarta/contacts/contacts.html">Контакты</a></li>
+            <li class="menu__item"><a href="../pages/reviews.html">Отзывы</a></li>
+            <li class="menu__item"><a href="../pages/events.html">События</a></li>
+            <li class="menu__item"><a href="../contacts/contacts.html">Контакты</a></li>
         </nav>
     </div>
 </header>
 
-<section class="event-page">
-    <div class="event-page__inner">
-        <div class="event-page__header">
-            <h1 class="text-title text-title_big">Мастер-класс «Реабилитация при заболеваниях
-                суставов нижних конечностей» в Нижнем Новгороде</h1>
-            <p>08 октября 2018, 14:59</p>
+<section class="events-subscription">
+    <div class="events-subscription__inner">
+        <div class="events-subscription__title">
+            <p class="text-title text-title_big">Будь в курсе событий</p>
         </div>
-        <div class="event-page__body text-content">
-            <p>21 февраля 2017 года на базе центра медицинской реабилитации «Экзарта» состоится бесплатный мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей методами мануальной терапии и ЛФК. Реабилитация после операций. Европейские подходы».</p>
-            <p>Мероприятие адресовано специалистам в области медицинской реабилитации, неврологии и ортопедии, лечебной физкультуры и мануальной терапии.</p>
-            <p>Специальный гость и ведущий - Мирослав Кокош (Польша). Доктор физиотерапии. Преподаватель кафедры специальных методов физиотерапии в Академии физического воспитания (г. Катовице). Стаж более 20 лет.</p>
-            <p>Вопросы постоперационной реабилитации - Ежов Михаил Юрьевич. Профессор кафедры хирургии ФПКВ НижГМА, доктор медицинских наук. Автор диссертации – «Хирургическое лечение дегенеративно-дистрофических заболеваний суставов стопы и голеностопного сустава». Стаж 15 лет.</p>
-            <p>Начало мероприятия - 18.00. Предварительная запись по телефону: 8 (831) 429-01-15</p>
-            <p>или электронной почте: seller@inamr.ru</p>
-            <p>Количество мест ограничено.</p>
+        <div class="events-subscription__form">
+            <form action="">
+                <div class="form-group">
+                    <label for="">Имя</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label for="">Ваш e-mail</label>
+                    <input type="text">
+                </div>
+                <button class="button button_red">ПОДПИСАТЬСЯ</button>
+            </form>
+            <p class="events-subscription__agree text-content">Отправляя форму, вы соглашаетесь с <a href="">политикой
+                конфиденциальности и пользовательским соглашением</a>
+                данного сайта.</p>
+        </div>
+    </div>
+</section>
+
+<section class="events-current">
+    <div class="events-current__inner">
+        <div class="events-current__title">
+            <p>СОБЫТИЯ</p>
+        </div>
+        <div class="events-current__slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url(/images/desktop/pic/mtmt.jpg)">
+                        <p class="events-current__date">08 октября 2018, 14:59</p>
+                        <a href="" class="events-current__name">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
+                        <!--<p class="event__desc">21 февраля 2017 года на базе центра медицинской реабилитации «Экзарта» состоится бесплатный мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей методами мануальной терапии и ЛФК. Реабилитация после операций. </p>-->
+                    </div>
+                    <div class="swiper-slide" style="background-image:url(/images/desktop/pic/pnf.jpg)">
+                        <p class="events-current__date">08 октября 2018, 14:59</p>
+                        <a href="" class="events-current__name">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url(/images/desktop/pic/vzros_dzhonston.jpg)">
+                        <p class="events-current__date">08 октября 2018, 14:59</p>
+                        <a href="" class="events-current__name">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url(/images/desktop/pic/vzros_hanke.jpg)">
+                        <p class="events-current__date">08 октября 2018, 14:59</p>
+                        <a href="" class="events-current__name">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="events-past">
+    <div class="events-past__inner">
+        <div class="events-past__title">ПРОШЕДШИЕ СОБЫТИЯ</div>
+        <div class="events-past__event event">
+            <p class="event__date">08 октября 2018, 14:59</p>
+            <a href="" class="event__name">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
+            <p class="event__desc">21 февраля 2017 года на базе центра медицинской реабилитации «Экзарта» состоится бесплатный мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей методами мануальной терапии и ЛФК. Реабилитация после операций. </p>
+        </div>
+        <div class="events-past__event event">
+            <p class="event__date">27.01 - 5.02</p>
+            <a href="" class="event__name">Образовательный курс по Бобат-терапии в Санкт-Петербургском педиатрическом медицинском университе</a>
+            <p class="event__desc">С 27 января по 5 февраля в Санкт-Петербургском государственном педиатрическом медицинском университете пройдет первый образовательный курс по подготовке Бобат-терапевтов.</p>
         </div>
     </div>
 </section>

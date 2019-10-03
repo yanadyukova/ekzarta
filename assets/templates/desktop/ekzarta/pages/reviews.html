@@ -34,31 +34,36 @@
 
 <section class="reviews">
     <div class="reviews__form">
+        <div class="reviews__form-close jsCloseReviewForm"></div>
         <form action="">
-            <div class="form-group">
-                <label for="">Ваш отзыв</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+            <div class="reviews__form-block">
+                <div class="form-group">
+                    <label for="">Ваш отзыв</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="reviews__form-data">
+                    <div class="form-group">
+                        <label for="">Как вас зовут?</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Ваш e-mail</label>
+                        <input type="email">
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="">Как вас зовут?</label>
-                <input type="text">
-            </div>
-            <div class="form-group">
-                <label for="">Ваш e-mail</label>
-                <input type="text">
-            </div>
-            <div class="form-group">
-                <input type="text">
-                <label for="">Отправляя форму, вы соглашаетесь с политикой
-                конфиденциальности и пользовательским
-                соглашением данного сайта.</label>
+            <div class="form-group input_checkbox">
+                <input id="review__agree" type="checkbox" checked>
+                <label for="review__agree">Отправляя форму, вы соглашаетесь с <a href="">политикой
+                    конфиденциальности и пользовательским
+                    соглашением</a> данного сайта.</label>
             </div>
             <button class="button button_red">Отправить</button>
         </form>
     </div>
     <div class="reviews__title">
         <p>ОТЗЫВЫ</p>
-        <a href="">ДОБАВИТЬ ОТЗЫВ</a>
+        <a href="javascript:void(0)" class="reviews__add jsAddReview">ДОБАВИТЬ ОТЗЫВ</a>
     </div>
     <div class="reviews__reviews">
         <div class="reviews__review text-content">
