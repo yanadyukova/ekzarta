@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ekzarta</title>
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+    <!-- fonts -->
+    <style>@font-face{font-family:'PF Din Text Cond Pro XBlack';src:url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.eot?v16cb5551df7);src:url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.eot?v16cb5551df7#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.woff2?v16cb5551df9) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.woff?v16cb5551df8) format('woff');font-weight:900;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Light.eot?v16cb5551dca);src:url(/fonts/DIN/PFDinTextCondPro-Light.eot?v16cb5551dca#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Light.woff2?v16cb5551dcc) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Light.woff?v16cb5551dcb) format('woff');font-weight:300;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-BoldItalic.eot?v16cb5551d7f);src:url(/fonts/DIN/PFDinDisplayPro-BoldItalic.eot?v16cb5551d7f#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-BoldItalic.woff2?v16cb5551d81) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-BoldItalic.woff?v16cb5551d80) format('woff');font-weight:700;font-style:italic}@font-face{font-family:'PF DinDisplay Pro ExtraThin';src:url(/fonts/DIN/PFDinDisplayPro-ExtraThin.eot?v16cb5551d85);src:url(/fonts/DIN/PFDinDisplayPro-ExtraThin.eot?v16cb5551d85#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-ExtraThin.woff2?v16cb5551d87) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-ExtraThin.woff?v16cb5551d86) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro X';src:url(/fonts/DIN/PFDinTextCondPro-XThinItalic.eot?v16cb5551e05);src:url(/fonts/DIN/PFDinTextCondPro-XThinItalic.eot?v16cb5551e05#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XThinItalic.woff2?v16cb5551e07) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XThinItalic.woff?v16cb5551e06) format('woff');font-weight:100;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Medium.eot?v16cb5551dd5);src:url(/fonts/DIN/PFDinTextCondPro-Medium.eot?v16cb5551dd5#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Medium.woff2?v16cb5551dd7) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Medium.woff?v16cb5551dd6) format('woff');font-weight:500;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-LightItalic.eot?v16cb5551dcf);src:url(/fonts/DIN/PFDinTextCondPro-LightItalic.eot?v16cb5551dcf#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-LightItalic.woff2?v16cb5551dd1) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-LightItalic.woff?v16cb5551dd1) format('woff');font-weight:300;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Regular.eot?v16cb5551de0);src:url(/fonts/DIN/PFDinTextCondPro-Regular.eot?v16cb5551de0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Regular.woff2?v16cb5551de2) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Regular.woff?v16cb5551de1) format('woff');font-weight:400;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Regular.eot?v16cb5551daa);src:url(/fonts/DIN/PFDinDisplayPro-Regular.eot?v16cb5551daa#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Regular.woff2?v16cb5551dac) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Regular.woff?v16cb5551dab) format('woff');font-weight:400;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-BoldItalic.eot?v16cb5551dbf);src:url(/fonts/DIN/PFDinTextCondPro-BoldItalic.eot?v16cb5551dbf#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-BoldItalic.woff2?v16cb5551dc1) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-BoldItalic.woff?v16cb5551dc0) format('woff');font-weight:700;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Thin.eot?v16cb5551daf);src:url(/fonts/DIN/PFDinDisplayPro-Thin.eot?v16cb5551daf#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Thin.woff2?v16cb5551db2) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Thin.woff?v16cb5551db1) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Medium.eot?v16cb5551da0);src:url(/fonts/DIN/PFDinDisplayPro-Medium.eot?v16cb5551da0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Medium.woff2?v16cb5551da2) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Medium.woff?v16cb5551da1) format('woff');font-weight:500;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-LightItalic.eot?v16cb5551d9b);src:url(/fonts/DIN/PFDinDisplayPro-LightItalic.eot?v16cb5551d9b#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-LightItalic.woff2?v16cb5551d9d) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-LightItalic.woff?v16cb5551d9c) format('woff');font-weight:300;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Italic.eot?v16cb5551dc4);src:url(/fonts/DIN/PFDinTextCondPro-Italic.eot?v16cb5551dc4#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Italic.woff2?v16cb5551dc7) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Italic.woff?v16cb5551dc6) format('woff');font-weight:400;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Bold.eot?v16cb5551d7a);src:url(/fonts/DIN/PFDinDisplayPro-Bold.eot?v16cb5551d7a#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Bold.woff2?v16cb5551d7c) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Bold.woff?v16cb5551d7b) format('woff');font-weight:700;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro XBlack';src:url(/fonts/DIN/PFDinTextCondPro-XBlack.eot?v16cb5551df3);src:url(/fonts/DIN/PFDinTextCondPro-XBlack.eot?v16cb5551df3#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XBlack.woff2?v16cb5551df5) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XBlack.woff?v16cb5551df4) format('woff');font-weight:900;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-BlackItalic.eot?v16cb5551d75);src:url(/fonts/DIN/PFDinDisplayPro-BlackItalic.eot?v16cb5551d75#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-BlackItalic.woff2?v16cb5551d77) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-BlackItalic.woff?v16cb5551d76) format('woff');font-weight:900;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Light.eot?v16cb5551d95);src:url(/fonts/DIN/PFDinDisplayPro-Light.eot?v16cb5551d95#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Light.woff2?v16cb5551d97) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Light.woff?v16cb5551d97) format('woff');font-weight:300;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro X';src:url(/fonts/DIN/PFDinTextCondPro-XThin.eot?v16cb5551dfe);src:url(/fonts/DIN/PFDinTextCondPro-XThin.eot?v16cb5551dfe#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XThin.woff2?v16cb5551e00) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XThin.woff?v16cb5551dff) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Bold.eot?v16cb5551dbb);src:url(/fonts/DIN/PFDinTextCondPro-Bold.eot?v16cb5551dbb#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Bold.woff2?v16cb5551dbd) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Bold.woff?v16cb5551dbc) format('woff');font-weight:700;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-MediumItalic.eot?v16cb5551dda);src:url(/fonts/DIN/PFDinTextCondPro-MediumItalic.eot?v16cb5551dda#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-MediumItalic.woff2?v16cb5551ddd) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-MediumItalic.woff?v16cb5551ddc) format('woff');font-weight:500;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-ThinItalic.eot?v16cb5551dee);src:url(/fonts/DIN/PFDinTextCondPro-ThinItalic.eot?v16cb5551dee#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-ThinItalic.woff2?v16cb5551df0) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-ThinItalic.woff?v16cb5551def) format('woff');font-weight:100;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-ThinItalic.eot?v16cb5551db5);src:url(/fonts/DIN/PFDinDisplayPro-ThinItalic.eot?v16cb5551db5#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-ThinItalic.woff2?v16cb5551db8) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-ThinItalic.woff?v16cb5551db7) format('woff');font-weight:100;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Thin.eot?v16cb5551de6);src:url(/fonts/DIN/PFDinTextCondPro-Thin.eot?v16cb5551de6#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Thin.woff2?v16cb5551de9) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Thin.woff?v16cb5551de8) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-MediumItalic.eot?v16cb5551da5);src:url(/fonts/DIN/PFDinDisplayPro-MediumItalic.eot?v16cb5551da5#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-MediumItalic.woff2?v16cb5551da7) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-MediumItalic.woff?v16cb5551da6) format('woff');font-weight:500;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Italic.eot?v16cb5551d90);src:url(/fonts/DIN/PFDinDisplayPro-Italic.eot?v16cb5551d90#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Italic.woff2?v16cb5551d92) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Italic.woff?v16cb5551d91) format('woff');font-weight:400;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Black.eot?v16cb5551d70);src:url(/fonts/DIN/PFDinDisplayPro-Black.eot?v16cb5551d70#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Black.woff2?v16cb5551d72) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Black.woff?v16cb5551d71) format('woff');font-weight:900;font-style:normal}@font-face{font-family:'PF DinDisplay Pro ExtraThin';src:url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.eot?v16cb5551d8b);src:url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.eot?v16cb5551d8b#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.woff2?v16cb5551d8d) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.woff?v16cb5551d8c) format('woff');font-weight:100;font-style:italic}</style>
+
+    <link href="/bundles/css/desktop.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header__inner">
+        <div class="header__logo"></div>
+        <nav class="menu menu_medcenter">
+            <li class="menu__item menu__item_medcenter"><a href="../medcenter/index.html">Медцентр</a></li>
+            <li class="menu__item menu__item_medcenter"><a href="../medcenter/services-frame.html">Услуги и цены</a></li>
+            <li class="menu__item menu__item_medcenter"><a href="../medcenter/specialists.html">Специалисты</a></li>
+            <li class="menu__item menu__item_medcenter"><a href="../medcenter/promotions.html">Новости и акции</a></li>
+            <li class="menu__item menu__item_medcenter"><a href="../medcenter/contacts.html">Контакты</a></li>
+        </nav>
+    </div>
+</header>
+<section class="landing-header">
+    <div class="landing-header__inner">
+        <h1 class="landing-header__title">Центр медицинской
+            реабилитации
+            «Экзарта»</h1>
+        <div class="landing-header__contacts">
+            <div class="landing-header__phones">
+                <p>8 (831) 429-01-15</p>
+                <p>8 (831) 230-50-18</p>
+            </div>
+            <div class="landing-header__opening">
+                График работы: Пн-Пт с 8.00 до 20.00<br>
+                Сб — по записи, с 8.00 до 14.00<br>
+                Вс — выходной день
+            </div>
+            <div class="landing-header__button">
+                <a href="" class="button button_red">ЗАПИСАТЬСЯ НА ПРИЁМ</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services-content frame-content">
+    <div class="tabs">
+        <ul class="tabs__caption">
+            <li class="active"><a href="#adults">ВЗРОСЛЫЕ</a></li>
+            <li><a href="#children">ДЕТИ</a></li>
+        </ul>
+
+        <div class="services-search">
+            <form action="" method="get">
+                <input name="s" placeholder="Симптом или услуга" type="search">
+                <button type="submit">Искать</button>
+            </form>
+        </div>
+
+        <div class="tabs__content active">
+            <article class="adults">
+                
+                <section class="services">
+
+                    <div class="services-price">
+                        <section class="services-table">
+                            <div class="table">
+                                <table>
+                                    <caption>ОСМОТР, Консультация</caption>
+                                    <tr>
+                                        <th>Наименование услуги</th>
+                                        <th>Длительность,<br>мин.</th>
+                                        <th>Стоимость,<br>руб.</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Прием врача по лечебной физкультуре</td>
+                                        <td>30-50</td>
+                                        <td>1700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Прием врача-невролога первичный</td>
+                                        <td>30-50</td>
+                                        <td>1700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Прием врача – травматолога-ортопеда первичный</td>
+                                        <td>30</td>
+                                        <td>1700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Приём врача-физиотерапевта</td>
+                                        <td>30</td>
+                                        <td>1700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Прием врача по лечебной физкультуре повторный</td>
+                                        <td>30</td>
+                                        <td>1700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Прием врача-невролога повторный</td>
+                                        <td>30</td>
+                                        <td>1700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Прием врача – травматолога-ортопеда повторный</td>
+                                        <td>30</td>
+                                        <td>1700</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section class="services-table">
+                            <div class="table">
+                                <table>
+                                    <caption>Лечебная физкультура, кинезиотерапия<br><span>с применением методик Бобат, PNF, Экзарта</span></caption>
+                                    <tr>
+                                        <th>Наименование услуги</th>
+                                        <th>Длительность,<br>мин.</th>
+                                        <th>Стоимость,<br>руб.</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Индивидуальное занятие ЛФК (с применением вышеперечисленных методик)</td>
+                                        <td>50</td>
+                                        <td>2100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Индивидуальное занятие по методике Войта</td>
+                                        <td>30</td>
+                                        <td>1500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Гипсование</td>
+                                        <td></td>
+                                        <td>3000</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section class="services-table">
+                            <div class="table">
+                                <table>
+                                    <caption>Кинезиотерапевтическое тейпирование</caption>
+                                    <tr>
+                                        <th>Наименование услуги</th>
+                                        <th>Длительность,<br>мин.</th>
+                                        <th>Стоимость,<br>руб.</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Кинезиотерапевтическое тейпирование (нанесение на 1 зону)</td>
+                                        <td>-</td>
+                                        <td>600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Кинезиотерапевтическое тейпирование (5-10 сеансов)</td>
+                                        <td>-</td>
+                                        <td>570*</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Кинезиотерапевтическое тейпирование (10-20 сеансов)</td>
+                                        <td>-</td>
+                                        <td>550*</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Кинезиотерапевтическое тейпирование (более 20 сеансов)</td>
+                                        <td>-</td>
+                                        <td>1700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Кинезиотерапевтическое тейпирование с использованием материала пациента</td>
+                                        <td>-</td>
+                                        <td>1700</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="services-filter">
+                        <div class="services-filter__inner">
+                            <form action="">
+                                <div class="services-filter__block">
+                                    <div class="form-group input_checkbox">
+                                        <input id="filter_1" type="checkbox">
+                                        <label for="filter_1">Голова и шея</label>
+                                    </div>
+                                    <div class="form-group input_checkbox">
+                                        <input id="filter_2" type="checkbox">
+                                        <label for="filter_2">Боль</label>
+                                    </div>
+                                    <div class="form-group input_checkbox">
+                                        <input id="filter_3" type="checkbox">
+                                        <label for="filter_3">Неврология</label>
+                                    </div>
+                                </div>
+                                <div class="services-filter__block">
+                                    <div class="form-group input_checkbox">
+                                        <input id="filter_4" type="checkbox">
+                                        <label for="filter_4">Верх спины и плечи</label>
+                                    </div>
+                                    <div class="form-group input_checkbox">
+                                        <input id="filter_5" type="checkbox">
+                                        <label for="filter_5">Боль</label>
+                                    </div>
+                                    <div class="form-group input_checkbox">
+                                        <input id="filter_6" type="checkbox">
+                                        <label for="filter_6">Неврология</label>
+                                    </div>
+                                    <div class="form-group input_checkbox">
+                                        <input id="filter_7" type="checkbox">
+                                        <label for="filter_7">Не гнется</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="articles">
+                    <div class="articles__inner">
+                        <p class="articles__title text-title text-title_big">Статьи</p>
+                        <div class="articles__cards">
+                            <div class="articles__row">
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Упражнения для
+                                        поясничного отдела
+                                        позвоночника, спины</h2>
+                                    <p>Для правильного и осознанного выполнения упражнений приведем пару строк теории.
+                                        В организме: поверхностные (двигательные) мышцы расположены с внешней стороны организма, обеспечивают выполнение движений</p>
+                                </a>
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Осанка и причины боли
+                                        в позвоночнике,
+                                        пояснице, шее, затылке</h2>
+                                    <p>Физические процессы нашей планеты всегда затрагивают и человека. Сила тяжести воздействует постоянно. В нашем организме ей сопротивляются мышцы – именно они не дают прижать нас к земле, сдавить.</p>
+                                </a>
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Основы проблем
+                                        с суставами и позвоночником: принципы
+                                        построения движений</h2>
+                                    <p>Чтобы понять, как правильно и максимально быстро снять боли в районе позвоночника, в суставах, шее и почему возникают боли, нужно понять проходящие в организме процессы.</p>
+                                </a>
+                            </div>
+                            <div class="articles__row">
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Восстановление объема движений после травм</h2>
+                                    <p>Как правильно провести восстановление амплитуды движений? Приводить к скованности движений может многое, а вот способов полностью восстановить движения после травм, как и после инсульта</p>
+                                </a>
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Корректировка биомеханики движений</h2>
+                                    <p>Как правильно провести восстановление амплитуды движений? Приводить к скованности движений может многое, а вот способов полностью восстановить движения после травм, как и после инсульта</p>
+                                </a>
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Восстановление и укрепление мышц спины и брюшного пресса</h2>
+                                    <p>Как правильно провести восстановление амплитуды движений? Приводить к скованности движений может многое, а вот способов полностью восстановить движения после травм, как и после инсульта</p>
+                                </a>
+                            </div>
+                            <div class="articles__row">
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Упражнения для
+                                        поясничного отдела
+                                        позвоночника, спины</h2>
+                                    <p>Для правильного и осознанного выполнения упражнений приведем пару строк теории.
+                                        В организме: поверхностные (двигательные) мышцы расположены с внешней стороны организма, обеспечивают выполнение движений</p>
+                                </a>
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Осанка и причины боли
+                                        в позвоночнике,
+                                        пояснице, шее, затылке</h2>
+                                    <p>Физические процессы нашей планеты всегда затрагивают и человека. Сила тяжести воздействует постоянно. В нашем организме ей сопротивляются мышцы – именно они не дают прижать нас к земле, сдавить.</p>
+                                </a>
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Основы проблем
+                                        с суставами и позво-
+                                        ночником: принципы
+                                        построения движений</h2>
+                                    <p>Чтобы понять, как правильно и максимально быстро снять боли в районе позвоночника, в суставах, шее и почему возникают боли, нужно понять проходящие в организме процессы.</p>
+                                </a>
+                            </div>
+                            <div class="articles__row">
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Восстановление объема движений после травм</h2>
+                                    <p>Как правильно провести восстановление амплитуды движений? Приводить к скованности движений может многое, а вот способов полностью восстановить движения после травм, как и после инсульта</p>
+                                </a>
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Корректировка биомеханики движений</h2>
+                                    <p>Как правильно провести восстановление амплитуды движений? Приводить к скованности движений может многое, а вот способов полностью восстановить движения после травм, как и после инсульта</p>
+                                </a>
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Восстановление и укрепление мышц спины и брюшного пресса</h2>
+                                    <p>Как правильно провести восстановление амплитуды движений? Приводить к скованности движений может многое, а вот способов полностью восстановить движения после травм, как и после инсульта</p>
+                                </a>
+                            </div>
+                            <div class="articles__row">
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Восстановление и укрепление мышц спины и брюшного пресса</h2>
+                                    <p>Как правильно провести восстановление амплитуды движений? Приводить к скованности движений может многое, а вот способов полностью восстановить движения после травм, как и после инсульта</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
+        <div class="tabs__content">
+            <article class="children">
+                
+                <section class="services">
+
+                    <div class="services-price">
+                        <section class="services-table">
+                            <div class="table">
+                                <table>
+                                    <caption>ОСМОТР, Консультация</caption>
+                                    <tr>
+                                        <th>Наименование услуги</th>
+                                        <th>Длительность,<br>мин.</th>
+                                        <th>Стоимость,<br>руб.</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Прием врача по лечебной физкультуре</td>
+                                        <td>30-50</td>
+                                        <td>1700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Прием врача-невролога первичный</td>
+                                        <td>30-50</td>
+                                        <td>1700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Прием врача – травматолога-ортопеда первичный</td>
+                                        <td>30</td>
+                                        <td>1700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Приём врача-физиотерапевта</td>
+                                        <td>30</td>
+                                        <td>1700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Прием врача по лечебной физкультуре повторный</td>
+                                        <td>30</td>
+                                        <td>1700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Прием врача-невролога повторный</td>
+                                        <td>30</td>
+                                        <td>1700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Прием врача – травматолога-ортопеда повторный</td>
+                                        <td>30</td>
+                                        <td>1700</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section class="services-table">
+                            <div class="table">
+                                <table>
+                                    <caption>Лечебная физкультура, кинезиотерапия<br><span>с применением методик Бобат, PNF, Экзарта</span></caption>
+                                    <tr>
+                                        <th>Наименование услуги</th>
+                                        <th>Длительность,<br>мин.</th>
+                                        <th>Стоимость,<br>руб.</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Индивидуальное занятие ЛФК (с применением вышеперечисленных методик)</td>
+                                        <td>50</td>
+                                        <td>2100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Индивидуальное занятие по методике Войта</td>
+                                        <td>30</td>
+                                        <td>1500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Гипсование</td>
+                                        <td></td>
+                                        <td>3000</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section class="services-table">
+                            <div class="table">
+                                <table>
+                                    <caption>Кинезиотерапевтическое тейпирование</caption>
+                                    <tr>
+                                        <th>Наименование услуги</th>
+                                        <th>Длительность,<br>мин.</th>
+                                        <th>Стоимость,<br>руб.</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Кинезиотерапевтическое тейпирование (нанесение на 1 зону)</td>
+                                        <td>-</td>
+                                        <td>600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Кинезиотерапевтическое тейпирование (5-10 сеансов)</td>
+                                        <td>-</td>
+                                        <td>570*</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Кинезиотерапевтическое тейпирование (10-20 сеансов)</td>
+                                        <td>-</td>
+                                        <td>550*</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Кинезиотерапевтическое тейпирование (более 20 сеансов)</td>
+                                        <td>-</td>
+                                        <td>1700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Кинезиотерапевтическое тейпирование с использованием материала пациента</td>
+                                        <td>-</td>
+                                        <td>1700</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="services-filter">
+                        <div class="services-filter__inner">
+                            <form action="">
+                                <div class="services-filter__block">
+                                    <div class="form-group input_checkbox">
+                                        <input id="filter_1" type="checkbox">
+                                        <label for="filter_1">Голова и шея</label>
+                                    </div>
+                                    <div class="form-group input_checkbox">
+                                        <input id="filter_2" type="checkbox">
+                                        <label for="filter_2">Боль</label>
+                                    </div>
+                                    <div class="form-group input_checkbox">
+                                        <input id="filter_3" type="checkbox">
+                                        <label for="filter_3">Неврология</label>
+                                    </div>
+                                </div>
+                                <div class="services-filter__block">
+                                    <div class="form-group input_checkbox">
+                                        <input id="filter_4" type="checkbox">
+                                        <label for="filter_4">Верх спины и плечи</label>
+                                    </div>
+                                    <div class="form-group input_checkbox">
+                                        <input id="filter_5" type="checkbox">
+                                        <label for="filter_5">Боль</label>
+                                    </div>
+                                    <div class="form-group input_checkbox">
+                                        <input id="filter_6" type="checkbox">
+                                        <label for="filter_6">Неврология</label>
+                                    </div>
+                                    <div class="form-group input_checkbox">
+                                        <input id="filter_7" type="checkbox">
+                                        <label for="filter_7">Не гнется</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="articles">
+                    <div class="articles__inner">
+                        <p class="articles__title text-title text-title_big">Статьи</p>
+                        <div class="articles__cards">
+                            <div class="articles__row">
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Упражнения для
+                                        поясничного отдела
+                                        позвоночника, спины</h2>
+                                    <p>Для правильного и осознанного выполнения упражнений приведем пару строк теории.
+                                        В организме: поверхностные (двигательные) мышцы расположены с внешней стороны организма, обеспечивают выполнение движений</p>
+                                </a>
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Осанка и причины боли
+                                        в позвоночнике,
+                                        пояснице, шее, затылке</h2>
+                                    <p>Физические процессы нашей планеты всегда затрагивают и человека. Сила тяжести воздействует постоянно. В нашем организме ей сопротивляются мышцы – именно они не дают прижать нас к земле, сдавить.</p>
+                                </a>
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Основы проблем
+                                        с суставами и позвоночником: принципы
+                                        построения движений</h2>
+                                    <p>Чтобы понять, как правильно и максимально быстро снять боли в районе позвоночника, в суставах, шее и почему возникают боли, нужно понять проходящие в организме процессы.</p>
+                                </a>
+                            </div>
+                            <div class="articles__row">
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Восстановление объема движений после травм</h2>
+                                    <p>Как правильно провести восстановление амплитуды движений? Приводить к скованности движений может многое, а вот способов полностью восстановить движения после травм, как и после инсульта</p>
+                                </a>
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Корректировка биомеханики движений</h2>
+                                    <p>Как правильно провести восстановление амплитуды движений? Приводить к скованности движений может многое, а вот способов полностью восстановить движения после травм, как и после инсульта</p>
+                                </a>
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Восстановление и укрепление мышц спины и брюшного пресса</h2>
+                                    <p>Как правильно провести восстановление амплитуды движений? Приводить к скованности движений может многое, а вот способов полностью восстановить движения после травм, как и после инсульта</p>
+                                </a>
+                            </div>
+                            <div class="articles__row">
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Упражнения для
+                                        поясничного отдела
+                                        позвоночника, спины</h2>
+                                    <p>Для правильного и осознанного выполнения упражнений приведем пару строк теории.
+                                        В организме: поверхностные (двигательные) мышцы расположены с внешней стороны организма, обеспечивают выполнение движений</p>
+                                </a>
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Осанка и причины боли
+                                        в позвоночнике,
+                                        пояснице, шее, затылке</h2>
+                                    <p>Физические процессы нашей планеты всегда затрагивают и человека. Сила тяжести воздействует постоянно. В нашем организме ей сопротивляются мышцы – именно они не дают прижать нас к земле, сдавить.</p>
+                                </a>
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Основы проблем
+                                        с суставами и позво-
+                                        ночником: принципы
+                                        построения движений</h2>
+                                    <p>Чтобы понять, как правильно и максимально быстро снять боли в районе позвоночника, в суставах, шее и почему возникают боли, нужно понять проходящие в организме процессы.</p>
+                                </a>
+                            </div>
+                            <div class="articles__row">
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Восстановление объема движений после травм</h2>
+                                    <p>Как правильно провести восстановление амплитуды движений? Приводить к скованности движений может многое, а вот способов полностью восстановить движения после травм, как и после инсульта</p>
+                                </a>
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Корректировка биомеханики движений</h2>
+                                    <p>Как правильно провести восстановление амплитуды движений? Приводить к скованности движений может многое, а вот способов полностью восстановить движения после травм, как и после инсульта</p>
+                                </a>
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Восстановление и укрепление мышц спины и брюшного пресса</h2>
+                                    <p>Как правильно провести восстановление амплитуды движений? Приводить к скованности движений может многое, а вот способов полностью восстановить движения после травм, как и после инсульта</p>
+                                </a>
+                            </div>
+                            <div class="articles__row">
+                                <a href="" class="articles__card">
+                                    <span>07.03.2018</span>
+                                    <h2>Восстановление и укрепление мышц спины и брюшного пресса</h2>
+                                    <p>Как правильно провести восстановление амплитуды движений? Приводить к скованности движений может многое, а вот способов полностью восстановить движения после травм, как и после инсульта</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer__inner">
+        <nav class="footer__menu">
+            <div class="footer__menu_col">
+                <li><a href="../ekzarta/to-patients/frame.html">Пациентам</a></li>
+                <li><a href="../ekzarta/to-specialists/frame.html">Специалистам</a></li>
+                <li><a href="../ekzarta/to-businessmen/frame.html">Бизнесу</a></li>
+            </div>
+            <div class="footer__menu_col">
+                <li><a href="../ekzarta/reviews.html">Отзывы</a></li>
+                <li><a href="../ekzarta/events.html">События</a></li>
+                <li><a href="../ekzarta/contacts/contacts.html">Контакты</a></li>
+            </div>
+        </nav>
+        <div class="footer__info">
+            <div class="footer__logo"></div>
+            <div class="footer__links">
+                <a href="">ГК Мадин</a>
+                <a href="">Написать веб-мастеру</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ########### -->
+<!-- CONTENT END -->
+<!-- ########### -->
+
+
+
+<script src="/bundles/webpack/vendor.bundle.js"></script>
+<script src="/bundles/webpack/desktop.bundle.js"></script>
+
+</body>
+</html>

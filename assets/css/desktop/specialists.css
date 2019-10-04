@@ -1,6 +1,8 @@
 .specialists {
     &__inner {
         padding: 0 73px 100px;
+        max-width: 1440px;
+        margin: 0 auto;
     }
     &__title {
          font-family: 'PF DinDisplay Pro';

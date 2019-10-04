@@ -86,6 +86,17 @@ let ww = $(window).width(),
         mousewheel: true,
     }),
 
+    SliderPromotions = new Swiper('.promotions-slider .swiper-container', {
+        speed: 500,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    }),
+
     AmountProduct = function() {
         $('.button_minus').on('click', function(e) {
             e.preventDefault();

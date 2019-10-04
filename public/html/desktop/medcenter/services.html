@@ -1,76 +1,7 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ekzarta</title>
-    
-    <link rel="shortcut icon" href="/favicon.png">
-    
-    
-
-    <!-- fonts -->
-    <style>@font-face{font-family:'PF Din Text Cond Pro XBlack';src:url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.eot?v16cb5551df7);src:url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.eot?v16cb5551df7#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.woff2?v16cb5551df9) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.woff?v16cb5551df8) format('woff');font-weight:900;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Light.eot?v16cb5551dca);src:url(/fonts/DIN/PFDinTextCondPro-Light.eot?v16cb5551dca#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Light.woff2?v16cb5551dcc) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Light.woff?v16cb5551dcb) format('woff');font-weight:300;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-BoldItalic.eot?v16cb5551d7f);src:url(/fonts/DIN/PFDinDisplayPro-BoldItalic.eot?v16cb5551d7f#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-BoldItalic.woff2?v16cb5551d81) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-BoldItalic.woff?v16cb5551d80) format('woff');font-weight:700;font-style:italic}@font-face{font-family:'PF DinDisplay Pro ExtraThin';src:url(/fonts/DIN/PFDinDisplayPro-ExtraThin.eot?v16cb5551d85);src:url(/fonts/DIN/PFDinDisplayPro-ExtraThin.eot?v16cb5551d85#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-ExtraThin.woff2?v16cb5551d87) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-ExtraThin.woff?v16cb5551d86) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro X';src:url(/fonts/DIN/PFDinTextCondPro-XThinItalic.eot?v16cb5551e05);src:url(/fonts/DIN/PFDinTextCondPro-XThinItalic.eot?v16cb5551e05#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XThinItalic.woff2?v16cb5551e07) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XThinItalic.woff?v16cb5551e06) format('woff');font-weight:100;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Medium.eot?v16cb5551dd5);src:url(/fonts/DIN/PFDinTextCondPro-Medium.eot?v16cb5551dd5#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Medium.woff2?v16cb5551dd7) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Medium.woff?v16cb5551dd6) format('woff');font-weight:500;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-LightItalic.eot?v16cb5551dcf);src:url(/fonts/DIN/PFDinTextCondPro-LightItalic.eot?v16cb5551dcf#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-LightItalic.woff2?v16cb5551dd1) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-LightItalic.woff?v16cb5551dd1) format('woff');font-weight:300;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Regular.eot?v16cb5551de0);src:url(/fonts/DIN/PFDinTextCondPro-Regular.eot?v16cb5551de0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Regular.woff2?v16cb5551de2) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Regular.woff?v16cb5551de1) format('woff');font-weight:400;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Regular.eot?v16cb5551daa);src:url(/fonts/DIN/PFDinDisplayPro-Regular.eot?v16cb5551daa#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Regular.woff2?v16cb5551dac) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Regular.woff?v16cb5551dab) format('woff');font-weight:400;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-BoldItalic.eot?v16cb5551dbf);src:url(/fonts/DIN/PFDinTextCondPro-BoldItalic.eot?v16cb5551dbf#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-BoldItalic.woff2?v16cb5551dc1) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-BoldItalic.woff?v16cb5551dc0) format('woff');font-weight:700;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Thin.eot?v16cb5551daf);src:url(/fonts/DIN/PFDinDisplayPro-Thin.eot?v16cb5551daf#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Thin.woff2?v16cb5551db2) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Thin.woff?v16cb5551db1) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Medium.eot?v16cb5551da0);src:url(/fonts/DIN/PFDinDisplayPro-Medium.eot?v16cb5551da0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Medium.woff2?v16cb5551da2) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Medium.woff?v16cb5551da1) format('woff');font-weight:500;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-LightItalic.eot?v16cb5551d9b);src:url(/fonts/DIN/PFDinDisplayPro-LightItalic.eot?v16cb5551d9b#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-LightItalic.woff2?v16cb5551d9d) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-LightItalic.woff?v16cb5551d9c) format('woff');font-weight:300;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Italic.eot?v16cb5551dc4);src:url(/fonts/DIN/PFDinTextCondPro-Italic.eot?v16cb5551dc4#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Italic.woff2?v16cb5551dc7) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Italic.woff?v16cb5551dc6) format('woff');font-weight:400;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Bold.eot?v16cb5551d7a);src:url(/fonts/DIN/PFDinDisplayPro-Bold.eot?v16cb5551d7a#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Bold.woff2?v16cb5551d7c) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Bold.woff?v16cb5551d7b) format('woff');font-weight:700;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro XBlack';src:url(/fonts/DIN/PFDinTextCondPro-XBlack.eot?v16cb5551df3);src:url(/fonts/DIN/PFDinTextCondPro-XBlack.eot?v16cb5551df3#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XBlack.woff2?v16cb5551df5) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XBlack.woff?v16cb5551df4) format('woff');font-weight:900;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-BlackItalic.eot?v16cb5551d75);src:url(/fonts/DIN/PFDinDisplayPro-BlackItalic.eot?v16cb5551d75#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-BlackItalic.woff2?v16cb5551d77) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-BlackItalic.woff?v16cb5551d76) format('woff');font-weight:900;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Light.eot?v16cb5551d95);src:url(/fonts/DIN/PFDinDisplayPro-Light.eot?v16cb5551d95#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Light.woff2?v16cb5551d97) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Light.woff?v16cb5551d97) format('woff');font-weight:300;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro X';src:url(/fonts/DIN/PFDinTextCondPro-XThin.eot?v16cb5551dfe);src:url(/fonts/DIN/PFDinTextCondPro-XThin.eot?v16cb5551dfe#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XThin.woff2?v16cb5551e00) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XThin.woff?v16cb5551dff) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Bold.eot?v16cb5551dbb);src:url(/fonts/DIN/PFDinTextCondPro-Bold.eot?v16cb5551dbb#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Bold.woff2?v16cb5551dbd) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Bold.woff?v16cb5551dbc) format('woff');font-weight:700;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-MediumItalic.eot?v16cb5551dda);src:url(/fonts/DIN/PFDinTextCondPro-MediumItalic.eot?v16cb5551dda#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-MediumItalic.woff2?v16cb5551ddd) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-MediumItalic.woff?v16cb5551ddc) format('woff');font-weight:500;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-ThinItalic.eot?v16cb5551dee);src:url(/fonts/DIN/PFDinTextCondPro-ThinItalic.eot?v16cb5551dee#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-ThinItalic.woff2?v16cb5551df0) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-ThinItalic.woff?v16cb5551def) format('woff');font-weight:100;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-ThinItalic.eot?v16cb5551db5);src:url(/fonts/DIN/PFDinDisplayPro-ThinItalic.eot?v16cb5551db5#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-ThinItalic.woff2?v16cb5551db8) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-ThinItalic.woff?v16cb5551db7) format('woff');font-weight:100;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Thin.eot?v16cb5551de6);src:url(/fonts/DIN/PFDinTextCondPro-Thin.eot?v16cb5551de6#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Thin.woff2?v16cb5551de9) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Thin.woff?v16cb5551de8) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-MediumItalic.eot?v16cb5551da5);src:url(/fonts/DIN/PFDinDisplayPro-MediumItalic.eot?v16cb5551da5#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-MediumItalic.woff2?v16cb5551da7) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-MediumItalic.woff?v16cb5551da6) format('woff');font-weight:500;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Italic.eot?v16cb5551d90);src:url(/fonts/DIN/PFDinDisplayPro-Italic.eot?v16cb5551d90#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Italic.woff2?v16cb5551d92) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Italic.woff?v16cb5551d91) format('woff');font-weight:400;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Black.eot?v16cb5551d70);src:url(/fonts/DIN/PFDinDisplayPro-Black.eot?v16cb5551d70#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Black.woff2?v16cb5551d72) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Black.woff?v16cb5551d71) format('woff');font-weight:900;font-style:normal}@font-face{font-family:'PF DinDisplay Pro ExtraThin';src:url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.eot?v16cb5551d8b);src:url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.eot?v16cb5551d8b#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.woff2?v16cb5551d8d) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.woff?v16cb5551d8c) format('woff');font-weight:100;font-style:italic}</style>
-
-    <link href="/bundles/css/desktop.min.css" rel="stylesheet">
-</head>
-<body>
-<header class="header">
-    <div class="header__inner">
-        <a href="../pages/index.html" class="header__logo"></a>
-        <nav class="menu">
-            <li class="menu__item"><a href="../to-patients/frame.html">Пациентам</a></li>
-            <li class="menu__item"><a href="../to-specialists/frame.html">Специалистам</a></li>
-            <li class="menu__item"><a href="../to-businessmen/frame.html">Бизнесу</a></li>
-            <li class="menu__item menu__item_basket not-empty">
-                <!--у menu__item_basket есть 3 дополнительных класса-->
-                <!--empty  - для пустой корзины, при нем кнопка "Оформить заказ неактивна"-->
-                <!--not-empty - кнопка "Оформить заказ" активна и над корзиной отображается количество товара в корзине-->
-                <!--active - добавляется при клике на корзину и показываются товары, которые в корзине-->
-                <p>Корзина</p>
-                <p class="quantity">2</p>
-                <div class="basket">
-                    <div class="basket__inner">
-                        <div class="basket__buttons">
-                            <a href="../pages/checkout.html" class="basket__checkout">Оформить заказ</a>
-                            <a href="" class="basket__close"></a>
-                        </div>
-                        <div class="basket__items">
-                            <div class="basket__item">
-                                <p class="basket__item-name">Тренажер Экзарта Мини</p>
-                                <p class="basket__item-price"><span>11295</span> Руб.</p>
-                                <p class="basket__item-amount">x<span>1</span></p>
-                                <button class="basket__item-delete"></button>
-                            </div>
-                            <div class="basket__item">
-                                <p class="basket__item-name">Тренажер Экзарта Мини</p>
-                                <p class="basket__item-price"><span>11295</span> Руб.</p>
-                                <p class="basket__item-amount">x<span>1</span></p>
-                                <button class="basket__item-delete"></button>
-                            </div>
-                        </div>
-                        <!--<div class="basket__empty">-->
-                            <!--<p>Добавьте товары</p>-->
-                        <!--</div>-->
-                        <div class="basket__total">
-                            <span>Итого:</span>
-                            <p><span>3000</span> Руб.</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="menu__item"><a href="../pages/reviews.html">Отзывы</a></li>
-            <li class="menu__item"><a href="../pages/events.html">События</a></li>
-            <li class="menu__item"><a href="../contacts/contacts.html">Контакты</a></li>
-        </nav>
-    </div>
-</header>
 
 <section class="services">
 
     <div class="services-price">
-
         <section class="services-table">
             <div class="table">
                 <table>
@@ -184,7 +115,6 @@
                 </table>
             </div>
         </section>
-
     </div>
     <div class="services-filter">
         <div class="services-filter__inner">
@@ -324,39 +254,3 @@
         </div>
     </div>
 </section>
-
-<footer class="footer">
-    <div class="footer__inner">
-        <nav class="footer__menu">
-            <div class="footer__menu_col">
-                <li><a href="../ekzarta/to-patients/frame.html">Пациентам</a></li>
-                <li><a href="../ekzarta/to-specialists/frame.html">Специалистам</a></li>
-                <li><a href="../ekzarta/to-businessmen/frame.html">Бизнесу</a></li>
-            </div>
-            <div class="footer__menu_col">
-                <li><a href="../ekzarta/reviews.html">Отзывы</a></li>
-                <li><a href="../ekzarta/events.html">События</a></li>
-                <li><a href="../ekzarta/contacts/contacts.html">Контакты</a></li>
-            </div>
-        </nav>
-        <div class="footer__info">
-            <div class="footer__logo"></div>
-            <div class="footer__links">
-                <a href="">ГК Мадин</a>
-                <a href="">Написать веб-мастеру</a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- ########### -->
-<!-- CONTENT END -->
-<!-- ########### -->
-
-
-
-<script src="/bundles/webpack/vendor.bundle.js"></script>
-<script src="/bundles/webpack/desktop.bundle.js"></script>
-
-</body>
-</html>
