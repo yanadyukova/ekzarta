@@ -75,18 +75,16 @@ let ww = $(window).width(),
         });
     }(),
 
-    SliderCities = function() {
-        var swiper = new Swiper('.map-cities .swiper-container', {
-            direction: 'vertical',
-            slidesPerView: 'auto',
-            freeMode: true,
-            draggable: true,
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-            mousewheel: true,
-        });
-    }(),
+    SliderCities = new Swiper('.map-cities .swiper-container', {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        freeMode: true,
+        draggable: true,
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+        mousewheel: true,
+    }),
 
     AmountProduct = function() {
         $('.button_minus').on('click', function(e) {
@@ -145,6 +143,25 @@ let ww = $(window).width(),
 
         $('.jsCloseReviewForm').click(function () {
             $(this).parent().removeClass('active');
+        });
+    }(),
+
+    TabSwitch = function () {
+        var hash = location.hash;
+        if ( hash !== '') {
+            var i = $('ul.tabs__caption li').has('a[href*="' + hash + '"]').index();
+            $('ul.tabs__caption li').has('a[href*="' + hash + '"]').addClass('active').siblings().removeClass('active')
+                .closest('div.tabs').find('div.tabs__content').removeClass('active').eq(i).addClass('active');
+        }
+
+        if (hash == '#medcenters') {
+            SliderCities.update();
+        }
+
+        $('ul.tabs__caption').on('click', 'li:not(.active) a', function() {
+            $(this).parent()
+                .addClass('active').siblings().removeClass('active')
+                .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).parent().index()).addClass('active');
         });
     }(),
 

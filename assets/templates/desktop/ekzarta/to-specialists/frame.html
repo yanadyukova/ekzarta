@@ -17,37 +17,43 @@
     </div>
 </section>
 
-<section class="frame-content">
+<section class="specialist-content frame-content">
     <div class="tabs">
-        <input type="radio" name="tab" id="courses" checked>
-        <label for="courses">КУРСЫ</label>
-        <input type="radio" name="tab" id="schedule">
-        <label for="schedule">РАСПИСАНИЕ</label>
-        <input type="radio" name="tab" id="teachers">
-        <label for="teachers">ПРЕПОДАВАТЕЛИ</label>
-        <input type="radio" name="tab" id="methods">
-        <label for="methods">МЕТОДИКИ</label>
-        <input type="radio" name="tab" id="training">
-        <label for="training">ПОДГОТОВКА</label>
 
-        <div class="content">
+        <ul class="tabs__caption">
+            <li class="active"><a href="#courses">КУРСЫ</a></li>
+            <li><a href="#schedule">РАСПИСАНИЕ</a></li>
+            <li><a href="#teachers">ПРЕПОДАВАТЕЛИ</a></li>
+            <li><a href="#methods">МЕТОДИКИ</a></li>
+            <li><a href="#training">ПОДГОТОВКА</a></li>
+        </ul>
+
+        <div class="tabs__content active">
             <article class="courses">
                 @@include('templates/desktop/ekzarta/to-specialists/courses.html')
             </article>
+        </div>
+        <div class="tabs__content">
             <article class="schedule">
                 @@include('templates/desktop/ekzarta/to-specialists/schedule.html')
             </article>
+        </div>
+        <div class="tabs__content">
             <article class="teachers">
                 @@include('templates/desktop/ekzarta/to-specialists/teachers.html')
             </article>
+        </div>
+        <div class="tabs__content">
             <article class="methods">
                 @@include('templates/desktop/ekzarta/to-specialists/methods.html')
             </article>
+        </div>
+        <div class="tabs__content">
             <article class="training">
                 @@include('templates/desktop/ekzarta/to-specialists/training.html')
             </article>
         </div>
-        <!--<br class="clear:both" />-->
+
     </div>
 </section>
 

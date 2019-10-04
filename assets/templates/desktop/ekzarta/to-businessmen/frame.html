@@ -12,32 +12,28 @@
                     и при этом зарабатывать деньги?
                     Решение есть: <span>франшиза Экзарта</span>.</p>
             </div>
-            <!--<div class="businessmen-header__button frame__button">-->
-                <!--<a href="" class="button button_red">ЗАПИСАТЬСЯ НА ПРИЁМ</a>-->
-            <!--</div>-->
         </div>
-        <!--<div class="businessmen-header__image frame__image">-->
-            <!--<img src="/images/desktop/3-1@2x.jpg" alt="">-->
-        <!--</div>-->
     </div>
 </section>
 
 <section class="businessmen-content frame-content">
     <div class="tabs">
-        <input type="radio" name="tab" id="franchise" checked>
-        <label for="franchise">ФРАНШИЗА</label>
-        <input type="radio" name="tab" id="equipment">
-        <label for="equipment">МАГАЗИН ОБОРУДОВАНИЯ</label>
 
-        <div class="content">
+        <ul class="tabs__caption">
+            <li class="active"><a href="#franchise">ФРАНШИЗА</a></li>
+            <li><a href="#equipment">МАГАЗИН ОБОРУДОВАНИЯ</a></li>
+        </ul>
+        <div class="tabs__content active">
             <article class="franchise">
                 @@include('templates/desktop/ekzarta/to-businessmen/franchise.html')
             </article>
+        </div>
+        <div class="tabs__content">
             <article class="equipment">
                 @@include('templates/desktop/ekzarta/to-businessmen/equipment.html')
             </article>
         </div>
-        <!--<br class="clear:both" />-->
+
     </div>
 </section>
 

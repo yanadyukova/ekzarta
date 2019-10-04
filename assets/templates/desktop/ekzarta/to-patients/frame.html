@@ -24,20 +24,21 @@
 
 <section class="patient-content frame-content">
     <div class="tabs">
-        <input type="radio" name="tab" id="adults" checked>
-        <label for="adults">ВЗРОСЛЫЕ</label>
-        <input type="radio" name="tab" id="children">
-        <label for="children">ДЕТИ</label>
+        <ul class="tabs__caption">
+            <li class="active"><a href="#adults">ВЗРОСЛЫЕ</a></li>
+            <li><a href="#children">ДЕТИ</a></li>
+        </ul>
 
-        <div class="content">
+        <div class="tabs__content active">
             <article class="adults">
                 @@include('templates/desktop/ekzarta/to-patients/adults.html')
             </article>
+        </div>
+        <div class="tabs__content">
             <article class="children">
                 @@include('templates/desktop/ekzarta/to-patients/children.html')
             </article>
         </div>
-        <!--<br class="clear:both" />-->
     </div>
 </section>
 

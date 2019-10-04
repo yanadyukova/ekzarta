@@ -6,6 +6,11 @@
             }
         }
     }
+    &-content {
+        .tabs__caption {
+            justify-content: space-between;
+        }
+    }
     &-footer {
         margin-bottom: 20px;
         background-color: #f8f6f0;

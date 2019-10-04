@@ -2,20 +2,20 @@
 
 <section class="contacts-content frame-content">
     <div class="tabs">
-        <input type="radio" name="tab" id="ekzarta" checked>
-        <label for="ekzarta">ЭКЗАРТА</label>
-        <input type="radio" name="tab" id="medcenters">
-        <label for="medcenters">МЕДЦЕНТРЫ</label>
-
-        <div class="content">
+        <ul class="tabs__caption">
+            <li class="active"><a href="#ekzarta">ЭКЗАРТА</a></li>
+            <li><a href="#medcenters">МЕДЦЕНТРЫ</a></li>
+        </ul>
+        <div class="tabs__content active">
             <article class="ekzarta">
                 @@include('templates/desktop/ekzarta/contacts/ekzarta.html')
             </article>
+        </div>
+        <div class="tabs__content">
             <article class="medcenters">
                 @@include('templates/desktop/ekzarta/contacts/map.html')
             </article>
         </div>
-        <!--<br class="clear:both" />-->
     </div>
 </section>
 

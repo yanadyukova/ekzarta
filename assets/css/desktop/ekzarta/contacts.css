@@ -1,27 +1,23 @@
 .contacts {
     &-content {
-        .tabs {
-            justify-content: flex-start;
-            margin-bottom: 0;
-            label {
-                margin-left: 74px;
-                /*margin-right: 40px;*/
-            }
-            input[id=medcenters]:checked~.content .medcenters {
-                height: 100%;
-                display: flex;
-            }
-        }
+        .tabs {}
         .content {
             margin-top: 25px;
         }
+        /*.tabs__content {*/
+            /*visibility: hidden;*/
+            /*display: block;*/
+            /*&.active {*/
+                /*visibility: visible;*/
+            /*}*/
+        /*}*/
         #map {
             width: 70%;
             height: 100%;
             flex-grow: 1;
         }
         .medcenters {
-            display: none;
+            display: flex;
             align-items: stretch;
             height: calc(100vh - 182px);
             border-top: solid 1px #e3ddcd;
