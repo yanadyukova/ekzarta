@@ -86,10 +86,78 @@
             }
          }
          &_medcenter {
+            position: relative;
             margin-right: 30px;
             &:last-child {
                 margin-left: auto;
+                &:hover {
+                    &:after {
+                     content: none;
+                    }
+                    .menu-contacts {
+                        opacity: 1;
+                        transition: all .3s linear;
+                        visibility: visible;
+                    }
+                }
             }
          }
+    }
+    &-contacts {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        width: 658px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+        top: -17px;
+        right: 0;
+        text-transform: none;
+        transition: all .3s linear;
+        &__inner {
+            padding: 25px;
+        }
+        &__header {
+             display: flex;
+             justify-content: space-between;
+             font-family: 'PF DinDisplay Pro';
+             font-size: 24px;
+             font-weight: 900;
+             font-style: normal;
+             font-stretch: normal;
+             line-height: 1.17;
+             letter-spacing: 1.3px;
+             color: #002337;
+             margin-bottom: 16px;
+             text-transform: uppercase;
+             a {
+                white-space: nowrap;
+                margin-left: 40px;
+             }
+        }
+        &__row {
+             display: flex;
+             align-items: center;
+             margin-bottom: 10px;
+        }
+        &__col {
+            margin-right: 50px;
+            p {
+                font-family: 'PF Din Text Cond Pro';
+                font-size: 14px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.36;
+                letter-spacing: 0.44px;
+                color: #002337;
+                margin-bottom: 0;
+
+                &.title {
+                     font-weight: 500;
+                     letter-spacing: 0.41px;
+                }
+            }
+        }
     }
 }
