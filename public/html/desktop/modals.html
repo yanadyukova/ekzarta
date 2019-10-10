@@ -16,85 +16,34 @@
     <link href="/bundles/css/desktop.min.css" rel="stylesheet">
 </head>
 <body>
-<header class="header">
-    <div class="header__inner">
-        <a href="../pages/index.html" class="header__logo"></a>
-        <nav class="menu">
-            <li class="menu__item"><a href="../to-patients/frame.html">Пациентам</a></li>
-            <li class="menu__item"><a href="../to-specialists/frame.html">Специалистам</a></li>
-            <li class="menu__item"><a href="../to-businessmen/frame.html">Бизнесу</a></li>
-            <li class="menu__item menu__item_basket not-empty">
-                <!--у menu__item_basket есть 3 дополнительных класса-->
-                <!--empty  - для пустой корзины, при нем кнопка "Оформить заказ неактивна"-->
-                <!--not-empty - кнопка "Оформить заказ" активна и над корзиной отображается количество товара в корзине-->
-                <!--active - добавляется при клике на корзину и показываются товары, которые в корзине-->
-                <p>Корзина</p>
-                <p class="quantity">2</p>
-                <div class="basket">
-                    <div class="basket__inner">
-                        <div class="basket__buttons">
-                            <a href="../pages/checkout.html" class="basket__checkout">Оформить заказ</a>
-                            <a class="basket__close"></a>
-                        </div>
-                        <div class="basket__items">
-                            <div class="basket__item">
-                                <p class="basket__item-name">Тренажер Экзарта Мини</p>
-                                <p class="basket__item-price"><span>11295</span> Руб.</p>
-                                <p class="basket__item-amount">x<span>1</span></p>
-                                <button class="basket__item-delete"></button>
-                            </div>
-                            <div class="basket__item">
-                                <p class="basket__item-name">Тренажер Экзарта Мини</p>
-                                <p class="basket__item-price"><span>11295</span> Руб.</p>
-                                <p class="basket__item-amount">x<span>1</span></p>
-                                <button class="basket__item-delete"></button>
-                            </div>
-                        </div>
-                        <!--<div class="basket__empty">-->
-                            <!--<p>Добавьте товары</p>-->
-                        <!--</div>-->
-                        <div class="basket__total">
-                            <span>Итого:</span>
-                            <p><span>3000</span> Руб.</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="menu__item"><a href="../pages/reviews.html">Отзывы</a></li>
-            <li class="menu__item"><a href="../pages/events.html">События</a></li>
-            <li class="menu__item"><a href="../contacts/contacts.html">Контакты</a></li>
-        </nav>
-    </div>
-</header>
+<div style="padding: 30px 80px;">
 
-<section class="breadcrumbs">
-    <div class="breadcrumbs__inner">
-        <a href="#">Экзарта</a>
-        <a href="#">События</a>
-        <a class="active" href="#">Мастер-класс «Реабилитация при заболеваниях
-            суставов нижних конечностей» в Нижнем Новгороде</a>
+    <div style="padding: 20px;">
+        <a data-toggle="modal" data-target=".jsModalSuccess" href="" class="button">Успешная подписка на события</a>
     </div>
-</section>
+    <div style="padding: 20px;">
+        <a data-toggle="modal" data-target=".jsModalSubscribe" href="" class="button">Подробнее</a>
+    </div>
+    <div style="padding: 20px;">
+        <a data-toggle="modal" data-target=".jsModalEventSubscribe" href="" class="button">Записаться на мероприятие</a>
+    </div>
+    <div style="padding: 20px;">
+        <a data-toggle="modal" data-target=".jsModalEventSubscribeSuccess" href="" class="button">Успешная запись на мероприятие</a>
+    </div>
+    <div style="padding: 20px;">
+        <a data-toggle="modal" data-target=".jsModalAppointment" href="" class="button">Запись на прием</a>
+    </div>
+    <div style="padding: 20px;">
+        <a data-toggle="modal" data-target=".jsModalEnrollment" href="" class="button">Запись на обучение</a>
+    </div>
+    <div style="padding: 20px;">
+        <a data-toggle="modal" data-target=".jsModalAppointmentSuccess" href="" class="button">Успешная запись на прием</a>
+    </div>
+    <div style="padding: 20px;">
+        <a data-toggle="modal" data-target=".jsModalGallery" href="" class="button">Записаться</a>
+    </div>
 
-<section class="event-page">
-    <div class="event-page__inner">
-        <div class="event-page__header">
-            <h1 class="text-title text-title_big">Мастер-класс «Реабилитация при заболеваниях
-                суставов нижних конечностей» в Нижнем Новгороде</h1>
-            <p>08 октября 2018, 14:59</p>
-            <a href="" class="button button_red event-page__button">Записаться</a>
-        </div>
-        <div class="event-page__body text-content">
-            <p>21 февраля 2017 года на базе центра медицинской реабилитации «Экзарта» состоится бесплатный мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей методами мануальной терапии и ЛФК. Реабилитация после операций. Европейские подходы».</p>
-            <p>Мероприятие адресовано специалистам в области медицинской реабилитации, неврологии и ортопедии, лечебной физкультуры и мануальной терапии.</p>
-            <p>Специальный гость и ведущий - Мирослав Кокош (Польша). Доктор физиотерапии. Преподаватель кафедры специальных методов физиотерапии в Академии физического воспитания (г. Катовице). Стаж более 20 лет.</p>
-            <p>Вопросы постоперационной реабилитации - Ежов Михаил Юрьевич. Профессор кафедры хирургии ФПКВ НижГМА, доктор медицинских наук. Автор диссертации – «Хирургическое лечение дегенеративно-дистрофических заболеваний суставов стопы и голеностопного сустава». Стаж 15 лет.</p>
-            <p>Начало мероприятия - 18.00. Предварительная запись по телефону: 8 (831) 429-01-15</p>
-            <p>или электронной почте: seller@inamr.ru</p>
-            <p>Количество мест ограничено.</p>
-        </div>
-    </div>
-</section>
+</div>
 
 <footer class="footer">
     <div class="footer__inner">
@@ -727,3 +676,4 @@
 
 </body>
 </html>
+

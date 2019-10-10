@@ -8,8 +8,8 @@
 /*@import url(../public/node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.css);*/
 /*@import url(../public/node_modules/jquery-timepicker-master/jquery.timepicker.css);*/
 
-/*@import url(blocks/modal/bootstrap.css);*/
-/*@import url(blocks/modal/index.css);*/
+@import url(blocks/modal/bootstrap.css);
+@import url(blocks/modal/index.css);
 /*@import url(blocks/scroller/index.css);*/
 
 @import url(css/desktop/header.css);

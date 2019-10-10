@@ -4,7 +4,7 @@
             <div class="modal-body">
                 <a data-dismiss="modal" class="modal__close"></a>
                 <div class="modal__title">Спасибо!</div>
-                <div class="modal__message jsModalSuccessMessage">
+                <div class="modal__message">
                     Вы успешно подписались на новостную рассылку.
                 </div>
             </div>
@@ -48,104 +48,6 @@
                         <div class="modal-event__foot">
                             <div class="form__button">
                                 <button class="button-default">Отправить</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div tabindex="-1" class="modal fade modal-default modal-gallery-olapic jsModalGalleryOlapic">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <a data-dismiss="modal" class="modal-close"></a>
-            <div class="modal__inner">
-                <iframe data-src="/olapic/gallery-olapic-example.html" class="modal-gallery-iframe"></iframe>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div tabindex="-1" class="modal fade modal-video jsModalVideo" data-hash="modal_video">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-video__inner">
-                <a data-dismiss="modal" class="modal-close"></a>
-                <div class="modal-video__iframe"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div tabindex="-1" class="modal fade modal-video jsModalVideoUploaded" data-hash="modal_video">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-video__inner">
-                <a data-dismiss="modal" class="modal-close"></a>
-                <div class="modal-video__iframe"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div tabindex="-1" class="modal fade modal-default jsModalLogin">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <a data-dismiss="modal" class="modal__close"></a>
-                <div class="modal-event__inner">
-                    <form class="event-create__form">
-                        <div class="form__group">
-                            <div class="select-form select-lang">
-                                <select>
-                                    <option value="ru">Россия</option>
-                                    <option value="by">Беларусь</option>
-                                    <option value="ua">Украина</option>
-                                    <option value="kz">Казахстан</option>
-                                    <option value="am">Армения</option>
-                                    <option value="az">Азербайджан</option>
-                                    <option value="kg">Кыргызстан</option>
-                                    <option value="mn">Монголия</option>
-                                    <option value="md">Молдавия</option>
-                                    <option value="ge">Грузия</option>
-                                </select>
-                            </div>
-                            <div class="form__label">Выбери страну</div>
-                        </div>
-                        <div class="form__group">
-                            <div class="form__input error">
-                                <input type="text" name="login" required="" placeholder="НОМЕР КОНСУЛЬТАНТА">
-                                <div class="error">Ошибка</div>
-                            </div>
-                            <div class="form__label">Введи номер</div>
-                        </div>
-                        <div class="form__group">
-                            <div class="form__input error">
-                                <input type="password" name="password" required="" placeholder="●●●●●●">
-                            </div>
-                            <div class="form__label">Введи пароль</div>
-                        </div>
-                        <div class="form__checkbox">
-                            <div class="checkbox error">
-                                <input name="personal" type="checkbox" checked="" required="true" id="agree_popup_20">
-                                <div class="error">Ошибка</div>
-                                <label for="agree_popup_20">Я согласен с <a href="https://www.oriflame.ru/customer-service/privacy-protection-policy" target="_blank">правилами обработки данных</a></label>
-                            </div>
-                        </div>
-                        <div class="form__checkbox">
-                            <div class="checkbox ">
-                                <input name="rule" type="checkbox" checked="" value="1" id="subscribe_popup">
-                                <label for="subscribe_popup">Я хочу получать новости Oriflame</label>
-                            </div>
-                        </div>
-                        <div class="modal-event__foot">
-                            <div class="form__button">
-                                <button class="button-default">войти</button>
-                            </div>
-                            <div class="lk-auth__link">
-                                <a target="_blink" href="https://www.oriflame.ru/business-opportunity/become-consultant">Регистрация</a>
                             </div>
                         </div>
                     </form>
@@ -414,870 +316,6 @@
     </div>
 </div>
 
-<div tabindex="-1" class="modal fade modal-default jsModalEventEditStep1">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <a data-dismiss="modal" class="modal__close"></a>
-                <div class="modal-event__inner">
-                    <form class="event-create__form">
-                        <div class="form__group">
-                            <div class="form__input event-create__input error">
-                                <input type="text" name="event_author" placeholder="Ирина Иванова">
-                            </div>
-                            <div class="form__label">Введи имя и фамилию</div>
-                        </div>
-                        <div class="form__group">
-                            <div class="select-form">
-                                <select name="event_type_consultant">
-                                    <option value="1">Консультант по красоте</option>
-                                    <option value="2">Консультант по здоровому питанию</option>
-                                    <option value="3">Консультант по здоровому образу жизни</option>
-                                </select>
-                            </div>
-                            <div class="form__label">Выбери тип консультанта</div>
-                        </div>
-                        <div class="form__group">
-                            <div class="form__input event-create__input error">
-                                <input type="text" name="event_phone" placeholder="+7 (___) ___-__-__">
-                            </div>
-                            <div class="form__label">Введи номер телефона</div>
-                        </div>
-                        <div class="form__group">
-                            <div class="form__input event-create__input error">
-                                <input type="email" name="event_email" placeholder="example@mail.ru">
-                            </div>
-                            <div class="form__label">Введи свою почту</div>
-                        </div>
-                        <div class="modal-event__foot">
-                            <button class="button-default">Сохранить изменения</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div tabindex="-1" class="modal fade modal-default jsModalEventEditStep2">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <a data-dismiss="modal" class="modal__close"></a>
-                <div class="modal-event__inner">
-                    <form class="event-create__form auto">
-                        <input type="hidden" class="jsEventFormTypeInput" value="1">
-                        <input type="hidden" class="jsEventFormCoverTypeInput" value="1">
-                        <div class="event-create-type__title">Формат мероприятия</div>
-                        <div class="event-create-type">
-                            <div class="event-create-type__head">
-                                <ul class="jsEventFormType clearfix">
-                                    <li class="opendays active">
-                                        <a href="#"><i></i><span>Дни открытых дверей</span></a>
-                                    </li>
-                                    <li class="wellness">
-                                        <a href="#"><i></i><span>Клубы</span></a>
-                                    </li>
-                                    <li class="skincare">
-                                        <a href="#"><i></i><span>Мастер-классы</span></a>
-                                    </li>
-                                    <li class="beauty">
-                                        <a href="#"><i></i><span>Фестивали</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="event-create-type__body">
-                                <div class="event-create-type__item jsEventFormTypeItem active">
-                                    <div class="form__group readonly">
-                                        <div class="form__input event-create__input error">
-                                            <div class="form__edit">
-                                                <a href="#" class="lk-edit desc jsEventFormDescEdit"></a>
-                                            </div>
-                                            <textarea name="" cols="30" rows="10" readonly>На вечеринке мы открываем коробку с самыми интересными новинками и продуктами Орифлэйм. Каждый раз мероприятие отличается темой – это может быть вечеринка в стиле «Оскар», или вечеринка «Шведские тренды», или «Девичник» – это значит, что каждый раз вы попадаете в уникальную атмосферу праздника. В ходе вечеринки вы узнаете много нового о том, как ухаживать за собой, как сделать самый модный макияж, как подобрать аксессуары для трендового образа – полезные советы и фишки обязательно пригодятся вам каждый день.</textarea>
-                                        </div>
-                                    </div>
-                                    <div class="event-create-type__files">
-                                        <span>Скачай материалы:</span>
-                                        <a href="#" download>Beauty Box party сценарий.docx</a><br>
-                                        <a href="#" download>Beauty Box party презентация.pptx</a>
-                                        <div>
-                                            Очень длинное название видеопрезентации
-                                            <p><a data-modal-video data-src="https://www.youtube.com/embed/P38acjc8DyY" href="#">Смотреть</a>/<a href="#" download>Скачать</a></p>
-                                        </div>
-                                    </div>
-                                    <div class="event-create-type__slider jsSliderEventCover">
-                                        <div class="swiper-container">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide active">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/beauty/bb party cover 1 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/beauty/bb party cover 2 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/beauty/bb party cover 3 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/beauty/bb party cover 4 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/beauty/bb party cover 5 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/beauty/bb party cover 6 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/beauty/bb party cover 7 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/beauty/bb party cover 8 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/beauty/bb party cover 9 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/beauty/bb party cover 10 80х80@2x.jpg');"></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="swiper-prev swiper-button-disabled"></button>
-                                        <button class="swiper-next swiper-button-disabled"></button>
-                                    </div>
-                                </div>
-                                <div class="event-create-type__item jsEventFormTypeItem">
-                                    <div class="event-create-type__desc">На вечеринке мы открываем коробку с самыми интересными новинками и продуктами Орифлэйм. Каждый раз мероприятие отличается темой – это может быть вечеринка в стиле «Оскар», или вечеринка «Шведские тренды», или «Девичник» – это значит, что каждый раз вы попадаете в уникальную атмосферу праздника. В ходе вечеринки вы узнаете много нового о том, как ухаживать за собой, как сделать самый модный макияж, как подобрать аксессуары для трендового образа – полезные советы и фишки обязательно пригодятся вам каждый день.</div>
-                                    <div class="event-create-type__files">
-                                        <span>Скачай материалы:</span>
-                                        <a href="#" download>Wellness club сценарий.docx</a><br>
-                                        <a href="#" download>Wellness club презентация.pptx</a>
-                                    </div>
-                                    <div class="event-create-type__slider jsSliderEventCover">
-                                        <div class="swiper-container">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide active">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/wellness/wellness club cover 1 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/wellness/wellness club cover 2 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/wellness/wellness club cover 3 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/wellness/wellness club cover 4 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/wellness/wellness club cover 5 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/wellness/wellness club cover 6 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/wellness/wellness club cover 7 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/wellness/wellness club cover 8 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/wellness/wellness club cover 9 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/wellness/wellness club cover 10 80х80@2x.jpg');"></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="swiper-prev swiper-button-disabled"></button>
-                                        <button class="swiper-next swiper-button-disabled"></button>
-                                    </div>
-                                </div>
-                                <div class="event-create-type__item jsEventFormTypeItem">
-                                    <div class="event-create-type__desc">Это мероприятие, где каждый может узнать все о том, от чего зависит старение кожи, как мы можем повлиять на этот процесс, и что непосредственно нужно делать. Не секрет, что многие женщины просто не знают, как правильно ухаживать за лицом. Мы расскажем, покажем и научим любую ухаживать за кожей так, чтобы выглядеть всегда моложе своих лет. Ведь ученые доказали, что 80% процесса старения кожи – в наших руках.</div>
-                                    <div class="event-create-type__files">
-                                        <span>Скачай материалы:</span>
-                                        <a href="#" download>Skincare session индивидуальные консультации.pptx</a><br>
-                                        <a href="#" download>Skincare session презентация.pptx</a>
-                                    </div>
-                                    <div class="event-create-type__slider jsSliderEventCover">
-                                        <div class="swiper-container">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide active">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 1 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 2 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 3 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 4 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 5 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 6 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 7 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 8 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 9 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 10 80х80@2x.jpg');"></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="swiper-prev swiper-button-disabled"></button>
-                                        <button class="swiper-next swiper-button-disabled"></button>
-                                    </div>
-                                </div>
-                                <!--<div class="event-create-type__item jsEventFormTypeItem">
-                                    <div class="event-create-type__desc">Это мероприятие, где каждый может узнать все о том, от чего зависит старение кожи, как мы можем повлиять на этот процесс, и что непосредственно нужно делать. Не секрет, что многие женщины просто не знают, как правильно ухаживать за лицом. Мы расскажем, покажем и научим любую ухаживать за кожей так, чтобы выглядеть всегда моложе своих лет. Ведь ученые доказали, что 80% процесса старения кожи – в наших руках.</div>
-                                    <div class="event-create-type__files">
-                                        <span>Скачай материалы:</span>
-                                        <a href="#" download>Skincare session индивидуальные консультации.pptx</a><br>
-                                        <a href="#" download>Skincare session презентация.pptx</a>
-                                    </div>
-                                    <div class="event-create-type__slider jsSliderEventCover">
-                                        <div class="swiper-container">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide active">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 1 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 2 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 3 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 4 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 5 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 6 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 7 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 8 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 9 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 10 80х80@2x.jpg');"></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="swiper-prev swiper-button-disabled"></button>
-                                        <button class="swiper-next swiper-button-disabled"></button>
-                                    </div>
-                                </div>-->
-                                <div class="event-create-type__item jsEventFormTypeItem">
-                                    <div class="event-create__form">
-                                        <div class="form__group">
-                                            <div class="select-form">
-                                                <select name="event_type_consultant">
-                                                    <option value="1">Мастер-классы по макияжу</option>
-                                                    <option value="2">Мастер-классы по макияжу 2</option>
-                                                    <option value="3">Мастер-классы по макияжу 3</option>
-                                                </select>
-                                            </div>
-                                            <div class="form__label">Выбери тип мероприятия</div>
-                                        </div>
-                                    </div>
-                                    <div class="event-create-type__desc-title">Описание:</div>
-                                    <div class="form__group readonly">
-                                        <div class="form__input event-create__input error">
-                                            <div class="form__edit">
-                                                <a href="#" class="lk-edit desc jsEventFormDescEdit"></a>
-                                            </div>
-                                            <textarea name="" cols="30" rows="10" readonly>На вечеринке мы открываем коробку с самыми интересными новинками и продуктами Орифлэйм. Каждый раз мероприятие отличается темой – это может быть вечеринка в стиле «Оскар», или вечеринка «Шведские тренды», или «Девичник» – это значит, что каждый раз вы попадаете в уникальную атмосферу праздника. В ходе вечеринки вы узнаете много нового о том, как ухаживать за собой, как сделать самый модный макияж, как подобрать аксессуары для трендового образа – полезные советы и фишки обязательно пригодятся вам каждый день.</textarea>
-                                        </div>
-                                    </div>
-                                    <div class="event-create-type__desc-title">Включи в описание актуальные пункты (они отобразятся в описании твоего мероприятия):</div>
-                                    <div class="form__group form__group_modal">
-                                        <div class="event-create-type__desc_bold">Здесь вы узнаете:</div>
-                                        <div class="checkbox-form">
-                                            <div class="checkbox-form__input">
-                                                <input type="checkbox" id="checkbox_10">
-                                                <label for="checkbox_10">Какие тренды в макияже на пике популярности</label>
-                                                <!-- <span class="checkbox-form__input-delete">Удалить</span> -->
-                                            </div>
-                                            <div class="checkbox-form__input">
-                                                <input type="checkbox" id="checkbox_20">
-                                                <label for="checkbox_20">Как подобрать макияж по типу внешности</label>
-                                                <!-- <span class="checkbox-form__input-delete">Удалить</span> -->
-                                            </div>
-                                            <div class="checkbox-form__input">
-                                                <input type="checkbox" id="checkbox_30">
-                                                <label for="checkbox_30">Как научиться делать актуальный макияж губ</label>
-                                                <!-- <span class="checkbox-form__input-delete">Удалить</span> -->
-                                            </div>
-                                            <div class="checkbox-form__input">
-                                                <input type="checkbox" id="checkbox_40">
-                                                <label for="checkbox_40">Как подобрать идеальную красную помаду</label>
-                                                <!-- <span class="checkbox-form__input-delete">Удалить</span> -->
-                                            </div>
-                                            <div class="checkbox-form__input">
-                                                <input type="checkbox" id="checkbox_50">
-                                                <label for="checkbox_50">Как научиться рисовать классические стрелки</label>
-                                                <!-- <span class="checkbox-form__input-delete">Удалить</span> -->
-                                            </div>
-                                            <div class="checkbox-form__input">
-                                                <input type="checkbox" id="checkbox_60">
-                                                <label for="checkbox_60">Как сделать трендовый макияж с акцентом на глаза/тон/губы</label>
-                                                <!-- <span class="checkbox-form__input-delete">Удалить</span> -->
-                                            </div>
-                                            <div class="checkbox-form__input jsEventCheckbox">
-                                                <input type="hidden" value="Мой вариант">
-                                                <input type="checkbox" id="checkbox_70" checked>
-                                                <label for="checkbox_70">Мой вариант</label>
-                                                <span class="checkbox-form__input-delete jsEventCheckboxRemove">Удалить</span>
-                                            </div>
-                                            <div class="checkbox-form__input checkbox-form__input_hidden jsEventCheckbox">
-                                                <input type="hidden">
-                                                <input type="checkbox" id="checkbox_80">
-                                                <label for="checkbox_80">Ваш вариант:</label>
-                                                <span class="checkbox-form__input-delete jsEventCheckboxRemove">Удалить</span>
-                                            </div>
-                                            <div class="checkbox-form__input checkbox-form__input_hidden jsEventCheckbox">
-                                                <input type="hidden">
-                                                <input type="checkbox" id="checkbox_90">
-                                                <label for="checkbox_90">Ваш вариант:</label>
-                                                <span class="checkbox-form__input-delete jsEventCheckboxRemove">Удалить</span>
-                                            </div>
-                                            <div class="checkbox-form__input_textarea jsEventTextarea">
-                                                <label>Ваш вариант:</label>
-                                                <textarea name="comment"></textarea>
-                                                <span class="textarea-to-checkbox jsEventCheckboxAdd">Добавить</span>
-                                            </div>
-                                            <div class="checkbox-form__add-input jsEventTextareaAdd"><span>Добавить еще вариант</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="event-create-type__slider jsSliderEventCover">
-                                        <div class="swiper-container">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide active">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 1 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 2 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 3 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 4 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 5 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 6 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 7 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 8 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 9 80х80@2x.jpg');"></a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a class="jsSliderEventCoverType" href="#" style="background-image: url('/images/desktop/lk/media/skincare/scs cover 10 80х80@2x.jpg');"></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="swiper-prev swiper-button-disabled"></button>
-                                        <button class="swiper-next swiper-button-disabled"></button>
-                                    </div>
-                                </div>
-                                <div class="form__label">Выбери обложку мероприятия</div>
-                                <div class="event-create-type__foot">
-                                    <div class="checkbox-form">
-                                        <div class="checkbox-form__input">
-                                            <input type="checkbox" id="temp">
-                                            <label for="temp">это мероприятие проводится Бьюти центром Oriflame</label>
-                                            <span class="checkbox-hint">
-                                                <span class="checkbox-hint__toggle">?</span>
-                                                <span class="checkbox-hint__popover">
-                                                    <ol>
-                                                        <li>ул. 25 Января, 22, Воронеж, Воронежская обл., Россия</li>
-                                                        <li>ул. им. Рокоссовского, 62, Волгоград, Волгоградская обл., Россия</li>
-                                                        <li>ул. Щорса, 7, Екатеринбург, Свердловская обл., Россия</li>
-                                                        <li>ул. Миславского, 9, Казань, Респ. Татарстан, Россия</li>
-                                                        <li>ул. Зиповская, 5, Краснодар, Краснодарский край, Россия</li>
-                                                        <li>ул. Ленина, 21, Красноярск, Красноярский край, Россия</li>
-                                                        <li>ул. Усачева, 37, Москва, Россия</li>
-                                                        <li>Ленинградский пр., 72, Москва, Россия</li>
-                                                        <li>ул. Максима Горького, 117, Нижний Новгород, Нижегородская обл., Россия</li>
-                                                        <li>пл. Карла Маркса, 1/1, Новосибирск, Новосибирская обл., Россия</li>
-                                                        <li>ул. Ленина, 22, Омск, Омская обл., Россия</li>
-                                                        <li>ул. Ленина, 102, Пермь, Пермский край, Россия</li>
-                                                        <li>Будённовский просп., 62/2, Ростов-на-Дону, Ростовская обл., Россия</li>
-                                                        <li>Корабельная ул., 13, Самара, Самарская обл., Россия</li>
-                                                        <li>Лиговский пр., 13, Санкт-Петербург, Россия</li>
-                                                        <li>ул. Большая Казачья, 33а, Саратов, Саратовская обл., Россия</li>
-                                                        <li>просп. Октября, 69 корпус 1, Уфа, Респ. Башкортостан, Россия</li>
-                                                        <li>ул. Дзержинского, 23, Хабаровск, Хабаровский край, Россия</li>
-                                                        <li>пр. Ленина, 53, Челябинск, Челябинская обл., Россия</li>
-                                                        <li>Угличская ул., 48, Ярославль, Ярославская обл., Россия</li>
-                                                        <li>пр. Октябрьской Революции, 11Б, Ставрополь, Ставропольский край, Россия</li>
-                                                        <li>ул. Московская, 3, Сочи, Краснодарский край, Россия</li>
-                                                        <li>Первомайский пр., 51, Рязань, Рязанская обл., Россия</li>
-                                                        <li>ул. 2-я Мичурина, 29, Брянск, Брянская обл., Россия</li>
-                                                        <li>Звездная ул., 8, Балашиха, Московская обл., Россия</li>
-                                                    </ol>
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-event__foot">
-                            <button class="button-default">Сохранить изменения</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div tabindex="-1" class="modal fade modal-default jsModalEventEditStep3">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <a data-dismiss="modal" class="modal__close"></a>
-                <div class="modal-event__inner">
-                    <form class="event-create__form">
-                        <div class="form__group">
-                            <div class="form__input event-create__input error">
-                                <input type="text" name="event_" placeholder="Oriflame Wellness Club " maxlength="60" size="60">
-                            </div>
-                            <div class="form__label">Введи название мероприятия (не более 60 символов)</div>
-                        </div>
-                        <div class="event-create-price">
-                            <input type="hidden" class="jsEventPriceInput" value="2">
-                            <div class="event-create-price__title">Форма участия</div>
-                            <div class="event-create-price__body">
-                                <div class="event-create-price__item">
-                                    <a href="#" class="event-create-price__link jsEventPriceToggle"><i class="money"></i><span>Платное участие</span></a>
-                                </div>
-                                <div class="event-create-price__item active">
-                                    <a href="#" class="event-create-price__link jsEventPriceToggle"><i class="free"></i><span>Бесплатное участие</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-event__foot">
-                            <button class="button-default">Сохранить изменения</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div tabindex="-1" class="modal fade modal-default jsModalEventEditStep4">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <a data-dismiss="modal" class="modal__close"></a>
-                <div class="modal-event__inner">
-                    <form class="event-create__form auto">
-                        <div class="event-create__date">
-                            <div class="hint hint_form jsHint" data-cookie="hint-3days">
-                                <a href="#" class="hint__close jsHintClose"></a>
-                                <div class="hint__content">Регистрация мероприятия должна производиться не позднее чем за 3 дня до его проведения.</div>
-                            </div>
-                            <div class="form__group">
-                                <div class="event-create__label">Дата проведения мероприятия</div>
-                                <div class="event-create__inline">
-                                    <div class="event-create__inline-item">
-                                        <div class="form__input event-create__input inline error">
-                                            <input type="text" name="day" placeholder="ДД">
-                                        </div>
-                                        <div class="form__label">День</div>
-                                    </div>
-                                    <div class="event-create__inline-item">
-                                        <div class="form__input event-create__input inline error">
-                                            <input type="text" name="month" placeholder="ММ">
-                                        </div>
-                                        <div class="form__label">Месяц</div>
-                                    </div>
-                                    <div class="event-create__inline-item">
-                                        <div class="form__input event-create__input inline error">
-                                            <input type="text" name="year" placeholder="ГГГГ">
-                                        </div>
-                                        <div class="form__label">Год</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form__group">
-                                <div class="event-create__label">Время проведение мероприятия</div>
-                                <div class="event-create__inline">
-                                    <div class="event-create__inline-item">
-                                        <div class="form__input event-create__input inline error">
-                                            <input type="text" name="time" placeholder="чч:мм">
-                                        </div>
-                                        <div class="form__label">Время начала</div>
-                                    </div>
-                                    <div class="event-create__inline-item">
-                                        <div class="form__input event-create__input inline error">
-                                            <input type="text" name="time" placeholder="чч:мм">
-                                        </div>
-                                        <div class="form__label">Время окончания</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="event-create__form">
-                            <div class="form__group">
-                                <div class="select-form">
-                                    <select name="country" placeholder="Страна">
-                                        <option value="1">Россия</option>
-                                        <option value="2">Украина</option>
-                                        <option value="3">Казахстан</option>
-                                    </select>
-                                </div>
-                                <div class="form__label">Выбери страну</div>
-                            </div>
-                            <div class="form__group">
-                                <div class="select-form">
-                                    <select name="city" placeholder="Город">
-                                        <option value="1">Москва</option>
-                                        <option value="2">Санкт-Петербург</option>
-                                        <option value="3">Екатеренбур</option>
-                                        <option value="4">Москва</option>
-                                        <option value="5">Санкт-Петербург</option>
-                                        <option value="6">Екатеренбур</option>
-                                        <option value="7">Москва</option>
-                                        <option value="8">Санкт-Петербург</option>
-                                        <option value="9">Екатеренбур</option>
-                                        <option value="10">Москва</option>
-                                        <option value="11">Санкт-Петербург</option>
-                                        <option value="12">Екатеренбур</option>
-                                    </select>
-                                </div>
-                                <div class="form__label">Выбери город</div>
-                            </div>
-                            <div class="form__group">
-                                <div class="form__input event-create__input">
-                                    <!--<input type="text" name="address" placeholder="ул. Пролетарская, д.15, стр.1">-->
-                                    <div class="event-create__inline address">
-                                        <div class="event-create__inline-item street error" style="display: block">
-                                            <div class="form__input event-create__input inline">
-                                                <input type="text" name="street" placeholder="Улица">
-                                            </div>
-                                            <div class="form__label">Введи улицу</div>
-                                        </div>
-                                        <div class="event-create__inline-item house" style="display: block">
-                                            <div class="form__input event-create__input inline">
-                                                <input type="text" name="house_number" placeholder="Дом">
-                                            </div>
-                                            <div class="form__label">Введи номер дома</div>
-                                        </div>
-                                    </div>
-                                    <input type="hidden" name="cords">
-                                </div>
-                            </div>
-                            <div class="form__group">
-                                <div class="form__input event-create__input error">
-                                    <input type="text" name="address_comment">
-                                </div>
-                                <div class="form__label">Комментарии к адресу</div>
-                            </div>
-                        </div>
-                        <div class="modal-event__foot">
-                            <button class="button-default">Сохранить изменения</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div tabindex="-1" class="modal fade modal-default modal-small jsModalEventAddMember">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <a data-dismiss="modal" class="modal__close"></a>
-                <div class="modal-event__inner">
-                    <form class="event-create__form">
-                        <div class="form__group">
-                            <div class="form__input event-create__input error">
-                                <input type="text" name="" placeholder="Ирина Иванова">
-                            </div>
-                            <div class="form__label">Введи имя и фамилию</div>
-                        </div>
-                        <div class="form__group">
-                            <div class="form__input event-create__input error">
-                                <input type="email" name="" placeholder="example@mail.ru">
-                            </div>
-                            <div class="form__label">Введи свою почту</div>
-                        </div>
-                        <div class="modal-event__foot">
-                            <button class="button-default"><span>Добавить участника</span></button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div tabindex="-1" class="modal fade modal-default modal-small jsModalEventLoadCSV">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <a data-dismiss="modal" class="modal__close"></a>
-                <div class="modal-event__inner">
-                    <form class="event-create__form">
-                        <div class="event-create-type__title">Загрузить список</div>
-                        <div class="form__input-file event-photo-upload__input modal__input-file error">
-                            <input type="file" multiple="" required="">
-                            <div class="error">Текст ошибки</div>
-                        </div>
-                        <div class="modal-event__foot">
-                            <button class="button-default">Добавить участников</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div tabindex="-1" class="modal fade modal-default modal-small jsModalErrorTest">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <a data-dismiss="modal" class="modal__close"></a>
-                <div class="modal__message">
-                    К сожалению ваш результат не был предусмотрен в системе. Обратитесь в поддержку
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div tabindex="-1" class="modal fade modal-default modal-small jsModalError">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <a data-dismiss="modal" class="modal__close"></a>
-                <div class="modal__message jsModalErrorMessage">
-                    Ошибка
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div tabindex="-1" class="modal fade modal-default modal-small jsModalEventDelete">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <a data-dismiss="modal" class="modal__close"></a>
-                <div class="modal__message">
-                    Ты уверен, что хочешь удалить мероприятие?
-                </div>
-                <div class="modal__button">
-                    <a href="#" class="button-default">Подтвердить</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div tabindex="-1" class="modal fade modal-default modal-small jsModalEventPublished">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <a data-dismiss="modal" class="modal__close"></a>
-                <div class="modal__desc">
-                    <p>Мероприятие будет опубликовано на сайте после проверки модератором в течение 48 часов.</p>
-                    <p>Уведомление об активации мероприятия поступить на твой e-mail.</p>
-                </div>
-                <div class="modal__button">
-                    <a href="#" class="button-default">Вернуться на сайт</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div tabindex="-1" class="modal fade modal-default modal-small modal-subscribe jsModalPageGo">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <a data-dismiss="modal" class="modal__close"></a>
-                <!-- <div class="modal__title">
-                    я хочу участвовать в этом мероприятии
-                </div>
-                <form class="modal__form" action="" method="post">
-                    <div class="form__input error">
-                        <input type="text" name="" placeholder="Имя Фамилия">
-                    </div>
-                    <div class="form__input error">
-                        <input type="text" name="" placeholder="Эл. почта">
-                    </div>
-                    <div class="form__checkbox">
-                        <div class="checkbox error">
-                            <input name="personal" type="checkbox" checked="" required="true" id="agree">
-                            <div class="error">Ошибка</div>
-                            <label for="agree">Я согласен с <a href="https://www.oriflame.ru/customer-service/privacy-protection-policy" target="_blank">правилами обработки данных</a></label>
-                        </div>
-                    </div>
-                    <div class="form__checkbox">
-                        <div class="checkbox ">
-                            <input name="rule" type="checkbox" checked="" value="1" id="subscribe">
-                            <label for="subscribe">Я хочу получать новости Oriflame</label>
-                        </div>
-                    </div>
-                    <div class="form__button">
-                        <button class="button-default"><span>записаться</span></button>
-                    </div>
-                </form> -->
-                <div class="modal__title">Вы записаны на мероприятие</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div tabindex="-1" class="modal fade modal-default modal-small modal-share jsModalPageShare">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <a data-dismiss="modal" class="modal__close"></a>
-                <div class="modal__title">
-                    поделись ссылкой
-                </div>
-                <div class="modal__share">
-                    <a href="#" class="modal__share-link">https://ru.oriflame.com/business-opportu-business-opportu-business-opportu</a>
-                </div>
-                <div class="modal__message modal__message_small">
-                    через соц.сети
-                </div>
-                <div class="modal__social">
-                    <div class="modal__social-icon">
-                        <img src="/images/mobile/icon/facebook.svg" alt="">
-                    </div>
-                    <div class="modal__social-icon">
-                        <img src="/images/mobile/icon/vkontakte.svg" alt="">
-                    </div>
-                    <div class="modal__social-icon">
-                        <img src="/images/mobile/icon/odnoklassniki.svg" alt="">
-                    </div>
-                </div>
-                <div class="modal__message modal__message_small">
-                    или отправь на почту
-                </div>
-                <form class="modal__form" action="" method="post">
-                    <div class="form__input error">
-                        <input type="text" name="" placeholder="Эл. почта">
-                    </div>
-                    <div class="form__input error">
-                        <input type="text" name="" placeholder="Напиши приглашение">
-                    </div>
-                    <div class="form__button">
-                        <button class="button-default"><span>отправить</span></button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div tabindex="-1" class="modal fade modal-default modal-lang jsModalLang-am">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <a data-dismiss="modal" class="modal__close"></a>
-            <div class="modal-lang__title">выбрать язык</div>
-            <div class="modal-lang__buttons">
-                <a href="#">Армянский</a>
-                <a href="#" class="active">Русский</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div tabindex="-1" class="modal fade modal-default modal-lang jsModalLang-kz">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <a data-dismiss="modal" class="modal__close"></a>
-            <div class="modal-lang__title">выбрать язык</div>
-            <div class="modal-lang__buttons">
-                <a href="#">Казахский</a>
-                <a href="#" class="active">Русский</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div tabindex="-1" class="modal fade modal-default modal-lang modal-lang-confirm jsModalCountryConfirm">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <a data-dismiss="modal" class="modal__close"></a>
-            <div class="modal-lang__title2">
-                <p><span>Ваша страна:</span><strong>Казахстан</strong></p>
-                <div>
-                    <a class="jsModalCountryConfirmListToggle" href="#">Изменить</a>
-                    <ul>
-                        <li><a href="#">россия</a></li>
-                        <li><a href="#">азербайджан</a></li>
-                        <li><a href="#">армения</a></li>
-                        <li><a href="#">грузия</a></li>
-                        <li><a href="#">Беларусь</a></li>
-                        <li><a href="#">казахстан</a></li>
-                        <li><a href="#">Кыргызстан</a></li>
-                        <li><a href="#">молдавия</a></li>
-                        <li><a href="#">монголия</a></li>
-                        <li><a href="#">украина</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="modal-lang__buttons modal-lang__buttons2">
-                <a href="#" class="active">Подтвердить</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div tabindex="-1" class="modal fade modal-default modal-small jsModalConfirm">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <a data-dismiss="modal" class="modal__close"></a>
-                <div class="modal__message jsModalConfirmText">
-                    Вы уверены?
-                </div>
-                <div class="modal__button">
-                    <a href="#" class="button-default white jsModalConfirmNo">Нет</a>
-                    <a href="#" class="button-default jsModalConfirmYes">Да</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div tabindex="-1" class="modal fade modal-default jsModalEventSubscribe">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content event-subscribe">
@@ -1299,24 +337,17 @@
                             <div class="error">Текст ошибки</div>
                         </div>
                         <div class="event-subscribe__checkbox-group">
-                            <div class="checkbox error">
-                                <label>
-                                    <input name="personal" type="checkbox" checked="" required="true" id="agree10">
-                                    <i></i>
-                                    <span>Я согласен с <a href="https://www.oriflame.ru/customer-service/privacy-protection-policy" target="_blank">правилами обработки персональных данных</a></span>
-                                </label>
+                            <div class="form-group input_checkbox">
+                                <input name="personal" type="checkbox" checked="" required="true" id="agree10">
+                                <label for="agree10">Я согласен с <a href="" target="_blank">правилами обработки персональных данных</a></label>
                                 <div class="error">Текст ошибки</div>
                             </div>
-                            <div class="checkbox error">
-                                <label>
-                                    <input name="personal" type="checkbox" checked="" id="subscribe10">
-                                    <i></i>
-                                    <span>Я хочу получать новости Oriflame</span>
-                                </label>
-                                <div class="error"></div>
+                            <div class="form-group input_checkbox">
+                                <input name="personal" type="checkbox" checked="" id="subscribe10">
+                                <label for="subscribe10">Я хочу получать новости Экзарта</label>
                             </div>
                         </div>
-                        <button class="button-default">Записаться</button>
+                        <button class="button button_red">Записаться</button>
                     </form>
                 </div>
             </div>
@@ -1324,40 +355,30 @@
     </div>
 </div>
 
-<div tabindex="-1" class="modal fade modal-default jsModalShareEvent">
+<div tabindex="-1" class="modal fade modal-default modal-small jsModalEventSubscribeSuccess">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content modal-event-share event-share">
+        <div class="modal-content">
             <div class="modal-body">
                 <a data-dismiss="modal" class="modal__close"></a>
-                <div class="event-share__inner">
-                    <form action="" class="event-share__inner">
-                        <div class="event-share__title">делись ссылкой,<br> приглашай друзей</div>
-                        <div class="event-share__input">
-                            <input type="text" value="https://lifestyle.expert/map/event/745">
-                            <!--<a href="#" class="event-share__copy jsCopyLink"></a>-->
-                        </div>
-                        <div class="event-share__social">
-                            <p>через соц.сети</p>
-                            <ul>
-                                <li><a class="fb" href="#"></a></li>
-                                <li><a class="vk" href="#"></a></li>
-                                <li><a class="ok" href="#"></a></li>
-                            </ul>
-                        </div>
-                        <div class="event-share__email">
-                            <p>или почту</p>
-                            <div class="event-share__input2">
-                                <input type="email" placeholder="Введите адрес e-mail">
-                                <div class="error">Ошибка</div>
-                            </div>
-                        </div>
-                        <div class="event-share__textarea">
-                            <textarea placeholder="Введите приглашение" name=""  cols="30" rows="5"></textarea>
-                        </div>
-                        <div class="event-share__button">
-                            <button class="button-default">Отправить</button>
-                        </div>
-                    </form>
+                <div class="modal__title">Спасибо!</div>
+                <div class="modal__message">
+                    Вы записаны на мероприятие.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-default modal-small jsModalAppointmentSuccess">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <div class="modal__title">Спасибо!</div>
+                <div class="modal__message">
+                    Ваша запись успешно оформлена.<br>
+                    В ближайшее время с вами свяжется наш менеджер
+                    для уточнения деталей.
                 </div>
             </div>
         </div>
@@ -1372,6 +393,204 @@
                 <div class="modal__title jsModalSubscribeSuccessMessage">
                     Вы записаны на мероприятие
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-form jsModalAppointment">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <section class="appointment-form">
+                    <div class="appointment-form__inner">
+                        <!--<div class="appointment-form__close">-->
+                            <!--<a data-dismiss="modal" href="">Закрыть форму и вернуться</a>-->
+                        <!--</div>-->
+                        <div class="appointment-form__title">Запись на приём</div>
+                        <div class="appointment-form__form">
+                            <form data-form="appointment">
+                                <div class="appointment-form__pagination">
+                                    <ul class="jsAppointmentFormPagination">
+                                        <li class="success" data-step-pagination="1">
+                                            <a href="#">Выбор услуги</a>
+                                            <span>Прием врача по лечебной физкультуре</span>
+                                        </li>
+                                        <li class="active" data-step-pagination="2">
+                                            <a href="#">Выбор города и медцентра</a>
+                                            <span>Нижний Новгород<br>
+                                Медцентр «Медицинский центр братьев Алиевых» </span>
+                                        </li>
+                                        <li data-step-pagination="3">
+                                            <a href="#">Контактная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="appointment-form__wrapper">
+                                    <div class="appointment-form__body">
+                                        <div data-step="1" class="appointment-form__step jsAppointmentFormStage">
+                                            <div class="form-group form__select">
+                                                <label for="">Услуга</label>
+                                                <select name="services" id="" class="jsAppointmentFormSelect">
+                                                    <optgroup label="ОСМОТР, Консультация">
+                                                        <option value="">Прием врача по лечебной физкультуре</option>
+                                                        <option value="">Прием врача-невролога первичный</option>
+                                                        <option value="">Прием врача – травматолога-ортопеда первичный</option>
+                                                    </optgroup>
+                                                    <optgroup label="Лечебная физкультура, кинезиотерапия">
+                                                        <option value="">Индивидуальное занятие ЛФК (с применением вышеперечисленных методик)</option>
+                                                        <option value="">Индивидуальное занятие по методике Войта</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div data-step="2" class="appointment-form__step jsAppointmentFormStage active">
+                                            <div class="form-group form__select">
+                                                <label for="">Ваш город</label>
+                                                <select name="city" id="">
+                                                    <option value="" selected>Нижний Новгород</option>
+                                                    <option value="">Дзержинск</option>
+                                                    <option value="" disabled>Москва</option>
+                                                </select>
+                                            </div>
+                                            <div class="appointment-form__branch">
+                                                <div class="form-group input_radio">
+                                                    <input type="radio" name="branch" value="1" id="branch_1">
+                                                    <label for="branch_1">
+                                                        <p class="appointment-form__branch-name">Медицинский центр лечения заболеваний</p>
+                                                        <div>
+                                                            <div class="phone">
+                                                                <p>Телефон:</p>
+                                                                <p>(831) 429-01-15</p>
+                                                                <p>(831) 230-50-18</p>
+                                                            </div>
+                                                            <div class="address">
+                                                                <p>Адрес:</p>
+                                                                <p>603087, Нижний Новгород,
+                                                                    Казанское шоссе, д.18, корпус 1.</p>
+                                                            </div>
+                                                            <div class="work">
+                                                                <p>График работы:</p>
+                                                                <p>Пн-Пт с 8.00 до 20.00<br>
+                                                                    Сб — по записи, с 8.00 до 14.00<br>
+                                                                    Вс — выходной день.</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="appointment-form__branch">
+                                                <div class="form-group input_radio">
+                                                    <input type="radio" name="branch" value="2" id="branch_2">
+                                                    <label for="branch_2">
+                                                        <p class="appointment-form__branch-name">Медицинский центр лечения заболеваний</p>
+                                                        <div>
+                                                            <div class="phone">
+                                                                <p>Телефон:</p>
+                                                                <p>(831) 429-01-15</p>
+                                                                <p>(831) 230-50-18</p>
+                                                            </div>
+                                                            <div class="address">
+                                                                <p>Адрес:</p>
+                                                                <p>603087, Нижний Новгород,
+                                                                    Казанское шоссе, д.18, корпус 1.</p>
+                                                            </div>
+                                                            <div class="work">
+                                                                <p>График работы:</p>
+                                                                <p>Пн-Пт с 8.00 до 20.00<br>
+                                                                    Сб — по записи, с 8.00 до 14.00<br>
+                                                                    Вс — выходной день.</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-step="3" class="appointment-form__step jsAppointmentFormStage">
+                                            <div class="form-group">
+                                                <label for="">Как к вам обращаться?</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">Номер телефона</label>
+                                                <input type="text" placeholder="+7 (       ) ____-____-__-__">
+                                            </div>
+                                            <div class="form-group input_checkbox">
+                                                <input type="checkbox" checked id="appointment-form__agree">
+                                                <label for="appointment-form__agree">Отправляя форму, вы соглашаетесь с политикой
+                                                    конфиденциальности и пользовательским соглашением
+                                                    данного сайта.</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="appointment-form__foot">
+                                        <a href="#" class="button appointment-form__button back jsAppointmentFormBack hidden">назад</a>
+                                        <button class="button button_red appointment-form__button">далее</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-form jsModalEnrollment">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <section class="enrollment">
+                    <div class="enrollment__inner">
+                        <div class="enrollment__title">Запись на обучение</div>
+                        <div class="enrollment__form">
+                            <form action="">
+                                <div class="form-group form__select">
+                                    <label for="">Курс</label>
+                                    <select name="courses" id="">
+                                        <option value="">Биомеханика человека. Модуль 1. Функциональная анатомия и нормаль...</option>
+                                    </select>
+                                </div>
+                                <div class="enrollment__info">
+                                    <div class="enrollment__course">
+                                        <div class="date">
+                                            <p>Даты:</p>
+                                            <span class="text-content">13.07.2019 – 17.07.2019</span>
+                                        </div>
+                                        <div class="teacher">
+                                            <p>Преподаватель:</p>
+                                            <a href="">Шлыков К.А.</a>
+                                        </div>
+                                        <div class="cost">
+                                            <p>Стоимость:</p>
+                                            <span class="text-content">24 000 руб.</span>
+                                        </div>
+                                    </div>
+                                    <div class="enrollment__contacts">
+                                        <div class="form-group">
+                                            <label for="">Как к вам обращаться?</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Номер телефона</label>
+                                            <input type="text" placeholder="+7 (       ) ____-____-__-__">
+                                        </div>
+                                        <div class="form-group input_checkbox">
+                                            <input type="checkbox" checked id="enrollment__agree">
+                                            <label for="enrollment__agree">Отправляя форму, вы соглашаетесь с политикой
+                                                конфиденциальности и пользовательским соглашением
+                                                данного сайта.</label>
+                                        </div>
+                                        <button class="button button_red enrollment__button">ОФОРМИТЬ ЗАПИСЬ</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>

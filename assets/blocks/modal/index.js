@@ -1,4 +1,4 @@
-import 'expose-loader?Util!exports-loader?Util!bootstrap/js/dist/util';
+import 'bootstrap/js/dist/util';
 import 'bootstrap/js/dist/modal';
 
 export default class Modal {

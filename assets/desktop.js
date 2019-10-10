@@ -1,7 +1,7 @@
 // import 'babel-polyfill';
 // // import Promise from 'es6-promise-promise'; // нужен^ если используется require.ensure, для ie11-
 import 'expose-loader?$!expose-loader?jQuery!jquery';
-// import Modal from 'modal';
+import Modal from 'modal';
 // import Swiper from 'swiper/dist/js/swiper.js';
 import 'expose-loader?Swiper!swiper/dist/js/swiper.js';
 import 'jquery-ui';

@@ -96,92 +96,17 @@ body {
                 padding-bottom: 50px;
             }
             &__title {
-                font-family: var(--font-obaum);
+                font-family: 'PF DinDisplay Pro';
                 font-size: 50px;
                 text-align: center;
                 margin-bottom: 10px;
             }
         }
     }
-    &-gallery-olapic {
-        .modal {
-            &-content {
-                margin-top: 30px;
-                margin-bottom: 30px;
-                padding: 0;
-                width: 90%;
-                background-color: #fff;
-                padding: 30px 60px;
-                padding-top: 0px;
-                padding-bottom: 0;
-                min-height: calc(100vh - 65px);
-            }
-            &__inner {
-                iframe {
-                    display: block;
-                    border: none;
-                    width: 100%;
-                    height: calc(100vh - 65px);
-                    .olapic-upload {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-    &-video {
-        margin: 0;
-        padding: 0;
-        & .modal {
-            &-dialog,
-            &-content {
-                margin: 0 auto;
-                width: auto;
-                width: calc(90vh * 1.775);
-                max-width: 100%;
-                height: 90vh;
-                background-color: #000;
-                margin-top: 5vh;
-            }
-            &-content {
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                width: auto;
-            }
-            &-close {
-                top: 8px;
-                right: 8px;
-                background-color: #fff;
-                border: none;
-                width: 30px;
-                height: 30px;
-                border-radius: 50px;
-                &:before,
-                &:after {
-                    background-color: #000;
-                }
-            }
-        }
-        &__iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            video {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
     &-main-subscribe {
         .modal {
             &-content {
-                @mixin i main/bg-3, jpg;
+                /*@mixin i main/bg-3, jpg;*/
                 width: 644px;
                 height: auto;
                 padding: 48px 40px;
@@ -440,130 +365,6 @@ body {
             text-align: center;
         }
     }
-    &-lang {
-        text-align: center;
-        .modal {
-            &-dialog {
-                margin-top: 100px;
-                margin-bottom: 50px;
-                padding: 0;
-                position: relative;
-            }
-            &-content {
-                @mixin i bg/3, jpg;
-                background-color: #fff;
-            }
-        }
-        &-confirm {
-            .modal {
-                &-content {
-                    @mixin i bg/4, jpg;
-                    background-color: #fff;
-                }
-            }
-        }
-        &__title {
-            font-family: var(--font-title);
-            font-size: 36px;
-            font-weight: bold;
-            text-align: center;
-            font-style: italic;
-            color: #000000;
-            text-transform: uppercase;
-        }
-        &__title2 {
-            padding-top: 5px;
-            > p {
-                display: inline-block;
-                vertical-align: top;
-                margin: 0;
-                margin-right: 4px;
-                min-width: 300px;
-                span {
-                    font-size: 18px;
-                    font-weight: 300;
-                    color: #000;
-                    display: inline-block;
-                    vertical-align: top;
-                    margin-right: 4px;
-                }
-                strong {
-                    font-size: 18px;
-                    font-weight: bold;
-                    color: #000;
-                    display: inline-block;
-                    margin-left: 5px;
-                }
-            }
-            > div {
-                display: inline-block;
-                vertical-align: top;
-                position: relative;
-                > a {
-                    font-size: 14px;
-                    line-height: 20px;
-                    font-weight: 300;
-                    color: #000 !important;
-                    text-decoration: underline;
-                }
-                ul {
-                    position: absolute;
-                    top: 100%;
-                    left: calc(50% + 25px);
-                    margin-top: 5px;
-                    margin-left: -100px;
-                    width: 150px;
-                    display: none;
-                    background: rgba(255,255,255,0.8);
-                    padding: 10px 0;
-                    li {
-                        padding: 2px 0;
-                        a {
-                            font-size: 12px;
-                            line-height: 1.67;
-                            text-align: center;
-                            color: #000 !important;
-                            text-transform: uppercase;
-                        }
-                    }
-                }
-            }
-        }
-        &__buttons {
-            &2 {
-                margin-top: 40px;
-            }
-            margin-top: 30px;
-            margin-left: -50px;
-            margin-right: -50px;
-            a {
-                &:first-child {
-                    border-color: #d0021b;
-                }
-                &.active {
-                    background-color: #ffffff;
-                    /*border: 1px solid #d0021b;*/
-                }
-                font-size: 18px;
-                font-weight: 300;
-                text-align: center;
-                color: #000000;
-                display: inline-block;
-                min-width: 150px;
-                height: 41px;
-                border-radius: 100px;
-                line-height: 39px;
-                border: 1px solid #fff;
-                margin: 0 20px;
-                transition: all .2s ease-in-out;
-                padding-left: 20px;
-                padding-right: 20px;
-                &:hover {
-                    /*border-color: #fff;*/
-                }
-            }
-        }
-    }
     &__message {
         font-size: 24px;
         font-weight: 300;
@@ -578,15 +379,8 @@ body {
             margin-right: 10px;
         }
     }
-    &__input-file {
-        margin-top: 40px;
-        input {
-            width: 100%;
-        }
-    }
     .event-subscribe {
-        @mixin i lk/form/2, jpg;
-        background-size: cover;
+        background-image: radial-gradient(circle at 46% 66%, #c8ede3, #83c1c4);
         min-height: 382px;
         width: auto;
         height: auto;
@@ -596,7 +390,7 @@ body {
             height: 26px;
             top: 14px;
             right: 14px;
-            border: 1px solid #211f22;
+            /*border: 1px solid #211f22;*/
             border-radius: 50%;
         }
         &__inner {
@@ -604,6 +398,7 @@ body {
             min-width: 303px;
         }
         &__title {
+             font-family: 'PF DinDisplay Pro';
              color: #000000;
              font-size: 16px;
              font-weight: 400;
@@ -612,6 +407,27 @@ body {
         }
         &__checkbox-group {
             margin-top: 37px;
+            text-align: left;
+            .form-group {
+                padding-top: 0;
+                label {
+                    color: #002337;
+                    a {
+                        font-family: 'PF DinDisplay Pro';
+                        font-size: 14px;
+                    }
+                }
+                .error {
+                    position: absolute;
+                    top: calc(100% - 2px);
+                    left: 0;
+                    width: 100%;
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: #d0021b;
+                    text-align: left;
+                }
+            }
         }
         &__input {
              margin-bottom: 20px;
@@ -638,255 +454,10 @@ body {
                 text-align: left;
             }
         }
-        .checkbox {
-            position: relative;
-            margin-left: 0;
-            padding-top: 0;
-            padding-bottom: 8px;
-            text-align: center;
-            input[type = checkbox] {
-                position: absolute;
-                top: 0;
-                left: 0;
-                /*&+i {
-                     position: absolute;
-                     display: inline-block;
-                     content: '';
-                    left: 0;
-                     width: 12px;
-                     height: 12px;
-                     border: 1px solid #000000;
-                     transition: all .2s linear;
-                    &:before {
-                         content: '';
-                         position: absolute;
-                         width: 4px;
-                         height: 9px;
-                         bottom: -5px;
-                         right: -4px;
-                         border-right: 1px solid #000000;
-                         border-bottom: 1px solid #000000;
-                         transform-origin: 0 100%;
-                         transition: all .2s linear;
-                         opacity: 0;
-                     }
-                }*/
-                &:checked+i {
-                    &:before {
-                         border-right-width: 1px;
-                         border-bottom-width: 1px;
-                         transform: rotate(45deg) translate3d(-13px, 0px, 0);
-                         opacity: 1;
-                    }
-                }
-            }
-            &.error .error {
-                 left: 0;
-                 top: calc(100% + 4px);
-                 text-align: center;
-                 font-size: 12px;
-                 margin-top: -18px;
-                 color: #d0021b;
-             }
-            label {
-                position: relative;
-                width: 200px;
-                padding-left: 20px;
-                color: #000000;
-                font-size: 12px;
-                font-weight: 300;
-                line-height: 1;
-                text-align: left;
-                a {
-                    color: #000;
-                }
-            }
-        }
         button {
             margin-top: 15px;
         }
     }
-    &-event-share {
-        &.event-share {
-         @mixin i lk/form/3, jpg;
-             background-size: cover;
-             min-height: 382px;
-             width: auto;
-             height: auto;
-             padding: 21px 47px 28px;
-         }
-        .modal__close {
-            width: 26px;
-            height: 26px;
-            top: 14px;
-            right: 14px;
-            border: 1px solid #211f22;
-            border-radius: 50%;
-        }
-        .event-share {
-            &__inner {
-                 text-align: center;
-                 min-width: 303px;
-            }
-            &__title {
-                 color: #000000;
-                 font-size: 16px;
-                 font-weight: normal;
-                 text-transform: uppercase;
-                 margin-bottom: 19px;
-            }
-            &__input {
-                 margin-bottom: 19px;
-                 position: relative;
-                input {
-                    width: 100%;
-                    height: 39px;
-                    background-color: #ffffff;
-                    line-height: 24px;
-                    border: none;
-                    color: #000000;
-                    font-size: 16px;
-                    font-weight: 300;
-                    padding-right: 26px;
-                    padding-left: 16px;
-                    text-align: left;
-                }
-                .error {
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    width: 100%;
-                    font-size: 10px;
-                    font-weight: 300;
-                    color: #d0021b;
-                    text-align: center;
-                }
-            }
-            &__copy {
-                @mixin io lk/form/copy, svg;
-                 background-color: #fff;
-                 background-position: 50% 50%;
-                 position: absolute;
-                 top: 0;
-                 right: 0;
-                 height: 100%;
-                 width: 24px;
-            }
-            &__social {
-                 text-align: left;
-                 margin-bottom: 13px;
-                p {
-                    display: inline-block;
-                    vertical-align: middle;
-                    color: #000000;
-                    font-size: 14px;
-                    font-weight: normal;
-                    text-transform: uppercase;
-                    margin: 0;
-                    margin-right: 24px;
-                }
-                ul {
-                    display: inline-block;
-                    vertical-align: middle;
-                    margin: 0;
-                    li {
-                        display: inline-block;
-                        margin: 0 6px;
-                        a {
-                            display: block;
-                            &.fb {
-                                @mixin io lk/form/fb, svg;
-                                background-size: 35px 35px;
-                                width: 35px;
-                                height: 35px;
-                            }
-                            &.vk {
-                                @mixin io lk/form/vk, svg;
-                                background-size: 35px 35px;
-                                width: 35px;
-                                height: 35px;
-                            }
-                            &.ok {
-                                @mixin io lk/form/ok, svg;
-                                background-size: 35px 35px;
-                                width: 35px;
-                                height: 35px;
-                            }
-                        }
-                    }
-                }
-            }
-            &__email {
-                 text-align: left;
-                p {
-                    display: inline-block;
-                    vertical-align: top;
-                    color: #000000;
-                    font-size: 14px;
-                    line-height: 24px;
-                    font-weight: normal;
-                    text-transform: uppercase;
-                    margin: 0;
-                    margin-right: 25px;
-                    margin-bottom: 20px;
-                }
-            }
-            &__input2 {
-                 margin-bottom: 5px;
-                 position: relative;
-                 display: inline-block;
-                 vertical-align: top;
-                input {
-                    width: 100%;
-                    height: 24px;
-                    background-color: #ffffff;
-                    line-height: 24px;
-                    border: none;
-                    color: #000000;
-                    font-size: 16px;
-                    font-weight: 300;
-                    text-align: left;
-                    padding-right: 26px;
-                    width: 175px;
-                    background: none;
-                    border-bottom: 1px solid #000;
-                    padding-bottom: 5px;
-                }
-                .error {
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    width: 100%;
-                    font-size: 12px;
-                    font-weight: 300;
-                    color: #d0021b;
-                    text-align: left;
-                }
-            }
-            &__textarea {
-                 margin-top: 5px;
-                textarea {
-                    width: 100%;
-                    background-color: #ffffff;
-                    border: none;
-                    height: 112px;
-                    resize: none;
-                    color: #000000;
-                    font-size: 14px;
-                    font-weight: 300;
-                    padding: 5px;
-                }
-            }
-            &__button {
-                margin-top: 21px;
-            }
-        }
-    }
-    .event-create-type {
-        padding: 0 20px;
-    }
-
-
     &-subscribe-success {
         text-align: center;
         .modal {
@@ -896,7 +467,7 @@ body {
                 position: relative;
             }
             &-content {
-                @mixin i bg/4, jpg;
+                /*@mixin i bg/4, jpg;*/
                 background-color: #fff;
                 padding: 75px 55px;
             }
@@ -904,6 +475,13 @@ body {
                 color: #000;
                 font-size: 24px;
                 font-weight: 300;
+            }
+        }
+    }
+    &-form {
+        .modal {
+            &-content {
+                margin: 0 auto;
             }
         }
     }
