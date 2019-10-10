@@ -5,6 +5,7 @@ import 'expose-loader?$!expose-loader?jQuery!jquery';
 // import Swiper from 'swiper/dist/js/swiper.js';
 import 'expose-loader?Swiper!swiper/dist/js/swiper.js';
 import 'jquery-ui';
+import baron from 'baron';
 
 let ww = $(window).width(),
     wh = $(window).height(),
@@ -18,11 +19,7 @@ let ww = $(window).width(),
         pagination: {
             el: '.swiper-pagination',
             dynamicBullets: true,
-        },
-        // navigation: {
-        //     nextEl: '.swiper-button-next',
-        //     prevEl: '.swiper-button-prev',
-        // },
+        }
     }),
 
     SliderEventsCurrent = new Swiper('.events-current__slider .swiper-container', {
@@ -128,6 +125,7 @@ let ww = $(window).width(),
 
             $input.val(value);
         });
+
     }(),
     
     Basket = function () {
@@ -165,7 +163,7 @@ let ww = $(window).width(),
                 .closest('div.tabs').find('div.tabs__content').removeClass('active').eq(i).addClass('active');
         }
 
-        if (hash == '#medcenters') {
+        if (hash === '#medcenters') {
             SliderCities.update();
         }
 
@@ -173,6 +171,15 @@ let ww = $(window).width(),
             $(this).parent()
                 .addClass('active').siblings().removeClass('active')
                 .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).parent().index()).addClass('active');
+            if ($(this).attr('href') === '#medcenters') {
+                SliderCities.update();
+            }
+        });
+    }(),
+
+    SearchServices = function() {
+        $('.jsSearchServices a').click(function () {
+            $('.jsMapServices').addClass('active');
         });
     }(),
 
@@ -243,3 +250,31 @@ let ww = $(window).width(),
         }
 
     }();
+
+export default class Scroller {
+    constructor() {
+        this.scroller;
+        this.container = $('.jsScroller');
+        this.options = {
+            root: '.jsScroller',
+            scroller: '.baron__scroller',
+            bar: '.baron__bar'
+        };
+    }
+    init() {
+        if (!this.container.length) return;
+
+        this.scroller = baron(this.options);
+    }
+    update() {
+        if (this.scroller) {
+            this.scroller.update();
+        }
+    }
+    destroy() {
+        if (this.scroller) {
+            this.scroller.dispose();
+        }
+    }
+}
+
