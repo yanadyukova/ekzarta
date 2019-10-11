@@ -82,7 +82,26 @@ a {
         text-decoration: none;
     }
     &.course-teacher {
+        position: relative;
         padding-left: 20px;
+        &:before {
+            position: absolute;
+            content: '';
+            width: 12px;
+            height: 8px;
+            left: 0;
+            top: calc(50% - 4px);
+        }
+        &.pl {
+            &:before {
+                background: url("/images/desktop/pic/pl.png") 50% 50%/contain no-repeat;
+            }
+        }
+        &.ru {
+            &:before {
+                 background: url("/images/desktop/pic/ru.gif") 50% 50%/contain no-repeat;
+            }
+        }
     }
 }
 

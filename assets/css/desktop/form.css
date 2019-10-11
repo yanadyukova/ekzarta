@@ -73,6 +73,10 @@ label {
             pointer-events: none;
         }
     }
+    &__amount {
+        display: flex;
+        align-items: flex-start;
+    }
 }
 
 button {
