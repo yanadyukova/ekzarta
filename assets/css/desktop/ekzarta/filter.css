@@ -1,0 +1,61 @@
+.filter__ekzarta {
+    margin: 0 auto 25px;
+    padding: 0 74px;
+    form {
+        position: relative;
+        border-radius: 3px;
+        border: solid 1px #e3ddcd;
+        box-shadow: 0 6px 12px 0 rgba(227, 221, 205, .37), 0 1px 4px 0 rgba(0, 0, 0, 0.12);
+        height: 80px;
+        padding: 0 80px 0 20px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
+        .form-group {
+            padding-top: 0;
+            margin-bottom: 0;
+            .input_checkbox label:before {
+                top: 1px;
+            }
+            label {
+                font-family: 'PF Din Text Cond Pro';
+                font-size: 15px;
+                line-height: 1.27;
+                letter-spacing: 0.47px;
+                color: #002337;
+                margin-right: 50px;
+                margin-left: 0;
+            }
+        }
+        button {
+            position: absolute;
+            width: 76px;
+            height: 100%;
+            top: 0;
+            right: 0;
+            border-radius: 3px;
+            background-color: #f8f6f0;
+            align-self: stretch;
+            margin-left: auto;
+            font-family: 'PF Din Text Cond Pro';
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 0.5px;
+            color: #e61841;
+            padding-top: 26px;
+            &:before {
+                 position: absolute;
+                 content: '';
+                 width: 16px;
+                 height: 22px;
+                 top: 15px;
+                 left: calc(50% - 8px);
+                 background: url("/images/desktop/icons/reset.svg") 50% 50%/contain no-repeat;
+            }
+        }
+    }
+}

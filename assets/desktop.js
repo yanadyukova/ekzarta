@@ -83,6 +83,17 @@ let ww = $(window).width(),
         mousewheel: true,
     }),
 
+    SliderProductsCheckout = new Swiper('.checkout-products__slider .swiper-container', {
+        slidesPerView: 3,
+        // spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        navigation: {
+            nextEl: '.checkout-products__slider .swiper-button-next',
+            prevEl: '.checkout-products__slider .swiper-button-prev',
+        },
+    }),
+
     SliderPromotions = new Swiper('.promotions-slider .swiper-container', {
         speed: 500,
         slidesPerView: 1,

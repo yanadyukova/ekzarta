@@ -161,4 +161,38 @@
     &__button {
         width: 100%;
     }
+    &-products {
+        &__inner {
+            padding: 0 74px 40px;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__slider {
+            position: relative;
+            .swiper-button-next,
+            .swiper-button-prev {
+                width: 18px;
+                height: 30px;
+                background-size: contain;
+&:focus {
+     outline: none;
+ }
+&::-moz-focus-inner {
+     border: none;
+ }
+            }
+            .swiper-button-next {
+                right: -25px;
+            }
+            .swiper-button-prev {
+                left: -25px;
+            }
+        }
+        .card-product {
+           margin: 0 30px 30px;
+        }
+    }
 }

@@ -91,15 +91,31 @@ body {
     &-small {
         & .modal {
             &-content {
-                width: 518px;
+                background-image: radial-gradient(circle at 46% 66%, #c8ede3, #83c1c4);
+                position: relative;
+                width: 605px;
                 padding-top: 50px;
                 padding-bottom: 50px;
+                padding-left: 220px;
+                &:before {
+                     position: absolute;
+                     content: '';
+                     width: 155px;
+                     height: 59px;
+                     top: 50px;
+                     left: 50px;
+                     background: url("/images/desktop/logo@2x.png") 50% 50%/contain no-repeat;
+                }
             }
             &__title {
                 font-family: 'PF DinDisplay Pro';
                 font-size: 50px;
-                text-align: center;
+                text-align: left;
                 margin-bottom: 10px;
+            }
+            &__message {
+                text-align: left;
+                color: #002337;
             }
         }
     }

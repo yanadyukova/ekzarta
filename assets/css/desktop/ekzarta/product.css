@@ -1,5 +1,8 @@
 .product {
     &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         padding: 0 74px 60px;
         max-width: 1280px;
         margin: 0 auto;
@@ -17,9 +20,15 @@
         }
     }
     &__card {
+        width: 100%;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
+    }
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
     &__photos {
         display: flex;
@@ -227,99 +236,4 @@
             margin: 20px 0;
         }
     }
-}
-
-
-.border {
-    width: 300px;
-    margin: 0 auto;
-    background: white;
-    padding: 20px;
-    border: 1px solid #F1E7E8;
-}
-.wrap {
-    height: 100%;
-    position: relative;
-}
-.product-wrap {position: relative;}
-.product-wrap:after {
-    content: '';
-    background: rgba(0, 35, 55, .5);
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    opacity: 0;
-    transform: scale(.3);
-    transition: .3s ease-in-out;
-}
-.border:hover .product-wrap:after {
-    opacity: 1;
-    transform: scale(1);
-}
-.product-wrap a {
-    display: block;
-    text-decoration: none;
-}
-.product-wrap img {
-    display: block;
-    width: 100%;
-}
-.loop-action {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    transition: .5s ease-in-out;
-}
-.border:hover .loop-action {opacity: 1;}
-.loop-action a {
-    text-decoration: none;
-    display: block;
-    border: 1px solid white;
-    border-radius: 3px;
-    white-space: nowrap;
-    text-transform: uppercase;
-    padding: .5em 1em;
-    font-size: 14px;
-    line-height: 1.6;
-    outline: none;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    color: white;
-    min-width: 160px;
-    margin: 5px auto;
-    transition: .5s ease-in-out;
-}
-.loop-action a:after {
-    content: '';
-    position: absolute;
-    left: -220%;
-    top: -500%;
-    width: 140%;
-    height: 1000%;
-    transform: rotate(45deg);
-    background: white;
-    z-index: -1;
-    transition: .3s ease-in-out;
-}
-.loop-action a:hover {color: black;}
-.loop-action a:hover:after {left: 0%;}
-.border:hover {border-color: #002337;}
-.product-info {padding-top: 15px;}
-
-.product-title {
-    font-weight: normal;
-    font-family: "PF DinDisplay Pro";
-    color: #002337;
-    font-size: 18px;
-}
-.price {
-    font-family: "PF DinDisplay Pro";
-    color: #002337;
-    /*font-style: italic;*/
-    font-weight: bold;
 }

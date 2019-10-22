@@ -1,10 +1,14 @@
 .schedule {
     text-align: center;
     margin-bottom: 60px;
+    &-filter {
+        margin-bottom: 45px;
+    }
     &-table {
+         padding: 0 94px;
          table {
-            width: 82%;
-            max-width: 1200px;
+            width: 100%;
+            max-width: 1440px;
             margin: 0 auto;
             td:first-child,
             td:nth-child(4){

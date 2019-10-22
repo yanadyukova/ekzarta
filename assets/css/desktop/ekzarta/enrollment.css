@@ -54,7 +54,8 @@
         width: 350px;
         .form-group {
             width: 349px;
-            input[type='text'] {
+            input[type='text'],
+            input[type='email'] {
                 width: 100%;
             }
         }

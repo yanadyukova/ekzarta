@@ -25,6 +25,7 @@
 @import url(css/desktop/articles.css);
 @import url(css/desktop/form.css);
 @import url(css/desktop/breadcrumbs.css);
+@import url(css/desktop/card.css);
 
 @import url(css/desktop/landing-ekzarta/main.css);
 @import url(css/desktop/landing-ekzarta/directions.css);
@@ -52,6 +53,7 @@
 @import url(css/desktop/ekzarta/methodology.css);
 @import url(css/desktop/ekzarta/checkout.css);
 @import url(css/desktop/ekzarta/contacts.css);
+@import url(css/desktop/ekzarta/filter.css);
 
 @import url(css/desktop/specialists-inner/courses.css);
 @import url(css/desktop/specialists-inner/methods.css);
