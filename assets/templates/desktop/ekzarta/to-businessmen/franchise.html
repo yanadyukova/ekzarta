@@ -148,16 +148,16 @@
                         <div class="form-group form__select">
                             <label for="">Регион</label>
                             <select name="" id="region">
-                                <option value="type_1">Москва и Санкт-Петербург</option>
-                                <option value="type_2">Другой</option>
+                                <option value="capital_cities">Москва и Санкт-Петербург</option>
+                                <option value="other_regions">Другой</option>
                             </select>
                         </div>
                         <div class="form-group form__select">
                             <label for="">Система налогообложения</label>
                             <select name="" id="tax_system">
-                                <!--<option value="">Общая система (ОСН)</option>-->
-                                <option value="type_1">УСН (6%)</option>
-                                <option value="type_2">УСН (15%)</option>
+                                <option value="osn">Общая система (ОСН)</option>
+                                <option value="usn_6">УСН (6%)</option>
+                                <option value="usn_15">УСН (15%)</option>
                             </select>
                         </div>
                         <div class="form-group form__select">
@@ -173,7 +173,7 @@
 
                         <div class="form-group range">
                             <label for="">Площадь, м<sup>2</sup></label>
-                            <input type="text" value="35" id="area">
+                            <input type="text" value="" id="area">
                             <input type="range" id="range_area" min="10" max="50" step="1">
                         </div>
                         <div class="form-group form__amount">
@@ -204,6 +204,29 @@
                                 издержки за год, руб.</label>
                             <input type="text" value="2 600 000" id="transaction_costs" disabled>
                         </div>
+                    </div>
+                    <div class="franchise-calculator__forecast">
+                        <div class="net_profit">
+                            <p>Чистый денежный
+                                поток (за 5 лет)</p>
+                            <span>1 500 000 руб.</span>
+                        </div>
+                        <div class="profitability_index">
+                            <p>Индекс доходности
+                                (за 5 лет)*</p>
+                            <span>1,68</span>
+                        </div>
+                        <div class="payback_period">
+                            <p>Период
+                                окупаемости от</p>
+                            <span>9 месяцев</span>
+                        </div>
+                    </div>
+                    <div class="franchise-calculator__order">
+                        <p>Вы можете заказать у нас финансовую модель,
+                            и здесь пара слов о том, что она проработана
+                            и наглядна, надо заказывать скорее</p>
+                        <a href="" class="button button_red">Заказать</a>
                     </div>
                 </div>
             </div>
