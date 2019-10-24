@@ -216,18 +216,21 @@
                 color: #002337;
             }
             .form-group {
-                width: 20%;
-                &:nth-child(2),
-                &:nth-child(6) {
-                     width: 27%;
-                }
-                &:nth-child(3),
-                &:nth-child(7) {
-                     width: 20%;
-                }
-                &:nth-child(5),
+                width: 30%;
+                /*&:nth-child(2),*/
+                /*&:nth-child(6) {*/
+                     /*width: 27%;*/
+                /*}*/
+                /*&:nth-child(3),*/
+                /*&:nth-child(7) {*/
+                     /*width: 20%;*/
+                /*}*/
+                &:nth-child(8),
+                &:nth-child(10),
                 &:nth-child(9) {
-                     width: 23%;
+                     input {
+                         width: 100%;
+                     }
                 }
                 label {
                     margin-left: 0;
@@ -247,6 +250,7 @@
                     color: #002337;
                 }
                 &.form__amount {
+                     margin-top: -10px;
                     .button_minus,
                     .button_plus {
                         height: 39px;
@@ -269,7 +273,8 @@
                 &.range {
                     display: flex;
                     align-items: flex-start;
-                    margin-top: 20px;
+                    margin-top: -10px;
+                    margin-bottom: 30px;
                     input[type=text] {
                         width: 70px;
                         margin-right: 10px;

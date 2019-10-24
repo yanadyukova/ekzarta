@@ -145,10 +145,48 @@
                     </div>
                     <div class="franchise-calculator__variable-data">
                         <p>ПОСЧИТАТЬ ОКУПАЕМОСТЬ:</p>
+                        <div class="form-group form__select">
+                            <label for="">Регион</label>
+                            <select name="" id="region">
+                                <option value="type_1">Москва и Санкт-Петербург</option>
+                                <option value="type_2">Другой</option>
+                            </select>
+                        </div>
+                        <div class="form-group form__select">
+                            <label for="">Система налогообложения</label>
+                            <select name="" id="tax_system">
+                                <!--<option value="">Общая система (ОСН)</option>-->
+                                <option value="type_1">УСН (6%)</option>
+                                <option value="type_2">УСН (15%)</option>
+                            </select>
+                        </div>
+                        <div class="form-group form__select">
+                            <label for="">Сценарий развития</label>
+                            <select name="" id="development_scenario">
+                                <option value="optimistic">Оптимистичный</option>
+                                <option value="moderately_optimistic">Умеренно-оптимистичный</option>
+                                <option value="base">Базовый</option>
+                                <option value="moderately_pessimistic">Умеренно-пессимистичный</option>
+                                <option value="pessimistic">Пессимистичный</option>
+                            </select>
+                        </div>
+
                         <div class="form-group range">
                             <label for="">Площадь, м<sup>2</sup></label>
                             <input type="text" value="35" id="area">
-                            <input type="range" min="10" max="50" step="1">
+                            <input type="range" id="range_area" min="10" max="50" step="1">
+                        </div>
+                        <div class="form-group form__amount">
+                            <label for="">Раб. дней в месяц</label>
+                            <button class="button_minus" type="button" name="button"></button>
+                            <input type="text" name="name" value="22" id="working_days" disabled>
+                            <button class="button_plus" type="button" name="button"></button>
+                        </div>
+                        <div class="form-group form__amount">
+                            <label for="">Раб. часов в день</label>
+                            <button class="button_minus" type="button" name="button"></button>
+                            <input type="text" name="name" value="12" id="working_hours" disabled>
+                            <button class="button_plus" type="button" name="button"></button>
                         </div>
                         <div class="form-group big-label">
                             <label for="">Предполагаемые<br>
@@ -165,36 +203,6 @@
                             <label for="">Предполагаемые операционные<br>
                                 издержки за год, руб.</label>
                             <input type="text" value="2 600 000" id="transaction_costs" disabled>
-                        </div>
-                        <div class="form-group form__select">
-                            <label for="">Система налогообложения</label>
-                            <select name="" id="tax_system">
-                                <option value="">Общая система (ОСН)</option>
-                                <option value="">УСН (6%)</option>
-                                <option value="">УСН (15%)</option>
-                            </select>
-                        </div>
-                        <div class="form-group form__select">
-                            <label for="">Сценарий развития</label>
-                            <select name="" id="development_scenario">
-                                <option value="optimistic">Оптимистичный</option>
-                                <option value="moderately_optimistic">Умеренно-оптимистичный</option>
-                                <option value="base">Базовый</option>
-                                <option value="moderately_pessimistic">Умеренно-пессимистичный</option>
-                                <option value="pessimistic">Пессимистичный</option>
-                            </select>
-                        </div>
-                        <div class="form-group form__amount">
-                            <label for="">Раб. дней в месяц</label>
-                            <button class="button_minus" type="button" name="button"></button>
-                            <input type="text" name="name" value="22" id="working_days" disabled>
-                            <button class="button_plus" type="button" name="button"></button>
-                        </div>
-                        <div class="form-group form__amount">
-                            <label for="">Раб. часов в день</label>
-                            <button class="button_minus" type="button" name="button"></button>
-                            <input type="text" name="name" value="12" id="working_hours" disabled>
-                            <button class="button_plus" type="button" name="button"></button>
                         </div>
                     </div>
                 </div>

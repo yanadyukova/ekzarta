@@ -139,7 +139,7 @@ body {
                 right: 40px;
             }
             &__title {
-                font-family: var(--font-obaum);
+                font-family: 'PF DinDisplay Pro';
                 font-size: 25px;
                 line-height: 29px;
                 text-align: center;
