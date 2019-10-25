@@ -685,11 +685,26 @@ var ww = $(window).width(),
         var $this = $(this);
         var $input = $this.closest('div').find('input');
         var value = parseInt($input.val());
+        var id = $input.attr('id');
 
-        if (value < 999) {
-            value = value + 1;
+        if (id === 'working_days') {
+            if (value < 31) {
+                value = value + 1;
+            } else {
+                value = 31;
+            }
+        } else if (id === 'working_hours') {
+            if (value < 24) {
+                value = value + 1;
+            } else {
+                value = 24;
+            }
         } else {
-            value = 999;
+            if (value < 999) {
+                value = value + 1;
+            } else {
+                value = 999;
+            }
         }
 
         $input.val(value);

@@ -184,6 +184,8 @@ var ww = $(window).width(),
     field_area = $('#area'),
     field_range_area = $('#range_area'),
     field_region = $('#region'),
+    field_working_days = $('#working_days'),
+    field_working_hours = $('#working_hours'),
     field_net_profit = $('.franchise-calculator__forecast .net_profit span'),
     field_profitability_index = $('.franchise-calculator__forecast .profitability_index span'),
     field_payback_period = $('.franchise-calculator__forecast .payback_period span'),
@@ -195,7 +197,11 @@ var ww = $(window).width(),
     selectWorkingDays = void 0,
     selectWorkingHours = void 0;
 
-packages['home'] = home_package, packages['standart'] = standart_package, packages['maximum'] = maximum_package, $(document).ready(function () {
+packages['home'] = home_package;
+packages['standart'] = standart_package;
+packages['maximum'] = maximum_package;
+
+$(document).ready(function () {
     init();
 });
 
@@ -241,9 +247,25 @@ field_range_area.on('input', function () {
     countNetProfit();
 });
 
+// field_working_days.on('change', function () {
+//     selectWorkingDays = field_working_days.val();
+//     countCashflow();
+//     countTransactionCosts();
+//     countTaxes();
+//     countNetProfit();
+// });
+//
+// field_working_hours.on('change', function () {
+//     selectWorkingHours = field_working_hours.val();
+//     countCashflow();
+//     countTransactionCosts();
+//     countTaxes();
+//     countNetProfit();
+// });
+
 $('.form__amount button').click(function () {
-    selectWorkingDays = $('#working_days').val();
-    selectWorkingHours = $('#working_hours').val();
+    selectWorkingDays = field_working_days.val();
+    selectWorkingHours = field_working_hours.val();
     countCashflow();
     countTransactionCosts();
     countTaxes();
@@ -315,9 +337,7 @@ function countTransactionCosts() {
 
 function countNetProfit() {
     net_profit = cashflow - transaction_costs - packages[selectPackage]['cost_equipment'] / 84 * 12 - cashflow * 0.07 - taxes;
-    ;
 
-    // field_transaction_costs.val(abc(Math.floor(transaction_costs)));
     console.log('net_profit - ' + abc(Math.floor(net_profit)));
 
     field_net_profit.text(abc(Math.floor(net_profit * 5)) + 'руб.');
@@ -328,20 +348,35 @@ function countNetProfit() {
         DCF += net_profit / Math.pow(1.2, i);
     }
 
-    var pl = DCF / investments;
+    profitability_index = DCF / investments;
 
     console.log('DCF - ' + abc(Math.floor(DCF)));
-    console.log('pl - ' + Math.floor(pl));
+    console.log('pl - ' + profitability_index);
+    field_profitability_index.text(profitability_index.toFixed(2));
 
     payback_period = 0;
 
-    var sum_net_profit = 0;
-    var net_profit_month = net_profit / 12;
+    var sum_DCF_year = 0;
+    var sum_DCF_month = 0;
+    var DCF_year;
+    var DCF_month;
+    var year = 0;
 
     if (net_profit > 0) {
-        while (sum_net_profit < investments) {
-            payback_period++;
-            sum_net_profit += net_profit_month;
+        while (sum_DCF_year < investments) {
+            year++;
+            DCF_year = net_profit / Math.pow(1.2, year);
+            sum_DCF_year += DCF_year;
+            DCF_month = DCF_year / 12;
+            if (sum_DCF_year > investments) {
+                while (sum_DCF_month < investments) {
+                    payback_period++;
+                    sum_DCF_month += DCF_month;
+                }
+            } else {
+                payback_period += 12;
+                sum_DCF_month += DCF_year;
+            }
         }
         console.log(payback_period);
         field_payback_period.text(payback_period + ' месяцев');
