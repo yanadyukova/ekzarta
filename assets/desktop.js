@@ -99,6 +99,29 @@ let ww = $(window).width(),
         slidesPerView: 1,
         spaceBetween: 10,
         loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    }),
+
+    SliderConcept = new Swiper('.franchise-concept__slider .swiper-container', {
+        speed: 500,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -119,7 +142,6 @@ let ww = $(window).width(),
             }
 
             $input.val(value);
-
         });
 
         $('.button_plus').on('click', function(e) {

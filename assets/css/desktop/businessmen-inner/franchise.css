@@ -15,13 +15,14 @@
                 margin-bottom: 15px;
                 span {
                     font-family: 'PF DinDisplay Pro';
-                    font-size: 40px;
+                    font-size: 55px;
                     font-weight: 900;
                     font-style: normal;
                     font-stretch: normal;
                     line-height: normal;
                     letter-spacing: 2.5px;
                     color: #8cde98;
+                    text-transform: uppercase;
                 }
                 p {
                     width: 300px;
@@ -30,6 +31,7 @@
         }
     }
     &-advantages {
+        position: relative;
         width: 90%;
         margin: 0 auto 62px;
         border-radius: 3px;
@@ -60,7 +62,9 @@
                     span {
                         margin-right: 17px;
                     }
-                    p {}
+                    p {
+                        font-size: 16px;
+                    }
                     &:nth-child(4) {
                         span {
                             margin-right: 5px;
@@ -75,9 +79,54 @@
         &__clients {
             padding-left: 74px;
         }
-
+        &__form {
+            position: absolute;
+            width: 438px;
+            bottom: -65px;
+            right: -20px;
+            border-radius: 3px;
+            box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+            background-color: #ffffff;
+            form {
+                padding: 31px 53px 0 36px;
+                p {
+                    font-family: 'PF Din Text Cond Pro';
+                    font-size: 16px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.27;
+                    letter-spacing: 0.47px;
+                    color: #002337;
+                    margin-bottom: 25px;
+                }
+                input {
+                    width: 100%;
+                }
+                label {
+                    margin-left: 0!important;
+                }
+                button {
+                    width: 438px;
+                    height: 65px;
+                    margin-top: 15px;
+                    margin-left: -36px;
+                    margin-right: -53px;
+                    background-color: #e61841;
+                    color: #fff;
+                    font-family: 'PF DinDisplay Pro';
+                    font-weight: bold;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.38;
+                    letter-spacing: 0.44px;
+                }
+            }
+        }
     }
     &-calculator {
+        position: relative;
+        z-index: 5;
         &__inner {
             padding: 0 30px;
             max-width: 1440px;
@@ -86,7 +135,6 @@
         &__packages {
              display: flex;
              justify-content: flex-start;
-             margin-bottom: 30px;
              input {
                  appearance: none;
                  position: absolute;
@@ -133,7 +181,7 @@
         }
         &__desc {
              font-family: 'PF Din Text Cond Pro';
-             font-size: 15px;
+             font-size: 16px;
              font-weight: normal;
              font-style: normal;
              font-stretch: normal;
@@ -152,7 +200,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            margin-bottom: 65px;
+            margin-bottom: 45px;
             div {
                 position: relative;
                 width: 45%;
@@ -175,7 +223,7 @@
                 }
                 p {
                     font-family: 'PF DinDisplay Pro';
-                    font-size: 14px;
+                    font-size: 16px;
                     font-weight: bold;
                     font-style: normal;
                     font-stretch: normal;
@@ -186,7 +234,7 @@
                 }
                 span {
                     font-family: 'PF Din Text Cond Pro';
-                    font-size: 15px;
+                    font-size: 16px;
                     font-weight: normal;
                     font-style: normal;
                     font-stretch: normal;
@@ -217,14 +265,6 @@
             }
             .form-group {
                 width: 30%;
-                /*&:nth-child(2),*/
-                /*&:nth-child(6) {*/
-                     /*width: 27%;*/
-                /*}*/
-                /*&:nth-child(3),*/
-                /*&:nth-child(7) {*/
-                     /*width: 20%;*/
-                /*}*/
                 &:nth-child(8),
                 &:nth-child(10),
                 &:nth-child(9) {
@@ -241,7 +281,7 @@
                 span {
                     display: block;
                     font-family: 'PF Din Text Cond Pro';
-                    font-size: 15px;
+                    font-size: 16px;
                     font-weight: normal;
                     font-style: normal;
                     font-stretch: normal;
@@ -407,7 +447,7 @@
             p {
                 width: 30%;
                 font-family: 'PF Din Text Cond Pro';
-                font-size: 15px;
+                font-size: 16px;
                 font-weight: normal;
                 font-stretch: normal;
                 font-style: normal;
@@ -420,5 +460,323 @@
                 padding: 25px 125px;
             }
         }
+    }
+    &-concept {
+        position: relative;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+        margin: 0 auto 62px;
+        &__desc {
+            margin-right: 35px;
+            padding-top: 61px;
+            padding-left: 37px;
+            p {
+                font-family: 'PF DinDisplay Pro';
+                font-size: 40px;
+                font-weight: 900;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: 2.5px;
+                color: #002337;
+            }
+            span {
+                font-size: 16px;
+            }
+        }
+        &__slider {
+             position: relative;
+             width: 475px;
+             height: 348px;
+            .swiper-container {
+                width: 100%;
+                height: 100%;
+            }
+             .swiper-slide {
+                 img {
+                     width: 100%;
+                 }
+             }
+            .swiper-button-prev {
+                background-image: url("/images/desktop/icons/arrow.svg");
+                transform: rotate(180deg);
+                left: 0;
+            }
+            .swiper-button-next {
+                background-image: url("/images/desktop/icons/arrow.svg");
+                right: 366px;
+            }
+            .swiper-button-prev,
+            .swiper-button-next {
+                width: 16px;
+                height: 16px;
+                background-size: contain;
+                top: 108%;
+            }
+            .swiper-pagination-fraction {
+                width: 23%;
+                bottom: -24px;
+                font-family: 'PF Din Text Cond Pro';
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                letter-spacing: 0.7px;
+                color: #002337;
+            }
+        }
+    }
+    &-steps {
+         position: relative;
+         border-radius: 3px;
+         background-image: radial-gradient(circle at 86% 78%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 53%), linear-gradient(to bottom, #f8f6f0, #f8f6f0);
+         &:before {
+              position: absolute;
+              content: '';
+              background: url("/images/desktop/pic/finish@2x.png") 0 0 no-repeat;
+              right: 0;
+              bottom: 0;
+              width: 370px;
+              height: 273px;
+              background-size: 370px 273px;
+         }
+         &__inner {
+              padding: 61px 74px 0;
+         }
+         &__title {
+              font-family: 'PF DinDisplay Pro';
+              font-size: 40px;
+              font-weight: 900;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: normal;
+              letter-spacing: 2.5px;
+              color: #002337;
+              margin-bottom: 36px;
+         }
+         &__steps {
+              display: flex;
+              flex-wrap: wrap;
+         }
+         &__step {
+              position: relative;
+              width: 16.5%;
+              margin-bottom: 62px;
+              &:before {
+                  position: absolute;
+                  content: '';
+                  width: 100%;
+                  height: 2px;
+                  left: 0;
+                  top: 34px;
+                  background-color: rgba(232,77,90,1);
+                  z-index: 1;
+                  /*animation: stretchRight 0.5s linear;*/
+                  /*transform-origin: 0% 0%;*/
+              }
+              span {
+                  /*animation: go-step 1s ease-in-out;*/
+                  position: relative;
+                  display: block;
+                  width: 64px;
+                  height: 64px;
+                  box-shadow: inset 0px 0px 0px 2px rgba(232,77,90,1),
+                  0px 0px 0px 2px rgba(255,255,255,1),
+                  0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+                  background-color: #ffffff;
+                  border-radius: 50%;
+                  margin: 0 0 10px;
+                  font-family: 'PF DinDisplay Pro';
+                  font-size: 40px;
+                  font-weight: 500;
+                  font-stretch: normal;
+                  font-style: normal;
+                  line-height: 64px;
+                  letter-spacing: 2.5px;
+                  color: #002337;
+                  text-align: center;
+                  z-index: 5;
+              }
+              p {
+                  font-family: 'PF Din Text Cond Pro';
+                  font-size: 16px;
+                  font-weight: normal;
+                  font-stretch: normal;
+                  font-style: normal;
+                  line-height: 1.27;
+                  letter-spacing: 0.47px;
+                  color: #002337;
+              }
+         }
+         &__finish {
+              position: relative;
+              z-index: 5;
+              p {
+                  width: 232px;
+                  height: 68px;
+                  border-radius: 34px;
+                  box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+                  background-color: #ffffff;
+                  font-family: 'PF DinDisplay Pro';
+                  font-size: 30px;
+                  font-weight: 900;
+                  font-stretch: normal;
+                  font-style: normal;
+                  line-height: 68px;
+                  letter-spacing: 1.88px;
+                  color: #002337;
+                  text-align: center;
+                  /*animation: finish 2s 5s ease-in-out;*/
+              }
+         }
+         &.animate {
+              .franchise-steps__step {
+                  &:before {
+                       animation: stretchRight 0.5s linear;
+                       transform-origin: 0% 0%;
+                  }
+                  span {
+                      animation: go-step 1s ease-in-out;
+                  }
+                  &:nth-child(2) {
+                      &:before {animation-delay: 0.5s;}
+                      span {animation-delay: 0.5s;}
+                  }
+                  &:nth-child(3) {
+                      &:before {animation-delay: 1s;}
+                      span {animation-delay: 1s;}
+                  }
+                  &:nth-child(4) {
+                      &:before {animation-delay: 1.5s;}
+                      span {animation-delay: 1.5s;}
+                  }
+                  &:nth-child(5) {
+                      &:before {animation-delay: 2s;}
+                      span {animation-delay: 2s;}
+                  }
+                  &:nth-child(6) {
+                      &:before {animation-delay: 2.5s;}
+                      span {animation-delay: 2.5s;}
+                  }
+                  &:nth-child(7) {
+                      &:before {animation-delay: 3s;}
+                      span {animation-delay: 3s;}
+                  }
+                  &:nth-child(8) {
+                      &:before {animation-delay: 3.5s;}
+                      span {animation-delay: 3.5s;}
+                  }
+                  &:nth-child(9) {
+                      &:before {animation-delay: 4s;}
+                      span {animation-delay: 4s;}
+                  }
+                  &:nth-child(10) {
+                      &:before {animation-delay: 4.5s;}
+                      span {animation-delay: 4.5s;}
+                  }
+              }
+              .franchise-steps__finish {
+                  p {animation: finish 2s 5s ease-in-out;}
+              }
+         }
+    }
+    &-founder {
+        text-align: center;
+        padding: 80px 0 55px;
+        &__title {
+             font-family: 'PF DinDisplay Pro';
+             font-size: 40px;
+             font-weight: 900;
+             font-stretch: normal;
+             font-style: normal;
+             line-height: normal;
+             letter-spacing: 2.5px;
+             text-align: center;
+             color: #002337;
+             margin-bottom: 35px;
+        }
+        &__image {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 20px;
+            img {
+                width: 100%;
+            }
+        }
+        &__name {
+             font-family: 'PF DinDisplay Pro';
+             font-size: 24px;
+             font-weight: 900;
+             font-stretch: normal;
+             font-style: normal;
+             line-height: 1.17;
+             letter-spacing: 1.3px;
+             text-align: center;
+             color: #002337;
+        }
+        &__position {
+             font-family: 'PF Din Text Cond Pro';
+             font-size: 16px;
+             font-weight: normal;
+             font-stretch: normal;
+             font-style: normal;
+             line-height: 1.27;
+             letter-spacing: 0.47px;
+             color: #002337;
+             margin-bottom: 34px;
+        }
+        &__text {
+            width: 50%;
+            text-align: left;
+            margin: 0 auto;
+            font-size: 16px;
+        }
+    }
+}
+
+@keyframes go-step {   /* назовём анимацию: "go-left-right" */
+    0%   { transform: scale(0); box-shadow: none;}
+    33%  { transform: scale(1.3)}
+    66%  { transform: scale(.8);}
+    100%  { transform: scale(1);
+        box-shadow: inset 0px 0px 0px 2px rgba(232,77,90,1),
+        0px 0px 0px 2px rgba(255,255,255,1),
+        0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+        }
+}
+
+@keyframes finish {   /* назовём анимацию: "go-left-right" */
+    0%   { transform: scale(0); box-shadow: none;}
+    33%  { transform: scale(1.3)}
+    66%  { transform: scale(.8);
+        box-shadow: inset 0px 0px 0px 2px rgba(232,77,90,1),
+        0px 0px 0px 2px rgba(255,255,255,1),
+        0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);}
+    100%  { transform: scale(1);box-shadow: none;
+    }
+}
+
+@keyframes go-step-line {   /* назовём анимацию: "go-left-right" */
+    0%   { transform: translateX(0%);}
+    100%  { transform: translateX(100%);}
+}
+
+@keyframes stretchRight {
+    0% {
+        transform: scaleX(0.3);
+    }
+    /*40% {*/
+        /*transform: scaleX(1.02);*/
+    /*}*/
+    /*60% {*/
+        /*transform: scaleX(0.98);*/
+    /*}*/
+    /*80% {*/
+        /*transform: scaleX(1.01);*/
+    /*}*/
+    100% {
+        transform: scaleX(1);
     }
 }
