@@ -17,6 +17,8 @@ let ww = $(window).width(),
         individual_training: 60,
         massage: 30,
         group_training: 60,
+        reaterra: 60,
+        avantron: 20,
         physiotherapy: 20
     },
 
@@ -33,12 +35,12 @@ let ww = $(window).width(),
     },
 
     scenarios = {
-        optimistic: {consultation: 30, individual_training: 70, massage: 35, group_training: 30, physiotherapy: 30},
-        moderately_optimistic: {consultation: 25, individual_training: 60, massage: 30, group_training: 25, physiotherapy: 25},
-        base: {consultation: 20, individual_training: 50, massage: 25, group_training: 20, physiotherapy: 20},
-        moderately_pessimistic: {consultation: 15, individual_training: 40, massage: 17, group_training: 15, physiotherapy: 15},
-        pessimistic: {consultation: 10, individual_training: 30, massage: 10, group_training: 10, physiotherapy: 10},
-        first_month: {consultation: 5, individual_training: 10, massage: 5, group_training: 5, physiotherapy: 2}
+        optimistic: {consultation: 30, individual_training: 70, massage: 35, group_training: 30, physiotherapy: 30, reaterra: 30, avantron: 30},
+        moderately_optimistic: {consultation: 25, individual_training: 60, massage: 30, group_training: 25, physiotherapy: 25, reaterra: 25, avantron: 25},
+        base: {consultation: 20, individual_training: 50, massage: 25, group_training: 20, physiotherapy: 20, reaterra: 20, avantron: 20},
+        moderately_pessimistic: {consultation: 15, individual_training: 40, massage: 17, group_training: 15, physiotherapy: 15, reaterra: 15, avantron: 15},
+        pessimistic: {consultation: 10, individual_training: 30, massage: 10, group_training: 10, physiotherapy: 10, reaterra: 10, avantron: 10},
+        first_month: {consultation: 5, individual_training: 10, massage: 5, group_training: 5, physiotherapy: 2, reaterra: 5, avantron: 2}
     },
 
     home_package = {
@@ -112,13 +114,15 @@ let ww = $(window).width(),
         discount_training: 15,
         cost_equipment: 4557500,
         cost_furniture: 300000,
-        services: ['consultation', 'individual_training', 'massage', 'group_training', 'physiotherapy'],
+        services: ['consultation', 'individual_training', 'massage', 'group_training', 'physiotherapy', 'reaterra', 'avantron'],
         workplaces: {
             consultation: 1,
             individual_training: 6,
             massage: 1,
             group_training: 1,
-            physiotherapy: 2
+            physiotherapy: 2,
+            reaterra: 1,
+            avantron: 1
         },
         specialists: {
             medical_staff: {
@@ -273,9 +277,7 @@ let ww = $(window).width(),
                 services[service] *
                 selectWorkingDays *
                 scenarios[selectDevelopmentScenario][service] / 100) *
-                12 *
-                packages[selectPackage]['workplaces'][service] *
-                1500;
+                12 * 1500;
             console.log(service + cashflow);
         });
         field_cashflow.val(abc(cashflow));
@@ -328,7 +330,6 @@ let ww = $(window).width(),
     function countNetProfit() {
         net_profit = cashflow -
             transaction_costs -
-            packages[selectPackage]['cost_equipment']/84 * 12 -
             cashflow * 0.07 
             - taxes;
 
