@@ -135,8 +135,10 @@ let ww = $(window).width(),
     package_lump_sum = $('.franchise-calculator__initial-data .lump-sum span'),
 
     field_cashflow = $('#cashflow'),
+    field_cashflow_label = $('#cashflow_label b'),
     field_investments = $('#investments'),
     field_transaction_costs = $('#transaction_costs'),
+    field_transaction_costs_label = $('#transaction_costs_label b'),
     field_area = $('#area'),
     field_years = $('#years'),
     field_range_area = $('#range_area'),
@@ -169,11 +171,11 @@ let ww = $(window).width(),
 
     function init() {
         selectPackage = $('.franchise-calculator__packages input').filter(':checked').attr('id');
+        selectYears = field_years.val();
 
         insertData();
 
         selectArea = field_area.val();
-        selectYears = field_years.val();
         selectRegion = $('#region option').filter(':selected').val();
         selectTaxSystem = $('#tax_system option').filter(':selected').val();
         selectDevelopmentScenario = $('#development_scenario option').filter(':selected').val();
@@ -182,8 +184,8 @@ let ww = $(window).width(),
         countMaxLoad();
         countCashflow();
         countInvestments();
-        countTransactionCosts();
-        countTaxes();
+        countTransactionCosts(selectYears);
+        countTaxes(selectYears);
         countNetProfit();
     }
 
@@ -196,6 +198,8 @@ let ww = $(window).width(),
         field_range_area.attr('min', packages[selectPackage]['area'][0]).attr('max', packages[selectPackage]['area'][1]);
         field_range_area.val(packages[selectPackage]['area'][0]);
         field_area.val(packages[selectPackage]['area'][0]);
+        field_transaction_costs_label.text(selectYears);
+        field_cashflow_label.text(selectYears);
     }
 
     $('.franchise-calculator__packages input').change(function () {
@@ -205,18 +209,20 @@ let ww = $(window).width(),
     field_range_area.on('input', function () {
         field_area.val($(this).val());
         selectArea = field_area.val();
-        countTransactionCosts();
-        countTaxes();
+        countTransactionCosts(selectYears);
+        countTaxes(selectYears);
         countNetProfit();
     });
 
     field_range_year.on('input', function () {
         field_years.val($(this).val());
         selectYears = field_years.val();
+        field_transaction_costs_label.text(selectYears);
+        field_cashflow_label.text(selectYears);
         countCashflow();
-        // countTransactionCosts();
-        // countTaxes();
-        // countNetProfit();
+        countTransactionCosts(selectYears);
+        countTaxes(selectYears);
+        countNetProfit();
     });
 
     $('.form__amount button').click(function () {
@@ -224,28 +230,29 @@ let ww = $(window).width(),
         selectWorkingHours = field_working_hours.val();
         countMaxLoad();
         countCashflow();
-        countTransactionCosts();
-        countTaxes();
+        countTransactionCosts(selectYears);
+        countTaxes(selectYears);
         countNetProfit();
     });
 
     $('#development_scenario').change(function () {
         selectDevelopmentScenario = $('#development_scenario option').filter(':selected').val();
         countCashflow();
-        countTransactionCosts();
-        countTaxes();
+        countTransactionCosts(selectYears);
+        countTaxes(selectYears);
         countNetProfit();
     });
 
     $('#tax_system').change(function () {
         selectTaxSystem = $('#tax_system option').filter(':selected').val();
-        countTaxes();
+        countTaxes(selectYears);
         countNetProfit();
     });
 
     field_region.change(function () {
         selectRegion = $('#region option').filter(':selected').val();
         countInvestments();
+        countNetProfit();
     });
 
     function countMaxLoad() {
@@ -298,8 +305,6 @@ let ww = $(window).width(),
                 });
 
                 cashflows.push(cashflow);
-
-                console.log(cashflows);
             } else {
                 cashflow = 0;
                 let numbers = [];
@@ -327,81 +332,85 @@ let ww = $(window).width(),
                     }
                     number_services_last_month[service] = number_services_month;
 
-                    console.log(numbers);
+                    // console.log(numbers);
                     cashflow += number_services * services[service]['price'] * services[service]['customers'];
                 });
                 cashflows.push(cashflow);
-
-                console.log(cashflows);
             }
         }
-
+        console.log(cashflows);
+        field_cashflow.val(abc(cashflows[selectYears-1]));
     }
 
     function countInvestments() {
-        // investments =
-            // parseInt(packages[selectPackage]['lump_sum'][0].replace(/\s+/g, '')) +
-            // packages[selectPackage]['initial_investment'];
+        investments =
+            parseInt(packages[selectPackage]['lump_sum'][0].replace(/\s+/g, '')) +
+            packages[selectPackage]['initial_investment'];
 
-        // if (selectRegion === 'capital_cities') {
-        //     investments = parseInt(packages[selectPackage]['lump_sum'][1].replace(/\s+/g, ''))
-        //     + packages[selectPackage]['cost_equipment']
-        //     + packages[selectPackage]['cost_furniture'];
-        // } else {
-        //     investments = parseInt(packages[selectPackage]['lump_sum'][0].replace(/\s+/g, ''))
-        //         + packages[selectPackage]['cost_equipment']
-        //         + packages[selectPackage]['cost_furniture'];
-        // }
-        //
-        // field_investments.val(abc(investments));
+        if (selectRegion === 'capital_cities') {
+            investments = parseInt(packages[selectPackage]['lump_sum'][1].replace(/\s+/g, ''))
+            + packages[selectPackage]['cost_equipment']
+            + packages[selectPackage]['cost_furniture'];
+        } else {
+            investments = parseInt(packages[selectPackage]['lump_sum'][0].replace(/\s+/g, ''))
+                + packages[selectPackage]['cost_equipment']
+                + packages[selectPackage]['cost_furniture'];
+        }
+
+        field_investments.val(abc(investments));
         // countNetProfit();
     }
 
-    function countTransactionCosts() {
-        // let specialist, member;
-        // transaction_costs =
-        //     (selectArea * 700 // аренда помещения
-        //         + 5000 // комуналка
-        //         + 5000 // общехозяйственные расходы
-        //         + 10000 // бухгалтерия аутсорс
-        //         + 5000 // РКО
-        //         + 5000 // интернет, софт
-        //         + 10000) // маркетинг
-        //     * 12 + // умножаем на 12 месяцев
-        //     cashflow * 0.2 + // 20% с услуги специалистам
-        //     cashflow * 0.2 * 0.302; // налог на 20% с услуги
-        //
-        // for(specialist in packages[selectPackage]['specialists']) {
-        //     transaction_costs += packages[selectPackage]['specialists'][specialist] * fixed_costs[specialist] * 12
-        //                          + packages[selectPackage]['specialists'][specialist] * fixed_costs[specialist] * 12 * 0.302;
-        // }
-        //
-        // field_transaction_costs.val(abc(Math.floor(transaction_costs)));
-        // console.log('transaction_costs - ' + abc(Math.floor(transaction_costs)));
+    function countTransactionCosts(year) {
+        transaction_costs = 0;
+
+        let specialist;
+        transaction_costs =
+            (selectArea * 700 // аренда помещения
+                + 5000 // комуналка
+                + 5000 // общехозяйственные расходы
+                + 10000 // бухгалтерия аутсорс
+                + 5000 // РКО
+                + 5000 // интернет, софт
+                + 10000) // маркетинг
+            * 12 + // умножаем на 12 месяцев
+            cashflows[year - 1] * 0.2 + // 20% с услуги специалистам
+            cashflows[year - 1] * 0.2 * 0.302; // налог на 20% с услуги
+
+        for(specialist in packages[selectPackage]['specialists']) {
+            transaction_costs += packages[selectPackage]['specialists'][specialist] * fixed_costs[specialist] * 12
+                                 + packages[selectPackage]['specialists'][specialist] * fixed_costs[specialist] * 12 * 0.302;
+        }
+
+        field_transaction_costs.val(abc(Math.floor(transaction_costs)));
+        console.log('transaction_costs - ' + abc(Math.floor(transaction_costs)));
+
+        return transaction_costs;
     }
 
     function countNetProfit() {
-        // net_profit = cashflow -
-        //     transaction_costs -
-        //     cashflow * 0.07
-        //     - taxes;
-        //
-        // console.log('net_profit - ' + abc(Math.floor(net_profit)));
-        //
-        // field_net_profit.text(abc(Math.floor(net_profit * 5)) + 'руб.');
-        //
-        // let DCF = 0;
-        //
-        // for (var i = 1; i <= 5; i++) {
-        //     DCF += net_profit/Math.pow(1.2, i);
-        // }
-        //
-        // profitability_index = DCF/investments;
-        //
-        // console.log('DCF - ' + abc(Math.floor(DCF)));
-        // console.log('pl - ' + profitability_index);
-        // field_profitability_index.text(profitability_index.toFixed(2));
-        //
+        net_profit = 0;
+
+        for (let i = 1; i <= selectYears; i++) {
+            net_profit += cashflows[i - 1] - countTransactionCosts(i) - cashflows[i - 1] * 0.07 - countTaxes(i);
+        }
+
+        console.log('net_profit - ' + abc(Math.floor(net_profit)));
+
+        field_net_profit.text(abc(Math.floor(net_profit)) + 'руб.');
+
+        let DCF = 0;
+
+        for (let i = 1; i <= selectYears; i++) {
+            DCF += net_profit/Math.pow(1.2, i);
+        }
+
+        profitability_index = DCF/investments;
+
+        console.log('DCF - ' + abc(Math.floor(DCF)));
+        console.log('pl - ' + profitability_index);
+        field_profitability_index.text(profitability_index.toFixed(2));
+
         // payback_period = 0;
         //
         // var sum_DCF_year = 0;
@@ -433,21 +442,25 @@ let ww = $(window).width(),
 
     }
     
-    function countTaxes() {
-        // if (selectTaxSystem === 'osn') {
-        //     if (cashflow - transaction_costs > 0) {
-        //         taxes = cashflow * 0.2;
-        //     }
-        // } else if (selectTaxSystem === 'usn_6') {
-        //     taxes = cashflow * 0.06;
-        // } else {
-        //     if (cashflow - transaction_costs > 0) {
-        //         taxes = (cashflow - transaction_costs) * 0.15 > (cashflow - transaction_costs) * 0.01 ? (cashflow - transaction_costs) * 0.15:(cashflow - transaction_costs) * 0.01;
-        //     } else
-        //         taxes = (cashflow - transaction_costs) * 0.01;
-        // }
-        //
-        // console.log(taxes);
+    function countTaxes(year) {
+        taxes = 0;
+        transaction_costs = countTransactionCosts(year);
+        if (selectTaxSystem === 'osn') {
+            if (cashflows[year - 1] - transaction_costs > 0) {
+                taxes = cashflows[year - 1] * 0.2;
+            }
+        } else if (selectTaxSystem === 'usn_6') {
+            taxes = cashflows[year - 1] * 0.06;
+        } else {
+            if (cashflows[year - 1] - transaction_costs > 0) {
+                taxes = (cashflows[year - 1] - transaction_costs) * 0.15 > (cashflows[year - 1] - transaction_costs) * 0.01 ? (cashflows[year - 1] - transaction_costs) * 0.15 : (cashflows[year - 1] - transaction_costs) * 0.01;
+            } else
+                taxes = (cashflows[year - 1] - transaction_costs) * 0.01;
+        }
+
+        console.log('Налоги - ' + taxes);
+
+        return taxes;
     }
 
     function abc(n) {

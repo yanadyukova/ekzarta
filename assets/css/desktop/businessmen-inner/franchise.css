@@ -282,6 +282,9 @@
                 }
                 label {
                     margin-left: 0;
+                    b {
+                        font-weight: normal;
+                    }
                 }
                 &.big-label {
                     padding-top: 40px;
