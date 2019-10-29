@@ -264,10 +264,18 @@
                 color: #002337;
             }
             .form-group {
-                width: 30%;
-                &:nth-child(8),
+                width: 25%;
+                &:nth-child(4),
+                &:nth-child(7) {
+                    width: 40%;
+                }
                 &:nth-child(10),
-                &:nth-child(9) {
+                &:nth-child(11) {
+                     width: 17.5%;
+                }
+                &:nth-child(11),
+                &:nth-child(10),
+                &:nth-child(7) {
                      input {
                          width: 100%;
                      }
@@ -290,7 +298,7 @@
                     color: #002337;
                 }
                 &.form__amount {
-                     margin-top: -10px;
+                     margin-top: 20px;
                     .button_minus,
                     .button_plus {
                         height: 39px;
@@ -306,6 +314,7 @@
                     }
                 }
                 &.form__select {
+                    margin-bottom: 30px;
                     select {
 
                     }
@@ -313,7 +322,7 @@
                 &.range {
                     display: flex;
                     align-items: flex-start;
-                    margin-top: -10px;
+                    margin-top: 20px;
                     margin-bottom: 30px;
                     input[type=text] {
                         width: 70px;

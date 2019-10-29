@@ -35,9 +35,6 @@ module.exports = g;
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; // import 'babel-polyfill';
-
-
 __webpack_require__(3);
 
 // import device from 'device/device.js';
@@ -51,24 +48,22 @@ var ww = $(window).width(),
     maximum: {}
 },
     services = {
-    consultation: 30,
-    individual_training: 60,
-    massage: 30,
-    group_training: 60,
-    reaterra: 60,
-    avantron: 20,
-    physiotherapy: 20
+    consultation: { duration: 30, price: 1000, customers: 1 },
+    individual_training: { duration: 60, price: 2000, customers: 1 },
+    massage: { duration: 30, price: 600, customers: 1 },
+    group_training: { duration: 60, price: 500, customers: 5 },
+    reaterra: { duration: 60, price: 500, customers: 1 },
+    avantron: { duration: 20, price: 500, customers: 1 },
+    physiotherapy: { duration: 20, price: 300, customers: 1 }
 },
+    max_load_service = {},
+    cashflows = [],
     fixed_costs = {
     doctor: 25000,
     instructor: 20000,
     masseur: 20000,
     director: 30000,
-    administrator: 20000,
-    accountant: 10000,
-    RCO: 5000,
-    IT: 5000,
-    marketer: 10000
+    administrator: 20000
 },
     scenarios = {
     optimistic: { consultation: 30, individual_training: 70, massage: 35, group_training: 30, physiotherapy: 30, reaterra: 30, avantron: 30 },
@@ -94,17 +89,11 @@ var ww = $(window).width(),
         massage: 1
     },
     specialists: {
-        medical_staff: {
-            doctor: 1,
-            instructor: 1,
-            masseur: 1
-        },
+        doctor: 1,
+        instructor: 1,
+        masseur: 1,
         director: 1,
-        administrator: 1,
-        accountant: 1,
-        RCO: 1,
-        IT: 1,
-        marketer: 1
+        administrator: 1
     }
 },
     standart_package = {
@@ -125,17 +114,11 @@ var ww = $(window).width(),
         physiotherapy: 1
     },
     specialists: {
-        medical_staff: {
-            doctor: 2,
-            instructor: 2,
-            masseur: 2
-        },
+        doctor: 2,
+        instructor: 2,
+        masseur: 2,
         director: 1,
-        administrator: 2,
-        accountant: 1,
-        RCO: 1,
-        IT: 1,
-        marketer: 1
+        administrator: 2
     }
 },
     maximum_package = {
@@ -158,17 +141,11 @@ var ww = $(window).width(),
         avantron: 1
     },
     specialists: {
-        medical_staff: {
-            doctor: 3,
-            instructor: 4,
-            masseur: 2
-        },
+        doctor: 3,
+        instructor: 4,
+        masseur: 2,
         director: 1,
-        administrator: 4,
-        accountant: 1,
-        RCO: 1,
-        IT: 1,
-        marketer: 1
+        administrator: 4
     }
 },
     cashflow = void 0,
@@ -186,7 +163,9 @@ var ww = $(window).width(),
     field_investments = $('#investments'),
     field_transaction_costs = $('#transaction_costs'),
     field_area = $('#area'),
+    field_years = $('#years'),
     field_range_area = $('#range_area'),
+    field_range_year = $('#range_year'),
     field_region = $('#region'),
     field_working_days = $('#working_days'),
     field_working_hours = $('#working_hours'),
@@ -195,11 +174,13 @@ var ww = $(window).width(),
     field_payback_period = $('.franchise-calculator__forecast .payback_period span'),
     selectPackage = $('.franchise-calculator__packages input').filter(':checked').attr('id'),
     selectArea = void 0,
+    selectYears = void 0,
     selectRegion = void 0,
     selectTaxSystem = void 0,
     selectDevelopmentScenario = void 0,
     selectWorkingDays = void 0,
-    selectWorkingHours = void 0;
+    selectWorkingHours = void 0; // import 'babel-polyfill';
+
 
 packages['home'] = home_package;
 packages['standart'] = standart_package;
@@ -215,12 +196,13 @@ function init() {
     insertData();
 
     selectArea = field_area.val();
+    selectYears = field_years.val();
     selectRegion = $('#region option').filter(':selected').val();
     selectTaxSystem = $('#tax_system option').filter(':selected').val();
     selectDevelopmentScenario = $('#development_scenario option').filter(':selected').val();
     selectWorkingDays = $('#working_days').val();
     selectWorkingHours = $('#working_hours').val();
-
+    countMaxLoad();
     countCashflow();
     countInvestments();
     countTransactionCosts();
@@ -251,25 +233,18 @@ field_range_area.on('input', function () {
     countNetProfit();
 });
 
-// field_working_days.on('change', function () {
-//     selectWorkingDays = field_working_days.val();
-//     countCashflow();
-//     countTransactionCosts();
-//     countTaxes();
-//     countNetProfit();
-// });
-//
-// field_working_hours.on('change', function () {
-//     selectWorkingHours = field_working_hours.val();
-//     countCashflow();
-//     countTransactionCosts();
-//     countTaxes();
-//     countNetProfit();
-// });
+field_range_year.on('input', function () {
+    field_years.val($(this).val());
+    selectYears = field_area.val();
+    // countTransactionCosts();
+    // countTaxes();
+    // countNetProfit();
+});
 
 $('.form__amount button').click(function () {
     selectWorkingDays = field_working_days.val();
     selectWorkingHours = field_working_hours.val();
+    countMaxLoad();
     countCashflow();
     countTransactionCosts();
     countTaxes();
@@ -295,14 +270,56 @@ field_region.change(function () {
     countInvestments();
 });
 
+function countMaxLoad() {
+    for (var service in services) {
+        max_load_service[service] = selectWorkingHours * 60 / services[service]['duration'] * selectWorkingDays;
+    }
+    console.log(max_load_service);
+}
+
 function countCashflow() {
+    // cashflow = 0;
+    // packages[selectPackage]['services'].forEach(function (service) {
+    //     cashflow +=
+    //         Math.floor(
+    //         selectWorkingHours * 60 /
+    //         services[service] *
+    //         selectWorkingDays *
+    //         scenarios[selectDevelopmentScenario][service] / 100) *
+    //         12 * 1500;
+    //     console.log(service + cashflow);
+    // });
+    // field_cashflow.val(abc(cashflow));
+    // console.log(abc(cashflow));
+
     cashflow = 0;
-    packages[selectPackage]['services'].forEach(function (service) {
-        cashflow += Math.floor(selectWorkingHours * 60 / services[service] * selectWorkingDays * scenarios[selectDevelopmentScenario][service] / 100) * 12 * 1500;
-        console.log(service + cashflow);
-    });
-    field_cashflow.val(abc(cashflow));
-    console.log(abc(cashflow));
+    var cashflow_month = 0;
+    var cashflow_year = 0;
+    cashflows = [];
+
+    for (var i = 1; i <= selectYears; i++) {
+        if (i === 1) {
+            packages[selectPackage]['services'].forEach(function (service) {
+                var first_month = Math.floor(max_load_service[service] * scenarios['first_month'][service] / 100) * services[service]['price'] * services[service]['customers'];
+                var first_year = Math.floor(max_load_service[service] * scenarios[selectDevelopmentScenario][service] / 100) * services[service]['price'] * services[service]['customers'];
+                var annual_growth = (first_year - first_month) / first_month;
+                var month_growth = Math.pow(1 + annual_growth, 1 / 12) - 1;
+
+                cashflow += first_month;
+                cashflow_month = first_month;
+
+                for (var j = 1; j < 12; j++) {
+                    //считаем со 2 по 12 месяц
+                    cashflow_month = cashflow_month * (1 + month_growth);
+                    cashflow += cashflow_month;
+                }
+            });
+
+            cashflows.push(cashflow);
+
+            console.log(cashflows);
+        }
+    }
 }
 
 function countInvestments() {
@@ -310,97 +327,111 @@ function countInvestments() {
     // parseInt(packages[selectPackage]['lump_sum'][0].replace(/\s+/g, '')) +
     // packages[selectPackage]['initial_investment'];
 
-    if (selectRegion === 'capital_cities') {
-        investments = parseInt(packages[selectPackage]['lump_sum'][1].replace(/\s+/g, '')) + packages[selectPackage]['cost_equipment'] + packages[selectPackage]['cost_furniture'];
-    } else {
-        investments = parseInt(packages[selectPackage]['lump_sum'][0].replace(/\s+/g, '')) + packages[selectPackage]['cost_equipment'] + packages[selectPackage]['cost_furniture'];
-    }
-
-    field_investments.val(abc(investments));
-    countNetProfit();
+    // if (selectRegion === 'capital_cities') {
+    //     investments = parseInt(packages[selectPackage]['lump_sum'][1].replace(/\s+/g, ''))
+    //     + packages[selectPackage]['cost_equipment']
+    //     + packages[selectPackage]['cost_furniture'];
+    // } else {
+    //     investments = parseInt(packages[selectPackage]['lump_sum'][0].replace(/\s+/g, ''))
+    //         + packages[selectPackage]['cost_equipment']
+    //         + packages[selectPackage]['cost_furniture'];
+    // }
+    //
+    // field_investments.val(abc(investments));
+    // countNetProfit();
 }
 
 function countTransactionCosts() {
-    var specialist = void 0,
-        member = void 0;
-    transaction_costs = (selectArea * 700 + 5000 + 5000) * 12 + cashflow * 0.2 + cashflow * 0.2 * 0.302;
-
-    for (specialist in packages[selectPackage]['specialists']) {
-        if (_typeof(packages[selectPackage]['specialists'][specialist]) === 'object') {
-            for (member in packages[selectPackage]['specialists'][specialist]) {
-                transaction_costs += packages[selectPackage]['specialists'][specialist][member] * fixed_costs[member] * 12 + packages[selectPackage]['specialists'][specialist][member] * fixed_costs[member] * 12 * 0.302;
-            }
-        } else {
-            transaction_costs += packages[selectPackage]['specialists'][specialist] * fixed_costs[specialist] * 12;
-        }
-    }
-
-    field_transaction_costs.val(abc(Math.floor(transaction_costs)));
-    console.log('transaction_costs - ' + abc(transaction_costs));
+    // let specialist, member;
+    // transaction_costs =
+    //     (selectArea * 700 // аренда помещения
+    //         + 5000 // комуналка
+    //         + 5000 // общехозяйственные расходы
+    //         + 10000 // бухгалтерия аутсорс
+    //         + 5000 // РКО
+    //         + 5000 // интернет, софт
+    //         + 10000) // маркетинг
+    //     * 12 + // умножаем на 12 месяцев
+    //     cashflow * 0.2 + // 20% с услуги специалистам
+    //     cashflow * 0.2 * 0.302; // налог на 20% с услуги
+    //
+    // for(specialist in packages[selectPackage]['specialists']) {
+    //     transaction_costs += packages[selectPackage]['specialists'][specialist] * fixed_costs[specialist] * 12
+    //                          + packages[selectPackage]['specialists'][specialist] * fixed_costs[specialist] * 12 * 0.302;
+    // }
+    //
+    // field_transaction_costs.val(abc(Math.floor(transaction_costs)));
+    // console.log('transaction_costs - ' + abc(Math.floor(transaction_costs)));
 }
 
 function countNetProfit() {
-    net_profit = cashflow - transaction_costs - cashflow * 0.07 - taxes;
+    // net_profit = cashflow -
+    //     transaction_costs -
+    //     cashflow * 0.07
+    //     - taxes;
+    //
+    // console.log('net_profit - ' + abc(Math.floor(net_profit)));
+    //
+    // field_net_profit.text(abc(Math.floor(net_profit * 5)) + 'руб.');
+    //
+    // let DCF = 0;
+    //
+    // for (var i = 1; i <= 5; i++) {
+    //     DCF += net_profit/Math.pow(1.2, i);
+    // }
+    //
+    // profitability_index = DCF/investments;
+    //
+    // console.log('DCF - ' + abc(Math.floor(DCF)));
+    // console.log('pl - ' + profitability_index);
+    // field_profitability_index.text(profitability_index.toFixed(2));
+    //
+    // payback_period = 0;
+    //
+    // var sum_DCF_year = 0;
+    // var sum_DCF_month = 0;
+    // var DCF_year;
+    // var DCF_month;
+    // var year = 0;
+    //
+    // if (net_profit > 0) {
+    //     while (sum_DCF_year < investments) {
+    //         year++;
+    //         DCF_year = net_profit/Math.pow(1.2, year);
+    //         sum_DCF_year += DCF_year;
+    //         DCF_month = DCF_year/12;
+    //         if (sum_DCF_year > investments) {
+    //             while (sum_DCF_month < investments) {
+    //                 payback_period++;
+    //                 sum_DCF_month += DCF_month;
+    //             }
+    //         } else {
+    //             payback_period += 12;
+    //             sum_DCF_month += DCF_year;
+    //         }
+    //     }
+    //     console.log(payback_period);
+    //     field_payback_period.text(payback_period + ' месяцев');
+    // }
+    //
 
-    console.log('net_profit - ' + abc(Math.floor(net_profit)));
-
-    field_net_profit.text(abc(Math.floor(net_profit * 5)) + 'руб.');
-
-    var DCF = 0;
-
-    for (var i = 1; i <= 5; i++) {
-        DCF += net_profit / Math.pow(1.2, i);
-    }
-
-    profitability_index = DCF / investments;
-
-    console.log('DCF - ' + abc(Math.floor(DCF)));
-    console.log('pl - ' + profitability_index);
-    field_profitability_index.text(profitability_index.toFixed(2));
-
-    payback_period = 0;
-
-    var sum_DCF_year = 0;
-    var sum_DCF_month = 0;
-    var DCF_year;
-    var DCF_month;
-    var year = 0;
-
-    if (net_profit > 0) {
-        while (sum_DCF_year < investments) {
-            year++;
-            DCF_year = net_profit / Math.pow(1.2, year);
-            sum_DCF_year += DCF_year;
-            DCF_month = DCF_year / 12;
-            if (sum_DCF_year > investments) {
-                while (sum_DCF_month < investments) {
-                    payback_period++;
-                    sum_DCF_month += DCF_month;
-                }
-            } else {
-                payback_period += 12;
-                sum_DCF_month += DCF_year;
-            }
-        }
-        console.log(payback_period);
-        field_payback_period.text(payback_period + ' месяцев');
-    }
 }
 
 function countTaxes() {
-    if (selectTaxSystem === 'osn') {
-        if (cashflow - transaction_costs > 0) {
-            taxes = cashflow * 0.2;
-        }
-    } else if (selectTaxSystem === 'usn_6') {
-        taxes = cashflow * 0.06;
-    } else {
-        if (cashflow - transaction_costs > 0) {
-            taxes = (cashflow - transaction_costs) * 0.15;
-        } else taxes = (cashflow - transaction_costs) * 0.01;
-    }
-
-    console.log(taxes);
+    // if (selectTaxSystem === 'osn') {
+    //     if (cashflow - transaction_costs > 0) {
+    //         taxes = cashflow * 0.2;
+    //     }
+    // } else if (selectTaxSystem === 'usn_6') {
+    //     taxes = cashflow * 0.06;
+    // } else {
+    //     if (cashflow - transaction_costs > 0) {
+    //         taxes = (cashflow - transaction_costs) * 0.15 > (cashflow - transaction_costs) * 0.01 ? (cashflow - transaction_costs) * 0.15:(cashflow - transaction_costs) * 0.01;
+    //     } else
+    //         taxes = (cashflow - transaction_costs) * 0.01;
+    // }
+    //
+    // console.log(taxes);
 }
 
 function abc(n) {
