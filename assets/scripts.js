@@ -61,9 +61,7 @@ let ww = $(window).width(),
         specialists: {
             doctor: 1,
             instructor: 1,
-            masseur: 1,
-            director: 1,
-            administrator: 1
+            masseur: 1
         }
     },
 
@@ -318,7 +316,7 @@ let ww = $(window).width(),
                         first_month_year = Math.floor(max_load_service[service] *
                             scenarios[selectDevelopmentScenario][service] / 100);
                     } else {
-                        first_month_year = Math.ceil(number_services_last_month[service] * (1 + month_growth));
+                        first_month_year = number_services_last_month[service] * (1 + month_growth) < max_load_service[service] * 0.9 ?  Math.ceil(number_services_last_month[service] * (1 + month_growth)) : Math.floor(max_load_service[service] * 0.9);
                     }
 
                     number_services = first_month_year;
@@ -368,18 +366,19 @@ let ww = $(window).width(),
         transaction_costs =
             (selectArea * 700 // аренда помещения
                 + 5000 // комуналка
+                + 5000 // клининг
+                + 5000 // прочие расходы
                 + 5000 // общехозяйственные расходы
                 + 10000 // бухгалтерия аутсорс
                 + 5000 // РКО
                 + 5000 // интернет, софт
                 + 10000) // маркетинг
-            * 12 + // умножаем на 12 месяцев
-            cashflows[year - 1] * 0.2 + // 20% с услуги специалистам
-            cashflows[year - 1] * 0.2 * 0.302; // налог на 20% с услуги
+            * 12; // умножаем на 12 месяцев
+
+        transaction_costs += cashflows[year - 1] * 0.2 * (1 + 0.30); // 20% с услуги специалистам // налог на 20% с услуги
 
         for(specialist in packages[selectPackage]['specialists']) {
-            transaction_costs += packages[selectPackage]['specialists'][specialist] * fixed_costs[specialist] * 12
-                                 + packages[selectPackage]['specialists'][specialist] * fixed_costs[specialist] * 12 * 0.302;
+            transaction_costs += packages[selectPackage]['specialists'][specialist] * fixed_costs[specialist] * 12 * (1 + 0.30);
         }
 
         field_transaction_costs.val(abc(Math.floor(transaction_costs)));
@@ -447,10 +446,10 @@ let ww = $(window).width(),
         transaction_costs = countTransactionCosts(year);
         if (selectTaxSystem === 'osn') {
             if (cashflows[year - 1] - transaction_costs > 0) {
-                taxes = cashflows[year - 1] * 0.2;
+                taxes = (cashflows[year - 1] - transaction_costs) * 0.2;
             }
         } else if (selectTaxSystem === 'usn_6') {
-            taxes = cashflows[year - 1] * 0.06;
+            taxes = (cashflows[year - 1] - transaction_costs) * 0.06;
         } else {
             if (cashflows[year - 1] - transaction_costs > 0) {
                 taxes = (cashflows[year - 1] - transaction_costs) * 0.15 > (cashflows[year - 1] - transaction_costs) * 0.01 ? (cashflows[year - 1] - transaction_costs) * 0.15 : (cashflows[year - 1] - transaction_costs) * 0.01;
