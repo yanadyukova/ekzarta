@@ -235,7 +235,8 @@ field_range_area.on('input', function () {
 
 field_range_year.on('input', function () {
     field_years.val($(this).val());
-    selectYears = field_area.val();
+    selectYears = field_years.val();
+    countCashflow();
     // countTransactionCosts();
     // countTaxes();
     // countNetProfit();
@@ -293,32 +294,72 @@ function countCashflow() {
     // console.log(abc(cashflow));
 
     cashflow = 0;
-    var cashflow_month = 0;
-    var cashflow_year = 0;
     cashflows = [];
+    var number_services = 0;
+    var number_services_month = void 0;
+    var number_services_last_month = {};
 
-    for (var i = 1; i <= selectYears; i++) {
+    var _loop = function _loop(i) {
         if (i === 1) {
             packages[selectPackage]['services'].forEach(function (service) {
-                var first_month = Math.floor(max_load_service[service] * scenarios['first_month'][service] / 100) * services[service]['price'] * services[service]['customers'];
-                var first_year = Math.floor(max_load_service[service] * scenarios[selectDevelopmentScenario][service] / 100) * services[service]['price'] * services[service]['customers'];
+                var first_month = Math.floor(max_load_service[service] * scenarios['first_month'][service] / 100);
+                var first_year = Math.floor(max_load_service[service] * scenarios[selectDevelopmentScenario][service] / 100);
                 var annual_growth = (first_year - first_month) / first_month;
                 var month_growth = Math.pow(1 + annual_growth, 1 / 12) - 1;
 
-                cashflow += first_month;
-                cashflow_month = first_month;
+                number_services = first_month;
+                number_services_month = first_month;
 
                 for (var j = 1; j < 12; j++) {
                     //считаем со 2 по 12 месяц
-                    cashflow_month = cashflow_month * (1 + month_growth);
-                    cashflow += cashflow_month;
+                    number_services_month = Math.floor(number_services_month * (1 + month_growth));
+                    number_services += number_services_month;
                 }
+
+                cashflow += number_services * services[service]['price'] * services[service]['customers'];
             });
 
             cashflows.push(cashflow);
 
             console.log(cashflows);
+        } else {
+            cashflow = 0;
+            var numbers = [];
+            var first_month_year = void 0;
+
+            var annual_growth = 0.15;
+            var month_growth = Math.pow(1 + annual_growth, 1 / 12) - 1;
+
+            packages[selectPackage]['services'].forEach(function (service) {
+                if (i === 2) {
+                    first_month_year = Math.floor(max_load_service[service] * scenarios[selectDevelopmentScenario][service] / 100);
+                } else {
+                    first_month_year = Math.ceil(number_services_last_month[service] * (1 + month_growth));
+                }
+
+                number_services = first_month_year;
+                number_services_month = first_month_year;
+                numbers = [first_month_year];
+
+                for (var j = 1; j < 12; j++) {
+                    //считаем со 2 по 12 месяц
+                    number_services_month = number_services_month * (1 + month_growth) < max_load_service[service] * 0.9 ? Math.ceil(number_services_month * (1 + month_growth)) : Math.floor(max_load_service[service] * 0.9);
+                    number_services += number_services_month;
+                    numbers.push(number_services_month);
+                }
+                number_services_last_month[service] = number_services_month;
+
+                console.log(numbers);
+                cashflow += number_services * services[service]['price'] * services[service]['customers'];
+            });
+            cashflows.push(cashflow);
+
+            console.log(cashflows);
         }
+    };
+
+    for (var i = 1; i <= selectYears; i++) {
+        _loop(i);
     }
 }
 
