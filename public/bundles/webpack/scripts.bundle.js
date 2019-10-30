@@ -57,11 +57,21 @@ var ww = $(window).width(),
     physiotherapy: { duration: 20, price: 300, customers: 1 }
 },
     max_load_service = {},
-    cashflows = [],
+    // максимальная загрузка центра по услугам
+
+cashflows = [],
+    // денежные поступления по годам за выбранный период
+
+numbers = {},
+    // кол-во услуг за каждый месяц за выбранный период
+
+transaction_costs_year = {},
+    transaction_costs_years = [],
+    operating_profit = {},
     fixed_costs = {
     doctor: 25000,
     instructor: 20000,
-    masseur: 20000,
+    masseur: 15000,
     director: 30000,
     administrator: 20000
 },
@@ -90,7 +100,6 @@ var ww = $(window).width(),
     },
     specialists: {
         doctor: 1,
-        instructor: 1,
         masseur: 1
     }
 },
@@ -217,8 +226,8 @@ function insertData() {
     package_lump_sum.html('От ' + packages[selectPackage]['lump_sum'][0] + ' руб.' + '<br>' + 'до ' + packages[selectPackage]['lump_sum'][1] + ' руб.');
 
     field_range_area.attr('min', packages[selectPackage]['area'][0]).attr('max', packages[selectPackage]['area'][1]);
-    field_range_area.val(packages[selectPackage]['area'][0]);
-    field_area.val(packages[selectPackage]['area'][0]);
+    field_range_area.val(50);
+    field_area.val(50);
     field_transaction_costs_label.text(selectYears);
     field_cashflow_label.text(selectYears);
 }
@@ -284,28 +293,18 @@ function countMaxLoad() {
 }
 
 function countCashflow() {
-    // cashflow = 0;
-    // packages[selectPackage]['services'].forEach(function (service) {
-    //     cashflow +=
-    //         Math.floor(
-    //         selectWorkingHours * 60 /
-    //         services[service] *
-    //         selectWorkingDays *
-    //         scenarios[selectDevelopmentScenario][service] / 100) *
-    //         12 * 1500;
-    //     console.log(service + cashflow);
-    // });
-    // field_cashflow.val(abc(cashflow));
-    // console.log(abc(cashflow));
-
     cashflow = 0;
-    cashflows = [];
-    var number_services = 0;
-    var number_services_month = void 0;
-    var number_services_last_month = {};
+    cashflows = []; // денежные поступления по годам за выбранный период
+    var number_services = 0; // кол-во услуг за год
+    var number_services_month = void 0; // кол-во услуг в текущем месяце
+    var number_services_last_month = {}; //сохраняем кол-во услуг за последний месяц года, для расчета 1-ого месяца следующего года
 
-    var _loop = function _loop(i) {
-        if (i === 1) {
+    for (var i = 1; i <= selectYears; i++) {
+        numbers[i] = {};
+    }
+
+    var _loop = function _loop(_i) {
+        if (_i === 1) {
             packages[selectPackage]['services'].forEach(function (service) {
                 var first_month = Math.floor(max_load_service[service] * scenarios['first_month'][service] / 100);
                 var first_year = Math.floor(max_load_service[service] * scenarios[selectDevelopmentScenario][service] / 100);
@@ -314,11 +313,13 @@ function countCashflow() {
 
                 number_services = first_month;
                 number_services_month = first_month;
+                numbers[_i][service] = [first_month];
 
                 for (var j = 1; j < 12; j++) {
                     //считаем со 2 по 12 месяц
                     number_services_month = Math.floor(number_services_month * (1 + month_growth));
                     number_services += number_services_month;
+                    numbers[_i][service].push(number_services_month);
                 }
 
                 cashflow += number_services * services[service]['price'] * services[service]['customers'];
@@ -327,14 +328,13 @@ function countCashflow() {
             cashflows.push(cashflow);
         } else {
             cashflow = 0;
-            var numbers = [];
             var first_month_year = void 0;
 
             var annual_growth = 0.15;
             var month_growth = Math.pow(1 + annual_growth, 1 / 12) - 1;
 
             packages[selectPackage]['services'].forEach(function (service) {
-                if (i === 2) {
+                if (_i === 2) {
                     first_month_year = Math.floor(max_load_service[service] * scenarios[selectDevelopmentScenario][service] / 100);
                 } else {
                     first_month_year = number_services_last_month[service] * (1 + month_growth) < max_load_service[service] * 0.9 ? Math.ceil(number_services_last_month[service] * (1 + month_growth)) : Math.floor(max_load_service[service] * 0.9);
@@ -342,26 +342,27 @@ function countCashflow() {
 
                 number_services = first_month_year;
                 number_services_month = first_month_year;
-                numbers = [first_month_year];
+                numbers[_i][service] = [first_month_year];
 
                 for (var j = 1; j < 12; j++) {
                     //считаем со 2 по 12 месяц
                     number_services_month = number_services_month * (1 + month_growth) < max_load_service[service] * 0.9 ? Math.ceil(number_services_month * (1 + month_growth)) : Math.floor(max_load_service[service] * 0.9);
                     number_services += number_services_month;
-                    numbers.push(number_services_month);
+                    numbers[_i][service].push(number_services_month);
                 }
                 number_services_last_month[service] = number_services_month;
 
-                // console.log(numbers);
                 cashflow += number_services * services[service]['price'] * services[service]['customers'];
             });
+            console.log(numbers);
             cashflows.push(cashflow);
         }
     };
 
-    for (var i = 1; i <= selectYears; i++) {
-        _loop(i);
+    for (var _i = 1; _i <= selectYears; _i++) {
+        _loop(_i);
     }
+    console.log(numbers);
     console.log(cashflows);
     field_cashflow.val(abc(cashflows[selectYears - 1]));
 }
@@ -379,55 +380,81 @@ function countInvestments() {
     // countNetProfit();
 }
 
-function countTransactionCosts(year) {
-    transaction_costs = 0;
+function countTransactionCosts() {
+    transaction_costs_years = [];
+    var transaction_costs_month = void 0;
+    var specialist = void 0,
+        service = void 0;
 
-    var specialist = void 0;
-    transaction_costs = (selectArea * 700 // аренда помещения
-    + 5000 // комуналка
-    + 5000 // клининг
-    + 5000 // прочие расходы
-    + 5000 // общехозяйственные расходы
-    + 10000 // бухгалтерия аутсорс
-    + 5000 // РКО
-    + 5000 // интернет, софт
-    + 10000) * // маркетинг
-    12; // умножаем на 12 месяцев
-
-    transaction_costs += cashflows[year - 1] * 0.2 * (1 + 0.30); // 20% с услуги специалистам // налог на 20% с услуги
-
-    for (specialist in packages[selectPackage]['specialists']) {
-        transaction_costs += packages[selectPackage]['specialists'][specialist] * fixed_costs[specialist] * 12 * (1 + 0.30);
+    for (var i = 1; i <= selectYears; i++) {
+        transaction_costs_year[i] = [];
     }
 
-    field_transaction_costs.val(abc(Math.floor(transaction_costs)));
-    console.log('transaction_costs - ' + abc(Math.floor(transaction_costs)));
+    for (var _i2 = 1; _i2 <= selectYears; _i2++) {
+        for (var j = 1; j <= 12; j++) {
+            var cashflow_month = 0;
+            transaction_costs_month = selectArea * 700 // аренда помещения
+            + 5000 // комуналка
+            + 5000 // клининг
+            + 5000 // прочие расходы
+            + 5000 // общехозяйственные расходы
+            + 10000 // бухгалтерия аутсорс
+            + 5000 // РКО
+            + 5000 // интернет, софт
+            + 10000; // маркетинг
 
-    return transaction_costs;
+            for (service in numbers[_i2]) {
+                cashflow_month += numbers[_i2][service][j - 1] * services[service]['price'];
+            }
+
+            transaction_costs_month += cashflow_month * 0.2 * (1 + 0.30);
+
+            for (specialist in packages[selectPackage]['specialists']) {
+                transaction_costs_month += packages[selectPackage]['specialists'][specialist] * fixed_costs[specialist] * (1 + 0.30);
+            }
+
+            transaction_costs_year[_i2].push(transaction_costs_month);
+        }
+    }
+
+    for (var _i3 = 1; _i3 <= selectYears; _i3++) {
+        transaction_costs = 0;
+        transaction_costs_year[_i3].forEach(function (transaction_costs_month) {
+            transaction_costs += transaction_costs_month;
+        });
+        transaction_costs_years.push(transaction_costs);
+    }
+
+    field_transaction_costs.val(abc(Math.floor(transaction_costs_years[selectYears - 1])));
+    // console.log('transaction_costs - ' + transaction_costs_years);
+    // console.log('transaction_costs - ');
+    // console.log(transaction_costs_year);
+
+    countOperatingProfit();
 }
 
 function countNetProfit() {
-    net_profit = 0;
-
-    for (var i = 1; i <= selectYears; i++) {
-        net_profit += cashflows[i - 1] - countTransactionCosts(i) - cashflows[i - 1] * 0.07 - countTaxes(i);
-    }
-
-    console.log('net_profit - ' + abc(Math.floor(net_profit)));
-
-    field_net_profit.text(abc(Math.floor(net_profit)) + 'руб.');
-
-    var DCF = 0;
-
-    for (var _i = 1; _i <= selectYears; _i++) {
-        DCF += net_profit / Math.pow(1.2, _i);
-    }
-
-    profitability_index = DCF / investments;
-
-    console.log('DCF - ' + abc(Math.floor(DCF)));
-    console.log('pl - ' + profitability_index);
-    field_profitability_index.text(profitability_index.toFixed(2));
+    // net_profit = 0;
+    //
+    // for (let i = 1; i <= selectYears; i++) {
+    //     net_profit += cashflows[i - 1] - countTransactionCosts(i) - cashflows[i - 1] * 0.07 - countTaxes(i);
+    // }
+    //
+    // console.log('net_profit - ' + abc(Math.floor(net_profit)));
+    //
+    // field_net_profit.text(abc(Math.floor(net_profit)) + 'руб.');
+    //
+    // let DCF = 0;
+    //
+    // for (let i = 1; i <= selectYears; i++) {
+    //     DCF += net_profit/Math.pow(1.2, i);
+    // }
+    //
+    // profitability_index = DCF/investments;
+    //
+    // console.log('DCF - ' + abc(Math.floor(DCF)));
+    // console.log('pl - ' + profitability_index);
+    // field_profitability_index.text(profitability_index.toFixed(2));
 
     // payback_period = 0;
     //
@@ -457,26 +484,134 @@ function countNetProfit() {
     //     field_payback_period.text(payback_period + ' месяцев');
     // }
     //
+
 }
 
-function countTaxes(year) {
-    taxes = 0;
-    transaction_costs = countTransactionCosts(year);
-    if (selectTaxSystem === 'osn') {
-        if (cashflows[year - 1] - transaction_costs > 0) {
-            taxes = (cashflows[year - 1] - transaction_costs) * 0.2;
-        }
-    } else if (selectTaxSystem === 'usn_6') {
-        taxes = (cashflows[year - 1] - transaction_costs) * 0.06;
-    } else {
-        if (cashflows[year - 1] - transaction_costs > 0) {
-            taxes = (cashflows[year - 1] - transaction_costs) * 0.15 > (cashflows[year - 1] - transaction_costs) * 0.01 ? (cashflows[year - 1] - transaction_costs) * 0.15 : (cashflows[year - 1] - transaction_costs) * 0.01;
-        } else taxes = (cashflows[year - 1] - transaction_costs) * 0.01;
+function countOperatingProfit() {
+    var operating_profit_month = void 0;
+    var cashflow_month = void 0;
+
+    for (var i = 1; i <= selectYears; i++) {
+        operating_profit[i] = [];
     }
 
-    console.log('Налоги - ' + taxes);
+    var _loop2 = function _loop2(_i4) {
+        var _loop3 = function _loop3(j) {
+            cashflow_month = 0;
+            operating_profit_month = 0;
+            packages[selectPackage]['services'].forEach(function (service) {
+                cashflow_month += numbers[_i4][service][j] * services[service]['price'];
+            });
+            operating_profit_month = cashflow_month - cashflow_month * 0.07 - transaction_costs_year[_i4][j] - (packages[selectPackage]['cost_equipment'] + packages[selectPackage]['cost_furniture']) / 84;
+            operating_profit[_i4].push(parseInt(operating_profit_month.toFixed(2)));
+        };
 
-    return taxes;
+        for (var j = 0; j < 12; j++) {
+            _loop3(j);
+        }
+    };
+
+    for (var _i4 = 1; _i4 <= selectYears; _i4++) {
+        _loop2(_i4);
+    }
+
+    console.log('операционная прибыль - ');
+    console.log(operating_profit);
+}
+
+function countTaxes() {
+    // taxes = 0;
+    // transaction_costs = countTransactionCosts(year);
+    // if (selectTaxSystem === 'osn') {
+    //     if (cashflows[year - 1] - transaction_costs > 0) {
+    //         taxes = (cashflows[year - 1] - transaction_costs) * 0.2;
+    //     }
+    // } else if (selectTaxSystem === 'usn_6') {
+    //     taxes = (cashflows[year - 1] - transaction_costs) * 0.06;
+    // } else {
+    //     if (cashflows[year - 1] - transaction_costs > 0) {
+    //         taxes = (cashflows[year - 1] - transaction_costs) * 0.15 > (cashflows[year - 1] - transaction_costs) * 0.01 ? (cashflows[year - 1] - transaction_costs) * 0.15 : (cashflows[year - 1] - transaction_costs) * 0.01;
+    //     } else
+    //         taxes = (cashflows[year - 1] - transaction_costs) * 0.01;
+    // }
+    //
+    // console.log('Налоги - ' + taxes);
+
+    var taxes_month = void 0;
+    var taxes_year = {};
+    var cashflow_month = void 0,
+        cashflow_period = 0,
+        taxes_cashflow_period = void 0,
+        operating_profit_period = void 0;
+    var cashflow_prev_period = 0;
+
+    for (var i = 1; i <= selectYears; i++) {
+        taxes_year[i] = [];
+    }
+
+    if (selectTaxSystem === 'osn') {
+        for (var _i5 = 1; _i5 <= selectYears; _i5++) {
+            for (var j = 0; j < 12; j++) {
+                if (operating_profit[_i5][j] > 0) {
+                    taxes_month = operating_profit[_i5][j] * 0.2;
+                } else {
+                    taxes_month = 0;
+                }
+                taxes_year[_i5].push(taxes_month);
+            }
+        }
+    } else if (selectTaxSystem === 'usn_6') {
+        var _loop4 = function _loop4(_i6) {
+            var _loop5 = function _loop5(_j) {
+                cashflow_month = 0;
+                packages[selectPackage]['services'].forEach(function (service) {
+                    cashflow_month += numbers[_i6][service][_j] * services[service]['price'];
+                });
+                taxes_month = cashflow_month * 0.06;
+                taxes_year[_i6].push(taxes_month);
+            };
+
+            for (var _j = 0; _j < 12; _j++) {
+                _loop5(_j);
+            }
+        };
+
+        for (var _i6 = 1; _i6 <= selectYears; _i6++) {
+            _loop4(_i6);
+        }
+    } else if (selectTaxSystem === 'usn_15') {
+        var _loop6 = function _loop6(_i7) {
+            var _loop7 = function _loop7(_j2) {
+                packages[selectPackage]['services'].forEach(function (service) {
+                    cashflow_period += (numbers[_i7][service][_j2] + numbers[_i7][service][_j2 + 1] + numbers[_i7][service][_j2 + 2]) * services[service]['price'];
+                });
+
+                taxes_cashflow_period = cashflow_period * 0.01;
+                operating_profit_period = (operating_profit[_i7][_j2] + operating_profit[_i7][_j2 + 1] + operating_profit[_i7][_j2 + 2]) * 0.15;
+
+                if (taxes_cashflow_period > operating_profit_period) {
+                    taxes_month = taxes_cashflow_period - cashflow_prev_period;
+                    cashflow_prev_period = taxes_month;
+                } else {
+                    taxes_month = operating_profit_period - cashflow_prev_period;
+                    cashflow_prev_period = taxes_month;
+                }
+
+                taxes_year[_i7].push(taxes_month);
+            };
+
+            for (var _j2 = 0; _j2 < 12; _j2 = _j2 + 3) {
+                _loop7(_j2);
+            }
+        };
+
+        for (var _i7 = 1; _i7 <= selectYears; _i7++) {
+            _loop6(_i7);
+        }
+    }
+
+    console.log('налоги - ');
+    console.log(taxes_year);
 }
 
 function abc(n) {
