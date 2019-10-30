@@ -509,7 +509,7 @@ let ww = $(window).width(),
 
         let taxes_month;
         let taxes_year = {};
-        let cashflow_month, cashflow_period = 0, taxes_cashflow_period, operating_profit_period;
+        let cashflow_month, cashflow_period = 0, taxes_cashflow_period, operating_profit_period = 0;
         let cashflow_prev_period = 0;
 
         for (let i = 1; i<= selectYears; i ++) {
@@ -546,7 +546,7 @@ let ww = $(window).width(),
                     });
 
                     taxes_cashflow_period = cashflow_period * 0.01;
-                    operating_profit_period = (operating_profit[i][j] + operating_profit[i][j + 1] + operating_profit[i][j + 2]) * 0.15;
+                    operating_profit_period += (operating_profit[i][j] + operating_profit[i][j + 1] + operating_profit[i][j + 2]) * 0.15;
 
                     if (taxes_cashflow_period > operating_profit_period) {
                         taxes_month = taxes_cashflow_period - cashflow_prev_period;

@@ -542,7 +542,7 @@ function countTaxes() {
     var cashflow_month = void 0,
         cashflow_period = 0,
         taxes_cashflow_period = void 0,
-        operating_profit_period = void 0;
+        operating_profit_period = 0;
     var cashflow_prev_period = 0;
 
     for (var i = 1; i <= selectYears; i++) {
@@ -587,7 +587,7 @@ function countTaxes() {
                 });
 
                 taxes_cashflow_period = cashflow_period * 0.01;
-                operating_profit_period = (operating_profit[_i7][_j2] + operating_profit[_i7][_j2 + 1] + operating_profit[_i7][_j2 + 2]) * 0.15;
+                operating_profit_period += (operating_profit[_i7][_j2] + operating_profit[_i7][_j2 + 1] + operating_profit[_i7][_j2 + 2]) * 0.15;
 
                 if (taxes_cashflow_period > operating_profit_period) {
                     taxes_month = taxes_cashflow_period - cashflow_prev_period;
