@@ -426,10 +426,15 @@
         &__forecast {
              display: flex;
              justify-content: space-evenly;
+             align-items: center;
              border-radius: 3px;
+             padding: 0 14px 0 74px;
              background-color: #dff5db;
-             padding: 24px 0;
+             height: 110px;
              margin: 34px 0;
+             div {
+                 width: 30%;
+             }
              p {
                  font-family: 'PF Din Text Cond Pro';
                  font-size: 18px;
@@ -439,8 +444,13 @@
                  line-height: 1.27;
                  letter-spacing: 0.47px;
                  color: #002337;
+                 margin-bottom: 0;
+                 b {
+                     font-weight: normal;
+                 }
              }
              span {
+                 display: block;
                  font-family: 'PF DinDisplay Pro';
                  font-size: 17px;
                  font-weight: 900;
@@ -450,6 +460,7 @@
                  letter-spacing: 0.92px;
                  color: #002337;
                  text-transform: uppercase;
+                 margin-top: 18px;
              }
         }
         &__order {

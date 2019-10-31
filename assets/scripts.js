@@ -154,7 +154,7 @@ let ww = $(window).width(),
     field_working_days = $('#working_days'),
     field_working_hours = $('#working_hours'),
 
-    field_net_profit = $('.franchise-calculator__forecast .net_profit span'),
+    field_net_profit = $('.franchise-calculator__forecast .net_profit>span'),
     field_profitability_index = $('.franchise-calculator__forecast .profitability_index span'),
     field_payback_period = $('.franchise-calculator__forecast .payback_period span'),
 
@@ -428,15 +428,33 @@ let ww = $(window).width(),
             });
         }
 
+        profitability_index = net_profit/investments;
+
         console.log('net_profit - ' + abc(net_profit));
 
-        field_net_profit.text(abc(Math.floor(net_profit)) + 'руб.');
-        field_payback_period.text(payback_period);
+        if (selectYears == 1) {
+            $('.franchise-calculator__forecast .net_profit p b').text(selectYears + ' год');
+            $('.franchise-calculator__forecast .profitability_index p b').text(selectYears + ' год');
+        } else if (selectYears > 4) {
+            $('.franchise-calculator__forecast .net_profit p b').text(selectYears + ' лет');
+            $('.franchise-calculator__forecast .profitability_index p b').text(selectYears + ' лет');
+        } else {
+            $('.franchise-calculator__forecast .net_profit p b').text(selectYears + ' года');
+            $('.franchise-calculator__forecast .profitability_index p b').text(selectYears + ' года');
+        }
 
-        profitability_index = net_profit/investments;
+        field_net_profit.text(abc(Math.floor(net_profit)) + 'руб.');
 
         console.log('pl - ' + profitability_index);
         field_profitability_index.text(profitability_index.toFixed(2));
+
+        if (net_profit > investments) {
+            $('.franchise-calculator__forecast .payback_period p').text('Срок окупаемости от');
+            $('.franchise-calculator__forecast .payback_period span').text(payback_period + ' месяцев');
+        } else {
+            $('.franchise-calculator__forecast .payback_period p').text('Установите больше срок реализации проекта для расчета окупаемости')
+            $('.franchise-calculator__forecast .payback_period span').text('');
+        }
 
     }
     
