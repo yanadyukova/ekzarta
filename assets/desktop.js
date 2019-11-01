@@ -230,6 +230,16 @@ let ww = $(window).width(),
             $('.jsMapServices').addClass('active');
         });
     }(),
+    
+    ShowCharacter = function () {
+        $('.franchise-calculator__desc').click(function () {
+            $(this).toggleClass('hide');
+            $('.franchise-calculator__initial-data').slideToggle({
+                duration: 'fast',
+                easing: 'linear'
+            });
+        });
+    }(),
 
     AppointmentForm = function () {
 

@@ -73,6 +73,7 @@ transaction_costs_year = {},
     doctor: 25000,
     instructor: 20000,
     masseur: 15000,
+    nurse: 15000,
     director: 30000,
     administrator: 20000
 },
@@ -124,7 +125,8 @@ transaction_costs_year = {},
     specialists: {
         doctor: 2,
         instructor: 2,
-        masseur: 2,
+        masseur: 1,
+        nurse: 1,
         director: 1,
         administrator: 2
     }
@@ -152,8 +154,9 @@ transaction_costs_year = {},
         doctor: 3,
         instructor: 4,
         masseur: 2,
+        nurse: 1,
         director: 1,
-        administrator: 4
+        administrator: 3
     }
 },
     cashflow = void 0,
@@ -227,10 +230,18 @@ function insertData() {
     package_lump_sum.html('От ' + packages[selectPackage]['lump_sum'][0] + ' руб.' + '<br>' + 'до ' + packages[selectPackage]['lump_sum'][1] + ' руб.');
 
     field_range_area.attr('min', packages[selectPackage]['area'][0]).attr('max', packages[selectPackage]['area'][1]);
-    field_range_area.val(50);
-    field_area.val(50);
     field_transaction_costs_label.text(selectYears);
     field_cashflow_label.text(selectYears);
+    if (selectPackage === 'home') {
+        field_range_area.val(50);
+        field_area.val(50);
+    } else if (selectPackage === 'standart') {
+        field_range_area.val(150);
+        field_area.val(150);
+    } else {
+        field_range_area.val(200);
+        field_area.val(200);
+    }
 }
 
 $('.franchise-calculator__packages input').change(function () {
@@ -338,19 +349,33 @@ function countCashflow() {
                 if (_i === 2) {
                     first_month_year = Math.floor(max_load_service[service] * scenarios[selectDevelopmentScenario][service] / 100);
                 } else {
-                    first_month_year = number_services_last_month[service] * (1 + month_growth) < max_load_service[service] * 0.9 ? Math.ceil(number_services_last_month[service] * (1 + month_growth)) : Math.floor(max_load_service[service] * 0.9);
+                    if (service === 'physiotherapy' || service === 'avantron') {
+                        first_month_year = number_services_last_month[service] * (1 + month_growth) < max_load_service[service] * 0.9 ? Math.floor(number_services_last_month[service] * (1 + month_growth)) : Math.floor(max_load_service[service] * 0.9);
+                    } else {
+                        first_month_year = number_services_last_month[service] * (1 + month_growth) < max_load_service[service] * 0.9 ? Math.ceil(number_services_last_month[service] * (1 + month_growth)) : Math.floor(max_load_service[service] * 0.9);
+                    }
                 }
 
                 number_services = first_month_year;
                 number_services_month = first_month_year;
                 numbers[_i][service] = [first_month_year];
 
-                for (var j = 1; j < 12; j++) {
-                    //считаем со 2 по 12 месяц
-                    number_services_month = number_services_month * (1 + month_growth) < max_load_service[service] * 0.9 ? Math.ceil(number_services_month * (1 + month_growth)) : Math.floor(max_load_service[service] * 0.9);
-                    number_services += number_services_month;
-                    numbers[_i][service].push(number_services_month);
+                if (service === 'physiotherapy' || service === 'avantron') {
+                    for (var j = 1; j < 12; j++) {
+                        //считаем со 2 по 12 месяц
+                        number_services_month = number_services_month * (1 + month_growth) < max_load_service[service] * 0.9 ? Math.floor(number_services_month * (1 + month_growth)) : Math.floor(max_load_service[service] * 0.9);
+                        number_services += number_services_month;
+                        numbers[_i][service].push(number_services_month);
+                    }
+                } else {
+                    for (var _j = 1; _j < 12; _j++) {
+                        //считаем со 2 по 12 месяц
+                        number_services_month = number_services_month * (1 + month_growth) < max_load_service[service] * 0.9 ? Math.ceil(number_services_month * (1 + month_growth)) : Math.floor(max_load_service[service] * 0.9);
+                        number_services += number_services_month;
+                        numbers[_i][service].push(number_services_month);
+                    }
                 }
+
                 number_services_last_month[service] = number_services_month;
 
                 cashflow += number_services * services[service]['price'] * services[service]['customers'];
@@ -402,13 +427,20 @@ function countTransactionCosts() {
             + 10000 // бухгалтерия аутсорс
             + 5000 // РКО
             + 5000 // интернет, софт
-            + 10000; // маркетинг
+            + 15000; // маркетинг
+
+            // for (service in numbers[i]) {
+            //     cashflow_month += numbers[i][service][j-1] * services[service]['price'] * services[service]['customers'];
+            // }
 
             for (service in numbers[_i2]) {
-                cashflow_month += numbers[_i2][service][j - 1] * services[service]['price'];
+                if (service === 'consultation' || service === 'individual_training' || service === 'massage') {
+                    cashflow_month = numbers[_i2][service][j - 1] * services[service]['price'] * services[service]['customers'];
+                    transaction_costs_month += cashflow_month * 0.2 * (1 + 0.30);
+                }
             }
 
-            transaction_costs_month += cashflow_month * 0.2 * (1 + 0.30);
+            // transaction_costs_month += cashflow_month * 0.2 * (1 + 0.30);
 
             for (specialist in packages[selectPackage]['specialists']) {
                 transaction_costs_month += packages[selectPackage]['specialists'][specialist] * fixed_costs[specialist] * (1 + 0.30);
@@ -437,12 +469,18 @@ function countTransactionCosts() {
 function countNetProfit() {
     net_profit = 0;
     payback_period = 0;
-    var dp = Math.pow(1.2, 1 / 12) - 1;
-    var depreciation = parseInt(((packages[selectPackage]['cost_equipment'] + packages[selectPackage]['cost_furniture']) / 84).toFixed(2));
+    var dp = void 0;
+    if (selectPackage === 'standart') {
+        dp = Math.pow(1.1, 1 / 12) - 1;
+    } else {
+        dp = Math.pow(1.2, 1 / 12) - 1;
+    }
+
+    var depreciation = parseFloat(((packages[selectPackage]['cost_equipment'] + packages[selectPackage]['cost_furniture']) / 84).toFixed(2));
 
     var _loop2 = function _loop2(i) {
         operating_profit[i].forEach(function (operating_profit, j) {
-            net_profit += parseInt(((operating_profit - taxes_year[i][j] + depreciation) / Math.pow(1 + dp, j + 1 + (i - 1) * 12)).toFixed(2));
+            net_profit += parseFloat(((operating_profit - taxes_year[i][j] + depreciation) / Math.pow(1 + dp, j + 1 + (i - 1) * 12)).toFixed(8));
             if (net_profit < investments) {
                 payback_period++;
             }
@@ -468,7 +506,7 @@ function countNetProfit() {
         $('.franchise-calculator__forecast .profitability_index p b').text(selectYears + ' года');
     }
 
-    field_net_profit.text(abc(Math.floor(net_profit)) + 'руб.');
+    field_net_profit.text(abc(parseInt(net_profit)) + ' руб.');
 
     console.log('pl - ' + profitability_index);
     field_profitability_index.text(profitability_index.toFixed(2));
@@ -495,10 +533,10 @@ function countOperatingProfit() {
             cashflow_month = 0;
             operating_profit_month = 0;
             packages[selectPackage]['services'].forEach(function (service) {
-                cashflow_month += numbers[_i4][service][j] * services[service]['price'];
+                cashflow_month += numbers[_i4][service][j] * services[service]['price'] * services[service]['customers'];
             });
             operating_profit_month = cashflow_month - cashflow_month * 0.07 - transaction_costs_year[_i4][j] - (packages[selectPackage]['cost_equipment'] + packages[selectPackage]['cost_furniture']) / 84;
-            operating_profit[_i4].push(parseInt(operating_profit_month.toFixed(2)));
+            operating_profit[_i4].push(parseFloat(operating_profit_month.toFixed(2)));
         };
 
         for (var j = 0; j < 12; j++) {
@@ -534,22 +572,22 @@ function countTaxes() {
                 } else {
                     taxes_month = 0;
                 }
-                taxes_year[_i5].push(parseInt(taxes_month.toFixed(2)));
+                taxes_year[_i5].push(parseFloat(taxes_month.toFixed(2)));
             }
         }
     } else if (selectTaxSystem === 'usn_6') {
         var _loop5 = function _loop5(_i6) {
-            var _loop6 = function _loop6(_j) {
+            var _loop6 = function _loop6(_j2) {
                 cashflow_month = 0;
                 packages[selectPackage]['services'].forEach(function (service) {
-                    cashflow_month += numbers[_i6][service][_j] * services[service]['price'];
+                    cashflow_month += numbers[_i6][service][_j2] * services[service]['price'];
                 });
                 taxes_month = cashflow_month * 0.06;
-                taxes_year[_i6].push(parseInt(taxes_month.toFixed(2)));
+                taxes_year[_i6].push(parseFloat(taxes_month.toFixed(2)));
             };
 
-            for (var _j = 0; _j < 12; _j++) {
-                _loop6(_j);
+            for (var _j2 = 0; _j2 < 12; _j2++) {
+                _loop6(_j2);
             }
         };
 
@@ -558,13 +596,17 @@ function countTaxes() {
         }
     } else if (selectTaxSystem === 'usn_15') {
         var _loop7 = function _loop7(_i7) {
-            var _loop8 = function _loop8(_j2) {
+            cashflow_period = 0;
+            operating_profit_period = 0;
+            cashflow_prev_period = 0;
+
+            var _loop8 = function _loop8(_j3) {
                 packages[selectPackage]['services'].forEach(function (service) {
-                    cashflow_period += (numbers[_i7][service][_j2] + numbers[_i7][service][_j2 + 1] + numbers[_i7][service][_j2 + 2]) * services[service]['price'];
+                    cashflow_period += (numbers[_i7][service][_j3] + numbers[_i7][service][_j3 + 1] + numbers[_i7][service][_j3 + 2]) * services[service]['price'];
                 });
 
                 taxes_cashflow_period = cashflow_period * 0.01;
-                operating_profit_period += (operating_profit[_i7][_j2] + operating_profit[_i7][_j2 + 1] + operating_profit[_i7][_j2 + 2]) * 0.15;
+                operating_profit_period += (operating_profit[_i7][_j3] + operating_profit[_i7][_j3 + 1] + operating_profit[_i7][_j3 + 2]) * 0.15;
 
                 if (taxes_cashflow_period > operating_profit_period) {
                     taxes_month = taxes_cashflow_period - cashflow_prev_period;
@@ -575,11 +617,11 @@ function countTaxes() {
                 }
                 taxes_year[_i7].push(0);
                 taxes_year[_i7].push(0);
-                taxes_year[_i7].push(parseInt(taxes_month.toFixed(2)));
+                taxes_year[_i7].push(parseFloat(taxes_month.toFixed(2)));
             };
 
-            for (var _j2 = 0; _j2 < 12; _j2 = _j2 + 3) {
-                _loop8(_j2);
+            for (var _j3 = 0; _j3 < 12; _j3 = _j3 + 3) {
+                _loop8(_j3);
             }
         };
 
@@ -593,9 +635,10 @@ function countTaxes() {
 }
 
 function abc(n) {
-    n += "";
-    n = new Array(4 - n.length % 3).join("U") + n;
-    return n.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
+    // n += "";
+    // n = new Array(4 - n.length % 3).join("U") + n;
+    // return n.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
+    return (n + "").split("").reverse().join("").replace(/(\d{3})/g, "$1 ").split("").reverse().join("").replace(/^ /, "");
 }
 
 /***/ }),

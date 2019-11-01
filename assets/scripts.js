@@ -40,6 +40,7 @@ let ww = $(window).width(),
         doctor: 25000,
         instructor: 20000,
         masseur: 15000,
+        nurse: 15000,
         director: 30000,
         administrator: 20000
     },
@@ -94,7 +95,8 @@ let ww = $(window).width(),
         specialists: {
             doctor: 2,
             instructor: 2,
-            masseur: 2,
+            masseur: 1,
+            nurse: 1,
             director: 1,
             administrator: 2
         }
@@ -123,8 +125,9 @@ let ww = $(window).width(),
             doctor: 3,
             instructor: 4,
             masseur: 2,
+            nurse: 1,
             director: 1,
-            administrator: 4
+            administrator: 3
         }
     },
 
@@ -203,10 +206,20 @@ let ww = $(window).width(),
         package_lump_sum.html('От ' + packages[selectPackage]['lump_sum'][0] + ' руб.' + '<br>' + 'до ' + packages[selectPackage]['lump_sum'][1] + ' руб.');
 
         field_range_area.attr('min', packages[selectPackage]['area'][0]).attr('max', packages[selectPackage]['area'][1]);
-        field_range_area.val(50);
-        field_area.val(50);
         field_transaction_costs_label.text(selectYears);
         field_cashflow_label.text(selectYears);
+        if (selectPackage === 'home') {
+            field_range_area.val(50);
+            field_area.val(50);
+        } else if (selectPackage === 'standart') {
+            field_range_area.val(150);
+            field_area.val(150);
+        } else {
+            field_range_area.val(200);
+            field_area.val(200);
+        }
+
+
     }
 
     $('.franchise-calculator__packages input').change(function () {
@@ -316,18 +329,31 @@ let ww = $(window).width(),
                         first_month_year = Math.floor(max_load_service[service] *
                             scenarios[selectDevelopmentScenario][service] / 100);
                     } else {
-                        first_month_year = number_services_last_month[service] * (1 + month_growth) < max_load_service[service] * 0.9 ?  Math.ceil(number_services_last_month[service] * (1 + month_growth)) : Math.floor(max_load_service[service] * 0.9);
+                        if (service === 'physiotherapy' || service === 'avantron') {
+                            first_month_year = number_services_last_month[service] * (1 + month_growth) < max_load_service[service] * 0.9 ?  Math.floor(number_services_last_month[service] * (1 + month_growth)) : Math.floor(max_load_service[service] * 0.9);
+                        } else {
+                            first_month_year = number_services_last_month[service] * (1 + month_growth) < max_load_service[service] * 0.9 ?  Math.ceil(number_services_last_month[service] * (1 + month_growth)) : Math.floor(max_load_service[service] * 0.9);
+                        }
                     }
 
                     number_services = first_month_year;
                     number_services_month = first_month_year;
                     numbers[i][service] = [first_month_year];
 
-                    for (let j = 1; j < 12; j++) { //считаем со 2 по 12 месяц
-                        number_services_month = number_services_month * (1 + month_growth) < max_load_service[service] * 0.9 ? Math.ceil(number_services_month * (1 + month_growth)) : Math.floor(max_load_service[service] * 0.9);
-                        number_services += number_services_month;
-                        numbers[i][service].push(number_services_month);
+                    if (service === 'physiotherapy' || service === 'avantron') {
+                        for (let j = 1; j < 12; j++) { //считаем со 2 по 12 месяц
+                            number_services_month = number_services_month * (1 + month_growth) < max_load_service[service] * 0.9 ? Math.floor(number_services_month * (1 + month_growth)) : Math.floor(max_load_service[service] * 0.9);
+                            number_services += number_services_month;
+                            numbers[i][service].push(number_services_month);
+                        }
+                    } else {
+                        for (let j = 1; j < 12; j++) { //считаем со 2 по 12 месяц
+                            number_services_month = number_services_month * (1 + month_growth) < max_load_service[service] * 0.9 ? Math.ceil(number_services_month * (1 + month_growth)) : Math.floor(max_load_service[service] * 0.9);
+                            number_services += number_services_month;
+                            numbers[i][service].push(number_services_month);
+                        }
                     }
+
                     number_services_last_month[service] = number_services_month;
 
                     cashflow += number_services * services[service]['price'] * services[service]['customers'];
@@ -380,13 +406,20 @@ let ww = $(window).width(),
                     + 10000 // бухгалтерия аутсорс
                     + 5000 // РКО
                     + 5000 // интернет, софт
-                    + 10000); // маркетинг
+                    + 15000); // маркетинг
+
+                // for (service in numbers[i]) {
+                //     cashflow_month += numbers[i][service][j-1] * services[service]['price'] * services[service]['customers'];
+                // }
 
                 for (service in numbers[i]) {
-                    cashflow_month += numbers[i][service][j-1] * services[service]['price'];
+                    if (service === 'consultation' || service === 'individual_training' || service === 'massage') {
+                        cashflow_month = numbers[i][service][j-1] * services[service]['price'] * services[service]['customers'];
+                        transaction_costs_month += cashflow_month * 0.2 * (1 + 0.30);
+                    }
                 }
 
-                transaction_costs_month += cashflow_month * 0.2 * (1 + 0.30);
+                // transaction_costs_month += cashflow_month * 0.2 * (1 + 0.30);
 
                 for(specialist in packages[selectPackage]['specialists']) {
                     transaction_costs_month += packages[selectPackage]['specialists'][specialist] * fixed_costs[specialist] * (1 + 0.30);
@@ -416,12 +449,18 @@ let ww = $(window).width(),
     function countNetProfit() {
         net_profit = 0;
         payback_period = 0;
-        let dp = Math.pow(1.2, (1/12)) - 1;
-        let depreciation = parseInt(((packages[selectPackage]['cost_equipment'] + packages[selectPackage]['cost_furniture'])/84).toFixed(2));
+        let dp;
+        if (selectPackage === 'standart') {
+            dp = Math.pow(1.1, (1/12)) - 1;
+        } else {
+            dp = Math.pow(1.2, (1/12)) - 1;
+        }
+
+        let depreciation = parseFloat(((packages[selectPackage]['cost_equipment'] + packages[selectPackage]['cost_furniture'])/84).toFixed(2));
 
         for (let i = 1; i <= selectYears; i++) {
             operating_profit[i].forEach(function (operating_profit, j) {
-                net_profit += parseInt(((operating_profit - taxes_year[i][j] + depreciation) / Math.pow(1 + dp, j + 1 + (i-1) * 12)).toFixed(2));
+                net_profit += parseFloat(((operating_profit - taxes_year[i][j] + depreciation) / Math.pow(1 + dp, j + 1 + (i-1) * 12)).toFixed(8));
                 if (net_profit < investments) {
                     payback_period++;
                 }
@@ -443,7 +482,7 @@ let ww = $(window).width(),
             $('.franchise-calculator__forecast .profitability_index p b').text(selectYears + ' года');
         }
 
-        field_net_profit.text(abc(Math.floor(net_profit)) + 'руб.');
+        field_net_profit.text(abc(parseInt(net_profit)) + ' руб.');
 
         console.log('pl - ' + profitability_index);
         field_profitability_index.text(profitability_index.toFixed(2));
@@ -471,10 +510,10 @@ let ww = $(window).width(),
                 cashflow_month = 0;
                 operating_profit_month = 0;
                 packages[selectPackage]['services'].forEach(function (service) {
-                    cashflow_month += numbers[i][service][j] * services[service]['price'];
+                    cashflow_month += numbers[i][service][j] * services[service]['price'] * services[service]['customers'];
                 });
                 operating_profit_month = cashflow_month - cashflow_month * 0.07 - transaction_costs_year[i][j] - (packages[selectPackage]['cost_equipment'] + packages[selectPackage]['cost_furniture'])/84;
-                operating_profit[i].push(parseInt(operating_profit_month.toFixed(2)));
+                operating_profit[i].push(parseFloat(operating_profit_month.toFixed(2)));
             }
         }
 
@@ -499,7 +538,7 @@ let ww = $(window).width(),
                     } else {
                         taxes_month = 0;
                     }
-                    taxes_year[i].push(parseInt(taxes_month.toFixed(2)));
+                    taxes_year[i].push(parseFloat(taxes_month.toFixed(2)));
                 }
             }
         } else if (selectTaxSystem === 'usn_6') {
@@ -510,11 +549,14 @@ let ww = $(window).width(),
                         cashflow_month += numbers[i][service][j] * services[service]['price'];
                     });
                     taxes_month = cashflow_month * 0.06;
-                    taxes_year[i].push(parseInt(taxes_month.toFixed(2)));
+                    taxes_year[i].push(parseFloat(taxes_month.toFixed(2)));
                 }
             }
         } else if (selectTaxSystem === 'usn_15') {
             for (let i = 1; i<= selectYears; i++) {
+                cashflow_period = 0;
+                operating_profit_period = 0;
+                cashflow_prev_period = 0;
                 for (let j = 0; j < 12; j = j + 3) {
                     packages[selectPackage]['services'].forEach(function (service) {
                         cashflow_period += (numbers[i][service][j] + numbers[i][service][j + 1] + numbers[i][service][j + 2]) * services[service]['price'];
@@ -532,7 +574,7 @@ let ww = $(window).width(),
                     }
                     taxes_year[i].push(0);
                     taxes_year[i].push(0);
-                    taxes_year[i].push(parseInt(taxes_month.toFixed(2)));
+                    taxes_year[i].push(parseFloat(taxes_month.toFixed(2)));
                 }
             }
         }
@@ -543,7 +585,8 @@ let ww = $(window).width(),
     }
 
     function abc(n) {
-        n += "";
-        n = new Array(4 - n.length % 3).join("U") + n;
-        return n.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
+        // n += "";
+        // n = new Array(4 - n.length % 3).join("U") + n;
+        // return n.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
+        return (n + "").split("").reverse().join("").replace(/(\d{3})/g, "$1 ").split("").reverse().join("").replace(/^ /, "");
     }

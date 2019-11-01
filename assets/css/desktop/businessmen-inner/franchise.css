@@ -180,6 +180,8 @@
              padding-left: 40px;
         }
         &__desc {
+             display: inline-block;
+             position: relative;
              font-family: 'PF Din Text Cond Pro';
              font-size: 16px;
              font-weight: normal;
@@ -188,7 +190,27 @@
              line-height: 1.27;
              letter-spacing: 0.47px;
              color: #002337;
+             cursor: pointer;
              margin-bottom: 31px;
+             &:after {
+                  position: absolute;
+                  content: '';
+                  width: 11px;
+                  height: 11px;
+                  right: -25px;
+                  top: 10px;
+                  border-right: 1px solid #002337;
+                  border-bottom: 1px solid #002337;
+                  transform: rotate(-135deg);
+                  transition: all .3s linear;
+             }
+             &.hide {
+                  &:after {
+                       top: 2px;
+                       transform: rotate(45deg);
+                       transition: all .3s linear;
+                  }
+             }
         }
         &__calculator {
              border-radius: 3px;
