@@ -136,10 +136,13 @@
                       letter-spacing: 0.47px;
                       color: #002337;
                       margin-top: 10px;
+                      &.data {
+                            animation: go-step-up .5s linear;
+                      }
                   }
                   .volume {
                       border-bottom: 1px solid #e61841;
-                      animation: stretchRight 0.5s linear;
+                      animation: stretchRight 0.2s linear;
                       transform-origin: 0% 0%;
                       div {
                           width: 4px;
@@ -159,87 +162,96 @@
                       }
                   }
                   &:nth-child(2) {
+                      p.data {animation-delay: .2s;}
                       .volume {
                           height: 118.66px;
-                          animation-delay: .5s;
+                          animation-delay: .2s;
                           div {
-                              animation-delay: .5s;
+                              animation-delay: .2s;
                           }
                       }
                   }
                   &:nth-child(3) {
+                      p.data {animation-delay: .4s;}
                       .volume {
                           height: 136.18px;
+                          animation-delay: .4s;
+                          div {
+                              animation-delay: .4s;
+                          }
+                      }
+                  }
+                  &:nth-child(4) {
+                      p.data {animation-delay: .6s;}
+                      .volume {
+                          height: 148.86px;
+                          animation-delay: .6s;
+                          div {
+                              animation-delay: .6s;
+                          }
+                      }
+                  }
+                  &:nth-child(5) {
+                      p.data {animation-delay: .8s;}
+                      .volume {
+                          height: 153.84px;
+                          animation-delay: .8s;
+                          div {
+                              animation-delay: .8s;
+                          }
+                      }
+                  }
+                  &:nth-child(6) {
+                      p.data {animation-delay: 1s;}
+                      .volume {
+                          height: 158.32px;
                           animation-delay: 1s;
                           div {
                               animation-delay: 1s;
                           }
                       }
                   }
-                  &:nth-child(4) {
-                      .volume {
-                          height: 148.86px;
-                          animation-delay: 1.5s;
-                          div {
-                              animation-delay: 1.5s;
-                          }
-                      }
-                  }
-                  &:nth-child(5) {
-                      .volume {
-                          height: 153.84px;
-                          animation-delay: 2s;
-                          div {
-                              animation-delay: 2s;
-                          }
-                      }
-                  }
-                  &:nth-child(6) {
-                      .volume {
-                          height: 158.32px;
-                          animation-delay: 2.5s;
-                          div {
-                              animation-delay: 2.5s;
-                          }
-                      }
-                  }
                   &:nth-child(7) {
+                      p.data {animation-delay: 1.2s;}
                       .volume {
                           height: 165.08px;
-                          animation-delay: 3s;
+                          animation-delay: 1.2s;
                           div {
-                              animation-delay: 3s;
+                              animation-delay: 1.2s;
                           }
                       }
                   }
                   &:nth-child(8) {
+                      p.data {animation-delay: 1.4s;}
                       .volume {
                           height: 174px;
-                          animation-delay: 3.5s;
+                          animation-delay: 1.4s;
                           div {
-                              animation-delay: 3.5s;
+                              animation-delay: 1.4s;
                           }
                       }
                   }
                   &:nth-child(9) {
+                      p.data {animation-delay: 1.6s;}
                       .volume {
                           height: 185.6px;
-                          animation-delay: 4s;
+                          animation-delay: 1.6s;
                           div {
                               border: 1px solid #e61841;
                               background-color: #ffffff;
-                              animation-delay: 4s;
+                              animation-delay: 1.6s;
                           }
                       }
                   }
                   &:nth-child(10) {
+                      p.data {animation-delay: 1.8s;}
                       .volume {
                           height: 200px;
                           border-bottom: none;
                           div {
                               border: 1px solid #e61841;
                               background-color: #ffffff;
-                              animation-delay: 4.5s;
+                              animation-delay: 1.8s;
                           }
 
                       }
@@ -1021,6 +1033,11 @@
     100%  { transform: translateX(100%);}
 }
 
+@keyframes go-step-up {
+    0%   { transform: translateY(150px);}
+    100%  { transform: translateY(0);}
+}
+
 @keyframes stretchRight {
     0% {
         transform: scaleX(0.3);
@@ -1033,8 +1050,10 @@
 @keyframes stretchUp {
     0% {
         transform: scaleY(0);
+        opacity: 0;
     }
     100% {
         transform: scaleY(1);
+        opacity: 1;
     }
 }
