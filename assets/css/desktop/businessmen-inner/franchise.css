@@ -139,28 +139,97 @@
                   }
                   .volume {
                       border-bottom: 1px solid #e61841;
+                      animation: stretchRight 0.5s linear;
+                      transform-origin: 0% 0%;
                       div {
                           width: 4px;
                           height: 100%;
                           background-color: #e61841;
+                          animation: stretchUp 0.5s linear;
+                          transform-origin: 0% 100%;
                       }
                   }
-                  &:nth-child(1) {.volume {height: 103.8px;}}
-                  &:nth-child(2) {.volume {height: 118.66px;}}
-                  &:nth-child(3) {.volume {height: 136.18px;}}
-                  &:nth-child(4) {.volume {height: 148.86px;}}
-                  &:nth-child(5) {.volume {height: 153.84px;}}
-                  &:nth-child(6) {.volume {height: 158.32px;}}
-                  &:nth-child(7) {.volume {height: 165.08px;}}
-                  &:nth-child(8) {.volume {height: 174px;}}
+                  &:nth-child(1) {
+                      .volume {
+                          height: 103.8px;
+                          animation-delay: 0s;
+                          div {
+                              animation-delay: 0s;
+                          }
+                      }
+                  }
+                  &:nth-child(2) {
+                      .volume {
+                          height: 118.66px;
+                          animation-delay: .5s;
+                          div {
+                              animation-delay: .5s;
+                          }
+                      }
+                  }
+                  &:nth-child(3) {
+                      .volume {
+                          height: 136.18px;
+                          animation-delay: 1s;
+                          div {
+                              animation-delay: 1s;
+                          }
+                      }
+                  }
+                  &:nth-child(4) {
+                      .volume {
+                          height: 148.86px;
+                          animation-delay: 1.5s;
+                          div {
+                              animation-delay: 1.5s;
+                          }
+                      }
+                  }
+                  &:nth-child(5) {
+                      .volume {
+                          height: 153.84px;
+                          animation-delay: 2s;
+                          div {
+                              animation-delay: 2s;
+                          }
+                      }
+                  }
+                  &:nth-child(6) {
+                      .volume {
+                          height: 158.32px;
+                          animation-delay: 2.5s;
+                          div {
+                              animation-delay: 2.5s;
+                          }
+                      }
+                  }
+                  &:nth-child(7) {
+                      .volume {
+                          height: 165.08px;
+                          animation-delay: 3s;
+                          div {
+                              animation-delay: 3s;
+                          }
+                      }
+                  }
+                  &:nth-child(8) {
+                      .volume {
+                          height: 174px;
+                          animation-delay: 3.5s;
+                          div {
+                              animation-delay: 3.5s;
+                          }
+                      }
+                  }
                   &:nth-child(9) {
                       .volume {
                           height: 185.6px;
+                          animation-delay: 4s;
                           div {
                               border: 1px solid #e61841;
                               background-color: #ffffff;
+                              animation-delay: 4s;
                           }
-
                       }
                   }
                   &:nth-child(10) {
@@ -170,6 +239,7 @@
                           div {
                               border: 1px solid #e61841;
                               background-color: #ffffff;
+                              animation-delay: 4.5s;
                           }
 
                       }
@@ -765,11 +835,8 @@
                   top: 34px;
                   background-color: rgba(232,77,90,1);
                   z-index: 1;
-                  /*animation: stretchRight 0.5s linear;*/
-                  /*transform-origin: 0% 0%;*/
               }
               span {
-                  /*animation: go-step 1s ease-in-out;*/
                   position: relative;
                   display: block;
                   width: 64px;
@@ -820,7 +887,6 @@
                   letter-spacing: 1.88px;
                   color: #002337;
                   text-align: center;
-                  /*animation: finish 2s 5s ease-in-out;*/
               }
          }
          &.animate {
@@ -959,16 +1025,16 @@
     0% {
         transform: scaleX(0.3);
     }
-    /*40% {*/
-        /*transform: scaleX(1.02);*/
-    /*}*/
-    /*60% {*/
-        /*transform: scaleX(0.98);*/
-    /*}*/
-    /*80% {*/
-        /*transform: scaleX(1.01);*/
-    /*}*/
     100% {
         transform: scaleX(1);
+    }
+}
+
+@keyframes stretchUp {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
     }
 }

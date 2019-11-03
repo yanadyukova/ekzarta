@@ -461,7 +461,7 @@ let ww = $(window).width(),
         for (let i = 1; i <= selectYears; i++) {
             operating_profit[i].forEach(function (operating_profit, j) {
                 net_profit += parseFloat(((operating_profit - taxes_year[i][j] + depreciation) / Math.pow(1 + dp, j + 1 + (i-1) * 12)).toFixed(8));
-                if (net_profit < investments) {
+                if (net_profit < 0) {
                     payback_period++;
                 }
             });
