@@ -156,6 +156,10 @@
                 letter-spacing: 0.44px;
                 color: #002337;
                 margin-bottom: 5px;
+                cursor: pointer;
+                &:hover {
+                     color: #e61841;
+                }
             }
             span {
                 font-family: 'PF Din Text Cond Pro';
@@ -327,7 +331,7 @@
     &__col {
         p {
             font-family: 'PF Din Text Cond Pro';
-            font-size: 13px;
+            font-size: 14px;
             font-weight: normal;
             font-style: normal;
             font-stretch: normal;

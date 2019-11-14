@@ -1,6 +1,6 @@
 .frame {
     position: relative;
-    height: 375px;
+    height: 400px;
     background:
             url("images/desktop/icons/clouds-big.svg") 50% 100%/contain no-repeat,
             linear-gradient(to bottom, #83c1c4, #f8f6f0);
@@ -63,7 +63,7 @@
     }
     &__image {
         display: flex;
-        width: 283px;
+        width: 330px;
         height: 100%;
         align-items: flex-end;
         margin-left: 42px;
@@ -136,5 +136,14 @@
         transition: all .5s linear;
         opacity: 0;
         overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .frame {
+        height: 450px;
+        &__image {
+            width: 350px;
+        }
     }
 }

@@ -148,6 +148,7 @@
             height: 117px;
             top: 0;
             box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+            background: url("/images/desktop/icons/PDF@2x.png") 50% 50%/contain no-repeat;
         }
     }
 }

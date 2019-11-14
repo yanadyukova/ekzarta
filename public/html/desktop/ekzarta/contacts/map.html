@@ -226,7 +226,7 @@
         myMap = new ymaps.Map('map', {
             // При инициализации карты обязательно нужно указать
             // её центр и коэффициент масштабирования.
-            center: [56.32, 44.00], // Москва
+            center: [56.283340, 44.081148],
             zoom: 12,
             controls: ['zoomControl']
         });
@@ -259,8 +259,19 @@
                 "            Вс — выходной день.</p>\n" +
                 "    </div>\n" +
                 "</div>",
-            hintContent: "Хинт метки"
-        });
+            hintContent: "Посмотреть адрес и контакты"
+            },
+            {
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: '/images/desktop/icons/flag.svg',
+                // Размеры метки.
+                iconImageSize: [50, 73],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                // iconImageOffset: [-10, -103]
+            }
+    );
 
         myMap.geoObjects.add(placemark);
     }

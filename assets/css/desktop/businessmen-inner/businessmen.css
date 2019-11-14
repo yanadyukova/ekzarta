@@ -1,9 +1,11 @@
 .businessmen {
     &-header {
-        background: url("/images/desktop/3-1@2x.jpg") 50% 0/cover no-repeat;
-        &__inner {}
+        background: url("/images/desktop/pic/Business_bg@2x.png") 50% 0/cover no-repeat;
+        &__inner {
+            width: 930px;
+        }
         &__title {
-            width: 61%;
+            /*width: 61%;*/
         }
         &__desc {
             font-family: 'PF DinDisplay Pro';
@@ -29,12 +31,28 @@
                 }
             }
         }
+        &__image {
+            width: 650px;
+        }
     }
     &-content {
         .tabs {
             justify-content: flex-start;
             label {
                 margin-left: 74px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .businessmen {
+        &-header {
+            &__inner {
+                 width: 920px;
+            }
+            &__image {
+                width: 750px;
             }
         }
     }

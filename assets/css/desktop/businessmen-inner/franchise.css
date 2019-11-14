@@ -284,12 +284,20 @@
             display: inline-block;
             vertical-align: top;
             width: 45%;
+            p.text-title {
+                margin-bottom: 28px;
+            }
             ul {
                 li {
                     display: flex;
+                    margin-bottom: 28px;
                     align-items: center;
                     span {
                         margin-right: 17px;
+                        img {
+                            width: auto;
+                            height: 55px;
+                        }
                     }
                     p {
                         font-size: 16px;

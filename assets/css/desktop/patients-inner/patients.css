@@ -11,7 +11,6 @@
              width: 204px;
              margin-left: 143px;
              position: relative;
-             bottom: -30px;
         }
     }
     &-content {
@@ -19,6 +18,17 @@
             justify-content: flex-start;
             label {
                 margin-left: 74px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .patient {
+        &-header {
+            &__image {
+                 width: 230px;
+                 bottom: 0;
             }
         }
     }

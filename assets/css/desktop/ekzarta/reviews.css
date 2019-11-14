@@ -22,13 +22,13 @@
                   height: 86px;
                   flex-shrink: 0;
                   border-radius: 6px;
-                  /*background-color: #d8d8d8;*/
                   margin-right: 23px;
+                  cursor: pointer;
                   img {
                       width: 100%;
                       height: auto;
                   }
-                  &:after {
+                  &:before {
                       position: absolute;
                       content: '';
                       width: 100%;
@@ -37,8 +37,19 @@
                       background-color: #d8d8d8;
                       transition: all .2s linear;
                   }
+                  &:after {
+                       position: absolute;
+                       content: '';
+                       width: 22px;
+                       height: 22px;
+                       top: calc(50% - 11px);
+                       left: calc(50% - 11px);
+                       border-radius: 50%;
+                       background: url("/images/desktop/icons/play.svg") 50% 50%/contain no-repeat;
+                       transition: all .2s linear;
+                  }
                   &:hover {
-                      &:after {
+                      &:before {
                             opacity: 0;
                       }
                   }
@@ -67,7 +78,7 @@
                       left: 0;
                       top: 0;
                       box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
-                      background-color: #ffffff;
+                      background: #ffffff url("/images/desktop/icons/PDF@2x.png") 50% 50%/contain no-repeat;
                  }
              }
          }

@@ -2,7 +2,7 @@
     position: relative;
     @mixin i pic/header-bg, jpg;
     width: 100%;
-    height: 317px;
+    height: 375px;
     background-size: cover;
     background-position: 50% 50%;
     color: #002337;
@@ -51,11 +51,11 @@
     &:after {
          position: absolute;
          content: '';
-         background-image: url("images/desktop/icons/clouds.svg");
+         background-image: url("images/desktop/icons/clouds-small.svg");
          width: 100%;
          height: 121px;
-         background-repeat: repeat-x;
-         /*background-size: contain;*/
-         bottom: -20px;
+         background-repeat: no-repeat;
+         background-size: cover;
+         bottom: 0;
     }
 }
