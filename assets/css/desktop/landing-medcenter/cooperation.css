@@ -6,6 +6,7 @@
     &__desc {
         width: 50%;
         padding: 65px 73px;
+        text-decoration: none;
         background-image: radial-gradient(circle at 70% 3%, #03688b, #003751 64%, #002337);
         p {
             font-family: 'PF DinDisplay Pro';
