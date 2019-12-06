@@ -6,6 +6,7 @@
     margin-bottom: 44px;
     &-table {
         display: none;
+        transition: all .5s linear;
         margin-bottom: 60px;
         &.active {
             display: block;
@@ -40,6 +41,7 @@
                  font-size: 16px;
                  line-height: 1.13;
                  letter-spacing: 0.47px;
+                 transition: all .3s linear;
                  color: #002337;
                  &:first-child {
                       border-top: 1px solid #e3ddcd;

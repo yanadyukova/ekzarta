@@ -232,7 +232,23 @@ let ww = $(window).width(),
     }(),
 
     ShowServicesPrices = function() {
-
+        $('.jsServicesFilter li').on('click', function () {
+            if (!$(this).hasClass('active')) {
+                let service_name = $(this).attr('data-services');
+                $(this).closest('.jsServicesFilter').children('li').each(function (index, filter) {
+                    $(filter).removeClass('active');
+                });
+                $(this).addClass('active');
+                $('.jsServicesPrice').children('section').each(function (index, filter) {
+                    $(filter).removeClass('active');
+                });
+                $('.jsServicesPrice').children('section').each(function (index, filter) {
+                    if ($(filter).attr('id') === service_name) {
+                        $(filter).addClass('active');
+                    }
+                });
+            }
+        })
     }(),
     
     ShowCharacter = function () {
