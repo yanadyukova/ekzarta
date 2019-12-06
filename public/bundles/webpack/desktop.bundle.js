@@ -780,6 +780,7 @@ var ww = $(window).width(),
         $('.jsMapServices').addClass('active');
     });
 }(),
+    ShowServicesPrices = function () {}(),
     ShowCharacter = function () {
     $('.franchise-calculator__desc').click(function () {
         $(this).toggleClass('hide');

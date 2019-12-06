@@ -5,7 +5,14 @@
     padding: 0 74px;
     margin-bottom: 44px;
     &-table {
+        display: none;
         margin-bottom: 60px;
+        &.active {
+            display: block;
+        }
+        th {
+            height: 38px;
+        }
     }
     &-price {
          width: 70%;
@@ -20,8 +27,39 @@
          margin-top: 50px;
          border-radius: 3px;
          background-color: #f8f6f0;
-         &__inner {
-              padding: 30px;
+         &__inner {}
+         ul {
+             margin: 0;
+             li {
+                 position: relative;
+                 border: 1px solid #e3ddcd;
+                 border-top: none;
+                 padding: 9px 20px 9px 40px;
+                 cursor: pointer;
+                 font-family: 'PF Din Text Cond Pro';
+                 font-size: 16px;
+                 line-height: 1.13;
+                 letter-spacing: 0.47px;
+                 color: #002337;
+                 &:first-child {
+                      border-top: 1px solid #e3ddcd;
+                 }
+                 &:hover {
+                      background-color: #c5f0bd;
+                 }
+                 &.active {
+                      background-color: #c5f0bd;
+                      &:before {
+                           position: absolute;
+                           content: '';
+                           width: 26px;
+                           height: 26px;
+                           left: 8px;
+                           top: 4px;
+                           background: url("/images/desktop/icons/logo-small.svg") 50% 50%/contain no-repeat;
+                      }
+                 }
+             }
          }
          &__block {
               padding-bottom: 24px;
