@@ -33,6 +33,11 @@
             background-color: #ffffff;
             background-size: 15px 15px;
         }
+        .swiper-pagination {
+            .swiper-pagination-bullet-active {
+                background: #e61841;
+            }
+        }
         &__slide {
             display: block;
             width: 877px;

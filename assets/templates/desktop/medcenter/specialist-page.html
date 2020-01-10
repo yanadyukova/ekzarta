@@ -19,6 +19,11 @@
             <div class="specialist__photo card__image">
                 <img src="/images/desktop/specialists/1.jpg" alt="">
             </div>
+            <!--Эту кнопку выводить только если это страница врача.
+            По логике в модалку с записью нужно выводить услуги, оказываемые данным врачом. Уточнить у Романа-->
+            <div class="specialist__appointment">
+                <a href="" class="button button_red event-page__button" data-toggle="modal" data-target=".jsModalAppointment">Записаться</a>
+            </div>
         </div>
         <div class="specialist__info text-content">
             <p>В 1997 году окончил Нижегородскую Государственную медицинскую академию по специальности «лечебное дело».</p>
@@ -32,6 +37,54 @@
             <p>В 2015 г. прошел первичную специализацию по мануальной терапии.</p>
 
             <p>Участник конференций по медицинской реабилитации и спортивной медицине, соавтор методических рекомендаций по методике «Экзарта», научный редактор первого издания на русском языке книг «Бобат-концепция. Теория и клиническая практика в неврологической реабилитации» и «Принцип Войты. Игра мышц при рефлекторном поступательном движении и в двигательном онтогенезе», литературный редактор первого издания монографии «Нарушения постурального баланса при церебральном инсульте».</p>
+        </div>
+    </div>
+    <!--Следующий блок выводить только если это страница преподавателя. Выводить ближайшие курсы этого преподавателя-->
+    <div class="specialist__announcement">
+        <div class="specialist__announcement__inner">
+            <p class="text-title text-title_big">Ближайшие курсы</p>
+            <section class="schedule-table">
+            <div class="table">
+                <table>
+                    <tr>
+                        <th>Наименование курса</th>
+                        <th>Начало</th>
+                        <th>Окончание</th>
+                        <th>Преподаватель</th>
+                        <th>Город</th>
+                        <th>Стоимость,<br>руб.</th>
+                        <th>Записаться</th>
+                    </tr>
+                    <tr>
+                        <td><a href="">ПНФ Модуль 1</a></td>
+                        <td>13.07.2019</td>
+                        <td>17.07.2019</td>
+                        <td><a href="../../medcenter/specialist-page.html" class="course-teacher pl">Кокош М.</a></td>
+                        <td>Москва</td>
+                        <td>36 000</td>
+                        <td><a href="" data-toggle="modal" data-target=".jsModalEnrollment">Записаться</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Мануальная терапия Кальтенборна-Эвента, 3 модуль</a></td>
+                        <td>13.07.2019</td>
+                        <td>17.07.2019</td>
+                        <td><a href="" class="course-teacher pl">Кокош М.</a></td>
+                        <td>Москва</td>
+                        <td>36 000</td>
+                        <td><a href="" data-toggle="modal" data-target=".jsModalEnrollment">Записаться</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Войта-терапия 1 ступень</a></td>
+                        <td>13.07.2019</td>
+                        <td>17.07.2019</td>
+                        <td><a href="" class="course-teacher pl">Кокош М.</a></td>
+                        <td>Москва</td>
+                        <td>36 000</td>
+                        <td><a href="" data-toggle="modal" data-target=".jsModalEnrollment">Записаться</a></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
         </div>
     </div>
 </section>

@@ -3,13 +3,13 @@
     text-align: center;
     text-decoration: none;
     &__image {
-         width: 116px;
-         height: 116px;
+         width: 130px;
+         height: 130px;
          margin: 0 auto 12px;
          img {
              width: 100%;
              height: inherit;
-             border: 6px solid #fff;
+             border: 5px solid #fff;
              border-radius: 50%;
              box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.12);
          }

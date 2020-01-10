@@ -95,13 +95,16 @@ let ww = $(window).width(),
     }),
 
     SliderPromotions = new Swiper('.promotions-slider .swiper-container', {
-        speed: 500,
+        speed: 1500,
         slidesPerView: 1,
         spaceBetween: 10,
         loop: true,
         autoplay: {
-            delay: 2500,
+            delay: 3000,
             disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
         },
         navigation: {
             nextEl: '.swiper-button-next',

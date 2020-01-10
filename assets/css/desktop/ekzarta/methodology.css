@@ -151,4 +151,28 @@
             background: url("/images/desktop/icons/PDF@2x.png") 50% 50%/contain no-repeat;
         }
     }
+    &__announcement {
+         position: relative;
+         margin-top: 60px;
+         background-color: #f8f6f0;
+        &__inner {
+             padding: 30px 73px 50px;
+             max-width: 1440px;
+             margin: 0 auto;
+        }
+        .schedule-table {
+            margin-top: 40px;
+            padding: 0 72px;
+        }
+        &:before {
+             position: absolute;
+             content: '';
+             background-image: url("images/desktop/icons/clouds-beige-small.svg");
+             width: 100%;
+             height: 121px;
+             background-repeat: no-repeat;
+             background-size: cover;
+             top: -90px;
+        }
+    }
 }

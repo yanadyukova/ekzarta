@@ -72,12 +72,14 @@
         }
     }
     &-reviews {
-        display: flex;
-        &__reviews {
-            width: 50%;
-        }
+        &__reviews {}
         &__review {
-            margin-bottom: 60px;
+             display: flex;
+             margin-bottom: 60px;
+             div:first-of-type {
+                  width: 50%;
+                  /*margin-right: 100px;*/
+             }
         }
         &__title {
             margin-bottom: 7px;
@@ -101,13 +103,10 @@
              padding-left: 74px;
              text-decoration: underline;
         }
-        &__announcements {
-             width: 50%;
-             padding-left: 74px;
-        }
+        &__announcements {}
         &__announcement {
-            padding-top: 73px;
-            margin-bottom: 117px;
+            width: 50%;
+            padding-left: 73px;
             p {
                 font-family: 'PF Din Text Cond Pro';
                 font-size: 16px;
@@ -128,6 +127,9 @@
                 }
             }
         }
-        &__thanks {}
+        &__thanks {
+             margin-bottom: 50px;
+             width: 50%;
+        }
     }
 }

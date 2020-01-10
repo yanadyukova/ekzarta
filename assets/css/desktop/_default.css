@@ -1,10 +1,5 @@
 :root {
     --font-base: 'PF Din Text Cond Pro', Verdana, sans-serif, Arial;
-    /*--font: 'Oriflame Sans', Verdana, sans-serif, Arial;*/
-    /*--font-title: 'Garamond for Oriflame', Verdana, sans-serif, Arial;*/
-    /*--font-serif: 'PT Serif', serif;*/
-    /*--font-obaum: 'Oranienbaum', serif;*/
-    /*--font-roboto: 'Roboto', sans-serif;*/
 }
 
 /** { background-color: rgba(255,0,0,.2); }*/
@@ -72,7 +67,7 @@ a {
     color: #e61841;
     text-decoration: underline;
     &:focus {
-      outline: 3px auto #ea808c;
+        outline: 3px auto #ea808c;
     }
     &:hover {
         text-decoration: none;
@@ -134,5 +129,5 @@ a {
 }
 
 ::selection {
-  background: color(#83c1c4 tint(75%));
+    background: color(#83c1c4 tint(75%));
 }
