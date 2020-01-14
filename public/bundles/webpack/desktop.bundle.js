@@ -811,6 +811,26 @@ var ww = $(window).width(),
         });
     });
 }(),
+    FranchiseAnimate = function () {
+    var stepsBlock = $('.franchise-steps');
+    var stepsBlockPosition = stepsBlock.offset().top + 400;
+    var chartBlock = $('.franchise-chart__chart');
+    var chartBlockPosition = chartBlock.offset().top + 300;
+
+    var windowHeight = $(window).height();
+    var scrollToStepsBlock = stepsBlockPosition - windowHeight;
+    var scrollToChartBlock = chartBlockPosition - windowHeight;
+
+    $(window).scroll(function () {
+        var windowScrollTop = $(this).scrollTop();
+        if (windowScrollTop > scrollToStepsBlock) {
+            stepsBlock.addClass('animate');
+        }
+        if (windowScrollTop > scrollToChartBlock) {
+            chartBlock.addClass('animate');
+        }
+    });
+}(),
     AppointmentForm = function () {
 
     // $('.jsAppointmentFormPagination a').click(function() {
