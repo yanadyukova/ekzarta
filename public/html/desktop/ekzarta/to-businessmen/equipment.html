@@ -1,25 +1,21 @@
-<div class="equipment__inner">
+<section class="equipment-filter">
     <div class="filter__ekzarta">
         <form action="">
-            <div class="form-group input_checkbox">
-                <input id="filter_1" type="checkbox">
-                <label for="filter_1">Экзарта и Экзарта мини</label>
+            <div class="form-group form__select">
+                <label for="">Категория товаров</label>
+                <select name="" id="">
+                    <option></option>
+                    <option value="1">Экзарта</option>
+                    <option value="2">Печатная продукция</option>
+                    <option value="3">Сопутствующие товары</option>
+                </select>
             </div>
-            <div class="form-group input_checkbox">
-                <input id="filter_2" type="checkbox">
-                <label for="filter_2">Оборудование для франшизы</label>
-            </div>
-            <div class="form-group input_checkbox">
-                <input id="filter_3" type="checkbox">
-                <label for="filter_3">Комплектующие</label>
-            </div>
-            <div class="form-group input_checkbox">
-                <input id="filter_4" type="checkbox">
-                <label for="filter_4">Прочее</label>
-            </div>
-            <button type="reset">Сброс</button>
+            <button class="filter__ekzarta-reset" type="reset">Сброс</button>
         </form>
     </div>
+</section>
+
+<div class="equipment__inner">
     <div class="equipment__cards">
         <div class="equipment__row">
             <a href="../pages/product-page.html" class="equipment__card">
