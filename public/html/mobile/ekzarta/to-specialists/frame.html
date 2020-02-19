@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ekzarta</title>
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+    <!-- fonts -->
+    <style>@font-face{font-family:'PF Din Text Cond Pro XBlack';src:url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.eot?v16cb05c6548);src:url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.eot?v16cb05c6548#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.woff2?v16cb05c6d18) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.woff?v16cb05c6548) format('woff');font-weight:900;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Light.eot?v16cb05c6d18);src:url(/fonts/DIN/PFDinTextCondPro-Light.eot?v16cb05c6d18#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Light.woff2?v16cb05c74e8) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Light.woff?v16cb05c6d18) format('woff');font-weight:300;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-BoldItalic.eot?v16cb05c78d0);src:url(/fonts/DIN/PFDinDisplayPro-BoldItalic.eot?v16cb05c78d0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-BoldItalic.woff2?v16cb05c80a0) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-BoldItalic.woff?v16cb05c78d0) format('woff');font-weight:700;font-style:italic}@font-face{font-family:'PF DinDisplay Pro ExtraThin';src:url(/fonts/DIN/PFDinDisplayPro-ExtraThin.eot?v16cb05c80a0);src:url(/fonts/DIN/PFDinDisplayPro-ExtraThin.eot?v16cb05c80a0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-ExtraThin.woff2?v16cb05c8870) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-ExtraThin.woff?v16cb05c80a0) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro X';src:url(/fonts/DIN/PFDinTextCondPro-XThinItalic.eot?v16cb05c8870);src:url(/fonts/DIN/PFDinTextCondPro-XThinItalic.eot?v16cb05c8870#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XThinItalic.woff2?v16cb05c9040) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XThinItalic.woff?v16cb05c8870) format('woff');font-weight:100;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Medium.eot?v16cb05c9428);src:url(/fonts/DIN/PFDinTextCondPro-Medium.eot?v16cb05c9428#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Medium.woff2?v16cb05c9810) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Medium.woff?v16cb05c9428) format('woff');font-weight:500;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-LightItalic.eot?v16cb05c9bf8);src:url(/fonts/DIN/PFDinTextCondPro-LightItalic.eot?v16cb05c9bf8#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-LightItalic.woff2?v16cb05ca3c8) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-LightItalic.woff?v16cb05c9bf8) format('woff');font-weight:300;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Regular.eot?v16cb05ca3c8);src:url(/fonts/DIN/PFDinTextCondPro-Regular.eot?v16cb05ca3c8#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Regular.woff2?v16cb05cab98) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Regular.woff?v16cb05ca3c8) format('woff');font-weight:400;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Regular.eot?v16cb05cab98);src:url(/fonts/DIN/PFDinDisplayPro-Regular.eot?v16cb05cab98#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Regular.woff2?v16cb05cb368) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Regular.woff?v16cb05caf80) format('woff');font-weight:400;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-BoldItalic.eot?v16cb05cb368);src:url(/fonts/DIN/PFDinTextCondPro-BoldItalic.eot?v16cb05cb368#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-BoldItalic.woff2?v16cb05cbb38) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-BoldItalic.woff?v16cb05cb368) format('woff');font-weight:700;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Thin.eot?v16cb05cbb38);src:url(/fonts/DIN/PFDinDisplayPro-Thin.eot?v16cb05cbb38#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Thin.woff2?v16cb05cc6f0) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Thin.woff?v16cb05cbb38) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Medium.eot?v16cb05cc6f0);src:url(/fonts/DIN/PFDinDisplayPro-Medium.eot?v16cb05cc6f0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Medium.woff2?v16cb05ccec0) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Medium.woff?v16cb05cc6f0) format('woff');font-weight:500;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-LightItalic.eot?v16cb05ccec0);src:url(/fonts/DIN/PFDinDisplayPro-LightItalic.eot?v16cb05ccec0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-LightItalic.woff2?v16cb05cd690) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-LightItalic.woff?v16cb05ccec0) format('woff');font-weight:300;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Italic.eot?v16cb05cda78);src:url(/fonts/DIN/PFDinTextCondPro-Italic.eot?v16cb05cda78#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Italic.woff2?v16cb05ce248) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Italic.woff?v16cb05cda78) format('woff');font-weight:400;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Bold.eot?v16cb05ce248);src:url(/fonts/DIN/PFDinDisplayPro-Bold.eot?v16cb05ce248#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Bold.woff2?v16cb05cea18) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Bold.woff?v16cb05ce248) format('woff');font-weight:700;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro XBlack';src:url(/fonts/DIN/PFDinTextCondPro-XBlack.eot?v16cb05cea18);src:url(/fonts/DIN/PFDinTextCondPro-XBlack.eot?v16cb05cea18#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XBlack.woff2?v16cb05cf1e8) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XBlack.woff?v16cb05cea18) format('woff');font-weight:900;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-BlackItalic.eot?v16cb05cf1e8);src:url(/fonts/DIN/PFDinDisplayPro-BlackItalic.eot?v16cb05cf1e8#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-BlackItalic.woff2?v16cb05cf9b8) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-BlackItalic.woff?v16cb05cf1e8) format('woff');font-weight:900;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Light.eot?v16cb05cf9b8);src:url(/fonts/DIN/PFDinDisplayPro-Light.eot?v16cb05cf9b8#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Light.woff2?v16cb05d0188) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Light.woff?v16cb05cf9b8) format('woff');font-weight:300;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro X';src:url(/fonts/DIN/PFDinTextCondPro-XThin.eot?v16cb05d0188);src:url(/fonts/DIN/PFDinTextCondPro-XThin.eot?v16cb05d0188#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XThin.woff2?v16cb05d0d40) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XThin.woff?v16cb05d0188) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Bold.eot?v16cb05d0d40);src:url(/fonts/DIN/PFDinTextCondPro-Bold.eot?v16cb05d0d40#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Bold.woff2?v16cb05d1510) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Bold.woff?v16cb05d0d40) format('woff');font-weight:700;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-MediumItalic.eot?v16cb05d1510);src:url(/fonts/DIN/PFDinTextCondPro-MediumItalic.eot?v16cb05d1510#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-MediumItalic.woff2?v16cb05d1ce0) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-MediumItalic.woff?v16cb05d1510) format('woff');font-weight:500;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-ThinItalic.eot?v16cb05d1ce0);src:url(/fonts/DIN/PFDinTextCondPro-ThinItalic.eot?v16cb05d1ce0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-ThinItalic.woff2?v16cb05d2898) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-ThinItalic.woff?v16cb05d1ce0) format('woff');font-weight:100;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-ThinItalic.eot?v16cb05d2898);src:url(/fonts/DIN/PFDinDisplayPro-ThinItalic.eot?v16cb05d2898#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-ThinItalic.woff2?v16cb05d3068) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-ThinItalic.woff?v16cb05d2898) format('woff');font-weight:100;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Thin.eot?v16cb05d3450);src:url(/fonts/DIN/PFDinTextCondPro-Thin.eot?v16cb05d3450#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Thin.woff2?v16cb05d3c20) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Thin.woff?v16cb05d3450) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-MediumItalic.eot?v16cb05d3c20);src:url(/fonts/DIN/PFDinDisplayPro-MediumItalic.eot?v16cb05d3c20#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-MediumItalic.woff2?v16cb05d43f0) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-MediumItalic.woff?v16cb05d3c20) format('woff');font-weight:500;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Italic.eot?v16cb05d43f0);src:url(/fonts/DIN/PFDinDisplayPro-Italic.eot?v16cb05d43f0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Italic.woff2?v16cb05d4bc0) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Italic.woff?v16cb05d43f0) format('woff');font-weight:400;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Black.eot?v16cb05d4bc0);src:url(/fonts/DIN/PFDinDisplayPro-Black.eot?v16cb05d4bc0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Black.woff2?v16cb05d5390) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Black.woff?v16cb05d4bc0) format('woff');font-weight:900;font-style:normal}@font-face{font-family:'PF DinDisplay Pro ExtraThin';src:url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.eot?v16cb05d5778);src:url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.eot?v16cb05d5778#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.woff2?v16cb05d5f48) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.woff?v16cb05d5778) format('woff');font-weight:100;font-style:italic}</style>
+
+    <link href="/bundles/css/mobile.min.css" rel="stylesheet">
+
+</head>
+<body class="mobile">
+<!-- ############# -->
+<!-- CONTENT START -->
+<!-- ############# -->
+
+<header class="header">
+    <div class="header__inner">
+        <a href="#" class="header__nav nav-toggle jsNavToggle">
+            <span></span><span></span><span></span>
+        </a>
+        <a href="" class="header__logo"></a>
+        <div class="header__basket not-empty">
+            <!--у header__basket есть 2 дополнительных класса-->
+            <!--empty  - для пустой корзины, при нем кнопка "Оформить заказ неактивна"-->
+            <!--not-empty - кнопка "Оформить заказ" активна и над корзиной отображается количество товара в корзине-->
+            <p>Корзина</p>
+            <p class="quantity">2</p>
+            <div class="basket">
+                <div class="basket__inner">
+                    <div class="basket__buttons">
+                        <a href="../pages/checkout.html" class="basket__checkout">Оформить заказ</a>
+                        <a class="basket__close"></a>
+                    </div>
+
+                    <!--Если корзина пустая-->
+                    <!--<div class="basket__empty">-->
+                        <!--<p>Корзина пуста</p>-->
+                        <!--<a href="#">Перейти в магазин</a>-->
+                    <!--</div>-->
+
+                    <div class="basket__items">
+                        <div class="basket__item">
+                            <p class="basket__item-name">Тренажер Экзарта Мини</p>
+                            <p class="basket__item-price"><span>11295</span> Руб.</p>
+                            <p class="basket__item-amount">x<span>1</span></p>
+                            <button class="basket__item-delete"></button>
+                        </div>
+                        <div class="basket__item">
+                            <p class="basket__item-name">Тренажер Экзарта Мини</p>
+                            <p class="basket__item-price"><span>11295</span> Руб.</p>
+                            <p class="basket__item-amount">x<span>1</span></p>
+                            <button class="basket__item-delete"></button>
+                        </div>
+                    </div>
+                    <div class="basket__total">
+                        <span>Итого:</span>
+                        <p><span>3000</span> Руб.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="nav-mobile jsMobileNav">
+    <div class="nav-mobile__inner">
+        <ul>
+            <li class="active"><a href="../to-patients/frame.html"><span>Пациентам</span></a></li>
+            <li class=""><a href="../to-specialists/frame.html"><span>Специалистам</span></a></li>
+            <li class=""><a href="../to-businessmen/frame.html"><span>Бизнесу</span></a></li>
+            <li class=""><a href="../pages/reviews.html"><span>Отзывы</span></a></li>
+            <li class=""><a href="../pages/events.html"><span>События</span></a></li>
+            <li class=""><a href="../contacts/contacts.html"><span>Контакты</span></a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="specialist-header frame">
+    <div class="specialist-header__inner frame__inner">
+        <div>
+            <p class="specialist-header__title frame__title">СПЕЦИАЛИСТАМ</p>
+            <div class="specialist-header__desc frame__desc">
+                <p>Текст о том, почему полезно изучать технологии Экзарты, зачем это нужно, сколько уже есть специалистов и такое прочее</p>
+            </div>
+            <div class="specialist-header__button frame__button">
+                <a href="" class="button button_red" data-toggle="modal" data-target=".jsModalEnrollment">ЗАПИСАТЬСЯ НА ОБУЧЕНИЕ</a>
+            </div>
+        </div>
+        <div class="specialist-header__image frame__image">
+            <img src="/images/mobile/pic/2-2@2x.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="specialist-content frame-content">
+    <div class="tabs">
+        <ul class="tabs__caption">
+            <li class="active"><a href="#courses">КУРСЫ</a></li>
+            <li><a href="#schedule">РАСПИСАНИЕ</a></li>
+            <li><a href="#teachers">ПРЕПОДАВАТЕЛИ</a></li>
+            <li><a href="#methods">МЕТОДИКИ</a></li>
+            <li><a href="#training">ПОДГОТОВКА</a></li>
+        </ul>
+        <div class="tabs__content active">
+            <article class="courses">
+                <div class="courses__inner">
+                    <section class="courses-about">
+                        <div class="courses-about__desc text-content">
+                            <h2 class="text-title">Международная академия<br>медицинской реабилитации</h2>
+                            <p>Международная академия медицинской реабилитации
+                                (МАМР) проводит курсы и семинары по современным методикам медицинской реабилитации: Проприоцептивная нейромышечная фасилитация (ПНФ), кинезиотерапия Экзарта, Бобат для детей
+                                и Бобат для взрослых, Войта-терапия, мягкие техники мануальной терапии и миофасциальные цепи, терапия и методика Кальтен-борна, методики Джонстон и Ханке, кинезитейпирование, нейрологопедия
+                                и другая.</p>
+
+                            <div class="courses-about__image">
+                                <img src="/images/desktop/pic/certificates@2x.png" alt="">
+                            </div>
+
+                            <p>Курсы проводят европейские и российские специалисты в области медицинской реабилитологии, спортивной медицины, кинезиотерапии.</p>
+
+                            <p>«Международная Академия Медицинской Реабилитации» осуществляет образовательную деятельность на основании лицензии 52Л01 № 0004308, регистрационный номер 123, от 19 мая 2017 года.</p>
+
+                            <p>Занятия проходят в различных городах России: Москве, Санкт-Петербурге, Нижнем Новгороде, Казани, Уфе, а также городах стран СНГ;</p>
+                        </div>
+                    </section>
+
+                    <section class="courses-advantages">
+                        <p>преимущества:</p>
+                        <ul>
+                            <li>Практикующие преподаватели<br>(10 специалистов и 5 из Европы)</li>
+                            <li>Курсы адаптированы к российской действительности
+                                и разном уровню обучающихся</li>
+                            <li>Практико-ориентированный подход
+                                в обучении (минимум теории, максимум практики)</li>
+                            <li>Доступность по стоимости</li>
+                        </ul>
+                        <a href="" class="button button_red" data-toggle="modal" data-target=".jsModalEnrollment">ЗАПИСАТЬСЯ НА ОБУЧЕНИЕ</a>
+                    </section>
+
+                    <section class="courses-reviews">
+                        <div class="courses-reviews__reviews">
+                            <div class="courses-reviews__thanks text-content">
+                                <p>Выражаем благодарность и признательность всем,
+                                    кто делится своим мнением об обучении, критикует
+                                    и советует. Ваши отзывы - лучшая мотивация для
+                                    работы! Постараемся учесть все ваши пожелания
+                                    и замечания. Ждём на обучении!</p>
+                            </div>
+                            <div class="courses-reviews__review">
+                                <div>
+                                    <p class="courses-reviews__title text-title">
+                                        ОТЗЫВ О КУРСЕ<br>
+                                        «МЯГКИЕ МАНУАЛЬНЫЕ ТЕХНИКИ»
+                                    </p>
+                                    <p class="courses-reviews__author text-content"></p>
+                                    <p class="courses-reviews__desc text-content">Хочу выразить благодарность Мирославу за его оригинальные техники. После обучения сразу стала применять – пациенты все уходят в восторге. Результаты обалденные и самое главное – они видны сразу.</p>
+                                    <a href="#" class="courses-reviews__more">Ознакомиться с курсом</a>
+                                </div>
+                                <div class="courses-reviews__announcement">
+                                    <p>В сентябре этого года пройдет третий модуль
+                                        курса <span>«Мягкие мануальные техники»</span>. Желающих
+                                        попасть на обучение к Мирославу Кокошу всегда
+                                        много, поэтому <a data-toggle="modal" data-target=".jsModalEventSubscribe" href="">бронировать места</a> советуем
+                                        заранее:</p>
+                                    <p>Даты курса:   <span class="text-content">06.09 – 11.09.2019 г.</span></p>
+                                    <p>Место:  <span class="text-content">г. Москва</span></p>
+                                    <p>Преподаватель:  <span class="text-content">Мирослав Кокош</span></p>
+                                </div>
+                            </div>
+                            <div class="courses-reviews__review">
+                                <div>
+                                    <p class="courses-reviews__title text-title">Отзыв о курсе<br>
+                                        «Биомеханика человека. Модуль 1»</p>
+                                    <p class="courses-reviews__author text-content">от нашей ученицы Анны Костиной</p>
+                                    <p class="courses-reviews__desc text-content">Научилась использовать знания мышц, их прикрепления
+                                        и возможность их работы в классическом массаже, ЛФК и ПНФ. Как сочетать и изменить приемы и методы для достижения конкретной цели.</p>
+                                    <a href="#" class="courses-reviews__more">Ознакомиться с курсом</a>
+                                </div>
+                                <div class="courses-reviews__announcement">
+                                    <p>В сентябре этого года пройдет третий модуль
+                                        курса <span>«Мягкие мануальные техники»</span>. Желающих
+                                        попасть на обучение к Мирославу Кокошу всегда
+                                        много, поэтому <a data-toggle="modal" data-target=".jsModalEventSubscribe" href="">бронировать места</a> советуем
+                                        заранее:</p>
+                                    <p>Даты курса:   <span class="text-content">06.09 – 11.09.2019 г.</span></p>
+                                    <p>Место:  <span class="text-content">г. Москва</span></p>
+                                    <p>Преподаватель:  <span class="text-content">Мирослав Кокош</span></p>
+                                </div>
+                            </div>
+                            <div class="courses-reviews__review">
+                                <div>
+                                    <p class="courses-reviews__title text-title">Отзыв о курсе<br>
+                                        «МЯГКИЕ МАНУАЛЬНЫЕ ТЕХНИКИ»</p>
+                                    <p class="courses-reviews__author text-content">от Сироткиной Ольги Владимировны</p>
+                                    <p class="courses-reviews__desc text-content">Рома! Текста отзыва нет, а вместо этого написано, что на некоей фотографии Ольга получает диплом. Это хорошо, но что делать с отзывом?</p>
+                                    <a href="#" class="courses-reviews__more">Ознакомиться с курсом</a>
+                                </div>
+                                <div class="courses-reviews__announcement">
+                                    <p>В сентябре этого года пройдет третий модуль
+                                        курса <span>«Мягкие мануальные техники»</span>. Желающих
+                                        попасть на обучение к Мирославу Кокошу всегда
+                                        много, поэтому <a data-toggle="modal" data-target=".jsModalEventSubscribe" href="">бронировать места</a> советуем
+                                        заранее:</p>
+                                    <p>Даты курса:   <span class="text-content">06.09 – 11.09.2019 г.</span></p>
+                                    <p>Место:  <span class="text-content">г. Москва</span></p>
+                                    <p>Преподаватель:  <span class="text-content">Мирослав Кокош</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </div>
+        <div class="tabs__content">
+            <article class="schedule">
+                <section class="schedule-filter">
+                    <div class="filter__ekzarta">
+                        <form action="">
+                            <div class="search">
+                                <div class="search__input">
+                                    <input type="text" name="q" placeholder="Поиск по названию" value="">
+                                </div>
+                                <button class="search__button"></button>
+                            </div>
+                            <div class="form-group form__select">
+                                <label for="">Методика</label>
+                                <select name="" id="">
+                                    <option></option>
+                                    <option value="1">Бобат</option>
+                                    <option value="2">Биомеханика человека</option>
+                                    <option value="3">Экзарта</option>
+                                </select>
+                            </div>
+                            <div class="form-group form__select">
+                                <label for="">Город</label>
+                                <select name="" id="">
+                                    <option></option>
+                                    <option value="1">Москва</option>
+                                    <option value="2">Санкт-Петербург</option>
+                                    <option value="2">Нижний Новгород</option>
+                                </select>
+                            </div>
+                            <div class="form-group form__select">
+                                <label for="">Месяц</label>
+                                <select name="" id="">
+                                    <option></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                            <div class="form-group form__select">
+                                <label for="">Преподаватель</label>
+                                <select name="" id="">
+                                    <option></option>
+                                    <option value="1">Войчеховская А.</option>
+                                    <option value="2">Мухаметзянов В.Р.</option>
+                                </select>
+                            </div>
+                            <div class="form-group form__select">
+                                <label for="">Модуль</label>
+                                <select name="" id="">
+                                    <option></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <button class="filter__ekzarta-reset" type="reset"></button>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="schedule-table">
+                    <div class="schedule-table__inner">
+                        <div class="schedule-table__course">
+                            <div class="schedule-table__course-row data">
+                                <p>Москва</p>
+                                <p>13.07.2019 - 17.07.2019</p>
+                            </div>
+                            <div class="schedule-table__course-row name">
+                                <p><a href="">ПНФ Модуль 1</a></p>
+                                <p class="schedule-table__course-enrollment"><a href="" data-toggle="modal" data-target=".jsModalEnrollment">Записаться</a></p>
+                            </div>
+                            <div class="schedule-table__course-hidden">
+                                <div class="schedule-table__course-row">
+                                    <p>Преподаватель:</p>
+                                    <p><a href="../../medcenter/specialist-page.html" class="course-teacher pl">Кокош М.</a></p>
+                                </div>
+                                <div class="schedule-table__course-row">
+                                    <p>Стоимость, руб.:</p>
+                                    <p>36 000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="schedule-table__course">
+                            <div class="schedule-table__course-row data">
+                                <p>Москва</p>
+                                <p>13.07.2019 - 17.07.2019</p>
+                            </div>
+                            <div class="schedule-table__course-row name">
+                                <p><a href="">Мануальная терапия Кальтенборна-Эвента, 3 модуль</a></p>
+                                <p class="schedule-table__course-enrollment"><a href="" data-toggle="modal" data-target=".jsModalEnrollment">Записаться</a></p>
+                            </div>
+                            <div class="schedule-table__course-hidden">
+                                <div class="schedule-table__course-row">
+                                    <p>Преподаватель:</p>
+                                    <p><a href="../../medcenter/specialist-page.html" class="course-teacher pl">Кокош М.</a></p>
+                                </div>
+                                <div class="schedule-table__course-row">
+                                    <p>Стоимость, руб.:</p>
+                                    <p>36 000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="schedule-table__course">
+                            <div class="schedule-table__course-row data">
+                                <p>Нижний Новгород</p>
+                                <p>13.07.2019 - 17.07.2019</p>
+                            </div>
+                            <div class="schedule-table__course-row name">
+                                <p><a href="">Войта-терапия 1 ступень</a></p>
+                                <p class="schedule-table__course-enrollment"><a href="" data-toggle="modal" data-target=".jsModalEnrollment">Записаться</a></p>
+                            </div>
+                            <div class="schedule-table__course-hidden">
+                                <div class="schedule-table__course-row">
+                                    <p>Преподаватель:</p>
+                                    <p><a href="../../medcenter/specialist-page.html" class="course-teacher ru">Мухаметзянов В.Р.</a></p>
+                                </div>
+                                <div class="schedule-table__course-row">
+                                    <p>Стоимость, руб.:</p>
+                                    <p>36 000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
+        <div class="tabs__content">
+            <article class="teachers">
+                <section class="specialists">
+                    <div class="specialists__inner">
+                        <div class="specialists__cards">
+                            <a href="../../medcenter/specialist-page.html" class="specialists__card card">
+                                <div class="card__image">
+                                    <img src="/images/desktop/specialists/1.jpg" alt="">
+                                </div>
+                                <div class="card__name">Бурмистров<br>Андрей Львович</div>
+                                <div class="card__position">Директор Центра медицинской реабилитации «Экзарта», врач-невролог, кинезиотерапевт, мануальный терапевт</div>
+                            </a>
+                            <a href="../../medcenter/specialist-page.html" class="specialists__card card">
+                                <div class="card__image">
+                                    <img src="/images/desktop/specialists/1.jpg" alt="">
+                                </div>
+                                <div class="card__name">Кокош Мирослав<br>(Польша)</div>
+                                <div class="card__position">Научный руководитель Центра «Экзарта» по направлению "Взрослые"</div>
+                            </a>
+                            <a href="../../medcenter/specialist-page.html" class="specialists__card card">
+                                <div class="card__image">
+                                    <img src="/images/desktop/specialists/1.jpg" alt="">
+                                </div>
+                                <div class="card__name">Гогола Анна<br>(Польша)</div>
+                                <div class="card__position">Научный руководитель центра медицинской реабилитации «Экзарта» по направлению «Дети»</div>
+                            </a>
+                            <a href="../../medcenter/specialist-page.html" class="specialists__card card">
+                                <div class="card__image">
+                                    <img src="/images/desktop/specialists/1.jpg" alt="">
+                                </div>
+                                <div class="card__name">Беккерс<br>Доминик</div>
+                                <div class="card__position">Научный руководитель Центра медицинской реабилитации «Экзарта» по направлению "Взрослые"</div>
+                            </a>
+                            <a href="../../medcenter/specialist-page.html" class="specialists__card card">
+                                <div class="card__image">
+                                    <img src="/images/desktop/specialists/1.jpg" alt="">
+                                </div>
+                                <div class="card__name">Вольны Томаш<br>(Польша)</div>
+                                <div class="card__position">Научный руководитель Центра медицинской реабилитации «Экзарта» по направлению "Взрослые"</div>
+                            </a>
+                            <a href="../../medcenter/specialist-page.html" class="specialists__card card">
+                                <div class="card__image">
+                                    <img src="/images/desktop/specialists/1.jpg" alt="">
+                                </div>
+                                <div class="card__name">Солодянкин<br>Евгений Евгеньевич</div>
+                                <div class="card__position">Врач восстановительной медицины, невролог, мануальный терапевт, кинезитерапевт</div>
+                            </a>
+                            <a href="../../medcenter/specialist-page.html" class="specialists__card card">
+                                <div class="card__image">
+                                    <img src="/images/desktop/specialists/1.jpg" alt="">
+                                </div>
+                                <div class="card__name">Мухаметзянов<br>Вадим Раильевич</div>
+                                <div class="card__position">Инструктор-методист по лечебной физкультуре</div>
+                            </a>
+                            <a href="../../medcenter/specialist-page.html" class="specialists__card card">
+                                <div class="card__image">
+                                    <img src="/images/desktop/specialists/1.jpg" alt="">
+                                </div>
+                                <div class="card__name">Шлыков<br>Кирилл Алексеевич</div>
+                                <div class="card__position">Подиатр, врач ортопед-травматолог, реабилитолог, сертифицированный инструктор KINESIO (CKTI)</div>
+                            </a>
+                            <a href="../../medcenter/specialist-page.html" class="specialists__card card">
+                                <div class="card__image">
+                                    <img src="/images/desktop/specialists/1.jpg" alt="">
+                                </div>
+                                <div class="card__name">Осокина<br>Марина</div>
+                                <div class="card__position">Персональный тренер по реабилитационному фитнесу, специалист по лечебной физической культуре, йогатерапевт</div>
+                            </a>
+                            <a href="../../medcenter/specialist-page.html" class="specialists__card card">
+                                <div class="card__image">
+                                    <img src="/images/desktop/specialists/1.jpg" alt="">
+                                </div>
+                                <div class="card__name">Щеглова<br>Диля Даяновна</div>
+                                <div class="card__position">Врач невролог, врач лечебной физкультуры и спортивной медицины, педиатр.</div>
+                            </a>
+                            <a href="../../medcenter/specialist-page.html" class="specialists__card card">
+                                <div class="card__image">
+                                    <img src="/images/desktop/specialists/1.jpg" alt="">
+                                </div>
+                                <div class="card__name">Зобов<br>Андрей Дмитриевич</div>
+                                <div class="card__position">Преподаватель методики Экзарта Silver</div>
+                            </a>
+                            <a href="../../medcenter/specialist-page.html" class="specialists__card card">
+                                <div class="card__image">
+                                    <img src="/images/desktop/specialists/1.jpg" alt="">
+                                </div>
+                                <div class="card__name">Профессор<br>Яцек Дурмала</div>
+                                <div class="card__position">Ведущий специалист по педиатрии и медицинской реабилитации</div>
+                            </a>
+                            <a href="../../medcenter/specialist-page.html" class="specialists__card card">
+                                <div class="card__image">
+                                    <img src="/images/desktop/specialists/1.jpg" alt="">
+                                </div>
+                                <div class="card__name">Войчеховская<br>Алина</div>
+                                <div class="card__position">Магистр физиотерапии. Сертифицированный специалист по Войта-терапии</div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
+        <div class="tabs__content">
+            <article class="methods">
+                <section class="methods-filter">
+                    <div class="filter__ekzarta">
+                        <form action="">
+                            <div class="form-group form__select">
+                                <label for="">Методика</label>
+                                <select name="" id="">
+                                    <option></option>
+                                    <option value="1">Бобат</option>
+                                    <option value="2">Биомеханика человека</option>
+                                    <option value="3">Экзарта</option>
+                                </select>
+                            </div>
+                            <div class="form-group form__select">
+                                <label for="">Преподаватель</label>
+                                <select name="" id="">
+                                    <option></option>
+                                    <option value="1">Войчеховская А.</option>
+                                    <option value="2">Мухаметзянов В.Р.</option>
+                                </select>
+                            </div>
+                            <button class="filter__ekzarta-reset" type="reset"></button>
+                        </form>
+                    </div>
+                </section>
+
+                <div class="methods__inner">
+                    <div class="methods__cards">
+                        <div class="methods__card">
+                            <h2>Экзарта</h2>
+                            <p>Простота и эффективность технологии с использованием кинезитерапевтической установки «ЭКЗАРТА» делает ее
+                                незаменимым дополнением к обычным методам терапии и не имеет равных для устранения источника боли и улучшения
+                                функций опорно-двигательного <a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Методика НПФ</h2>
+                            <p>Методика ПНФ применяется при различных заболеваниях и травмах, связанных с поражением ЦНС, и сопровождающихся
+                                нарушением двигательной активности (ДЦП, постинсультные состояния, травмы головного и спинного мозга,
+                                периферической нервной системы и др.) <a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Бобат-терапия</h2>
+                            <p>Целью восстановительного лечения неврологических пациентов является стимуляция нормального двигательного
+                                развития и профилактика возникновения контрактур и деформаций. Нейроразвивающий подход Бобат-терапии
+                                направлен на сенсомоторные компоненты мышечного тонуса <a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Бобат-терапия для взрослых</h2>
+                            <p>Курс для физиотерапевтов и врачей, работающих с пациентами с повреж-дениями центральной нервной системы
+                                или с хроничес-кими неврологическими заболеваниями, в том числе с демиелини-зирующими заболеваниями,
+                                двигатель-ными нарушениям. <a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Мягкие мануальные техники</h2>
+                            <p>Диагностический процесс строится на схеме, отработанной английским ортопедом Джеймсом Сириаксом.
+                                Этот способ позволяет оценить клиническое состояние. Принципы первичного обследования по Сириаксу
+                                в течение обучения дополняются иными способами функционально <a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Функциональная терапия в педиатрии</h2>
+                            <p>Целью обучения является изучение системы мануальных техник воздействующих на мягкие ткани, костные ткани
+                                и нервную систему ребенка, в безопасной и безболез-неной терапии.
+                                <a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Курс кинезио-тейпирования</h2>
+                            <p>Словосочетание "кинезиологическое тейпирование", образованное из "kinesio" ("движение")
+                                и "tape" ("лента"), означает способ лечения заболеваний опордно­-двигательного аппарата,
+                                нарушений функций внутре <a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Прикладная кинезиология</h2>
+                            <p>Прикладная кинезиология, являясь функциональной неврологией, позволяет исследовать функционирование
+                                нервной системы как в покое так и под различными видами нагрузок, тонко выявляя дефицит сенсорного
+                                обеспечения и двигательного ответа. <a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Нейрологопедия</h2>
+                            <p>Диагностика и нейрологопедическая терапия нарушений функций ротовой полости, связанных
+                                с дисфункцией пищеварительного тракта и симптома-тологией дисфагии.
+                                <a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Методика Войта</h2>
+                            <p>Современная методика восстановления моторики и двигательных функций.
+                                Метод Войта является одним из наиболее эффективных при лечении поражений ЦНС.
+                                <a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Методика Кальтенборна</h2>
+                            <p>OMT Kaltenborn-Evjenth Konzept (Концепция ортопедической мануальной терапии Кальтенборна-Эвента)
+                                Фредди М. Кальтенборн – создатель методики <a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Основы подиатрии</h2>
+                            <p>Учебный курс по основам подиатрии в Международной академии медицинской реабилитации.
+                                Преподаватель Шлыков Кирилл Алексеевич. <a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Сколиоз в аспекте Нейрокинезиологии</h2>
+                            <p>Не в зависимости от метода физиотерапии, которую выбирает терапевт, в своей работе с пациентом,
+                                важно помнить о возмож-ностях моторики пациента <a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Интенсивная функциональная физиотерапия взрослых пациентов с поражениями мозга</h2>
+                            <p><a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Модель Фасциальных Нарущений (FDM)</h2>
+                            <p>Революционная методика, включающая в себя собственную диагностику и терапевтическую
+                                концепцию лечения боли и нарушений фасциальной системы.
+                                <a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Детский и моло-дежный спорт</h2>
+                            <p>Программа курса — это результат многомесячных дискуссий и множества лет практической
+                                работы с детьми и молодёжью. <a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Скандинавская ходьба в медицинской реабилитации</h2>
+                            <p><a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Экзарта-финтес</h2>
+                            <p>Базовый курс «Экзарта-фитнес: умное тело» ориентирован на тренеров разных направлений,
+                                ведущих как индивидуальные, так и групповые программы <a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                        <div class="methods__card">
+                            <h2>Экзарта-финтес</h2>
+                            <p>Базовый курс «Экзарта-фитнес: умное тело» ориентирован на тренеров разных направлений,
+                                ведущих как индивидуальные, так и групповые программы <a href="../pages/methodology-page.html">Подробнее</a></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="tabs__content">
+            <article class="training">
+                <div class="training__inner">
+                    <p>Обучение подразумевает уже имеющиеся знания по следующим направлениям:</p>
+                    <div class="training__directions">
+                        <div class="training__direction">
+                            <h2>Шейный отдел позвоночника</h2>
+                            <ol>
+                                <li>Шейный отдел позвоночника в целом, его функциональные сегменты, степень их подвижности.</li>
+                                <li>Атланто-аксиальный и атланто-затылочный суставы: анатомия, биомеханика.</li>
+                                <li>Связки подзатылочной области позвоночника.</li>
+                                <li>Связки нижней части шейного отдела позвоночника.</li>
+                                <li>Биомеханика нижней части шейного отдела позвоночника.</li>
+                                <li>Объем движения в шейном отделе позвоночника.</li>
+                                <li>Строение и действие грудинно-ключично-сосцевидной мышцы.</li>
+                                <li>Превертебральные мышцы шеи: длинная мышца головы, длинная мышца шеи, передняя и боковая прямые мышцы головы – анатомия, функция.</li>
+                                <li>Лестничные мышцы – анатомия, функция.</li>
+                                <li>Сгибание головы и шеи – биомеханика движения.</li>
+                                <li>Подзатылочные мышцы – анатомия и действие: боковой наклон и разгибание, ротация.</li>
+                                <li>Поперечно – остистые мышцы шейного отдела – анатомия, функция.</li>
+                                <li>Трапециевидная мышца- анатомия, функция.</li>
+                                <li>Мышца, поднимающая лопатку - анатомия, функция.</li>
+                                <li>Полуостистая мышца головы - анатомия, функция.</li>
+                                <li>Длиннейшая мышца головы - анатомия, функция.</li>
+                                <li>Длиннейшая мышца шеи - анатомия, функция.</li>
+                                <li>Длиннейшая мышца груди - анатомия, функция.</li>
+                                <li>Ременная мышца головы и шеи - анатомия, функция.</li>
+                                <li>Разгибание шейного отдела позвоночника задними мышцами шеи.</li>
+                                <li>Комбинированные движения: боковой наклон-ротация в нижней части шейного отдела позвоночника.</li>
+                            </ol>
+                        </div>
+
+                        <div class="training__direction">
+                            <h2>Плечевой сустав</h2>
+                            <ol>
+                                <li value="22">Многосуставной комплекс плечевого пояса - структура.</li>
+                                <li>Капсула и связки плечевого сустава.</li>
+                                <li>Особенности расположения сухожилия длинной головки двуглавой мышцы плеча.</li>
+                                <li>Коаптация суставных поверхностей плечевого сустава под действием околосуставных мышц.</li>
+                                <li>Поддельтовидный сустав – структура, движения.</li>
+                                <li>Лопаточно-грудной сустав – структура, движения.</li>
+                                <li>Грудинно-ключичный сустав – структура, движения.</li>
+                                <li>Акромиально-ключичный сустав – структура, движения.</li>
+                                <li>Мышцы, осуществляющие движения в плечевом поясе.</li>
+                                <li>Надостная мышца и отведение.</li>
+                                <li>Дельтовидная мышца – анатомия, функция.</li>
+                                <li>Двуглавая мышца плеча – анатомия, функция.</li>
+                                <li>Большая грудная мышца - анатомия, функция.</li>
+                                <li>Малая грудная мышца - анатомия, функция.</li>
+                                <li>Передняя зубчатая мышца - анатомия, функция.</li>
+                                <li>Ромбовидные мышцы - анатомия, функция.</li>
+                                <li>Круглые мышцы - анатомия, функция.</li>
+                                <li>Подостная мышца - анатомия, функция.</li>
+                                <li>Подлопаточная мышца - анатомия, функция.</li>
+                                <li>Клювовидно-плечевая мышца - анатомия, функция.</li>
+                                <li>Трехглавая мышца плеча - анатомия, функция.</li>
+                                <li>Биомеханика сгибания верхней конечности.</li>
+                                <li>Биомеханика отведения верхней конечности.</li>
+                                <li>Биомеханика приведения верхней конечности.</li>
+                                <li>Биомеханика разгибания верхней конечности.</li>
+                                <li>Биомеханика пронации верхней конечности.</li>
+                                <li>Биомеханика супинации верхней конечности.</li>
+                            </ol>
+                        </div>
+
+                        <div class="training__direction">
+                            <h2>Поясничный отдел позвоночника</h2>
+                            <ol>
+                                <li value="49">Поясничный отдел позвоночника в целом.</li>
+                                <li>Связки поясничного отдела позвоночника.</li>
+                                <li>Сгибание, разгибание и латерофлексия поясничного отдела позвоночника.</li>
+                                <li>Ротация в поясничном отделе позвоночника.</li>
+                                <li>Подвздошно – поясничные связки и подвижность пояснично-крестцового сустава.</li>
+                                <li>Широчайшая мышца спины – анатомия, функция.</li>
+                                <li>Глубокий слой задних мышц поясничного отдела позвоночника – анатомия, функция.</li>
+                                <li>Квадратная мышца поясницы и пояснично-подвздошная мышцы – анатомия, функция.</li>
+                                <li>Мышцы брюшной стенки: прямая и поперечная - анатомия, функция.</li>
+                                <li>Мышцы брюшной стенки: внутренняя косая и наружная косая  - анатомия, функция.</li>
+                                <li>Мышцы брюшной стенки: ротация туловища.</li>
+                                <li>Мышцы брюшной стенки: сгибание туловища</li>
+                                <li>Мышцы брюшной стенки: выпрямление поясничного лордоза.</li>
+                                <li>Объем сгибания и разгибания в поясничном отделе позвоночника.</li>
+                                <li>Объем латерофлексии в поясничном отделе позвоночника.</li>
+                                <li>Объем ротации пояснично-грудного отдела позвоночника.</li>
+                            </ol>
+                        </div>
+
+                        <div class="training__direction">
+                            <h2>Тазобедренный сустав</h2>
+                            <ol>
+                                <li value="65">Тазобедренный сустав в целом.</li>
+                                <li>Связки тазобедренного сустава.</li>
+                                <li>Сгибание и разгибание в тазобедренном суставе.</li>
+                                <li>Отведение и приведение в тазобедренном суставе.</li>
+                                <li>Пронация и супинация в тазобедренном суставе.</li>
+                                <li>Четырехглавая мышца бедра - анатомия, функция.</li>
+                                <li>Большая ягодичная мышца - анатомия, функция.</li>
+                                <li>Приводящие мышцы - анатомия, функция.</li>
+                                <li>Гребенчатая и тонкая мышцы - анатомия, функция.</li>
+                                <li>Портняжная мышца - анатомия, функция.</li>
+                                <li>Средняя и малая ягодичные мышцы - анатомия, функция.</li>
+                                <li>Полуперепончатая мышца - анатомия, функция.</li>
+                                <li>Полусухожильная мышца - анатомия, функция.</li>
+                                <li>Двуглавая мышца бедра - анатомия, функция.</li>
+                                <li>Мышца, напрягающая широкую фасцию бедра - анатомия, функция.</li>
+                                <li>Грушевидная мышца - анатомия, функция.</li>
+                            </ol>
+                        </div>
+
+                        <div class="training__direction">
+                            <h2>Коленный сустав</h2>
+                            <ol>
+                                <li value="81">Коленный сустав в целом.</li>
+                                <li>Связки коленного сустава.</li>
+                                <li>Сгибание и разгибание в коленном суставе.</li>
+                                <li>Пронация и супинация в коленном суставе.</li>
+                                <li>Подколенная мышца - анатомия, функция.</li>
+                                <li>Икроножная мышца - анатомия, функция.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="specialist-footer">
+    <div class="specialist-footer__inner">
+        <div class="specialist-footer__title text-title">Контакты</div>
+        <div class="specialist-footer__contacts">
+            <div class="specialist-footer__contact">
+                <p>Старший менеджер по развитию</p>
+                <p>Феклистова Марианна Вениаминовна</p>
+                <p>Email: <a href="mailto:feklistova.m@madin.ru">feklistova.m@madin.ru</a></p>
+                <p>Телефон: <a href="tel:+7 (920) 250-77-83">+7 (920) 250-77-83</a></p>
+            </div>
+            <div class="specialist-footer__contact">
+                <p>Менеджер по развитию</p>
+                <p>Зайцева Оксана Анатольевна</p>
+                <p>Email: <a href="mailto:">zayceva.o@madin.ru</a></p>
+                <p>Телефон: <a href="tel:+7 (920) 027-81-07">+7 (920) 027-81-07</a></p>
+            </div>
+        </div>
+        <div class="specialist-footer__button">
+            <a href="#" class="button button_red" data-toggle="modal" data-target=".jsModalEnrollment">ЗАПИСАТЬСЯ НА ОБУЧЕНИЕ</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__logo ekzarta">
+            <a href=""></a>
+            <div class="footer__social">
+                <ul>
+                    <li><a href="" class="fb"></a></li>
+                    <li><a href="" class="vk"></a></li>
+                    <li><a href="" class="in"></a></li>
+                    <li><a href="" class="yt"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__logo mamp">
+            <a href=""></a>
+            <div class="footer__social">
+                <ul>
+                    <li><a href="" class="fb"></a></li>
+                    <li><a href="" class="vk"></a></li>
+                    <li><a href="" class="in"></a></li>
+                    <li><a href="" class="yt"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__logo madin">
+            <a href=""></a>
+            <div class="footer__social">
+                <ul>
+                    <li><a href="" class="yt"></a></li>
+                </ul>
+            </div>
+        </div>
+        <!--<div class="footer__partner-logos">-->
+            <!--<a href=""></a>-->
+            <!--<a href=""></a>-->
+        <!--</div>-->
+        <p class="footer__copyright">© ООО "Меден", 2015-2020</p>
+        <p>ООО "Меден" <a href="">Лицензия № ЛО-52-01-004759 от 02.04.2015г.</a> выдана Министерством здравоохранения Нижегородской области</p>
+        <p><a href="">Написать веб-мастеру</a></p>
+    </div>
+</footer>
+
+<!-- ########### -->
+<!-- CONTENT END -->
+<!-- ########### -->
+<div tabindex="-1" class="modal fade modal-default modal-small jsModalSuccess">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <div class="modal__title">Спасибо!</div>
+                <div class="modal__message">
+                    Вы успешно подписались на новостную рассылку.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div tabindex="-1" class="modal fade modal-default modal-main-subscribe jsModalSubscribe">-->
+    <!--<div class="modal-dialog modal-dialog-centered">-->
+        <!--<div class="modal-content">-->
+            <!--<div class="modal-body">-->
+                <!--<a data-dismiss="modal" class="modal__close"></a>-->
+                <!--<div class="modal-event__inner">-->
+                    <!--<div class="modal__title">Подпишись на рассылку и узнавай первой о наших новинках, специальных предложениях и новостях бренда!</div>-->
+                    <!--<form class="event-create__form">-->
+                        <!--<div class="form__group">-->
+                            <!--<div class="form__input error">-->
+                                <!--<input type="text" name="name" required="" placeholder="Имя Фамилия">-->
+                                <!--<div class="error">Ошибка</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form__group">-->
+                            <!--<div class="form__input error">-->
+                                <!--<input type="email" name="email" required="" placeholder="Ваша электронная почта">-->
+                                <!--<div class="error">Ошибка</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form__checkbox">-->
+                            <!--<div class="checkbox error">-->
+                                <!--<input name="personal" type="checkbox" checked="" required="true" id="agree_popup_2">-->
+                                <!--<div class="error">Ошибка</div>-->
+                                <!--<label for="agree_popup_2">Я согласен с <a href="https://www.oriflame.ru/customer-service/privacy-protection-policy" target="_blank">правилами обработки персональных данных</a></label>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form__checkbox">-->
+                            <!--<div class="checkbox ">-->
+                                <!--<input name="rule" type="checkbox" checked="" required="true" id="subscribe_popup_2">-->
+                                <!--<label for="subscribe_popup_2">Я согласен получать новости Орифлейм Россия</label>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="modal-event__foot">-->
+                            <!--<div class="form__button">-->
+                                <!--<button class="button-default">Отправить</button>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</form>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<div tabindex="-1" class="modal fade modal-gallery jsModalGallery">-->
+    <!--<div class="modal-dialog modal-dialog-centered">-->
+        <!--<div class="modal-content">-->
+            <!--<div class="modal-body">-->
+                <!--<a data-dismiss="modal" class="modal-gallery__close"></a>-->
+                <!--<div class="modal-gallery__inner">-->
+                    <!--<div class="modal-gallery__body jsModalGalleryBig">-->
+                        <!--<div class="swiper-container">-->
+                            <!--<div class="swiper-wrapper">-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271LfcO3sT4qtm8xGDRkPuPX2CGfFLLUOuGM86Qm75l.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582715Sm2EPjdFYij6mM4ySNfW7ulrxwpGDtBrsaPkEMz.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271v4q34gaYezyY3KxdGEm8fPh1lTyd567kxuEDuh99.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/151285827180a2PfMuEcm6oF4UUQA0Qjhot6nw4nzX1jiaO9E9.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271ujQYBnHodfQNL2IpZNhGLKEKgixMDXryz7lR1O7p.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271roQgA02yyTcyGgDPeUkmTOfSFU7cMtvo3yWhpQm8.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271wdAAW6FRQTsB6G1DkJqEUdEO8qoM15xMjaMpTq2S.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210EbVBioztHZIHw7F3cZDwdLTEi6Avqd8dvfLXMsJp.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210To8Cy9FNUsoGV6IbEOg3UyotG1sQ8MGKQXjXbl1V.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582103UamYmlU1W4VAwGoRkzQybuZNjy1NBMSgBh7Zhk8.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210UvXjP6kx6Hq15niVOFks4MmUzIS3Vxcr34OQVHst.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/151285821085IvHgp8b1kuRMpeNg44WVEBVatz9w5f36RANfxU.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210Ix8aziN3f9W8jVNyWvC4EkJ2xNORm9tlZXWwLFDE.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210X6PnXVmA4DkpWHET8AU0cugrtaszyf8ElKsJLZ8B.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210FcuNMEcn7S3I2xsBLertyV8sXn2A0Exs4vqwjVxl.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582104evUamcxW13zUTxdVD7Tz201T0irk9Lh59wTqA7g.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210QfFntWagP7K5r9e4kVPxhNddFwOGzvP7wb1sgYm6.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210RRr4JD0ZxufrN6PH9G8UDVHHId0i6gsEpJaXuQ35.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210ZJHrNvziwRFHLlTklkCXCk8JasDWaLEXyxLb06V1.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582107CH9BkTa8rsqLsyWN02PBbUPV8QkGHvRStRDlHpI.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210rntvlBanpXoza1b4BlFPRgBpyOjnYPp7Ma6lU45L.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582104V3JlW3xe11Bxn530Ybwcow2wz9glqsoZn7hXa49.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="modal-gallery__foot jsModalGalleryThumb">-->
+                        <!--<div class="swiper-container">-->
+                            <!--<div class="swiper-wrapper">-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271LfcO3sT4qtm8xGDRkPuPX2CGfFLLUOuGM86Qm75l.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582715Sm2EPjdFYij6mM4ySNfW7ulrxwpGDtBrsaPkEMz.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271v4q34gaYezyY3KxdGEm8fPh1lTyd567kxuEDuh99.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/151285827180a2PfMuEcm6oF4UUQA0Qjhot6nw4nzX1jiaO9E9.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271ujQYBnHodfQNL2IpZNhGLKEKgixMDXryz7lR1O7p.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271roQgA02yyTcyGgDPeUkmTOfSFU7cMtvo3yWhpQm8.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271wdAAW6FRQTsB6G1DkJqEUdEO8qoM15xMjaMpTq2S.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210EbVBioztHZIHw7F3cZDwdLTEi6Avqd8dvfLXMsJp.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210To8Cy9FNUsoGV6IbEOg3UyotG1sQ8MGKQXjXbl1V.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582103UamYmlU1W4VAwGoRkzQybuZNjy1NBMSgBh7Zhk8.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210UvXjP6kx6Hq15niVOFks4MmUzIS3Vxcr34OQVHst.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/151285821085IvHgp8b1kuRMpeNg44WVEBVatz9w5f36RANfxU.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210Ix8aziN3f9W8jVNyWvC4EkJ2xNORm9tlZXWwLFDE.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210X6PnXVmA4DkpWHET8AU0cugrtaszyf8ElKsJLZ8B.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210FcuNMEcn7S3I2xsBLertyV8sXn2A0Exs4vqwjVxl.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582104evUamcxW13zUTxdVD7Tz201T0irk9Lh59wTqA7g.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210QfFntWagP7K5r9e4kVPxhNddFwOGzvP7wb1sgYm6.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210RRr4JD0ZxufrN6PH9G8UDVHHId0i6gsEpJaXuQ35.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210ZJHrNvziwRFHLlTklkCXCk8JasDWaLEXyxLb06V1.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582107CH9BkTa8rsqLsyWN02PBbUPV8QkGHvRStRDlHpI.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210rntvlBanpXoza1b4BlFPRgBpyOjnYPp7Ma6lU45L.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582104V3JlW3xe11Bxn530Ybwcow2wz9glqsoZn7hXa49.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<button class="swiper-prev swiper-button-disabled"></button>-->
+                        <!--<button class="swiper-next swiper-button-disabled"></button>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<div tabindex="-1" class="modal fade modal-photo jsModalPhoto">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-photo__inner">
+                    <a data-dismiss="modal" class="modal-photo__close"></a>
+                    <img alt="" class="jsModalPhotoPic">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-default jsModalEventSubscribe">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content event-subscribe">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <div class="event-subscribe__inner">
+                    <form action="" method="post">
+                        <div class="event-subscribe__title">я хочу участвовать в этом<br> мероприятии</div>
+                        <div class="event-subscribe__input">
+                            <input type="text" required placeholder="Имя Фамилия" name="">
+                            <div class="error">Текст ошибки</div>
+                        </div>
+                        <div class="event-subscribe__input">
+                            <input type="email" required placeholder="E-mail" name="">
+                            <div class="error">Текст ошибки</div>
+                        </div>
+                        <div class="event-subscribe__input">
+                            <input type="tel" required placeholder="+7 (___) ___-__-__" name="">
+                            <div class="error">Текст ошибки</div>
+                        </div>
+                        <div class="event-subscribe__checkbox-group">
+                            <div class="form-group input_checkbox">
+                                <input name="personal" type="checkbox" checked="" required="true" id="agree10">
+                                <label for="agree10">Я согласен с <a href="" target="_blank">правилами обработки персональных данных</a></label>
+                                <div class="error">Текст ошибки</div>
+                            </div>
+                            <div class="form-group input_checkbox">
+                                <input name="personal" type="checkbox" checked="" id="subscribe10">
+                                <label for="subscribe10">Я хочу получать новости Экзарта</label>
+                            </div>
+                        </div>
+                        <button class="button button_red">Записаться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-default modal-small jsModalEventSubscribeSuccess">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <div class="modal__title">Спасибо!</div>
+                <div class="modal__message">
+                    Вы записаны на мероприятие.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-default modal-small jsModalAppointmentSuccess">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <div class="modal__title">Спасибо!</div>
+                <div class="modal__message">
+                    Ваша запись успешно оформлена.<br>
+                    В ближайшее время с вами свяжется наш менеджер
+                    для уточнения деталей.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-default modal-subscribe-success jsModalSubscribeSuccess">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <div class="modal__title jsModalSubscribeSuccessMessage">
+                    Вы записаны на мероприятие
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-form jsModalAppointment">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <section class="appointment-form">
+                    <div class="appointment-form__inner">
+                        <!--<div class="appointment-form__close">-->
+                            <!--<a data-dismiss="modal" href="">Закрыть форму и вернуться</a>-->
+                        <!--</div>-->
+                        <div class="appointment-form__title">Запись на приём</div>
+                        <div class="appointment-form__form">
+                            <form data-form="appointment">
+                                <div class="appointment-form__pagination">
+                                    <ul class="jsAppointmentFormPagination">
+                                        <li class="active success" data-step-pagination="1">
+                                            <a href="#">Выбор услуги</a>
+                                            <span>Прием врача по лечебной физкультуре</span>
+                                        </li>
+                                        <li class="" data-step-pagination="2">
+                                            <a href="#">Выбор города и медцентра</a>
+                                            <span>Нижний Новгород<br>
+                                Медцентр «Медицинский центр братьев Алиевых» </span>
+                                        </li>
+                                        <li data-step-pagination="3">
+                                            <a href="#">Контактная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="appointment-form__wrapper">
+                                    <div class="appointment-form__body">
+                                        <div data-step="1" class="appointment-form__step jsAppointmentFormStage active">
+                                            <div class="form-group form__select">
+                                                <label for="">Услуга</label>
+                                                <select name="services" id="" class="jsAppointmentFormSelect">
+                                                    <optgroup label="ОСМОТР, Консультация">
+                                                        <option value="">Прием врача по лечебной физкультуре</option>
+                                                        <option value="">Прием врача-невролога первичный</option>
+                                                        <option value="">Прием врача – травматолога-ортопеда первичный</option>
+                                                    </optgroup>
+                                                    <optgroup label="Лечебная физкультура, кинезиотерапия">
+                                                        <option value="">Индивидуальное занятие ЛФК (с применением вышеперечисленных методик)</option>
+                                                        <option value="">Индивидуальное занятие по методике Войта</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div data-step="2" class="appointment-form__step jsAppointmentFormStage">
+                                            <div class="form-group form__select">
+                                                <label for="">Ваш город</label>
+                                                <select name="city" id="">
+                                                    <option value="" selected>Нижний Новгород</option>
+                                                    <option value="">Дзержинск</option>
+                                                    <option value="" disabled>Москва</option>
+                                                </select>
+                                            </div>
+                                            <div class="appointment-form__branch">
+                                                <div class="form-group input_radio">
+                                                    <input type="radio" name="branch" value="1" id="branch_1">
+                                                    <label for="branch_1">
+                                                        <p class="appointment-form__branch-name">Медицинский центр лечения заболеваний</p>
+                                                        <div>
+                                                            <div class="phone">
+                                                                <p>Телефоны:</p>
+                                                                <p>(831) 429-01-15</p>
+                                                                <p>(831) 230-50-18</p>
+                                                            </div>
+                                                            <div class="address">
+                                                                <p>Адрес:</p>
+                                                                <p>603087, Нижний Новгород,
+                                                                    Казанское шоссе, д.18, корпус 1.</p>
+                                                            </div>
+                                                            <div class="work">
+                                                                <p>График работы:</p>
+                                                                <p>Пн-Пт с 8.00 до 20.00<br>
+                                                                    Сб — по записи, с 8.00 до 14.00<br>
+                                                                    Вс — выходной день.</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="appointment-form__branch">
+                                                <div class="form-group input_radio">
+                                                    <input type="radio" name="branch" value="2" id="branch_2">
+                                                    <label for="branch_2">
+                                                        <p class="appointment-form__branch-name">Медицинский центр лечения заболеваний</p>
+                                                        <div>
+                                                            <div class="phone">
+                                                                <p>Телефоны:</p>
+                                                                <p>(831) 429-01-15</p>
+                                                                <p>(831) 230-50-18</p>
+                                                            </div>
+                                                            <div class="address">
+                                                                <p>Адрес:</p>
+                                                                <p>603087, Нижний Новгород,
+                                                                    Казанское шоссе, д.18, корпус 1.</p>
+                                                            </div>
+                                                            <div class="work">
+                                                                <p>График работы:</p>
+                                                                <p>Пн-Пт с 8.00 до 20.00<br>
+                                                                    Сб — по записи, с 8.00 до 14.00<br>
+                                                                    Вс — выходной день.</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-step="3" class="appointment-form__step jsAppointmentFormStage">
+                                            <div class="form-group">
+                                                <label for="">Как к вам обращаться?</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">Номер телефона</label>
+                                                <input type="text" placeholder="+7 (       ) ____-____-__-__">
+                                            </div>
+                                            <div class="form-group input_checkbox">
+                                                <input type="checkbox" checked id="appointment-form__agree">
+                                                <label for="appointment-form__agree">Отправляя форму, вы соглашаетесь с политикой
+                                                    конфиденциальности и пользовательским соглашением
+                                                    данного сайта.</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="appointment-form__foot">
+                                        <a href="#" class="button appointment-form__button back jsAppointmentFormBack hidden">назад</a>
+                                        <button class="button button_red appointment-form__button">далее</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-form jsModalEnrollment">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <section class="enrollment">
+                    <div class="enrollment__inner">
+                        <div class="enrollment__title">Запись на обучение</div>
+                        <div class="enrollment__form">
+                            <form action="">
+                                <div class="form-group form__select">
+                                    <label for="">Курс</label>
+                                    <select name="courses" id="">
+                                        <option value="">Биомеханика человека. Модуль 1. Функциональная анатомия и нормаль...</option>
+                                    </select>
+                                </div>
+                                <div class="enrollment__info">
+                                    <div class="enrollment__course">
+                                        <div class="name">
+                                            <p>Биомеханика человека.
+                                            Модуль 1. Функциональная
+                                            анатомия и нормальная
+                                            биомеханика</p>
+                                        </div>
+                                        <div class="date">
+                                            <p>Даты:</p>
+                                            <span class="text-content">13.07.2019 – 17.07.2019</span>
+                                        </div>
+                                        <div class="teacher">
+                                            <p>Преподаватель:</p>
+                                            <a href="" class="course-teacher ru">Шлыков К.А.</a>
+                                        </div>
+                                        <div class="cost">
+                                            <p>Стоимость:</p>
+                                            <span class="text-content">24 000 руб.</span>
+                                        </div>
+                                    </div>
+                                    <div class="enrollment__contacts">
+                                        <div class="form-group">
+                                            <label for="">Как к вам обращаться?</label>
+                                            <input type="text" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Номер телефона</label>
+                                            <input type="text" required placeholder="+7 (       ) ____-____-__-__">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">E-mail</label>
+                                            <input type="email" required>
+                                        </div>
+                                        <div class="form-group input_checkbox">
+                                            <input type="checkbox" checked id="enrollment__agree">
+                                            <label for="enrollment__agree">Отправляя форму, вы соглашаетесь с политикой
+                                                конфиденциальности и пользовательским соглашением
+                                                данного сайта.</label>
+                                        </div>
+                                        <button class="button button_red enrollment__button">ОФОРМИТЬ ЗАПИСЬ</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-default jsModalOrderModel">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content event-subscribe">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <div class="event-subscribe__inner">
+                    <form action="" method="post">
+                        <div class="event-subscribe__title">Я хочу получить финансовую модель<br>для рассчета франшизы</div>
+                        <div class="event-subscribe__input">
+                            <input type="text" required placeholder="Имя Фамилия" name="">
+                            <div class="error">Текст ошибки</div>
+                        </div>
+                        <div class="event-subscribe__input">
+                            <input type="email" required placeholder="E-mail" name="">
+                            <div class="error">Текст ошибки</div>
+                        </div>
+                        <div class="event-subscribe__input">
+                            <input type="tel" required placeholder="+7 (___) ___-__-__" name="">
+                            <div class="error">Текст ошибки</div>
+                        </div>
+                        <div class="event-subscribe__checkbox-group">
+                            <div class="form-group input_checkbox">
+                                <input name="personal" type="checkbox" checked="" required="true" id="agree11">
+                                <label for="agree11">Я согласен с <a href="" target="_blank">правилами обработки персональных данных</a></label>
+                                <div class="error">Текст ошибки</div>
+                            </div>
+                            <div class="form-group input_checkbox">
+                                <input name="personal" type="checkbox" checked="" id="subscribe11">
+                                <label for="subscribe11">Я хочу получать новости Экзарта</label>
+                            </div>
+                        </div>
+                        <button class="button button_red">Заказать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-default jsModalCities">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <p class="map-cities__title text-title">Выбор города</p>
+                <div class="map-cities__block">
+                    <p class="map-cities__alphabet">А</p>
+                    <div class="map-cities__city">
+                        <a href="">Арзамас</a>
+                        <span>1</span>
+                    </div>
+                    <div class="map-cities__city">
+                        <a href="">Архангельск</a>
+                        <span>3</span>
+                    </div>
+                    <div class="map-cities__city">
+                        <a href="">Астана</a>
+                        <span>1</span>
+                    </div>
+                </div>
+                <div class="map-cities__block">
+                    <p class="map-cities__alphabet">Б</p>
+                    <div class="map-cities__city">
+                        <a href="">Богородск</a>
+                        <span>1</span>
+                    </div>
+                </div>
+                <div class="map-cities__block">
+                    <p class="map-cities__alphabet">Д</p>
+                    <div class="map-cities__city">
+                        <a href="">Дзержинск</a>
+                        <span>1</span>
+                    </div>
+                </div>
+                <div class="map-cities__block">
+                    <p class="map-cities__alphabet">Н</p>
+                    <div class="map-cities__city">
+                        <a href="">Нижний Новгород</a>
+                        <span>1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/bundles/webpack/vendor.bundle.js"></script>
+<script src="/bundles/webpack/desktop.bundle.js"></script>
+<!--<script src="/bundles/webpack/scripts.bundle.js"></script>-->
+
+</body>
+</html>

@@ -512,10 +512,10 @@ function countNetProfit() {
     field_profitability_index.text(profitability_index.toFixed(2));
 
     if (net_profit > investments) {
-        $('.franchise-calculator__forecast .payback_period p').text('Срок окупаемости от');
+        $('.franchise-calculator__forecast .payback_period p').text('Период окупаемости от');
         $('.franchise-calculator__forecast .payback_period span').text(payback_period + ' месяцев');
     } else {
-        $('.franchise-calculator__forecast .payback_period p').text('Установите больше срок реализации проекта для расчета окупаемости');
+        $('.franchise-calculator__forecast .payback_period p').text('Установите больше период реализации проекта для расчета окупаемости');
         $('.franchise-calculator__forecast .payback_period span').text('');
     }
 }

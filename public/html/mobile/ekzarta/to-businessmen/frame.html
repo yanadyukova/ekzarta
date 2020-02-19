@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ekzarta</title>
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+    <!-- fonts -->
+    <style>@font-face{font-family:'PF Din Text Cond Pro XBlack';src:url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.eot?v16cb05c6548);src:url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.eot?v16cb05c6548#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.woff2?v16cb05c6d18) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XBlackItalic.woff?v16cb05c6548) format('woff');font-weight:900;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Light.eot?v16cb05c6d18);src:url(/fonts/DIN/PFDinTextCondPro-Light.eot?v16cb05c6d18#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Light.woff2?v16cb05c74e8) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Light.woff?v16cb05c6d18) format('woff');font-weight:300;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-BoldItalic.eot?v16cb05c78d0);src:url(/fonts/DIN/PFDinDisplayPro-BoldItalic.eot?v16cb05c78d0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-BoldItalic.woff2?v16cb05c80a0) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-BoldItalic.woff?v16cb05c78d0) format('woff');font-weight:700;font-style:italic}@font-face{font-family:'PF DinDisplay Pro ExtraThin';src:url(/fonts/DIN/PFDinDisplayPro-ExtraThin.eot?v16cb05c80a0);src:url(/fonts/DIN/PFDinDisplayPro-ExtraThin.eot?v16cb05c80a0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-ExtraThin.woff2?v16cb05c8870) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-ExtraThin.woff?v16cb05c80a0) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro X';src:url(/fonts/DIN/PFDinTextCondPro-XThinItalic.eot?v16cb05c8870);src:url(/fonts/DIN/PFDinTextCondPro-XThinItalic.eot?v16cb05c8870#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XThinItalic.woff2?v16cb05c9040) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XThinItalic.woff?v16cb05c8870) format('woff');font-weight:100;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Medium.eot?v16cb05c9428);src:url(/fonts/DIN/PFDinTextCondPro-Medium.eot?v16cb05c9428#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Medium.woff2?v16cb05c9810) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Medium.woff?v16cb05c9428) format('woff');font-weight:500;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-LightItalic.eot?v16cb05c9bf8);src:url(/fonts/DIN/PFDinTextCondPro-LightItalic.eot?v16cb05c9bf8#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-LightItalic.woff2?v16cb05ca3c8) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-LightItalic.woff?v16cb05c9bf8) format('woff');font-weight:300;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Regular.eot?v16cb05ca3c8);src:url(/fonts/DIN/PFDinTextCondPro-Regular.eot?v16cb05ca3c8#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Regular.woff2?v16cb05cab98) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Regular.woff?v16cb05ca3c8) format('woff');font-weight:400;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Regular.eot?v16cb05cab98);src:url(/fonts/DIN/PFDinDisplayPro-Regular.eot?v16cb05cab98#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Regular.woff2?v16cb05cb368) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Regular.woff?v16cb05caf80) format('woff');font-weight:400;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-BoldItalic.eot?v16cb05cb368);src:url(/fonts/DIN/PFDinTextCondPro-BoldItalic.eot?v16cb05cb368#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-BoldItalic.woff2?v16cb05cbb38) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-BoldItalic.woff?v16cb05cb368) format('woff');font-weight:700;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Thin.eot?v16cb05cbb38);src:url(/fonts/DIN/PFDinDisplayPro-Thin.eot?v16cb05cbb38#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Thin.woff2?v16cb05cc6f0) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Thin.woff?v16cb05cbb38) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Medium.eot?v16cb05cc6f0);src:url(/fonts/DIN/PFDinDisplayPro-Medium.eot?v16cb05cc6f0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Medium.woff2?v16cb05ccec0) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Medium.woff?v16cb05cc6f0) format('woff');font-weight:500;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-LightItalic.eot?v16cb05ccec0);src:url(/fonts/DIN/PFDinDisplayPro-LightItalic.eot?v16cb05ccec0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-LightItalic.woff2?v16cb05cd690) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-LightItalic.woff?v16cb05ccec0) format('woff');font-weight:300;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Italic.eot?v16cb05cda78);src:url(/fonts/DIN/PFDinTextCondPro-Italic.eot?v16cb05cda78#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Italic.woff2?v16cb05ce248) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Italic.woff?v16cb05cda78) format('woff');font-weight:400;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Bold.eot?v16cb05ce248);src:url(/fonts/DIN/PFDinDisplayPro-Bold.eot?v16cb05ce248#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Bold.woff2?v16cb05cea18) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Bold.woff?v16cb05ce248) format('woff');font-weight:700;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro XBlack';src:url(/fonts/DIN/PFDinTextCondPro-XBlack.eot?v16cb05cea18);src:url(/fonts/DIN/PFDinTextCondPro-XBlack.eot?v16cb05cea18#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XBlack.woff2?v16cb05cf1e8) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XBlack.woff?v16cb05cea18) format('woff');font-weight:900;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-BlackItalic.eot?v16cb05cf1e8);src:url(/fonts/DIN/PFDinDisplayPro-BlackItalic.eot?v16cb05cf1e8#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-BlackItalic.woff2?v16cb05cf9b8) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-BlackItalic.woff?v16cb05cf1e8) format('woff');font-weight:900;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Light.eot?v16cb05cf9b8);src:url(/fonts/DIN/PFDinDisplayPro-Light.eot?v16cb05cf9b8#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Light.woff2?v16cb05d0188) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Light.woff?v16cb05cf9b8) format('woff');font-weight:300;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro X';src:url(/fonts/DIN/PFDinTextCondPro-XThin.eot?v16cb05d0188);src:url(/fonts/DIN/PFDinTextCondPro-XThin.eot?v16cb05d0188#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-XThin.woff2?v16cb05d0d40) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-XThin.woff?v16cb05d0188) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Bold.eot?v16cb05d0d40);src:url(/fonts/DIN/PFDinTextCondPro-Bold.eot?v16cb05d0d40#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Bold.woff2?v16cb05d1510) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Bold.woff?v16cb05d0d40) format('woff');font-weight:700;font-style:normal}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-MediumItalic.eot?v16cb05d1510);src:url(/fonts/DIN/PFDinTextCondPro-MediumItalic.eot?v16cb05d1510#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-MediumItalic.woff2?v16cb05d1ce0) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-MediumItalic.woff?v16cb05d1510) format('woff');font-weight:500;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-ThinItalic.eot?v16cb05d1ce0);src:url(/fonts/DIN/PFDinTextCondPro-ThinItalic.eot?v16cb05d1ce0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-ThinItalic.woff2?v16cb05d2898) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-ThinItalic.woff?v16cb05d1ce0) format('woff');font-weight:100;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-ThinItalic.eot?v16cb05d2898);src:url(/fonts/DIN/PFDinDisplayPro-ThinItalic.eot?v16cb05d2898#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-ThinItalic.woff2?v16cb05d3068) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-ThinItalic.woff?v16cb05d2898) format('woff');font-weight:100;font-style:italic}@font-face{font-family:'PF Din Text Cond Pro';src:url(/fonts/DIN/PFDinTextCondPro-Thin.eot?v16cb05d3450);src:url(/fonts/DIN/PFDinTextCondPro-Thin.eot?v16cb05d3450#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinTextCondPro-Thin.woff2?v16cb05d3c20) format('woff2'),url(/fonts/DIN/PFDinTextCondPro-Thin.woff?v16cb05d3450) format('woff');font-weight:100;font-style:normal}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-MediumItalic.eot?v16cb05d3c20);src:url(/fonts/DIN/PFDinDisplayPro-MediumItalic.eot?v16cb05d3c20#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-MediumItalic.woff2?v16cb05d43f0) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-MediumItalic.woff?v16cb05d3c20) format('woff');font-weight:500;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Italic.eot?v16cb05d43f0);src:url(/fonts/DIN/PFDinDisplayPro-Italic.eot?v16cb05d43f0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Italic.woff2?v16cb05d4bc0) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Italic.woff?v16cb05d43f0) format('woff');font-weight:400;font-style:italic}@font-face{font-family:'PF DinDisplay Pro';src:url(/fonts/DIN/PFDinDisplayPro-Black.eot?v16cb05d4bc0);src:url(/fonts/DIN/PFDinDisplayPro-Black.eot?v16cb05d4bc0#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-Black.woff2?v16cb05d5390) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-Black.woff?v16cb05d4bc0) format('woff');font-weight:900;font-style:normal}@font-face{font-family:'PF DinDisplay Pro ExtraThin';src:url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.eot?v16cb05d5778);src:url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.eot?v16cb05d5778#iefix) format('embedded-opentype'),url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.woff2?v16cb05d5f48) format('woff2'),url(/fonts/DIN/PFDinDisplayPro-ExtraThinItalic.woff?v16cb05d5778) format('woff');font-weight:100;font-style:italic}</style>
+
+    <link href="/bundles/css/mobile.min.css" rel="stylesheet">
+
+</head>
+<body class="mobile">
+<!-- ############# -->
+<!-- CONTENT START -->
+<!-- ############# -->
+
+<header class="header">
+    <div class="header__inner">
+        <a href="#" class="header__nav nav-toggle jsNavToggle">
+            <span></span><span></span><span></span>
+        </a>
+        <a href="" class="header__logo"></a>
+        <div class="header__basket not-empty">
+            <!--у header__basket есть 2 дополнительных класса-->
+            <!--empty  - для пустой корзины, при нем кнопка "Оформить заказ неактивна"-->
+            <!--not-empty - кнопка "Оформить заказ" активна и над корзиной отображается количество товара в корзине-->
+            <p>Корзина</p>
+            <p class="quantity">2</p>
+            <div class="basket">
+                <div class="basket__inner">
+                    <div class="basket__buttons">
+                        <a href="../pages/checkout.html" class="basket__checkout">Оформить заказ</a>
+                        <a class="basket__close"></a>
+                    </div>
+
+                    <!--Если корзина пустая-->
+                    <!--<div class="basket__empty">-->
+                        <!--<p>Корзина пуста</p>-->
+                        <!--<a href="#">Перейти в магазин</a>-->
+                    <!--</div>-->
+
+                    <div class="basket__items">
+                        <div class="basket__item">
+                            <p class="basket__item-name">Тренажер Экзарта Мини</p>
+                            <p class="basket__item-price"><span>11295</span> Руб.</p>
+                            <p class="basket__item-amount">x<span>1</span></p>
+                            <button class="basket__item-delete"></button>
+                        </div>
+                        <div class="basket__item">
+                            <p class="basket__item-name">Тренажер Экзарта Мини</p>
+                            <p class="basket__item-price"><span>11295</span> Руб.</p>
+                            <p class="basket__item-amount">x<span>1</span></p>
+                            <button class="basket__item-delete"></button>
+                        </div>
+                    </div>
+                    <div class="basket__total">
+                        <span>Итого:</span>
+                        <p><span>3000</span> Руб.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="nav-mobile jsMobileNav">
+    <div class="nav-mobile__inner">
+        <ul>
+            <li class="active"><a href="../to-patients/frame.html"><span>Пациентам</span></a></li>
+            <li class=""><a href="../to-specialists/frame.html"><span>Специалистам</span></a></li>
+            <li class=""><a href="../to-businessmen/frame.html"><span>Бизнесу</span></a></li>
+            <li class=""><a href="../pages/reviews.html"><span>Отзывы</span></a></li>
+            <li class=""><a href="../pages/events.html"><span>События</span></a></li>
+            <li class=""><a href="../contacts/contacts.html"><span>Контакты</span></a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="businessmen-header frame">
+    <div class="businessmen-header__inner frame__inner">
+        <div>
+            <p class="businessmen-header__title frame__title">РУКОВОДИТЕЛЯМ</p>
+            <div class="businessmen-header__desc frame__desc">
+                <p>Хотите открыть свою клинику,
+                    приносить радость людям
+                    и при этом зарабатывать деньги?
+                    Решение есть: франшиза Экзарта.</p>
+            </div>
+            <div class="businessmen-header__button frame__button">
+                <a href="" class="button button_red" data-toggle="modal" data-target=".jsModalAppointment">Купить франшизу</a>
+            </div>
+        </div>
+        <div class="businessmen-header__image frame__image">
+            <img src="/images/mobile/pic/3-2@2x.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="businessmen-content frame-content">
+    <div class="tabs">
+
+        <ul class="tabs__caption">
+            <li class="active"><a href="#franchise">ФРАНШИЗА</a></li>
+            <li><a href="#equipment">МАГАЗИН</a></li>
+        </ul>
+        <div class="tabs__content active">
+            <article class="franchise">
+                <div class="franchise__inner">
+
+                    <section class="franchise-statistics">
+                        <p class="franchise-statistics__title text-title text-title_big">Боль в спине – самая частая причина
+                            потери трудоспособности</p>
+                        <ul>
+                            <li>
+                                <span>38%</span>
+                                <p class="text-content">населения любого города мучается со спиной
+                                    и суставами, страдает от головной боли</p>
+                            </li>
+                            <li>
+                                <span>80%</span>
+                                <p class="text-content">населения земного шара регулярно
+                                    испытывают боли в спине</p>
+                            </li>
+                            <li>
+                                <span>98%</span>
+                                <p class="text-content">болей в спине возникает из-за смещений
+                                    позвонков, напряжения мышц, грыж
+                                    межпозвоночных дисков</p>
+                            </li>
+                            <li>
+                                <span>38 млн.</span>
+                                <p class="text-content">россиян каждый год берут больничный
+                                    по причине боли в спине</p>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="franchise-chart">
+                        <div class="franchise-chart__inner">
+                            <div class="franchise-chart__title">
+                                <p>РЫНОК медицинских
+                                    услуг в РФ</p>
+                            </div>
+                            <div class="franchise-chart__chart">
+                                <p>Динамика</p>
+                                <div>
+                                    <p class="year">2012</p>
+                                    <div class="volume"></div>
+                                    <p class="data">1,487</p>
+                                </div>
+                                <div>
+                                    <p class="year">2013</p>
+                                    <div class="volume"></div>
+                                    <p class="data">1,700</p>
+                                </div>
+                                <div>
+                                    <p class="year">2014</p>
+                                    <div class="volume"></div>
+                                    <p class="data">1,951</p>
+                                </div>
+                                <div>
+                                    <p class="year">2015</p>
+                                    <div class="volume"></div>
+                                    <p class="data">2,104</p>
+                                </div>
+                                <div>
+                                    <p class="year">2016</p>
+                                    <div class="volume"></div>
+                                    <p class="data">2,204</p>
+                                </div>
+                                <div>
+                                    <p class="year">2017</p>
+                                    <div class="volume"></div>
+                                    <p class="data">2,268</p>
+                                </div>
+                                <div>
+                                    <p class="year">2018</p>
+                                    <div class="volume"></div>
+                                    <p class="data">2,365</p>
+                                </div>
+                                <div>
+                                    <p class="year">2019</p>
+                                    <div class="volume"></div>
+                                    <p class="data">2,493</p>
+                                </div>
+                                <div>
+                                    <p class="year">2020</p>
+                                    <div class="volume"></div>
+                                    <p class="data">2,661</p>
+                                </div>
+                                <div>
+                                    <p class="year">2021</p>
+                                    <div class="volume"></div>
+                                    <p class="data">2,865</p>
+                                </div>
+                            </div>
+                            <div class="franchise-chart__chart market-volume">
+                                <p>Объем</p>
+                                <div>
+                                    <p class="year"></p>
+                                    <div class="volume"></div>
+                                </div>
+                                <div>
+                                    <p class="year">14.3%</p>
+                                    <div class="volume"></div>
+                                </div>
+                                <div>
+                                    <p class="year">14.8%</p>
+                                    <div class="volume"></div>
+                                </div>
+                                <div>
+                                    <p class="year">7.8%</p>
+                                    <div class="volume"></div>
+                                </div>
+                                <div>
+                                    <p class="year">4.8%</p>
+                                    <div class="volume"></div>
+                                </div>
+                                <div>
+                                    <p class="year">2.9%</p>
+                                    <div class="volume"></div>
+                                </div>
+                                <div>
+                                    <p class="year">4.3%</p>
+                                    <div class="volume"></div>
+                                </div>
+                                <div>
+                                    <p class="year">5.4%</p>
+                                    <div class="volume"></div>
+                                </div>
+                                <div>
+                                    <p class="year">6.7%</p>
+                                    <div class="volume"></div>
+                                </div>
+                                <div>
+                                    <p class="year">7.7%</p>
+                                    <div class="volume"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="franchise-advantages">
+                        <div class="franchise-advantages__inner">
+                            <p class="franchise-advantages__title">Почему мы</p>
+                            <div class="franchise-advantages__partners franchise-advantages__block">
+                                <!--<p class="text-title text-title_big">ДЛЯ ПАРТНЕРОВ</p>-->
+                                <ul>
+                                    <li>
+                                        <span><img src="/images/desktop/icons/franchise/Spros@2x.png" alt=""></span>
+                                        <p class="text-content">высокий спрос
+                                            на реабилитационные услуги</p>
+                                    </li>
+                                    <li>
+                                        <span><img src="/images/desktop/icons/franchise/5@2x.png" alt=""></span>
+                                        <p class="text-content">мы на рынке
+                                            с 2014 года</p>
+                                    </li>
+                                    <li>
+                                        <span><img src="/images/desktop/icons/franchise/own_cms@2x.png" alt=""></span>
+                                        <p class="text-content">собственная информационная
+                                            система управления центром</p>
+                                    </li>
+                                    <li>
+                                        <span><img src="/images/desktop/icons/franchise/1000plus@2x.png" alt=""></span>
+                                        <p class="text-content">мы помогли более
+                                            1000 человек</p>
+                                    </li>
+                                    <li>
+                                        <span><img src="/images/desktop/icons/franchise/star@2x.png" alt=""></span>
+                                        <p class="text-content">современные методики
+                                            и оборудование</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="franchise-advantages__clients franchise-advantages__block">
+                                <!--<p class="text-title text-title_big">ДЛЯ КЛИЕНТОВ</p>-->
+                                <ul>
+                                    <li>
+                                        <span><img src="/images/desktop/icons/franchise/education@2x.png" alt=""></span>
+                                        <p class="text-content">мы производим оборудование
+                                            и учим как на нем работать</p>
+                                    </li>
+                                    <li>
+                                        <span><img src="/images/desktop/icons/franchise/check@2x.png" alt=""></span>
+                                        <p class="text-content">можем устранить
+                                            боль за 1 посещение</p>
+                                    </li>
+                                    <li>
+                                        <span><img src="/images/desktop/icons/franchise/aim@2x.png" alt=""></span>
+                                        <p class="text-content">мы устраняем причины боли,
+                                            а не симптомы</p>
+                                    </li>
+                                    <li>
+                                        <span><img src="/images/desktop/icons/franchise/friendly@2x.png" alt=""></span>
+                                        <p class="text-content">мы не навязываем
+                                            лишних услуг
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="franchise-advantages__form">
+                                <form action="">
+                                    <div class="franchise-advantages__form-inner">
+                                        <p>Мы с радостью вышлем вам нашу презентацию,
+                                            просто укажите свою почту:</p>
+                                        <div class="form-group">
+                                            <label for="">Как к вам обращаться?</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Ваш e-mail</label>
+                                            <input type="text" placeholder="mail@mail.ru">
+                                        </div>
+                                    </div>
+                                    <button>ЗАКАЗАТЬ ПРЕЗЕНТАЦИЮ</button>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="franchise-calculator">
+                        <div class="franchise-calculator__inner">
+                            <p class="franchise-calculator__title">ФОРМАТЫ</p>
+                            <div class="franchise-calculator__calculator">
+                                <div class="franchise-calculator__packages">
+                                    <div class="form-group">
+                                        <input type="radio" id="home" name="franchise_packages" checked>
+                                        <label for="home">Экзарта "У дома"</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="radio" id="standart" name="franchise_packages">
+                                        <label for="standart">Экзарта Стандарт</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="radio" id="maximum" name="franchise_packages">
+                                        <label for="maximum">Экзарта Максимум</label>
+                                    </div>
+                                </div>
+                                <div class="calculator">
+                                    <div class="franchise-calculator__desc"><p>Подробные характеристики пакета франшизы</p></div>
+                                    <div class="franchise-calculator__initial-data">
+                                        <div class="area">
+                                            <p>Площадь помещения</p>
+                                            <span>до 75 м</span>
+                                        </div>
+                                        <div class="royalty">
+                                            <p>Роялти</p>
+                                            <span>7%  от оборота</span>
+                                        </div>
+                                        <div class="direction">
+                                            <p>Направление работы</p>
+                                            <span>Взрослые или дети</span>
+                                        </div>
+                                        <div class="discount-equipment star">
+                                            <p>Скидка <br><span>на закупку оборудования ГК Мадин</span></p>
+                                            <span>25%</span>
+                                        </div>
+                                        <div class="lump-sum">
+                                            <p>Паушальный взнос</p>
+                                            <span>От 200 000 руб.<br>
+                                                до 400 000 руб.</span>
+                                        </div>
+                                        <div class="discount-training star">
+                                            <p>Скидка <br><span>на обучение</span></p>
+                                            <span>5% – 10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="franchise-calculator__variable-data">
+                                        <p>ПОСЧИТАТЬ ОКУПАЕМОСТЬ:</p>
+                                        <div class="form-group form__select">
+                                            <label for="">Регион</label>
+                                            <select name="" id="region">
+                                                <option value="capital_cities">Москва и Санкт-Петербург</option>
+                                                <option value="other_regions">Другой</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group form__select">
+                                            <label for="">Система налогообложения</label>
+                                            <select name="" id="tax_system">
+                                                <option value="osn">Общая система (ОСН)</option>
+                                                <option value="usn_6">УСН (6%)</option>
+                                                <option value="usn_15">УСН (15%)</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group form__select">
+                                            <label for="">Сценарий развития</label>
+                                            <select name="" id="development_scenario">
+                                                <option value="optimistic">Оптимистичный</option>
+                                                <option value="moderately_optimistic">Умеренно-оптимистичный</option>
+                                                <option value="base" selected>Базовый</option>
+                                                <option value="moderately_pessimistic">Умеренно-пессимистичный</option>
+                                                <option value="pessimistic">Пессимистичный</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group range">
+                                            <label for="">Площадь, м<sup>2</sup></label>
+                                            <input type="text" value="" id="area">
+                                            <input type="range" id="range_area" min="10" max="50" step="1">
+                                        </div>
+                                        <div class="form-group form__amount-group">
+                                            <div class="form-group form__amount">
+                                                <label for="">Раб. дней в месяц</label>
+                                                <button class="button_minus amount_minus" type="button" name="button"></button>
+                                                <input type="text" name="name" value="22" id="working_days" disabled>
+                                                <button class="button_plus amount_plus" type="button" name="button"></button>
+                                            </div>
+                                            <div class="form-group form__amount">
+                                                <label for="">Раб. часов в день</label>
+                                                <button class="button_minus amount_minus" type="button" name="button"></button>
+                                                <input type="text" name="name" value="12" id="working_hours" disabled>
+                                                <button class="button_plus amount_plus" type="button" name="button"></button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group range">
+                                            <label for="">Год</label>
+                                            <input type="text" value="5" id="years">
+                                            <input type="range" value="5" id="range_year" min="1" max="10" step="1">
+                                        </div>
+                                        <div class="form-group big-label">
+                                            <label id="cashflow_label" for="">Предполагаемые
+                                                поступления на <b></b> год, руб.</label>
+                                            <input type="text" value="3 000 000" id="cashflow" disabled>
+                                        </div>
+                                        <div class="form-group big-label">
+                                            <label id="transaction_costs_label" for="">Предполагаемые операционные
+                                                издержки на <b></b> год, руб.</label>
+                                            <input type="text" value="2 600 000" id="transaction_costs" disabled>
+                                        </div>
+                                        <div class="form-group big-label">
+                                            <label for="">Первоначальные
+                                                инвестиции, руб.</label>
+                                            <input type="text" value="900 000" id="investments" disabled>
+                                            <span>Без учета ремонта помещения</span>
+                                        </div>
+                                    </div>
+                                    <div class="franchise-calculator__forecast">
+                                        <div class="net_profit">
+                                            <p>Чистый денежный<br>
+                                                поток за <b></b></p>
+                                            <span>1 500 000 руб.</span>
+                                        </div>
+                                        <div class="profitability_index">
+                                            <p>Индекс доходности<br>
+                                                за <b></b></p>
+                                            <span>1,68</span>
+                                        </div>
+                                        <div class="payback_period">
+                                            <p>Период окупаемости от</p>
+                                            <span>9 месяцев</span>
+                                        </div>
+                                    </div>
+                                    <div class="franchise-calculator__order">
+                                        <p>Вы можете заказать у нас финансовую модель,
+                                            и здесь пара слов о том, что она проработана
+                                            и наглядна, надо заказывать скорее</p>
+                                        <a data-toggle="modal" data-target=".jsModalOrderModel" href="" class="button button_red">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="franchise-concept">
+                        <div class="franchise-concept__desc">
+                            <p>ВИЗУАЛЬНОЕ РЕШЕНИЕ</p>
+                            <span class="text-content">У нас есть гайдлайны и готовые решения для оформления всего на свете, смотрите
+                                как красиво боже какая красота Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu ex ornare enim fringilla dignissim vel eu mi. Donec vehicula sapien a sapien lobortis, non varius odio convallis. Etiam ultricies lobortis vestibulum. Aliquam convallis dignissim ante id scelerisque. Integer ut velit suscipit, tincidunt nunc non, tincidunt sem. </span>
+                        </div>
+                        <div class="franchise-concept__slider">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="/images/desktop/pic/concept-1.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="/images/desktop/pic/concept-1.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="/images/desktop/pic/concept-1.jpg" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </section>
+
+                    <section class="franchise-steps">
+                        <div class="franchise-steps__inner">
+                            <p class="franchise-steps__title">ШАГИ ОТКРЫТИЯ</p>
+                            <div class="franchise-steps__steps">
+                                <div class="franchise-steps__step">
+                                    <span>1</span>
+                                    <p>Заполнить заявку<br>(Знакомство)</p>
+                                </div>
+                                <div class="franchise-steps__step">
+                                    <span>2</span>
+                                    <p>Изучаем<br>экономику</p>
+                                </div>
+                                <div class="franchise-steps__step">
+                                    <span>3</span>
+                                    <p>Обговариваем условия<br>сотрудничества</p>
+                                </div>
+                                <div class="franchise-steps__step">
+                                    <span>4</span>
+                                    <p>Регистрируем<br>юридическое лицо</p>
+                                </div>
+                                <div class="franchise-steps__step">
+                                    <span>5</span>
+                                    <p>Выбираем<br>помещение</p>
+                                </div>
+                                <div class="franchise-steps__step">
+                                    <span>6</span>
+                                    <p>Ремонт<br>помещения</p>
+                                </div>
+                                <div class="franchise-steps__step">
+                                    <span>7</span>
+                                    <p>Покупка оборудования<br>и мебели</p>
+                                </div>
+                                <div class="franchise-steps__step">
+                                    <span>8</span>
+                                    <p>Подобрать<br>и обучить персонал</p>
+                                </div>
+                                <div class="franchise-steps__step">
+                                    <span>9</span>
+                                    <p>Получение<br>лицензии</p>
+                                </div>
+                                <div class="franchise-steps__step">
+                                    <span>10</span>
+                                    <p>Подготовка<br>к открытию</p>
+                                </div>
+                                <div class="franchise-steps__finish">
+                                    <p>ОТКРЫТИЕ!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="franchise-founder">
+                        <p class="franchise-founder__title">ОТ ОСНОВАТЕЛЯ</p>
+                        <div class="franchise-founder__image">
+                            <img src="/images/desktop/pic/founder@2x.png" alt="">
+                        </div>
+                        <p class="franchise-founder__name">Бурмистров Андрей Львович</p>
+                        <p class="franchise-founder__position">Руководитель ГК Мадин</p>
+                        <div class="franchise-founder__text text-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu ex ornare enim fringilla dignissim vel eu mi. Donec vehicula sapien a sapien lobortis, non varius odio convallis. Etiam ultricies lobortis vestibulum. Aliquam convallis dignissim ante id scelerisque. Integer ut velit suscipit, tincidunt nunc non, tincidunt sem. Cras et pellentesque tellus. In nisi enim, vulputate nec nulla non, condimentum aliquet ipsum. Fusce hendrerit, erat a ornare ultrices, diam magna viverra arcu, at dapibus eros turpis quis augue. Curabitur consectetur, turpis id auctor imperdiet, ante mauris porta leo, id vestibulum sem purus ac ligula. Donec sit amet efficitur neque, vel porta nisi. Morbi id metus purus.</p>
+
+                            <p>Nulla vulputate congue sagittis. Cras mollis tincidunt diam ut finibus. Integer eget augue nibh. Vivamus tempus nulla a nulla mollis, eget condimentum mi vehicula. Nunc lobortis augue lorem, sed aliquet sapien suscipit id. Curabitur sodales nisl id vulputate mattis. Integer vel quam mattis, hendrerit massa sit amet, consectetur dui. Praesent sed justo ut ex varius semper. Maecenas congue consequat neque ut faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum nunc sapien, dictum at viverra in, semper sodales nulla. Fusce suscipit venenatis gravida. Ut gravida, ex in lobortis auctor, odio ipsum elementum augue, ac consectetur tellus tellus a ante. Pellentesque quis malesuada mauris. Etiam tempus risus ac nunc hendrerit, vel ultricies nulla rutrum.</p>
+                        </div>
+                    </section>
+                    <section class="franchise-contacts">
+                        <div class="franchise-contacts__inner">
+                            <p class="franchise-contacts__title text-title">СВЯЗАТЬСЯ С НАМИ</p>
+                            <div class="franchise-contacts__contact">
+                                <p class="position">Старший менеджер по развитию</p>
+                                <p class="employee">Севостьянов Роман Игоревич</p>
+                                <a href="mailto:start@ekzarta.ru" class="email">start@ekzarta.ru</a>
+                                <a href="tel:+7 (930) 273 00 82" class="phone">+7 (930) 273 00 82</a>
+                            </div>
+                            <a href="" class="button button_red franchise-contacts__button">ПРИОБРЕСТИ ФРАНШИЗУ</a>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </div>
+        <div class="tabs__content">
+            <article class="equipment">
+                <section class="equipment-filter">
+                    <div class="filter__ekzarta">
+                        <form action="">
+                            <div class="form-group form__select">
+                                <label for="">Категория товаров</label>
+                                <select name="" id="">
+                                    <option></option>
+                                    <option value="1">Экзарта</option>
+                                    <option value="2">Печатная продукция</option>
+                                    <option value="3">Сопутствующие товары</option>
+                                </select>
+                            </div>
+                            <button class="filter__ekzarta-reset" type="reset"></button>
+                        </form>
+                    </div>
+                </section>
+
+                <div class="equipment__inner">
+                    <div class="equipment__cards">
+                        <div class="equipment__card">
+                            <h2><a href="../pages/product-page.html">Тренажер Экзарта мини</a></h2>
+                            <p class="equipment__card-desc moreContent" data-height="200">Экзарта — кинезиотерапевтическая методика лечения пациентов с нарушениями в работе опорно-двигательного аппарата
+                                после различных заболеваний, травм или длительного отсутствия физической активности.</p>
+                            <div class="equipment__card-details">
+                                <div class="equipment__card-image">
+                                    <img src="/images/desktop/pic/ekzarta-mini-basic.jpg" alt="">
+                                </div>
+                                <div>
+                                    <button class="equipment__card-button">В корзину</button>
+                                    <p class="equipment__card-price">11295 Руб.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="equipment__card">
+                            <h2><a href="../pages/product-page.html">Экзарта Баланс, подушка сенсомоторная</a></h2>
+                            <p class="equipment__card-desc">Спортивно-оздоровительный тренажер для укрепления мышц спины, пресса, шеи, рук и ног. Тренируясь на подушке, вы улучшите координацию и равновесие, избавитесь от ноющих болей в пояснице и суставах.</p>
+                            <div class="equipment__card-details">
+                                <div class="equipment__card-image">
+                                    <img src="/images/desktop/pic/pillow2.jpg" alt="">
+                                </div>
+                                <div>
+                                    <button class="equipment__card-button">В корзину</button>
+                                    <p class="equipment__card-price">3000 Руб.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="equipment__card">
+                            <h2><a href="../pages/product-page.html">Лечебная торфяная грязь "Томед-аппликат"</a></h2>
+                            <p class="equipment__card-desc">Простые и эффективные тренажеры из латекса. Предназначены для медицинской реабилитации, спортивной медицины, фитнеса.</p>
+                            <div class="equipment__card-details">
+                                <div class="equipment__card-image">
+                                    <img src="/images/desktop/pic/lenta.png" alt="">
+                                </div>
+                                <div>
+                                    <button class="equipment__card-button">В корзину</button>
+                                    <p class="equipment__card-price">11295 Руб.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="equipment__card">
+                            <h2><a href="../pages/product-page.html">Тренажер Экзарта мини</a></h2>
+                            <p class="equipment__card-desc moreContent" data-height="200">Экзарта — кинезиотерапевтическая методика лечения пациентов с нарушениями в работе опорно-двигательного аппарата
+                                после различных заболеваний, травм или длительного отсутствия физической активности.</p>
+                            <div class="equipment__card-details">
+                                <div class="equipment__card-image">
+                                    <img src="/images/desktop/pic/ekzarta-mini-basic.jpg" alt="">
+                                </div>
+                                <div>
+                                    <button class="equipment__card-button">В корзину</button>
+                                    <p class="equipment__card-price">11295 Руб.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="equipment__card">
+                            <h2><a href="../pages/product-page.html">Экзарта Баланс, подушка сенсомоторная</a></h2>
+                            <p class="equipment__card-desc">Спортивно-оздоровительный тренажер для укрепления мышц спины, пресса, шеи, рук и ног. Тренируясь на подушке, вы улучшите координацию и равновесие, избавитесь от ноющих болей в пояснице и суставах.</p>
+                            <div class="equipment__card-details">
+                                <div class="equipment__card-image">
+                                    <img src="/images/desktop/pic/pillow2.jpg" alt="">
+                                </div>
+                                <div>
+                                    <button class="equipment__card-button">В корзину</button>
+                                    <p class="equipment__card-price">3000 Руб.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="equipment__card">
+                            <h2><a href="../pages/product-page.html">Лечебная торфяная грязь "Томед-аппликат"</a></h2>
+                            <p class="equipment__card-desc">Простые и эффективные тренажеры из латекса. Предназначены для медицинской реабилитации, спортивной медицины, фитнеса.</p>
+                            <div class="equipment__card-details">
+                                <div class="equipment__card-image">
+                                    <img src="/images/desktop/pic/lenta.png" alt="">
+                                </div>
+                                <div>
+                                    <button class="equipment__card-button">В корзину</button>
+                                    <p class="equipment__card-price">11295 Руб.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__logo ekzarta">
+            <a href=""></a>
+            <div class="footer__social">
+                <ul>
+                    <li><a href="" class="fb"></a></li>
+                    <li><a href="" class="vk"></a></li>
+                    <li><a href="" class="in"></a></li>
+                    <li><a href="" class="yt"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__logo mamp">
+            <a href=""></a>
+            <div class="footer__social">
+                <ul>
+                    <li><a href="" class="fb"></a></li>
+                    <li><a href="" class="vk"></a></li>
+                    <li><a href="" class="in"></a></li>
+                    <li><a href="" class="yt"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__logo madin">
+            <a href=""></a>
+            <div class="footer__social">
+                <ul>
+                    <li><a href="" class="yt"></a></li>
+                </ul>
+            </div>
+        </div>
+        <!--<div class="footer__partner-logos">-->
+            <!--<a href=""></a>-->
+            <!--<a href=""></a>-->
+        <!--</div>-->
+        <p class="footer__copyright">© ООО "Меден", 2015-2020</p>
+        <p>ООО "Меден" <a href="">Лицензия № ЛО-52-01-004759 от 02.04.2015г.</a> выдана Министерством здравоохранения Нижегородской области</p>
+        <p><a href="">Написать веб-мастеру</a></p>
+    </div>
+</footer>
+
+<!-- ########### -->
+<!-- CONTENT END -->
+<!-- ########### -->
+<div tabindex="-1" class="modal fade modal-default modal-small jsModalSuccess">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <div class="modal__title">Спасибо!</div>
+                <div class="modal__message">
+                    Вы успешно подписались на новостную рассылку.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div tabindex="-1" class="modal fade modal-default modal-main-subscribe jsModalSubscribe">-->
+    <!--<div class="modal-dialog modal-dialog-centered">-->
+        <!--<div class="modal-content">-->
+            <!--<div class="modal-body">-->
+                <!--<a data-dismiss="modal" class="modal__close"></a>-->
+                <!--<div class="modal-event__inner">-->
+                    <!--<div class="modal__title">Подпишись на рассылку и узнавай первой о наших новинках, специальных предложениях и новостях бренда!</div>-->
+                    <!--<form class="event-create__form">-->
+                        <!--<div class="form__group">-->
+                            <!--<div class="form__input error">-->
+                                <!--<input type="text" name="name" required="" placeholder="Имя Фамилия">-->
+                                <!--<div class="error">Ошибка</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form__group">-->
+                            <!--<div class="form__input error">-->
+                                <!--<input type="email" name="email" required="" placeholder="Ваша электронная почта">-->
+                                <!--<div class="error">Ошибка</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form__checkbox">-->
+                            <!--<div class="checkbox error">-->
+                                <!--<input name="personal" type="checkbox" checked="" required="true" id="agree_popup_2">-->
+                                <!--<div class="error">Ошибка</div>-->
+                                <!--<label for="agree_popup_2">Я согласен с <a href="https://www.oriflame.ru/customer-service/privacy-protection-policy" target="_blank">правилами обработки персональных данных</a></label>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form__checkbox">-->
+                            <!--<div class="checkbox ">-->
+                                <!--<input name="rule" type="checkbox" checked="" required="true" id="subscribe_popup_2">-->
+                                <!--<label for="subscribe_popup_2">Я согласен получать новости Орифлейм Россия</label>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="modal-event__foot">-->
+                            <!--<div class="form__button">-->
+                                <!--<button class="button-default">Отправить</button>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</form>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<div tabindex="-1" class="modal fade modal-gallery jsModalGallery">-->
+    <!--<div class="modal-dialog modal-dialog-centered">-->
+        <!--<div class="modal-content">-->
+            <!--<div class="modal-body">-->
+                <!--<a data-dismiss="modal" class="modal-gallery__close"></a>-->
+                <!--<div class="modal-gallery__inner">-->
+                    <!--<div class="modal-gallery__body jsModalGalleryBig">-->
+                        <!--<div class="swiper-container">-->
+                            <!--<div class="swiper-wrapper">-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271LfcO3sT4qtm8xGDRkPuPX2CGfFLLUOuGM86Qm75l.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582715Sm2EPjdFYij6mM4ySNfW7ulrxwpGDtBrsaPkEMz.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271v4q34gaYezyY3KxdGEm8fPh1lTyd567kxuEDuh99.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/151285827180a2PfMuEcm6oF4UUQA0Qjhot6nw4nzX1jiaO9E9.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271ujQYBnHodfQNL2IpZNhGLKEKgixMDXryz7lR1O7p.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271roQgA02yyTcyGgDPeUkmTOfSFU7cMtvo3yWhpQm8.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271wdAAW6FRQTsB6G1DkJqEUdEO8qoM15xMjaMpTq2S.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210EbVBioztHZIHw7F3cZDwdLTEi6Avqd8dvfLXMsJp.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210To8Cy9FNUsoGV6IbEOg3UyotG1sQ8MGKQXjXbl1V.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582103UamYmlU1W4VAwGoRkzQybuZNjy1NBMSgBh7Zhk8.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210UvXjP6kx6Hq15niVOFks4MmUzIS3Vxcr34OQVHst.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/151285821085IvHgp8b1kuRMpeNg44WVEBVatz9w5f36RANfxU.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210Ix8aziN3f9W8jVNyWvC4EkJ2xNORm9tlZXWwLFDE.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210X6PnXVmA4DkpWHET8AU0cugrtaszyf8ElKsJLZ8B.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210FcuNMEcn7S3I2xsBLertyV8sXn2A0Exs4vqwjVxl.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582104evUamcxW13zUTxdVD7Tz201T0irk9Lh59wTqA7g.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210QfFntWagP7K5r9e4kVPxhNddFwOGzvP7wb1sgYm6.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210RRr4JD0ZxufrN6PH9G8UDVHHId0i6gsEpJaXuQ35.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210ZJHrNvziwRFHLlTklkCXCk8JasDWaLEXyxLb06V1.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582107CH9BkTa8rsqLsyWN02PBbUPV8QkGHvRStRDlHpI.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210rntvlBanpXoza1b4BlFPRgBpyOjnYPp7Ma6lU45L.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582104V3JlW3xe11Bxn530Ybwcow2wz9glqsoZn7hXa49.jpeg" class="swiper-lazy">-->
+                                    <!--<div class="swiper-lazy-preloader"></div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="modal-gallery__foot jsModalGalleryThumb">-->
+                        <!--<div class="swiper-container">-->
+                            <!--<div class="swiper-wrapper">-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271LfcO3sT4qtm8xGDRkPuPX2CGfFLLUOuGM86Qm75l.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582715Sm2EPjdFYij6mM4ySNfW7ulrxwpGDtBrsaPkEMz.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271v4q34gaYezyY3KxdGEm8fPh1lTyd567kxuEDuh99.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/151285827180a2PfMuEcm6oF4UUQA0Qjhot6nw4nzX1jiaO9E9.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271ujQYBnHodfQNL2IpZNhGLKEKgixMDXryz7lR1O7p.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271roQgA02yyTcyGgDPeUkmTOfSFU7cMtvo3yWhpQm8.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858271wdAAW6FRQTsB6G1DkJqEUdEO8qoM15xMjaMpTq2S.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210EbVBioztHZIHw7F3cZDwdLTEi6Avqd8dvfLXMsJp.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210To8Cy9FNUsoGV6IbEOg3UyotG1sQ8MGKQXjXbl1V.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582103UamYmlU1W4VAwGoRkzQybuZNjy1NBMSgBh7Zhk8.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210UvXjP6kx6Hq15niVOFks4MmUzIS3Vxcr34OQVHst.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/151285821085IvHgp8b1kuRMpeNg44WVEBVatz9w5f36RANfxU.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210Ix8aziN3f9W8jVNyWvC4EkJ2xNORm9tlZXWwLFDE.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210X6PnXVmA4DkpWHET8AU0cugrtaszyf8ElKsJLZ8B.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210FcuNMEcn7S3I2xsBLertyV8sXn2A0Exs4vqwjVxl.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582104evUamcxW13zUTxdVD7Tz201T0irk9Lh59wTqA7g.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210QfFntWagP7K5r9e4kVPxhNddFwOGzvP7wb1sgYm6.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210RRr4JD0ZxufrN6PH9G8UDVHHId0i6gsEpJaXuQ35.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210ZJHrNvziwRFHLlTklkCXCk8JasDWaLEXyxLb06V1.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582107CH9BkTa8rsqLsyWN02PBbUPV8QkGHvRStRDlHpI.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/1512858210rntvlBanpXoza1b4BlFPRgBpyOjnYPp7Ma6lU45L.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                    <!--<a href="#">-->
+                                        <!--<img data-src="http://anticasting.net/resize/image?image=/images/events_reports/15128582104V3JlW3xe11Bxn530Ybwcow2wz9glqsoZn7hXa49.jpeg&amp;size=240" class="swiper-lazy">-->
+                                        <!--<div class="swiper-lazy-preloader"></div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<button class="swiper-prev swiper-button-disabled"></button>-->
+                        <!--<button class="swiper-next swiper-button-disabled"></button>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<div tabindex="-1" class="modal fade modal-photo jsModalPhoto">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-photo__inner">
+                    <a data-dismiss="modal" class="modal-photo__close"></a>
+                    <img alt="" class="jsModalPhotoPic">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-default jsModalEventSubscribe">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content event-subscribe">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <div class="event-subscribe__inner">
+                    <form action="" method="post">
+                        <div class="event-subscribe__title">я хочу участвовать в этом<br> мероприятии</div>
+                        <div class="event-subscribe__input">
+                            <input type="text" required placeholder="Имя Фамилия" name="">
+                            <div class="error">Текст ошибки</div>
+                        </div>
+                        <div class="event-subscribe__input">
+                            <input type="email" required placeholder="E-mail" name="">
+                            <div class="error">Текст ошибки</div>
+                        </div>
+                        <div class="event-subscribe__input">
+                            <input type="tel" required placeholder="+7 (___) ___-__-__" name="">
+                            <div class="error">Текст ошибки</div>
+                        </div>
+                        <div class="event-subscribe__checkbox-group">
+                            <div class="form-group input_checkbox">
+                                <input name="personal" type="checkbox" checked="" required="true" id="agree10">
+                                <label for="agree10">Я согласен с <a href="" target="_blank">правилами обработки персональных данных</a></label>
+                                <div class="error">Текст ошибки</div>
+                            </div>
+                            <div class="form-group input_checkbox">
+                                <input name="personal" type="checkbox" checked="" id="subscribe10">
+                                <label for="subscribe10">Я хочу получать новости Экзарта</label>
+                            </div>
+                        </div>
+                        <button class="button button_red">Записаться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-default modal-small jsModalEventSubscribeSuccess">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <div class="modal__title">Спасибо!</div>
+                <div class="modal__message">
+                    Вы записаны на мероприятие.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-default modal-small jsModalAppointmentSuccess">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <div class="modal__title">Спасибо!</div>
+                <div class="modal__message">
+                    Ваша запись успешно оформлена.<br>
+                    В ближайшее время с вами свяжется наш менеджер
+                    для уточнения деталей.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-default modal-subscribe-success jsModalSubscribeSuccess">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <div class="modal__title jsModalSubscribeSuccessMessage">
+                    Вы записаны на мероприятие
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-form jsModalAppointment">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <section class="appointment-form">
+                    <div class="appointment-form__inner">
+                        <!--<div class="appointment-form__close">-->
+                            <!--<a data-dismiss="modal" href="">Закрыть форму и вернуться</a>-->
+                        <!--</div>-->
+                        <div class="appointment-form__title">Запись на приём</div>
+                        <div class="appointment-form__form">
+                            <form data-form="appointment">
+                                <div class="appointment-form__pagination">
+                                    <ul class="jsAppointmentFormPagination">
+                                        <li class="active success" data-step-pagination="1">
+                                            <a href="#">Выбор услуги</a>
+                                            <span>Прием врача по лечебной физкультуре</span>
+                                        </li>
+                                        <li class="" data-step-pagination="2">
+                                            <a href="#">Выбор города и медцентра</a>
+                                            <span>Нижний Новгород<br>
+                                Медцентр «Медицинский центр братьев Алиевых» </span>
+                                        </li>
+                                        <li data-step-pagination="3">
+                                            <a href="#">Контактная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="appointment-form__wrapper">
+                                    <div class="appointment-form__body">
+                                        <div data-step="1" class="appointment-form__step jsAppointmentFormStage active">
+                                            <div class="form-group form__select">
+                                                <label for="">Услуга</label>
+                                                <select name="services" id="" class="jsAppointmentFormSelect">
+                                                    <optgroup label="ОСМОТР, Консультация">
+                                                        <option value="">Прием врача по лечебной физкультуре</option>
+                                                        <option value="">Прием врача-невролога первичный</option>
+                                                        <option value="">Прием врача – травматолога-ортопеда первичный</option>
+                                                    </optgroup>
+                                                    <optgroup label="Лечебная физкультура, кинезиотерапия">
+                                                        <option value="">Индивидуальное занятие ЛФК (с применением вышеперечисленных методик)</option>
+                                                        <option value="">Индивидуальное занятие по методике Войта</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div data-step="2" class="appointment-form__step jsAppointmentFormStage">
+                                            <div class="form-group form__select">
+                                                <label for="">Ваш город</label>
+                                                <select name="city" id="">
+                                                    <option value="" selected>Нижний Новгород</option>
+                                                    <option value="">Дзержинск</option>
+                                                    <option value="" disabled>Москва</option>
+                                                </select>
+                                            </div>
+                                            <div class="appointment-form__branch">
+                                                <div class="form-group input_radio">
+                                                    <input type="radio" name="branch" value="1" id="branch_1">
+                                                    <label for="branch_1">
+                                                        <p class="appointment-form__branch-name">Медицинский центр лечения заболеваний</p>
+                                                        <div>
+                                                            <div class="phone">
+                                                                <p>Телефоны:</p>
+                                                                <p>(831) 429-01-15</p>
+                                                                <p>(831) 230-50-18</p>
+                                                            </div>
+                                                            <div class="address">
+                                                                <p>Адрес:</p>
+                                                                <p>603087, Нижний Новгород,
+                                                                    Казанское шоссе, д.18, корпус 1.</p>
+                                                            </div>
+                                                            <div class="work">
+                                                                <p>График работы:</p>
+                                                                <p>Пн-Пт с 8.00 до 20.00<br>
+                                                                    Сб — по записи, с 8.00 до 14.00<br>
+                                                                    Вс — выходной день.</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="appointment-form__branch">
+                                                <div class="form-group input_radio">
+                                                    <input type="radio" name="branch" value="2" id="branch_2">
+                                                    <label for="branch_2">
+                                                        <p class="appointment-form__branch-name">Медицинский центр лечения заболеваний</p>
+                                                        <div>
+                                                            <div class="phone">
+                                                                <p>Телефоны:</p>
+                                                                <p>(831) 429-01-15</p>
+                                                                <p>(831) 230-50-18</p>
+                                                            </div>
+                                                            <div class="address">
+                                                                <p>Адрес:</p>
+                                                                <p>603087, Нижний Новгород,
+                                                                    Казанское шоссе, д.18, корпус 1.</p>
+                                                            </div>
+                                                            <div class="work">
+                                                                <p>График работы:</p>
+                                                                <p>Пн-Пт с 8.00 до 20.00<br>
+                                                                    Сб — по записи, с 8.00 до 14.00<br>
+                                                                    Вс — выходной день.</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-step="3" class="appointment-form__step jsAppointmentFormStage">
+                                            <div class="form-group">
+                                                <label for="">Как к вам обращаться?</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">Номер телефона</label>
+                                                <input type="text" placeholder="+7 (       ) ____-____-__-__">
+                                            </div>
+                                            <div class="form-group input_checkbox">
+                                                <input type="checkbox" checked id="appointment-form__agree">
+                                                <label for="appointment-form__agree">Отправляя форму, вы соглашаетесь с политикой
+                                                    конфиденциальности и пользовательским соглашением
+                                                    данного сайта.</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="appointment-form__foot">
+                                        <a href="#" class="button appointment-form__button back jsAppointmentFormBack hidden">назад</a>
+                                        <button class="button button_red appointment-form__button">далее</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-form jsModalEnrollment">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <section class="enrollment">
+                    <div class="enrollment__inner">
+                        <div class="enrollment__title">Запись на обучение</div>
+                        <div class="enrollment__form">
+                            <form action="">
+                                <div class="form-group form__select">
+                                    <label for="">Курс</label>
+                                    <select name="courses" id="">
+                                        <option value="">Биомеханика человека. Модуль 1. Функциональная анатомия и нормаль...</option>
+                                    </select>
+                                </div>
+                                <div class="enrollment__info">
+                                    <div class="enrollment__course">
+                                        <div class="name">
+                                            <p>Биомеханика человека.
+                                            Модуль 1. Функциональная
+                                            анатомия и нормальная
+                                            биомеханика</p>
+                                        </div>
+                                        <div class="date">
+                                            <p>Даты:</p>
+                                            <span class="text-content">13.07.2019 – 17.07.2019</span>
+                                        </div>
+                                        <div class="teacher">
+                                            <p>Преподаватель:</p>
+                                            <a href="" class="course-teacher ru">Шлыков К.А.</a>
+                                        </div>
+                                        <div class="cost">
+                                            <p>Стоимость:</p>
+                                            <span class="text-content">24 000 руб.</span>
+                                        </div>
+                                    </div>
+                                    <div class="enrollment__contacts">
+                                        <div class="form-group">
+                                            <label for="">Как к вам обращаться?</label>
+                                            <input type="text" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Номер телефона</label>
+                                            <input type="text" required placeholder="+7 (       ) ____-____-__-__">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">E-mail</label>
+                                            <input type="email" required>
+                                        </div>
+                                        <div class="form-group input_checkbox">
+                                            <input type="checkbox" checked id="enrollment__agree">
+                                            <label for="enrollment__agree">Отправляя форму, вы соглашаетесь с политикой
+                                                конфиденциальности и пользовательским соглашением
+                                                данного сайта.</label>
+                                        </div>
+                                        <button class="button button_red enrollment__button">ОФОРМИТЬ ЗАПИСЬ</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-default jsModalOrderModel">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content event-subscribe">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <div class="event-subscribe__inner">
+                    <form action="" method="post">
+                        <div class="event-subscribe__title">Я хочу получить финансовую модель<br>для рассчета франшизы</div>
+                        <div class="event-subscribe__input">
+                            <input type="text" required placeholder="Имя Фамилия" name="">
+                            <div class="error">Текст ошибки</div>
+                        </div>
+                        <div class="event-subscribe__input">
+                            <input type="email" required placeholder="E-mail" name="">
+                            <div class="error">Текст ошибки</div>
+                        </div>
+                        <div class="event-subscribe__input">
+                            <input type="tel" required placeholder="+7 (___) ___-__-__" name="">
+                            <div class="error">Текст ошибки</div>
+                        </div>
+                        <div class="event-subscribe__checkbox-group">
+                            <div class="form-group input_checkbox">
+                                <input name="personal" type="checkbox" checked="" required="true" id="agree11">
+                                <label for="agree11">Я согласен с <a href="" target="_blank">правилами обработки персональных данных</a></label>
+                                <div class="error">Текст ошибки</div>
+                            </div>
+                            <div class="form-group input_checkbox">
+                                <input name="personal" type="checkbox" checked="" id="subscribe11">
+                                <label for="subscribe11">Я хочу получать новости Экзарта</label>
+                            </div>
+                        </div>
+                        <button class="button button_red">Заказать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-default jsModalCities">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <p class="map-cities__title text-title">Выбор города</p>
+                <div class="map-cities__block">
+                    <p class="map-cities__alphabet">А</p>
+                    <div class="map-cities__city">
+                        <a href="">Арзамас</a>
+                        <span>1</span>
+                    </div>
+                    <div class="map-cities__city">
+                        <a href="">Архангельск</a>
+                        <span>3</span>
+                    </div>
+                    <div class="map-cities__city">
+                        <a href="">Астана</a>
+                        <span>1</span>
+                    </div>
+                </div>
+                <div class="map-cities__block">
+                    <p class="map-cities__alphabet">Б</p>
+                    <div class="map-cities__city">
+                        <a href="">Богородск</a>
+                        <span>1</span>
+                    </div>
+                </div>
+                <div class="map-cities__block">
+                    <p class="map-cities__alphabet">Д</p>
+                    <div class="map-cities__city">
+                        <a href="">Дзержинск</a>
+                        <span>1</span>
+                    </div>
+                </div>
+                <div class="map-cities__block">
+                    <p class="map-cities__alphabet">Н</p>
+                    <div class="map-cities__city">
+                        <a href="">Нижний Новгород</a>
+                        <span>1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/bundles/webpack/vendor.bundle.js"></script>
+<script src="/bundles/webpack/desktop.bundle.js"></script>
+<!--<script src="/bundles/webpack/scripts.bundle.js"></script>-->
+
+</body>
+</html>
