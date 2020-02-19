@@ -1,0 +1,44 @@
+@@include('templates/mobile/include/header-ekzarta.html')
+
+<section class="patient-header frame">
+    <div class="patient-header__inner frame__inner">
+        <div>
+            <p class="patient-header__title frame__title">ПАЦИЕНТАМ</p>
+            <div class="patient-header__desc frame__desc">
+                <p>Экзарта помогает взрослым и детям
+                    в таких и сяких случаях.
+                    Эта же технология используется
+                    при реабилитации профессиональных
+                    спортсменов.</p>
+            </div>
+            <div class="patient-header__button frame__button">
+                <a href="" class="button button_red" data-toggle="modal" data-target=".jsModalAppointment">ЗАПИСАТЬСЯ НА ПРИЁМ</a>
+            </div>
+        </div>
+        <div class="patient-header__image frame__image">
+            <img src="/images/mobile/pic/patients-bg@2x.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="patient-content frame-content">
+    <div class="tabs">
+        <ul class="tabs__caption">
+            <li class="active"><a href="#adults">ВЗРОСЛЫЕ</a></li>
+            <li><a href="#children">ДЕТИ</a></li>
+        </ul>
+
+        <div class="tabs__content active">
+            <article class="adults">
+                @@include('templates/mobile/ekzarta/to-patients/adults.html')
+            </article>
+        </div>
+        <div class="tabs__content">
+            <article class="children">
+                @@include('templates/mobile/ekzarta/to-patients/children.html')
+            </article>
+        </div>
+    </div>
+</section>
+
+@@include('templates/mobile/include/footer.html')

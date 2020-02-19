@@ -1,0 +1,58 @@
+.methods {
+    margin-bottom: 20px;
+    &__cards {padding: 20px 33px;}
+    &__card {
+        position: relative;
+        margin-bottom: 15px;
+        border-bottom: solid 1px #f8f6f0;
+        h2 {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 16px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.28;
+            letter-spacing: 0.97px;
+            color: #002337;
+            text-transform: uppercase;
+            padding-right: 20px;
+            margin-bottom: 15px;
+        }
+        p {
+            display: none;
+            font-family: 'PF Din Text Cond Pro';
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.27;
+            letter-spacing: 0.47px;
+            color: #002337;
+            margin-bottom: 0;
+        }
+        a {
+            display: block;
+            text-align: right;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            top: 5px;
+            right: 0;
+            width: 12px;
+            height: 12px;
+            border-right: 1px solid #002337;
+            border-bottom: 1px solid #002337;
+            transform: rotate(45deg);
+            transition: all .3s linear;
+        }
+        &.show {
+            &:after {
+                transform: rotate(225deg);
+                transition: all .3s linear;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.breadcrumbs {
+    display: inline-block;
+    margin: 20px 0 40px;
+    counter-reset: flag;
+    &__inner {
+         max-width: 414px;
+         margin: 0 auto;
+         padding-left: 33px;
+    }
+    a {
+        position: relative;
+        float: left;
+        padding-right: 10px;
+        margin-right: 7px;
+        text-decoration: none;
+        background: white;
+        transition: all 0.5s;
+        font-family: 'PF DinDisplay Pro';
+        font-size: 12px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.58;
+        letter-spacing: normal;
+        &:after {
+            position: absolute;
+            content: '/';
+            right: 0;
+        }
+        &.active {
+             color: #002337;
+             pointer-events: none;
+             &:after {
+                  content: none;
+             }
+        }
+    }
+}

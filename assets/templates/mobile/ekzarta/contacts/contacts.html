@@ -1,0 +1,22 @@
+@@include('templates/mobile/include/header-ekzarta.html')
+
+<section class="contacts-content frame-content">
+    <div class="tabs">
+        <ul class="tabs__caption">
+            <li class="active"><a href="#ekzarta">ЭКЗАРТА</a></li>
+            <li><a href="#medcenters">МЕДЦЕНТРЫ</a></li>
+        </ul>
+        <div class="tabs__content active">
+            <article class="ekzarta">
+                @@include('templates/mobile/ekzarta/contacts/ekzarta.html')
+            </article>
+        </div>
+        <div class="tabs__content">
+            <article class="medcenters">
+                @@include('templates/mobile/ekzarta/contacts/map.html')
+            </article>
+        </div>
+    </div>
+</section>
+
+@@include('templates/mobile/include/footer.html')

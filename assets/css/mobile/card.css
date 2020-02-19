@@ -1,0 +1,245 @@
+.card {
+    position: relative;
+    display: block;
+    padding-left: 70px;
+    padding-right: 15px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    &__image {
+         position: absolute;
+         top: 10px;
+         left: 0;
+         width: 57px;
+         height: 57px;
+         margin: 0 auto 12px;
+         img {
+             width: 100%;
+             height: inherit;
+             border: 2px solid #fff;
+             border-radius: 50%;
+             box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.12);
+         }
+    }
+    &__name {
+         font-family: 'PF DinDisplay Pro';
+         font-size: 16px;
+         font-weight: 500;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: 1.19;
+         letter-spacing: normal;
+         color: #000000;
+         text-align: left;
+         margin-bottom: 10px;
+         padding-top: 10px;
+         border-top: solid 1px #f8f6f0;
+    }
+    &__position {
+         font-family: 'PF Din Text Cond Pro';
+         font-size: 12px;
+         font-weight: normal;
+         font-style: italic;
+         font-stretch: normal;
+         line-height: 1.23;
+         letter-spacing: 0.41px;
+         text-align: left;
+         color: #7b919e;
+    }
+    &-product {
+         margin-bottom: 30px;
+         background: white;
+         padding: 20px;
+         border: 1px solid #F1E7E8;
+         &:hover {
+              border-color: #002337;
+             .card-product__product-wrap:after {
+                 opacity: 1;
+                 transform: scale(1);
+             }
+             .card-product__loop-action {opacity: 1;}
+         }
+         &__wrap {
+             width: 100%;
+             position: relative;
+             height: auto;
+         }
+         &__product {
+              &-wrap {
+                   position: relative;
+                   a {
+                       display: block;
+                       text-decoration: none;
+                   }
+                   img {
+                       display: block;
+                       width: 100%;
+                   }
+                   &:after {
+                        content: '';
+                        background: rgba(0, 35, 55, .5);
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        top: 0;
+                        opacity: 0;
+                        transform: scale(.3);
+                        transition: .3s ease-in-out;
+                   }
+              }
+              &-info {
+                   padding-top: 15px;
+              }
+              &-title {
+                   font-weight: normal;
+                   font-family: "PF DinDisplay Pro";
+                   color: #002337;
+                   font-size: 18px;
+              }
+         }
+         &__loop-action {
+             position: absolute;
+             left: 50%;
+             top: 50%;
+             opacity: 0;
+             transform: translate(-50%, -50%);
+             transition: .5s ease-in-out;
+             a {
+                 text-decoration: none;
+                 display: block;
+                 border: 1px solid white;
+                 border-radius: 3px;
+                 white-space: nowrap;
+                 text-transform: uppercase;
+                 padding: .5em 1em;
+                 font-size: 14px;
+                 line-height: 1.6;
+                 outline: none;
+                 position: relative;
+                 overflow: hidden;
+                 text-align: center;
+                 color: white;
+                 min-width: 160px;
+                 margin: 5px auto;
+                 transition: .5s ease-in-out;
+                 &:after {
+                      content: '';
+                      position: absolute;
+                      left: -220%;
+                      top: -500%;
+                      width: 140%;
+                      height: 1000%;
+                      transform: rotate(45deg);
+                      background: white;
+                      z-index: -1;
+                      transition: .3s ease-in-out;
+                 }
+                 &:hover {
+                      color: black;
+                      &:after {left: 0%;}
+                 }
+             }
+         }
+         &__price {
+             font-family: "PF DinDisplay Pro";
+             color: #002337;
+             font-weight: bold;
+         }
+    }
+}
+
+
+
+.border {
+    width: 300px;
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border: 1px solid #F1E7E8;
+}
+.wrap {
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+.product-wrap {position: relative;}
+.product-wrap:after {
+    content: '';
+    background: rgba(0, 35, 55, .5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0;
+    transform: scale(.3);
+    transition: .3s ease-in-out;
+}
+.border:hover .product-wrap:after {
+    opacity: 1;
+    transform: scale(1);
+}
+.product-wrap a {
+    display: block;
+    text-decoration: none;
+}
+.product-wrap img {
+    display: block;
+    width: 100%;
+}
+.loop-action {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: .5s ease-in-out;
+}
+.border:hover .loop-action {opacity: 1;}
+.loop-action a {
+    text-decoration: none;
+    display: block;
+    border: 1px solid white;
+    border-radius: 3px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    padding: .5em 1em;
+    font-size: 14px;
+    line-height: 1.6;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    min-width: 160px;
+    margin: 5px auto;
+    transition: .5s ease-in-out;
+}
+.loop-action a:after {
+    content: '';
+    position: absolute;
+    left: -220%;
+    top: -500%;
+    width: 140%;
+    height: 1000%;
+    transform: rotate(45deg);
+    background: white;
+    z-index: -1;
+    transition: .3s ease-in-out;
+}
+.loop-action a:hover {color: black;}
+.loop-action a:hover:after {left: 0%;}
+.border:hover {border-color: #002337;}
+.product-info {padding-top: 15px;}
+
+.product-title {
+    font-weight: normal;
+    font-family: "PF DinDisplay Pro";
+    color: #002337;
+    font-size: 18px;
+}
+.price {
+    font-family: "PF DinDisplay Pro";
+    color: #002337;
+    font-weight: bold;
+}

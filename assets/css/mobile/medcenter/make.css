@@ -1,0 +1,163 @@
+.appointment-form {
+    &__inner {padding: 20px 10px 60px;}
+    &__close {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 60px;
+        a {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.22;
+            letter-spacing: normal;
+            color: #000000;
+            &:before {
+                position: absolute;
+                content: '';
+                width: 16px;
+                height: 16px;
+                top: calc(50% - 8px);
+                left: 0;
+                background: url("/images/desktop/icons/arrow-black.svg") 50% 50%/contain no-repeat;
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &__title {
+         font-family: 'PF DinDisplay Pro';
+         font-size: 30px;
+         font-weight: 900;
+         font-stretch: normal;
+         font-style: normal;
+         line-height: normal;
+         letter-spacing: 1.88px;
+         color: #002337;
+         text-transform: uppercase;
+         margin-bottom: 20px;
+    }
+    &__pagination {
+        text-align: center;
+        margin-bottom: 30px;
+        ul {
+            width: 280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            li {
+                position: relative;
+                &:first-child:before {content: none;}
+                &:before {
+                     position: absolute;
+                     top: 50%;
+                     left: 0;
+                     margin-top: -1px;
+                     margin-left: -60px;
+                     width: 45px;
+                     height: 2px;
+                     background-color: #000000;
+                     content: '';
+                }
+                &.active {
+                    + li + li + li,
+                    + li + li,
+                    + li {
+                        &:before {background-color: #e3ddcd;}
+                        &:after {color: #e3ddcd;}
+                        a {
+                            background-color: #f8f6f0;
+                            color: #D8D8D8;
+                        }
+                    }
+                    a {background-color: #e61841;}
+                }
+                &.success {}
+                a {
+                    pointer-events: none;
+                    display: block;
+                    font-size: 0;
+                    text-decoration: none;
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                    background-color: #8cde98;
+                }
+                span {display: none;}
+                &:after {
+                     position: absolute;
+                     top: calc(50% - 18px);
+                     left: calc(50% - 9px);
+                     content: '1';
+                     font-family: 'PF DinDisplay Pro';
+                     font-size: 30px;
+                     font-weight: 900;
+                     font-stretch: normal;
+                     font-style: normal;
+                     line-height: normal;
+                     letter-spacing: 1.88px;
+                     color: #ffffff;
+                }
+                &:nth-child(1) {
+                    &:after {content: '1';}
+                }
+                &:nth-child(2) {
+                    &:after {content: '2';}
+                }
+                &:nth-child(3) {
+                    &:after {content: '3';}
+                }
+            }
+        }
+    }
+    &__step {
+        display: none;
+        min-height: 200px;
+        &.active {display: block;}
+        .form-group {
+            input[type='text'] {width: 100%;}
+        }
+    }
+    &__branch {
+        label {
+            p.appointment-form__branch-name {
+                font-family: 'PF DinDisplay Pro';
+                font-size: 16px;
+                font-weight: 900;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.44;
+                letter-spacing: 0.87px;
+                color: #002337;
+                text-transform: uppercase;
+            }
+            &>div {
+                div {
+                    p {
+                        margin-bottom: 5px;
+                        font-family: 'PF Din Text Cond Pro';
+                        font-size: 13px;
+                        font-weight: normal;
+                        line-height: 1.54;
+                        letter-spacing: 0.44px;
+                        &:first-child {font-weight: bold;}
+                    }
+                }
+            }
+        }
+    }
+    &__foot {
+         margin-top: 40px;
+         text-align: center;
+    }
+    &__button {
+        &.back {
+            border: 1px solid #e61841;
+            border-radius: 3px;
+            font-size: 16px;
+            padding: 14px 29px;
+            box-shadow: none;
+            &.hidden {display: none;}
+        }
+    }
+}

@@ -1,0 +1,424 @@
+.contacts {
+    &-search {
+        position: absolute;
+        top: 10px;
+        right: 33px;
+        a {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            padding: 8px 46px 8px 21px;
+            border-radius: 18.5px;
+            box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+            background-color: #ffffff;
+            font-family: 'PF Din Text Cond Pro';
+            font-size: 16px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.5px;
+            color: #e61841!important;
+            &:after {
+                position: absolute;
+                content: '';
+                width: 18px;
+                height: 18px;
+                right: 19px;
+                background: url("/images/desktop/icons/search-red.svg") 50% 50%/contain no-repeat;
+            }
+        }
+    }
+    &-ekzarta {
+        &__inner {padding: 20px 10px;}
+        &__block {
+            position: relative;
+            margin-bottom: 12px;
+            padding: 20px 10px;
+            &:nth-child(2n+1) {
+                overflow: hidden;
+                background-image: radial-gradient(circle at 46% 66%, #c8ede3, #83c1c4);
+                &:after {
+                     position: absolute;
+                     content: '';
+                     background-image: url("images/desktop/icons/clouds.svg");
+                     width: 512px;
+                     height: 50.5px;
+                     background-repeat: no-repeat;
+                     background-size: contain;
+                     bottom: -2px;
+                     left: calc(50% - 266px);
+                }
+            }
+        }
+        &__title {
+             font-family: 'PF DinDisplay Pro';
+             font-size: 18px;
+             font-weight: 900;
+             font-stretch: normal;
+             font-style: normal;
+             line-height: 1.28;
+             letter-spacing: 0.97px;
+             color: #002337;
+             margin-bottom: 20px;
+        }
+        &__contact {
+             display: inline-block;
+             vertical-align: top;
+             margin-left: 10px;
+             margin-bottom: 30px;
+             font-family: 'PF Din Text Cond Pro';
+             font-size: 16px;
+             font-weight: normal;
+             font-stretch: normal;
+             font-style: normal;
+             line-height: 1.27;
+             letter-spacing: 0.47px;
+             color: #002337;
+             p {margin-bottom: 0;}
+        }
+        &__employee {font-weight: 500;}
+    }
+    &-cities {
+         display: flex;
+         justify-content: space-between;
+         margin: 20px 10px;
+         padding: 20px;
+         border-radius: 3px;
+         box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+         background-color: #ffffff;
+         font-family: 'PF Din Text Cond Pro';
+         font-size: 15px;
+         font-weight: normal;
+         font-stretch: normal;
+         font-style: normal;
+         line-height: 1.13;
+         letter-spacing: 0.47px;
+         p {
+             color: #002337;
+             margin: 0;
+         }
+         span {color: #7b919e;}
+    }
+    &-branches {
+        padding: 0 33px;
+        &__branch {
+            padding: 28px 0;
+            border-bottom: solid 1px #e3ddcd;
+            &:last-child {border-bottom: none;}
+            &-title {margin-bottom: 24px;}
+            &-link {
+                display: inline-block;
+                margin-bottom: 24px;
+            }
+            &>div {
+                div {
+                    p {
+                        margin-bottom: 5px;
+                        font-family: 'PF Din Text Cond Pro';
+                        font-size: 14px;
+                        font-weight: normal;
+                        line-height: 1.54;
+                        letter-spacing: 0.44px;
+                        &:first-child {font-weight: bold;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+.map {
+    &-cities {
+        &__title {margin-bottom: 25px;}
+        &__block {margin-bottom: 30px;}
+        &__alphabet {
+             font-family: 'PF DinDisplay Pro';
+             font-size: 24px;
+             font-weight: 900;
+             font-style: normal;
+             font-stretch: normal;
+             line-height: 1.17;
+             letter-spacing: 1.3px;
+             color: #002337;
+             margin-bottom: 15px;
+        }
+        &__city {
+            display: flex;
+            justify-content: space-between;
+            a {
+                display: block;
+                font-family: 'PF Din Text Cond Pro';
+                font-size: 14px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.21;
+                letter-spacing: 0.44px;
+                color: #002337;
+                margin-bottom: 5px;
+                text-decoration: none;
+                cursor: pointer;
+                &:hover {
+                     color: #e61841;
+                }
+            }
+            span {
+                font-family: 'PF Din Text Cond Pro';
+                font-size: 14px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.21;
+                letter-spacing: 0.44px;
+                text-align: right;
+                color: #7b919e;
+            }
+        }
+    }
+    &-services {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: -999px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 103px);
+        background-color: #f8f6f0;
+        z-index: 5;
+        transition: all .3s linear;
+        &.active {
+            visibility: visible;
+            opacity: 1;
+            top: 0;
+            transition: all .3s linear;
+        }
+        &__inner {padding: 34px 74px;}
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            p {
+                font-family: 'PF Din Text Cond Pro';
+                font-size: 14px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.54;
+                letter-spacing: 0.41px;
+                color: #002337;
+            }
+            button {
+                position: relative;
+                height: 37px;
+                padding: 0 46px 0 21px;
+                border-radius: 18.5px;
+                box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+                background-color: #ffffff;
+                font-family: 'PF Din Text Cond Pro';
+                font-size: 16px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: 0.5px;
+                color: #e61841;
+                margin-left: 80px;
+                white-space: nowrap;
+                &:after {
+                    position: absolute;
+                    content: '';
+                    width: 16px;
+                    height: 2px;
+                    top: 17.5px;
+                    right: 17px;
+                    background-color: #e61841;
+                    transform: rotate(45deg);
+                }
+                &:before {
+                     position: absolute;
+                     content: '';
+                     width: 16px;
+                     height: 2px;
+                     top: 17.5px;
+                     right: 17px;
+                     background-color: #e61841;
+                     transform: rotate(135deg);
+                }
+            }
+        }
+        &__body {
+            display: flex;
+            justify-content: space-between;
+            p {
+                font-family: 'PF DinDisplay Pro';
+                font-size: 24px;
+                font-weight: 900;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.17;
+                letter-spacing: 1.3px;
+                color: #002337;
+                text-transform: uppercase;
+                margin-bottom: 27px;
+            }
+        }
+        &__adult,
+        &__children {width: 50%;}
+        &__block {
+            margin-bottom: 24px;
+            p {
+                font-size: 18px;
+                line-height: 1.28;
+                letter-spacing: 0.98px;
+                margin-bottom: 14px;
+            }
+            .form-group {
+                padding-top: 0;
+                margin-bottom: 5px;
+            }
+            .input_checkbox {
+                input:checked + label:before {
+                    background-color: #c5f0bd;
+                    border: solid 1px #002337;
+                }
+                label {
+                    padding-left: 33px;
+                    font-family: 'PF Din Text Cond Pro';
+                    font-size: 16px;
+                    line-height: 1.27;
+                    letter-spacing: 0.47px;
+                    color: #002337;
+                    &:before {
+                         width: 22px;
+                         height: 22px;
+                         top: -1px;
+                    }
+                    &:after {
+                         border-right: 2px solid #002337;
+                         border-bottom: 2px solid #002337;
+                         left: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.balloon {
+    &__header {
+         font-family: 'PF DinDisplay Pro';
+         font-size: 18px;
+         font-weight: 900;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: 1.28;
+         letter-spacing: 0.97px;
+         color: #002337;
+         margin-bottom: 16px;
+         text-transform: uppercase;
+    }
+    &__row {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         margin-bottom: 10px;
+    }
+    &__col {
+        p {
+            font-family: 'PF Din Text Cond Pro';
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.54;
+            letter-spacing: 0.44px;
+            color: #002337;
+            margin-bottom: 0;
+            &.title {
+                 font-weight: 500;
+                 letter-spacing: 0.41px;
+            }
+        }
+    }
+}
+
+.baron {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+.baron__scroller {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+.baron__scroller::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.baron__track {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.baron._scrollbar .baron__track {
+    display: block;
+}
+.baron__free {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+.baron__bar {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    right: 5px;
+    width: 10px;
+    height: 64px !important;
+    border-radius: 11.5px;
+    background-color: #e9e9e9;
+}
+.baron._scrollbar .baron__bar {
+    display: block;
+}
+.baron__control {
+    display: none;
+}
+
+.baron-horizontal {
+    &__track {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         width: 100%;
+         background-color: #f0f0f0;
+         height: 15px;
+    }
+    &__bar {
+         display: none;
+         position: absolute;
+         top: 0;
+         z-index: 1;
+         height: 15px;
+         background-color: #f3cb8e;
+         cursor: pointer;
+    }
+}
+
+.baron._scrollbar .baron-horizontal__bar {
+    display: block;
+}

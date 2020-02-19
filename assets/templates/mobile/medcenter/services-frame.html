@@ -1,0 +1,31 @@
+@@include('templates/mobile/include/header-medcenter.html')
+@@include('templates/mobile/include/landing-header.html')
+
+<section class="services-content frame-content">
+    <div class="tabs">
+        <ul class="tabs__caption">
+            <li class="active"><a href="#adults">ВЗРОСЛЫЕ</a></li>
+            <li><a href="#children">ДЕТИ</a></li>
+        </ul>
+
+        <div class="services-search">
+            <form action="" method="get">
+                <input name="s" placeholder="Симптом или услуга" type="search">
+                <button type="submit">Искать</button>
+            </form>
+        </div>
+
+        <div class="tabs__content active">
+            <article class="adults">
+                @@include('templates/mobile/medcenter/services.html')
+            </article>
+        </div>
+        <div class="tabs__content">
+            <article class="children">
+                @@include('templates/mobile/medcenter/services.html')
+            </article>
+        </div>
+    </div>
+</section>
+
+@@include('templates/mobile/include/footer.html')

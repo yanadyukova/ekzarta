@@ -1,0 +1,103 @@
+.schedule {
+    margin-bottom: 60px;
+    &-filter {
+        margin-bottom: 45px;
+        .filter__ekzarta {
+            form {
+                .form-group {
+                    &:nth-child(2) {width: 100%;}
+                    &:nth-child(3) {width: 60%;}
+                    &:nth-child(4) {width: 30%;}
+                    &:nth-child(5) {width: 60%;}
+                    &:nth-child(6) {width: 30%;}
+                }
+            }
+        }
+    }
+    &-table {
+         &__inner {padding: 0 33px;}
+         &__course {
+              position: relative;
+              margin-bottom: 15px;
+              padding-bottom: 20px;
+              border-bottom: solid 1px #e3ddcd;
+              &-row {
+                   display: flex;
+                   justify-content: space-between;
+                   p {margin: 0;}
+                   &.data {
+                        font-family: 'PF Din Text Cond Pro';
+                        font-size: 14px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.29;
+                        letter-spacing: 0.34px;
+                        color: #002337;
+                        margin-bottom: 7px;
+                   }
+                   &.name {
+                        p {
+                            display: flex;
+                            align-items: center;
+                        }
+                        a {line-height: normal;}
+                   }
+              }
+              &-enrollment {
+                   a {
+                       font-size: 0;
+                       display: block;
+                       width: 16px;
+                       height: 16px;
+                       background: url("/images/desktop/icons/edit.svg") 50% 50%/contain no-repeat;
+                       margin: 0 auto;
+                   }
+              }
+              &-hidden {
+                   display: none;
+                   margin-top: 7px;
+                   p {
+                       font-family: 'PF Din Text Cond Pro';
+                       font-size: 14px;
+                       font-weight: normal;
+                       font-stretch: normal;
+                       font-style: normal;
+                       line-height: 1.29;
+                       letter-spacing: 0.34px;
+                       &:first-child {color: #7b919e;}
+                       a {font-size: 14px;}
+                   }
+              }
+              &:after {
+                   position: absolute;
+                   content: '';
+                   bottom: -2px;
+                   left: calc(50% - 6px);
+                   width: 12px;
+                   height: 12px;
+                   border-right: 1px solid #002337;
+                   border-bottom: 1px solid #002337;
+                   transform: rotate(45deg);
+                   transition: all .3s linear;
+              }
+              &:before {
+                   position: absolute;
+                   content: '';
+                   bottom: -7px;
+                   left: calc(50% - 15px);
+                   width: 30px;
+                   height: 14px;
+                   background-color: #FFFFFF;
+                   transition: all .3s linear;
+              }
+              &.show {
+                   &:after {
+                        bottom: -10px;
+                        transform: rotate(225deg);
+                        transition: all .3s linear;
+                   }
+              }
+         }
+    }
+}

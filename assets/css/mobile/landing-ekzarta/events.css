@@ -1,0 +1,42 @@
+.landing-events {
+    background-color: #ffffff;
+    &__block {
+        padding: 0 33px 36px;
+        text-align: right;
+    }
+    &__title{
+         margin-right: 65px;
+         text-transform: uppercase;
+    }
+    &__events {
+         width: 100%;
+         text-align: left;
+    }
+    &__event {
+         display: block;
+         margin-bottom: 20px;
+         text-decoration: none;
+    }
+    &__info {
+         display: flex;
+         justify-content: space-between;
+         color: #7b919e;
+         margin-bottom: 8px;
+         span {
+             font-size: 15px;
+             &:first-child {margin-right: 15px;}
+         }
+    }
+    &__name {
+         display: block;
+         font-size: 16px;
+         font-weight: 500;
+         margin-bottom: 8px;
+         text-decoration: none;
+         color: #002337;
+    }
+    &__teacher {
+        color: #e61841;
+        text-decoration: underline;
+    }
+}

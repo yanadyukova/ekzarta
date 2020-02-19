@@ -11,20 +11,64 @@ let ww = $(window).width(),
     wh = $(window).height(),
     isMobile = $('body').hasClass('mobile'),
 
-    SliderReviews = new Swiper('.landing-reviews__slider .swiper-container', {
-        speed: 500,
-        slidesPerView: 1.5,
-        spaceBetween: 60,
-        // loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            dynamicBullets: true,
+    SliderReviews = function () {
+        if (isMobile) {
+            new Swiper('.landing-reviews__slider .swiper-container', {
+                // speed: 500,
+                slidesPerView: 1.2,
+                spaceBetween: 20,
+                pagination: {
+                    el: '.swiper-pagination',
+                    dynamicBullets: true,
+                }
+            })
+        } else {
+            new Swiper('.landing-reviews__slider .swiper-container', {
+                speed: 500,
+                slidesPerView: 1.5,
+                spaceBetween: 60,
+                pagination: {
+                    el: '.swiper-pagination',
+                    dynamicBullets: true,
+                }
+            })
         }
-    }),
+    }(),
+
+    SliderFunds = function () {
+        if (isMobile) {
+            new Swiper('.landing-funds__funds .swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 60,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            })
+        }
+    }(),
+
+    SliderPartners = function () {
+        if (isMobile) {
+            new Swiper('.landing-partners__partners .swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 60,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            })
+        }
+    }(),
 
     SliderEventsCurrent = new Swiper('.events-current__slider .swiper-container', {
         effect: 'coverflow',
-        // grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
         loop: true,
@@ -41,76 +85,149 @@ let ww = $(window).width(),
     }),
 
     SliderProduct = function() {
-        var productThumbs = new Swiper('.product__thumbs', {
-            spaceBetween: 10,
-            slidesPerView: 4,
-            direction: 'vertical',
-            mousewheel: true,
-            keyboard: {
-                enabled: true,
-            },
-            // loop: true,
-            freeMode: true,
-            loopedSlides: 5, //looped slides should be the same
-            watchSlidesVisibility: true,
-            watchSlidesProgress: true,
-        });
-        var productPhoto = new Swiper('.product__photo', {
-            spaceBetween: 10,
-            keyboard: {
-                enabled: true,
-            },
-            // loop:true,
-            loopedSlides: 5, //looped slides should be the same
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            thumbs: {
-                swiper: productThumbs,
-            },
-        });
+        var productThumbs;
+        var productPhoto;
+        if (isMobile) {
+            productThumbs = new Swiper('.product__thumbs', {
+                spaceBetween: 10,
+                slidesPerView: 4,
+                // loop: true,
+                freeMode: true,
+                loopedSlides: 5, //looped slides should be the same
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+            });
+            productPhoto = new Swiper('.product__photo', {
+                spaceBetween: 10,
+                // loop:true,
+                loopedSlides: 5, //looped slides should be the same
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                thumbs: {
+                    swiper: productThumbs,
+                },
+            });
+        } else {
+            productThumbs = new Swiper('.product__thumbs', {
+                spaceBetween: 10,
+                slidesPerView: 4,
+                direction: 'vertical',
+                mousewheel: true,
+                keyboard: {
+                    enabled: true,
+                },
+                // loop: true,
+                freeMode: true,
+                loopedSlides: 5, //looped slides should be the same
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+            });
+            productPhoto = new Swiper('.product__photo', {
+                spaceBetween: 10,
+                keyboard: {
+                    enabled: true,
+                },
+                // loop:true,
+                loopedSlides: 5, //looped slides should be the same
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                thumbs: {
+                    swiper: productThumbs,
+                },
+            });
+        }
     }(),
 
-    SliderCities = new Swiper('.map-cities .swiper-container', {
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        freeMode: true,
-        draggable: true,
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-        mousewheel: true,
-    }),
+    SliderCities = function () {
+        if (!isMobile) {
+            new Swiper('.map-cities .swiper-container', {
+                direction: 'vertical',
+                slidesPerView: 'auto',
+                freeMode: true,
+                draggable: true,
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+                mousewheel: true,
+            });
+        }
+    }(),
 
-    SliderProductsCheckout = new Swiper('.checkout-products__slider .swiper-container', {
-        slidesPerView: 3,
-        // spaceBetween: 30,
-        centeredSlides: true,
-        loop: true,
-        navigation: {
-            nextEl: '.checkout-products__slider .swiper-button-next',
-            prevEl: '.checkout-products__slider .swiper-button-prev',
-        },
-    }),
+    SliderProductsCheckout = function () {
+        if (isMobile) {
+            new Swiper('.checkout-products__slider .swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                navigation: {
+                    nextEl: '.checkout-products__slider .swiper-button-next',
+                    prevEl: '.checkout-products__slider .swiper-button-prev',
+                },
+            })
+        } else {
+            new Swiper('.checkout-products__slider .swiper-container', {
+                slidesPerView: 3,
+                centeredSlides: true,
+                loop: true,
+                navigation: {
+                    nextEl: '.checkout-products__slider .swiper-button-next',
+                    prevEl: '.checkout-products__slider .swiper-button-prev',
+                },
+            })
+        }
+    }(),
 
-    SliderPromotions = new Swiper('.promotions-slider .swiper-container', {
-        speed: 1500,
-        slidesPerView: 1,
-        spaceBetween: 10,
-        loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    }),
+    SliderPromotions = function () {
+        if (isMobile) {
+            new Swiper('.promotions-slider .swiper-container', {
+                speed: 1500,
+                slidesPerView: 'auto',
+                spaceBetween: 10,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            })
+        } else {
+            new Swiper('.promotions-slider .swiper-container', {
+                speed: 1500,
+                slidesPerView: 1,
+                spaceBetween: 10,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            })
+        }
+    }(),
+
+    SliderImages = function () {
+        if (isMobile) {
+            new Swiper('.images-slider .swiper-container', {
+                slidesPerView: 'auto',
+                spaceBetween: 10,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            })
+        }
+    }(),
 
     SliderConcept = new Swiper('.franchise-concept__slider .swiper-container', {
         speed: 500,
@@ -130,6 +247,48 @@ let ww = $(window).width(),
             prevEl: '.swiper-button-prev',
         },
     }),
+
+    MethodCardsMobile = function () {
+        $('.methods__card').on('click', function () {
+            $(this).toggleClass('show').find('p').slideToggle('slow');
+        });
+    }(),
+
+    TrainingsMobile = function () {
+        $('.training__direction').on('click', function () {
+            $(this).toggleClass('show').find('ol').slideToggle('slow');
+        });
+    }(),
+
+    EquipmentDescMobile = function () {
+        $('.equipment__card-desc').on('click', function () {
+            $(this).toggleClass('show');
+        });
+    }(),
+
+    ScheduleMobile = function () {
+        $('.schedule-table__course').on('click', function () {
+            $(this).toggleClass('show').find('.schedule-table__course-hidden').slideToggle('slow');
+        });
+    }(),
+
+    ServicesMobile = function () {
+        $('.services-table__service').on('click', function () {
+            $(this).toggleClass('show').find('.services-table__service-hidden').slideToggle('slow');
+        });
+
+        $('.services-filter').on('click', function () {
+            $(this).toggleClass('show');
+        });
+    }(),
+
+    nav = (function() {
+        $('.jsNavToggle').click(function() {
+            $(this).toggleClass('active');
+            $('.jsMobileNav').toggleClass('active');
+            return false;
+        });
+    })(),
 
     AmountProduct = function() {
         $('.button_minus').on('click', function(e) {
@@ -181,10 +340,15 @@ let ww = $(window).width(),
     
     Basket = function () {
         $('.menu__item_basket p').click(function () {
-
             $(this).parent().addClass('active');
             $('body').addClass('layout');
         });
+
+        if (isMobile) {
+            $('.header__basket p').click(function () {
+                $(this).parent().find('.basket').slideToggle('slow');
+            });
+        }
         
         $('.basket__close').click(function () {
             $(this).closest('.menu__item_basket').removeClass('active');
@@ -214,7 +378,7 @@ let ww = $(window).width(),
                 .closest('div.tabs').find('div.tabs__content').removeClass('active').eq(i).addClass('active');
         }
 
-        if (hash === '#medcenters') {
+        if (hash === '#medcenters' && !isMobile) {
             SliderCities.update();
         }
 
@@ -222,7 +386,7 @@ let ww = $(window).width(),
             $(this).parent()
                 .addClass('active').siblings().removeClass('active')
                 .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).parent().index()).addClass('active');
-            if ($(this).attr('href') === '#medcenters') {
+            if ($(this).attr('href') === '#medcenters' && !isMobile) {
                 SliderCities.update();
             }
         });
@@ -266,9 +430,15 @@ let ww = $(window).width(),
 
     FranchiseAnimate = function () {
         let stepsBlock = $('.franchise-steps');
-        let stepsBlockPosition = stepsBlock.offset().top + 400;
         let chartBlock = $('.franchise-chart__chart');
-        let chartBlockPosition = chartBlock.offset().top + 300;
+        let stepsBlockPosition;
+        let chartBlockPosition;
+        if (stepsBlock.length > 0) {
+            stepsBlockPosition = stepsBlock.offset().top + 400;
+        }
+        if (chartBlock.length > 0) {
+            chartBlockPosition = chartBlock.offset().top + 300;
+        }
 
         let windowHeight = $(window).height();
         let scrollToStepsBlock = stepsBlockPosition - windowHeight;

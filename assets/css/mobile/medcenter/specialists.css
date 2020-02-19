@@ -1,0 +1,96 @@
+.specialists {
+    &__inner {
+        padding: 20px 10px 40px;
+        max-width: 414px;
+        margin: 0 auto;
+    }
+    &__title {
+         font-family: 'PF DinDisplay Pro';
+         font-size: 30px;
+         font-weight: 900;
+         font-stretch: normal;
+         font-style: normal;
+         line-height: normal;
+         letter-spacing: 1.88px;
+         text-align: center;
+         color: #002337;
+         margin-bottom: 25px;
+    }
+}
+
+.specialist {
+    padding-top: 54px;
+    &__inner {
+         position: relative;
+         padding: 70px 33px 50px;
+         max-width: 414px;
+         margin: 0 auto;
+         background-color: #f8f6f0;
+    }
+    &__data {margin-bottom: 20px;}
+    &__name {
+         font-family: 'PF DinDisplay Pro';
+         font-size: 18px;
+         font-weight: 900;
+         font-stretch: normal;
+         font-style: normal;
+         line-height: 1.28;
+         letter-spacing: 0.97px;
+         text-align: center;
+         color: #002337;
+         text-transform: uppercase;
+         margin-bottom: 10px;
+    }
+    &__position {
+         font-family: 'PF DinDisplay Pro';
+         font-size: 12px;
+         font-weight: 300;
+         font-stretch: normal;
+         font-style: italic;
+         line-height: 1.3;
+         letter-spacing: 0.36px;
+         text-align: center;
+         color: #7b919e;
+    }
+    &__site {
+        margin-top: 31px;
+        span {
+            display: inline-block;
+            font-size: 14px;
+            padding-right: 38px;
+            color: #7b919e;
+        }
+        a {
+            font-size: 14px;
+            color: #e61841;
+            text-decoration: underline;
+            &:hover {text-decoration: none;}
+        }
+    }
+    &__phone {
+        font-size: 14px;
+        span {
+            display: inline-block;
+            padding-right: 38px;
+            color: #7b919e;
+        }
+     }
+    &__photo {
+        width: 120px;
+        height: 120px;
+        top: -60px;
+        left: calc(50% - 60px);
+        margin: 0;
+        img {border: 6px solid #fff;}
+    }
+    &__info {
+         color: #002337;
+         font-size: 14px;
+         font-weight: normal;
+         font-stretch: normal;
+         font-style: normal;
+         line-height: 1.29;
+         letter-spacing: 0.34px;
+         color: #002337;
+    }
+}

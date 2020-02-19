@@ -1,0 +1,44 @@
+@@include('templates/mobile/include/header-ekzarta.html')
+
+<section class="businessmen-header frame">
+    <div class="businessmen-header__inner frame__inner">
+        <div>
+            <p class="businessmen-header__title frame__title">РУКОВОДИТЕЛЯМ</p>
+            <div class="businessmen-header__desc frame__desc">
+                <p>Хотите открыть свою клинику,
+                    приносить радость людям
+                    и при этом зарабатывать деньги?
+                    Решение есть: франшиза Экзарта.</p>
+            </div>
+            <div class="businessmen-header__button frame__button">
+                <a href="" class="button button_red" data-toggle="modal" data-target=".jsModalAppointment">Купить франшизу</a>
+            </div>
+        </div>
+        <div class="businessmen-header__image frame__image">
+            <img src="/images/mobile/pic/3-2@2x.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="businessmen-content frame-content">
+    <div class="tabs">
+
+        <ul class="tabs__caption">
+            <li class="active"><a href="#franchise">ФРАНШИЗА</a></li>
+            <li><a href="#equipment">МАГАЗИН</a></li>
+        </ul>
+        <div class="tabs__content active">
+            <article class="franchise">
+                @@include('templates/mobile/ekzarta/to-businessmen/franchise.html')
+            </article>
+        </div>
+        <div class="tabs__content">
+            <article class="equipment">
+                @@include('templates/mobile/ekzarta/to-businessmen/equipment.html')
+            </article>
+        </div>
+
+    </div>
+</section>
+
+@@include('templates/mobile/include/footer.html')

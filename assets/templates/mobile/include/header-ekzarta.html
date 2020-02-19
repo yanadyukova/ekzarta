@@ -1,0 +1,62 @@
+@@include('templates/mobile/include/header.html')
+
+<header class="header">
+    <div class="header__inner">
+        <a href="#" class="header__nav nav-toggle jsNavToggle">
+            <span></span><span></span><span></span>
+        </a>
+        <a href="" class="header__logo"></a>
+        <div class="header__basket not-empty">
+            <!--у header__basket есть 2 дополнительных класса-->
+            <!--empty  - для пустой корзины, при нем кнопка "Оформить заказ неактивна"-->
+            <!--not-empty - кнопка "Оформить заказ" активна и над корзиной отображается количество товара в корзине-->
+            <p>Корзина</p>
+            <p class="quantity">2</p>
+            <div class="basket">
+                <div class="basket__inner">
+                    <div class="basket__buttons">
+                        <a href="../pages/checkout.html" class="basket__checkout">Оформить заказ</a>
+                        <a class="basket__close"></a>
+                    </div>
+
+                    <!--Если корзина пустая-->
+                    <!--<div class="basket__empty">-->
+                        <!--<p>Корзина пуста</p>-->
+                        <!--<a href="#">Перейти в магазин</a>-->
+                    <!--</div>-->
+
+                    <div class="basket__items">
+                        <div class="basket__item">
+                            <p class="basket__item-name">Тренажер Экзарта Мини</p>
+                            <p class="basket__item-price"><span>11295</span> Руб.</p>
+                            <p class="basket__item-amount">x<span>1</span></p>
+                            <button class="basket__item-delete"></button>
+                        </div>
+                        <div class="basket__item">
+                            <p class="basket__item-name">Тренажер Экзарта Мини</p>
+                            <p class="basket__item-price"><span>11295</span> Руб.</p>
+                            <p class="basket__item-amount">x<span>1</span></p>
+                            <button class="basket__item-delete"></button>
+                        </div>
+                    </div>
+                    <div class="basket__total">
+                        <span>Итого:</span>
+                        <p><span>3000</span> Руб.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="nav-mobile jsMobileNav">
+    <div class="nav-mobile__inner">
+        <ul>
+            <li class="active"><a href="../to-patients/frame.html"><span>Пациентам</span></a></li>
+            <li class=""><a href="../to-specialists/frame.html"><span>Специалистам</span></a></li>
+            <li class=""><a href="../to-businessmen/frame.html"><span>Бизнесу</span></a></li>
+            <li class=""><a href="../pages/reviews.html"><span>Отзывы</span></a></li>
+            <li class=""><a href="../pages/events.html"><span>События</span></a></li>
+            <li class=""><a href="../contacts/contacts.html"><span>Контакты</span></a></li>
+        </ul>
+    </div>
+</nav>

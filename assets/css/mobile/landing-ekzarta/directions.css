@@ -1,0 +1,98 @@
+.landing-directions {
+    position: relative;
+    margin: 0 10px;
+    background-color: #ffffff;
+    z-index: 5;
+    &__inner {margin: 0 auto;}
+    &__item {
+        min-height: 216px;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin-bottom: 10px;
+        padding: 16px 0 0;
+        flex-grow: 1;
+        border-radius: 3px;
+        box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+        background-color: #ffffff;
+        p {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 18px;
+            font-weight: 900;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.28;
+            letter-spacing: 0.97px;
+            color: #002337;
+            margin-left: 22px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        ul {
+            margin-left: 22px;
+            li {
+                list-style: none;
+                a {
+                    font-family: 'PF Din Text Cond Pro';
+                    font-size: 14px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.93;
+                    letter-spacing: 0.61px;
+                    color: #e61841;
+                    text-decoration: underline;
+                    &:hover {
+                         text-decoration: none;
+                    }
+                }
+            }
+        }
+        a.item__button {
+            display: block;
+            margin-top: auto;
+            padding: 19px 0;
+            background-color: #e61841;
+            font-family: 'PF DinDisplay Pro';
+            font-size: 16px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.38;
+            letter-spacing: 0.44px;
+            text-align: center;
+            color: #ffffff;
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+        }
+        &:nth-child(1) {
+             &:before {
+                  position: absolute;
+                  content: '';
+                  @mixin i pic/1;
+                  bottom: 60px;
+                  right: 10px;
+             }
+        }
+        &:nth-child(2) {
+             &:before {
+                  position: absolute;
+                  content: '';
+                  @mixin i pic/2;
+                  bottom: 60px;
+                  right: 10px;
+             }
+        }
+        &:nth-child(3) {
+             &:before {
+                  position: absolute;
+                  content: '';
+                  @mixin i pic/3;
+                  bottom: 60px;
+                  right: 10px;
+             }
+        }
+    }
+
+}

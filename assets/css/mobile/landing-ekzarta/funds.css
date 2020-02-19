@@ -1,0 +1,132 @@
+.landing-funds {
+    background-color: #f8f6f0;
+    font-family: 'PF Din Text Cond Pro';
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: 0.34px;
+    color: #002337;
+    &__inner {
+        padding: 24px 33px 10px;
+        max-width: 414px;
+        margin: 0 auto;
+    }
+    &__title {
+         font-family: 'PF DinDisplay Pro';
+         font-size: 18px;
+         font-weight: 900;
+         font-stretch: normal;
+         font-style: normal;
+         line-height: 1.28;
+         letter-spacing: 0.97px;
+         color: #002337;
+         margin-bottom: 30px;
+         text-transform: uppercase;
+    }
+    &__funds {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        .swiper-slide {
+            &:nth-child(1) {
+                .fund__image {background-image: url("/images/desktop/funds/fund-1@2x.jpg");}
+            }
+            &:nth-child(2) {
+                .fund__image {background-image: url("/images/desktop/funds/fund-2@2x.jpg");}
+            }
+            &:nth-child(3) {
+                .fund__image {background-image: url("/images/desktop/funds/fund-3@2x.jpg");}
+            }
+            &:nth-child(4) {
+                .fund__image {background-image: url("/images/desktop/funds/fund-4@2x.jpg");}
+            }
+            &:nth-child(5) {
+                .fund__image {background-image: url("/images/desktop/funds/fund-5@2x.jpg");}
+            }
+            &:nth-child(6) {
+                .fund__image {background-image: url("/images/desktop/funds/fund-6@2x.jpg");}
+            }
+            &:nth-child(7) {
+                .fund__image {background-image: url("/images/desktop/funds/fund-7@2x.jpg");}
+            }
+        }
+        .swiper-button-prev, .swiper-button-next {
+            width: 15px;
+            height: 25px;
+            margin-top: -81px;
+            background-size: contain;
+        }
+        .swiper-button-prev {left: 0;}
+        .swiper-button-next {right: 0;}
+        .swiper-pagination-bullet-active {background-color: #e61841;}
+    }
+    &__fund {
+        width: 100%;
+        margin-right: 44px;
+    }
+    &__description {
+         margin-bottom: 52px;
+    }
+    &__contacts {
+        margin-bottom: 42px;
+        div {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 14px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.64;
+            letter-spacing: 0.76px;
+            color: #002337;
+            p {
+                margin: 0;
+                a {font-weight: bold;}
+                &.contact__email {
+                    a {color: #e61841;}
+                }
+            }
+        }
+        a {
+            color: #002337;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        b {font-weight: 500;}
+    }
+}
+
+.fund {
+    width: 206px;
+    margin: 0 auto 34px;
+    &__image {
+         display: block;
+         width: 206px;
+         height: 110px;
+         border-radius: 3px;
+         box-shadow: 0 2px 5px 0 rgba(82, 65, 30, 0.19), 0 5px 18px 0 rgba(174, 148, 113, 0.22);
+         background-color: #ffffff;
+         background-size: contain;
+         background-position: 50% 50%;
+         background-repeat: no-repeat;
+         margin: 0 auto 15px;
+    }
+    p {
+        margin-bottom: 0;
+        font-size: 16px;
+        a {text-decoration: none;}
+    }
+    &__title {
+        text-transform: uppercase;
+    }
+    &__site {color: #002337;}
+}
+
+.contact {
+    &__phone {margin-bottom: 6px;}
+    &__email {
+        color: #e61841;
+        text-transform: uppercase;
+    }
+}

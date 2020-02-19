@@ -1,12 +1,5 @@
 :root {
-    --font-base: 'Gill Sans for Oriflame', Verdana, sans-serif, Arial;
-    --font: 'Oriflame Sans', Verdana, sans-serif, Arial;
-    --font-title: 'Garamond for Oriflame', Verdana, sans-serif, Arial;
-    --height-header: 48px;
-    --max-width: 600px;
-    --font-serif: 'PT Serif', serif;
-    --font-obaum: 'Oranienbaum', serif;
-    --font-roboto: 'Roboto', sans-serif;
+    --font-base: 'PF Din Text Cond Pro', Verdana, sans-serif, Arial;
 }
 
 html, body {
@@ -21,7 +14,10 @@ html, body {
 input, button {
     font-family: var(--font-base);
     &:focus {
-      outline: 3px auto #ea808c;
+         outline: none;
+    }
+    &::-moz-focus-inner {
+         border: none;
     }
 }
 
@@ -34,12 +30,79 @@ button {
 }
 
 a {
-    font-family: var(--font-base);
-    &:focus {
-      outline: 3px auto #ea808c;
+    font-family: 'PF Din Text Cond Pro';
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.44;
+    letter-spacing: 0.7px;
+    color: #e61841;
+    text-decoration: underline;
+    outline: none;
+    &:hover {
+         text-decoration: none;
+         color: #e61841;
+    }
+    &.button {
+         text-decoration: none;
+    }
+    &.course-teacher {
+         position: relative;
+         white-space: nowrap;
+         padding-left: 20px;
+        &:before {
+             position: absolute;
+             content: '';
+             width: 12px;
+             height: 8px;
+             left: 0;
+             top: calc(50% - 4px);
+        }
+        &.pl {
+            &:before {
+                 background: url("/images/desktop/pic/pl.png") 50% 50%/contain no-repeat;
+            }
+        }
+        &.ru {
+            &:before {
+                 background: url("/images/desktop/pic/ru.gif") 50% 50%/contain no-repeat;
+            }
+        }
+    }
+    &::-moz-focus-inner {
+        border: none;
+    }
+}
+
+.text-content {
+    font-family: 'PF Din Text Cond Pro';
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: 0.34px;
+    color: #002337;
+}
+
+.text-title {
+    font-family: 'PF DinDisplay Pro';
+    font-size: 18px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.28;
+    letter-spacing: 0.97px;
+    color: #002337;
+    text-transform: uppercase;
+    &_big {
+         font-size: 24px;
+         line-height: 1.17;
+         letter-spacing: 1.3px;
     }
 }
 
 ::selection {
-  background: color(#ea808c tint(75%));
+    background: color(#83c1c4 tint(75%));
 }

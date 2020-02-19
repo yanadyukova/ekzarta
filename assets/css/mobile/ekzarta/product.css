@@ -1,0 +1,233 @@
+.product {
+    &__inner {
+        padding: 0 20px 60px;
+        max-width: 414px;
+        margin: 0 auto;
+        h1 {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 30px;
+            font-weight: 900;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 1.88px;
+            color: #002337;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+    }
+    &__card {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    &__photos {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 15px;
+    }
+    &__photo {
+         width: 100%;
+         height: 273px;
+         margin: 0 0 20px 0;
+        .swiper-slide {
+            background-color: #f8f6f0;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .swiper-button-prev, .swiper-button-next {
+            width: 15px;
+            height: 30px;
+            background-size: contain;
+        }
+    }
+    &__thumbs {
+        width: 100%;
+        height: 58px;
+        box-sizing: border-box;
+        margin: 0;
+        .swiper-wrapper {
+            display: flex;
+            .swiper-slide {
+                height: 57px;
+                background-color: #f8f6f0;
+                /*opacity: 0.4;*/
+                opacity: 1;
+                margin-bottom: 13.5px;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .swiper-slide-active {
+                opacity: 1;
+            }
+        }
+    }
+    &__order {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    &__cost {
+        margin-bottom: 5px;
+    }
+    &__sale {
+         font-family: 'PF DinDisplay Pro';
+         font-size: 14px;
+         font-weight: normal;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: 1.29;
+         letter-spacing: normal;
+         color: #002337;
+         max-width: 160px;
+         text-align: right;
+    }
+    &__amount {
+        margin-top: auto;
+        margin-bottom: 15px;
+        display: flex;
+        input {
+            width: 60px;
+            height: 42px;
+            border-radius: 0;
+            box-shadow: none;
+            border-right: 0;
+            border-left: 0;
+            text-align: center;
+            font-family: 'PF DinDisplay Pro';
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.22;
+            letter-spacing: normal;
+            text-align: center;
+            color: #000000;
+        }
+    }
+    &__button {
+        position: relative;
+        box-shadow: none;
+        font-size: 18px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.22;
+        letter-spacing: 0.2px;
+        padding: 20px 25px 20px 65px;
+        &:before {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 20px;
+            top: calc(50% - 10px);
+            left: 20px;
+            background: url("/images/desktop/icons/basket-white.svg") 50% 50%/contain no-repeat;
+        }
+    }
+    &__info {
+        max-width: 414px;
+        color: #002337;
+        h2 {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 24px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.17;
+            letter-spacing: 1.3px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 22px;
+            font-weight: 700;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.17;
+            letter-spacing: 1.3px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        h4 {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 20px;
+            font-weight: 700;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.17;
+            letter-spacing: 1.3px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        h5 {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 18px;
+            font-weight: 700;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.17;
+            letter-spacing: 1.3px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        h6 {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 16px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.17;
+            letter-spacing: 1.3px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        p {}
+        ul {
+            padding-left: 20px;
+            li {
+                list-style: disc;
+                margin-bottom: 10px;
+                padding-left: 10px;
+            }
+        }
+        ol {
+            padding-left: 20px;
+            li {
+                list-style: decimal;
+                margin-bottom: 10px;
+                padding-left: 10px;
+            }
+        }
+        img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 40px;
+        }
+        blockquote {
+            background-color: #c5f0bd;
+            margin: 0 -20px 15px;
+            padding: 20px;
+            p {
+                padding-left: 0;
+            }
+        }
+        hr {
+            appearance: none;
+            color: #e61841;
+            height: 2px;
+            background-color: #e61841;
+            border:none;
+            margin: 20px 0;
+        }
+    }
+}

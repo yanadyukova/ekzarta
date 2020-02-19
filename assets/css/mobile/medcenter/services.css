@@ -1,0 +1,270 @@
+.services {
+    position: relative;
+    padding: 0 10px;
+    margin-bottom: 44px;
+    &-table {
+        display: none;
+        transition: all .5s linear;
+        margin-bottom: 60px;
+        &.active {display: block;}
+        &__title {
+             font-family: 'PF DinDisplay Pro';
+             font-size: 20px;
+             font-weight: 900;
+             font-stretch: normal;
+             font-style: normal;
+             line-height: 1.17;
+             letter-spacing: 1.3px;
+             color: #002337;
+             text-transform: uppercase;
+             margin-bottom: 22px;
+             span {
+                 font-family: 'PF Din Text Cond Pro';
+                 font-size: 13px;
+                 font-weight: 400;
+                 font-style: normal;
+                 font-stretch: normal;
+                 line-height: 2.15;
+                 letter-spacing: .41px;
+                 text-transform: none;
+             }
+        }
+        &__service {
+             position: relative;
+             margin-bottom: 15px;
+             padding-bottom: 20px;
+             border-bottom: solid 1px #e3ddcd;
+             &-row {
+                  display: flex;
+                  p {margin: 0;}
+                  &.name {
+                      justify-content: space-between;
+                      p {
+                          display: flex;
+                          align-items: center;
+                      }
+                  }
+             }
+             &-appointment {
+                  margin-left: 20px!important;
+                  a {
+                      font-size: 0;
+                      display: block;
+                      width: 16px;
+                      height: 16px;
+                      background: url("/images/desktop/icons/edit.svg") 50% 50%/contain no-repeat;
+                      margin: 0 auto;
+                  }
+             }
+             &-hidden {
+                  display: none;
+                  margin-top: 7px;
+                  p {
+                      width: 150px;
+                      font-family: 'PF Din Text Cond Pro';
+                      font-size: 14px;
+                      font-weight: normal;
+                      font-stretch: normal;
+                      font-style: normal;
+                      line-height: 1.29;
+                      letter-spacing: 0.34px;
+                      &:first-child {color: #7b919e;}
+                  }
+             }
+             &:after {
+                  position: absolute;
+                  content: '';
+                  bottom: -2px;
+                  left: calc(50% - 6px);
+                  width: 12px;
+                  height: 12px;
+                  border-right: 1px solid #002337;
+                  border-bottom: 1px solid #002337;
+                  transform: rotate(45deg);
+                  transition: all .3s linear;
+             }
+             &:before {
+                  position: absolute;
+                  content: '';
+                  bottom: -7px;
+                  left: calc(50% - 15px);
+                  width: 30px;
+                  height: 14px;
+                  background-color: #FFFFFF;
+                  transition: all .3s linear;
+             }
+             &.show {
+                 &:after {
+                      bottom: -10px;
+                      transform: rotate(225deg);
+                      transition: all .3s linear;
+                 }
+             }
+        }
+    }
+    &-price {
+         position: relative;
+         z-index: 50;
+    }
+    &-filter {
+         width: 100%;
+         margin-left: -10px;
+         position: absolute;
+         top: 0;
+         display: inline-block;
+         &__inner {}
+         &__icon {
+             position: absolute;
+             padding-right: 25px;
+             top: -55px;
+             right: 10px;
+             p {
+                 font-family: 'PF Din Text Cond Pro';
+                 font-size: 16px;
+                 font-weight: 500;
+                 font-stretch: normal;
+                 font-style: normal;
+                 line-height: normal;
+                 letter-spacing: 0.5px;
+                 text-align: right;
+                 color: #e61841;
+             }
+             &:after {
+                  position: absolute;
+                  content: '';
+                  top: 0;
+                  right: 0;
+                  width: 18px;
+                  height: 18px;
+                  background: url("/images/mobile/icons/filter.svg") 50% 50%/contain no-repeat;
+                  transition: all .3s linear;
+             }
+         }
+         &.show {
+              .services-filter__icon {
+                  &:after {
+                       width: 14px;
+                       height: 14px;
+                       top: 4px;
+                       right: 2px;
+                       background: url("/images/mobile/icons/close.svg") 50% 50%/contain no-repeat;
+                  }
+              }
+              ul {
+                  opacity: 1;
+                  pointer-events: auto;
+                  transition: all .3s linear;
+                  z-index: 100;
+              }
+         }
+         ul {
+             position: relative;
+             z-index: 1;
+             opacity: 0;
+             pointer-events: none;
+             transition: all .3s linear;
+             margin: 0;
+             background-color: #f8f6f0;
+             width: 100%;
+             min-height: 90vh;
+             box-shadow: 0 2px 3px 0 rgba(82,65,30,.19), 0 0 2px 0 rgba(174,148,113,.22);
+             li {
+                 position: relative;
+                 border-bottom: 1px solid #e3ddcd;
+                 padding: 9px 20px 9px 40px;
+                 cursor: pointer;
+                 font-family: 'PF Din Text Cond Pro';
+                 font-size: 16px;
+                 line-height: 1.13;
+                 letter-spacing: 0.47px;
+                 transition: all .3s linear;
+                 color: #002337;
+                 &:first-child {border-top: 1px solid #e3ddcd;}
+                 &:hover {background-color: #c5f0bd;}
+                 &.active {
+                      background-color: #c5f0bd;
+                      &:before {
+                           position: absolute;
+                           content: '';
+                           width: 26px;
+                           height: 26px;
+                           left: 8px;
+                           top: 4px;
+                           background: url("/images/desktop/icons/logo-small.svg") 50% 50%/contain no-repeat;
+                      }
+                 }
+             }
+         }
+         &__block {
+              padding-bottom: 24px;
+              .form-group {
+                  padding-top: 0;
+                  margin-bottom: 5px;
+              }
+              .input_checkbox {
+                 input:checked + label:before {
+                     background-color: #c5f0bd;
+                     border: solid 1px #002337;
+                 }
+                  label {
+                      padding-left: 33px;
+                      font-family: 'PF Din Text Cond Pro';
+                      font-size: 16px;
+                      line-height: 1.27;
+                      letter-spacing: 0.47px;
+                      color: #002337;
+                      &:before {
+                           width: 22px;
+                           height: 22px;
+                           top: -1px;
+                      }
+                      &:after {
+                           border-right: 2px solid #002337;
+                           border-bottom: 2px solid #002337;
+                           left: 8px;
+                      }
+                  }
+                  &:not(:first-child) {padding-left: 33px;}
+              }
+         }
+    }
+    &-search {
+        margin: 5px 10px 30px;
+        form {
+            position: relative;
+            width: 70%;
+            input {
+                width: 100%;
+                height: 31px;
+                padding-right: 30px;
+                border-radius: 18.5px;
+                box-shadow: inset 0 2px 5px 0 #e3ddcd;
+                background-color: #f8f6f0;
+                outline: none;
+                border: none;
+                font-style: italic;
+                letter-spacing: 0.47px;
+            }
+            button {
+                position: absolute;
+                top: 0;
+                right: 0px;
+                width: 30px;
+                height: 31px;
+                padding-left: 30px;
+                border-radius: 0 18.5px 18.5px 0;
+                background-color: #8cde98;
+                font-size: 0;
+                &:before {
+                    position: absolute;
+                    content: '';
+                    left: calc(50% - 9px);
+                    top: calc(50% - 9px);
+                    width: 18px;
+                    height: 18px;
+                    background: url('/images/desktop/icons/search.svg') 50% 50%/contain no-repeat;
+                }
+            }
+        }
+    }
+}

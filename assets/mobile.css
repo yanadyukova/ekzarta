@@ -1,14 +1,69 @@
-/*@import url(css/mobile/_reset.css);*/
-/*@import url(css/mobile/_mixin.css);*/
-/*@import url(css/mobile/_default.css);*/
+@import url(css/mobile/_reset.css);
+@import url(css/mobile/_mixin.css);
+@import url(css/mobile/_default.css);
 
-/*@import url(../public/node_modules/swiper/dist/css/swiper.css);*/
+@import url(../node_modules/swiper/dist/css/swiper.css);
+@import url(../node_modules/baron/baron.css);
 /*@import url(../public/node_modules/gridstack/dist/gridstack.css);*/
 /*@import url(../public/node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.css);*/
+/*@import url(../public/node_modules/jquery-timepicker-master/jquery.timepicker.css);*/
 
-/*@import url(blocks/modal/bootstrap.css);*/
-/*@import url(blocks/modal/mobile/index.css);*/
+@import url(blocks/modal/bootstrap.css);
+@import url(blocks/modal/mobile/index.css);
 /*@import url(blocks/scroller/index.css);*/
 
-/*@import url(css/mobile/bootstrap.css);*/
+@import url(css/mobile/header.css);
+@import url(css/mobile/nav.css);
+/*@import url(css/mobile/menu.css);*/
+@import url(css/mobile/basket.css);
+@import url(css/mobile/footer.css);
+@import url(css/mobile/buttons.css);
+@import url(css/mobile/table.css);
+@import url(css/mobile/frame.css);
+@import url(css/mobile/articles.css);
+@import url(css/mobile/form.css);
+@import url(css/mobile/breadcrumbs.css);
+@import url(css/mobile/card.css);
 
+@import url(css/mobile/landing-ekzarta/main.css);
+@import url(css/mobile/landing-ekzarta/directions.css);
+@import url(css/mobile/landing-ekzarta/funds.css);
+@import url(css/mobile/landing-ekzarta/partners.css);
+@import url(css/mobile/landing-ekzarta/reviews.css);
+@import url(css/mobile/landing-ekzarta/events.css);
+
+@import url(css/mobile/landing-medcenter/header.css);
+@import url(css/mobile/landing-medcenter/promotions.css);
+@import url(css/mobile/landing-medcenter/about.css);
+@import url(css/mobile/landing-medcenter/advantages.css);
+@import url(css/mobile/landing-medcenter/cooperation.css);
+
+@import url(css/mobile/medcenter/promotions.css);
+@import url(css/mobile/medcenter/specialists.css);
+@import url(css/mobile/medcenter/contacts.css);
+@import url(css/mobile/medcenter/services.css);
+@import url(css/mobile/medcenter/make.css);
+
+@import url(css/mobile/ekzarta/technology.css);
+@import url(css/mobile/ekzarta/reviews.css);
+@import url(css/mobile/ekzarta/events.css);
+@import url(css/mobile/ekzarta/fund-page.css);
+@import url(css/mobile/ekzarta/enrollment.css);
+@import url(css/mobile/ekzarta/event-page.css);
+@import url(css/mobile/ekzarta/product.css);
+@import url(css/mobile/ekzarta/methodology.css);
+@import url(css/mobile/ekzarta/checkout.css);
+@import url(css/mobile/ekzarta/contacts.css);
+@import url(css/mobile/ekzarta/filter.css);
+
+@import url(css/mobile/specialists-inner/courses.css);
+@import url(css/mobile/specialists-inner/methods.css);
+@import url(css/mobile/specialists-inner/schedule.css);
+@import url(css/mobile/specialists-inner/training.css);
+@import url(css/mobile/specialists-inner/specialist.css);
+
+@import url(css/mobile/patients-inner/patients.css);
+
+@import url(css/mobile/businessmen-inner/businessmen.css);
+@import url(css/mobile/businessmen-inner/equipment.css);
+@import url(css/mobile/businessmen-inner/franchise.css);

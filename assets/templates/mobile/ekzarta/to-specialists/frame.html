@@ -1,0 +1,80 @@
+@@include('templates/mobile/include/header-ekzarta.html')
+
+<section class="specialist-header frame">
+    <div class="specialist-header__inner frame__inner">
+        <div>
+            <p class="specialist-header__title frame__title">СПЕЦИАЛИСТАМ</p>
+            <div class="specialist-header__desc frame__desc">
+                <p>Текст о том, почему полезно изучать технологии Экзарты, зачем это нужно, сколько уже есть специалистов и такое прочее</p>
+            </div>
+            <div class="specialist-header__button frame__button">
+                <a href="" class="button button_red" data-toggle="modal" data-target=".jsModalEnrollment">ЗАПИСАТЬСЯ НА ОБУЧЕНИЕ</a>
+            </div>
+        </div>
+        <div class="specialist-header__image frame__image">
+            <img src="/images/mobile/pic/2-2@2x.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="specialist-content frame-content">
+    <div class="tabs">
+        <ul class="tabs__caption">
+            <li class="active"><a href="#courses">КУРСЫ</a></li>
+            <li><a href="#schedule">РАСПИСАНИЕ</a></li>
+            <li><a href="#teachers">ПРЕПОДАВАТЕЛИ</a></li>
+            <li><a href="#methods">МЕТОДИКИ</a></li>
+            <li><a href="#training">ПОДГОТОВКА</a></li>
+        </ul>
+        <div class="tabs__content active">
+            <article class="courses">
+                @@include('templates/mobile/ekzarta/to-specialists/courses.html')
+            </article>
+        </div>
+        <div class="tabs__content">
+            <article class="schedule">
+                @@include('templates/mobile/ekzarta/to-specialists/schedule.html')
+            </article>
+        </div>
+        <div class="tabs__content">
+            <article class="teachers">
+                @@include('templates/mobile/ekzarta/to-specialists/teachers.html')
+            </article>
+        </div>
+        <div class="tabs__content">
+            <article class="methods">
+                @@include('templates/mobile/ekzarta/to-specialists/methods.html')
+            </article>
+        </div>
+        <div class="tabs__content">
+            <article class="training">
+                @@include('templates/mobile/ekzarta/to-specialists/training.html')
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="specialist-footer">
+    <div class="specialist-footer__inner">
+        <div class="specialist-footer__title text-title">Контакты</div>
+        <div class="specialist-footer__contacts">
+            <div class="specialist-footer__contact">
+                <p>Старший менеджер по развитию</p>
+                <p>Феклистова Марианна Вениаминовна</p>
+                <p>Email: <a href="mailto:feklistova.m@madin.ru">feklistova.m@madin.ru</a></p>
+                <p>Телефон: <a href="tel:+7 (920) 250-77-83">+7 (920) 250-77-83</a></p>
+            </div>
+            <div class="specialist-footer__contact">
+                <p>Менеджер по развитию</p>
+                <p>Зайцева Оксана Анатольевна</p>
+                <p>Email: <a href="mailto:">zayceva.o@madin.ru</a></p>
+                <p>Телефон: <a href="tel:+7 (920) 027-81-07">+7 (920) 027-81-07</a></p>
+            </div>
+        </div>
+        <div class="specialist-footer__button">
+            <a href="#" class="button button_red" data-toggle="modal" data-target=".jsModalEnrollment">ЗАПИСАТЬСЯ НА ОБУЧЕНИЕ</a>
+        </div>
+    </div>
+</section>
+
+@@include('templates/mobile/include/footer.html')

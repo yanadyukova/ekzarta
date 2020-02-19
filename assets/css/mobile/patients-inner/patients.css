@@ -1,0 +1,85 @@
+.patient {
+    &-header {
+        &__button {
+            a {
+                text-decoration: none;
+                padding: 25px 40px;
+            }
+        }
+    }
+    &__inner {}
+    &-directions {
+        padding: 0 33px;
+        &__direction {
+            ul {font-size: 14px;}
+        }
+    }
+    &-about {
+        position: relative;
+        margin-bottom: 60px;
+        background-color: #f8f6f0;
+        margin-top: 310px;
+        &__inner {padding: 0 33px 40px;}
+        &__text {padding-top: 60px;}
+        &__content {
+            p {font-size: 14px;}
+        }
+        &__image {
+            position: absolute;
+            top: -280px;
+            left: calc(50% - 140px);
+            width: 280px;
+            img {width: 100%;}
+        }
+        &__rehabilitation {
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                flex-grow: 1;
+                li {
+                    position: relative;
+                    b {
+                        position: absolute;
+                        font-family: 'PF DinDisplay Pro';
+                        font-size: 80px;
+                        font-weight: bold;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 60px;
+                        letter-spacing: normal;
+                        color: #e3ddcd;
+                        left: -27px;
+                    }
+                    p {
+                        position: relative;
+                        margin-bottom: 7px;
+                        z-index: 5;
+                        font-family: 'PF Din Text Cond Pro';
+                        font-size: 16px;
+                        font-weight: bold;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1.06;
+                        letter-spacing: 0.56px;
+                        color: #002337;
+                    }
+                    span {
+                        display: block;
+                        font-size: 14px;
+                        position: relative;
+                        margin-bottom: 7px;
+                        z-index: 5;
+                    }
+                }
+            }
+        }
+        &__button {
+            display: block;
+            position: relative;
+            bottom: -50px;
+            left: calc(50% - 135px);
+            a {padding: 26px 42px;}
+        }
+    }
+}

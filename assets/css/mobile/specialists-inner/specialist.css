@@ -1,0 +1,114 @@
+.specialist {
+    &-header {
+        &__button {
+            a {text-decoration: none;}
+        }
+    }
+    &-content {
+         position: relative;
+        .tabs__caption {
+            justify-content: flex-start;
+            overflow-x: auto;
+            padding: 25px 10px;
+            margin-right: 10px;
+            margin-bottom: 25px;
+            li {
+                margin: 0 5px;
+                a {min-width: 0;}
+            }
+        }
+        &:after {
+             position: absolute;
+             top: 80px;
+             left: calc(50% - 12.5px);
+             content: '';
+             width: 25px;
+             height: 25px;
+             border-radius: 50%;
+             background: #fff url("/images/mobile/icons/sahada-one-god.svg") 50% 50%/contain no-repeat;
+             animation: slideRightLeft 3s linear;
+             animation-delay: 1s;
+        }
+        &:before {
+             position: absolute;
+             top: 70px;
+             left: calc(50% - 15.5px);
+             content: '';
+             width: 25px;
+             height: 25px;
+             border-radius: 50%;
+             border: 1px solid #e61841;
+             opacity: 0;
+             animation: click 1s ease-in-out;
+        }
+    }
+    &-footer {
+        position: relative;
+        margin-bottom: 60px;
+        background-color: #f8f6f0;
+        &__inner {padding: 25px 33px;}
+        &__title {
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+        &__contacts {margin-bottom: 30px;}
+        &__contact {
+             font-family: 'PF DinDisplay Pro';
+             font-size: 14px;
+             font-weight: 300;
+             font-style: normal;
+             font-stretch: normal;
+             line-height: 1.36;
+             letter-spacing: normal;
+             margin-bottom: 20px;
+             color: #000000;
+             p {
+                 margin: 0;
+                 &:nth-child(1),
+                 &:nth-child(2) {font-weight: 500;}
+                 a {margin-left: 20px;}
+             }
+        }
+        &__button {
+            position: absolute;
+            left: calc(50% - 131px);
+            bottom: -35px;
+            a {
+                display: block;
+                padding: 25px;
+            }
+        }
+    }
+}
+
+@keyframes slideRightLeft {
+    0% {
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(200%);
+    }
+    40%{
+        transform: translateX(-200%);
+    }
+    60%{
+        transform: translateX(100%);
+    }
+    80%{
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes click {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

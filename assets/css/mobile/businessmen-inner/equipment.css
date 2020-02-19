@@ -1,0 +1,133 @@
+.equipment {
+    margin-bottom: 60px;
+    &-filter {
+        margin-top: 20px;
+    }
+    &__inner {padding: 20px 33px;}
+    &__card {
+         display: block;
+         margin-bottom: 15px;
+         padding-bottom: 20px;
+         border-bottom: solid 1px #f8f6f0;
+         text-decoration: none;
+         &-details {
+             display: flex;
+             justify-content: space-between;
+         }
+         &-image {
+             height: 120px;
+             img {
+                 width: auto;
+                 height: 100%;
+             }
+         }
+         &-button {
+              position: relative;
+              width: 110px;
+              height: 37px;
+              border-radius: 3px;
+              background-color: #e61841;
+              font-family: 'PF DinDisplay Pro';
+              font-size: 12px;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              text-align: right;
+              color: #ffffff;
+              padding-right: 10px;
+              margin-bottom: 10px;
+              text-transform: uppercase;
+              &:before {
+                   position: absolute;
+                   content: '';
+                   top: 8.5px;
+                   left: 10px;
+                   width: 20px;
+                   height: 20px;
+                   background: url("/images/desktop/icons/basket-white.svg") 50% 50%/contain no-repeat;
+              }
+         }
+         &-price {
+              font-family: 'PF DinDisplay Pro';
+              font-size: 16px;
+              font-weight: bold;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.19;
+              letter-spacing: normal;
+              text-align: right;
+              color: #002337;
+         }
+         h2 {
+             a {
+                 font-family: 'PF DinDisplay Pro';
+                 font-size: 20px;
+                 font-weight: bold;
+                 font-stretch: normal;
+                 font-style: normal;
+                 line-height: 1.25;
+                 letter-spacing: 0.6px;
+                 color: #002337;
+                 text-transform: uppercase;
+                 margin-bottom: 10px;
+                 text-decoration: none;
+             }
+         }
+         &-desc {
+              position: relative;
+              font-family: 'PF Din Text Cond Pro';
+              font-size: 14px;
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.38;
+              letter-spacing: 0.31px;
+              color: #002337;
+              padding-right: 20px;
+              height: 40px;
+              transition: all .3s linear;
+              overflow: hidden;
+              &:after {
+                   content: "";
+                   background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+                   width: 100%;
+                   height: 40px;
+                   position: absolute;
+                   bottom: 0;
+                   left: 0;
+                   opacity: 1;
+                   transition: all .3s linear;
+                   pointer-events: none;
+              }
+              &:before {
+                   position: absolute;
+                   content: '';
+                   top: 0;
+                   right: 5px;
+                   width: 12px;
+                   height: 12px;
+                   border-right: 1px solid #002337;
+                   border-bottom: 1px solid #002337;
+                   transform: rotate(45deg);
+                   transition: all .3s linear;
+                   z-index: 5;
+              }
+              &.show {
+                   height: 100%;
+                   transition: all .3s linear;
+                   &:after {
+                        transition: all .3s linear;
+                        opacity: 0;
+                        height: 0;
+                   }
+                   &:before {
+                        top: 10px;
+                        transform: rotate(225deg);
+                        transition: all .3s linear;
+                   }
+              }
+         }
+    }
+}

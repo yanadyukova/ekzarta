@@ -1,0 +1,34 @@
+.landing-promotions {
+    width: 100%;
+    height: 155px;
+    &__slider {
+         position: relative;
+         top: 15px;
+    }
+}
+
+.promotions {
+    &-slider {
+         height: 300px;
+         margin: 0 10px;
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {width: 277px;}
+        .swiper-pagination {
+            .swiper-pagination-bullet-active {background: #e61841;}
+        }
+        &__slide {
+            display: block;
+            background-image: radial-gradient(circle at 100% 0, #03688b, #003751 47%, #002337 73%);
+            width: 100%;
+            height: 100%;
+            border-radius: 3px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

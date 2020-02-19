@@ -1,0 +1,186 @@
+.checkout {
+    &__inner {
+        padding: 0 20px 60px;
+        max-width: 414px;
+        margin: 0 auto;
+    }
+    &__title {
+         display: inline-block;
+         position: relative;
+         font-family: 'PF DinDisplay Pro';
+         font-size: 24px;
+         font-weight: 900;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: 1.17;
+         letter-spacing: 1.3px;
+         color: #002337;
+         margin-bottom: 38px;
+         text-transform: uppercase;
+         &:after {
+              position: absolute;
+              content: '';
+              width: 20px;
+              height: 20px;
+              background: url("/images/desktop/icons/basket-black.svg") 50% 50%/contain no-repeat;
+              top: calc(50% - 10px);
+              right: -40px;
+         }
+         &-form {
+              margin-bottom: 10px;
+              &:after {
+                   content: none;
+              }
+         }
+    }
+    &__item {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        display: flex;
+        border-bottom: solid 1px #e5e5e5;
+        margin-bottom: 32px;
+        p {margin-bottom: 10px;}
+        &-name {
+             width: 90%;
+             font-family: 'PF DinDisplay Pro';
+             font-size: 14px;
+             font-weight: 300;
+             font-style: normal;
+             font-stretch: normal;
+             line-height: normal;
+             letter-spacing: normal;
+             color: #000000;
+        }
+        &-price {
+             font-family: 'PF DinDisplay Pro';
+             font-size: 14px;
+             font-weight: normal;
+             font-style: normal;
+             font-stretch: normal;
+             line-height: 1.8;
+             letter-spacing: normal;
+             color: #000000;
+        }
+        &-amount {
+            display: flex;
+            input {
+                width: 31px;
+                height: 25px;
+                border-radius: 0;
+            }
+            .button {
+                &_minus {
+                    width: 30px;
+                    height: 25px;
+                    &:before {
+                         width: 10px;
+                         left: 10px;
+                    }
+                }
+                &_plus {
+                     width: 30px;
+                     height: 25px;
+                     &:before,
+                     &:after {
+                          width: 10px;
+                          left: 10px;
+                     }
+                }
+            }
+
+        }
+        &-total {font-weight: bold;}
+        &-delete {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            background-color: #e61841;
+            border-radius: 50%;
+            &:after {
+                 position: absolute;
+                 content: '';
+                 width: 10px;
+                 height: 2px;
+                 background-color: #fff;
+                 top: calc(50% - 1px);
+                 left: calc(50% - 5px);
+            }
+        }
+    }
+    &__total {
+        text-align: right;
+        margin-bottom: 45px;
+        span {
+            opacity: 0.52;
+            font-family: 'PF DinDisplay Pro';
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: right;
+            color: #000000;
+        }
+        p {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 24px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.17;
+            letter-spacing: 1.3px;
+            color: #002337;
+        }
+    }
+    &__form {
+        input[type='text'] {
+            width: 100%;
+        }
+        .input_checkbox {
+            label {
+                font-size: 14px;
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    &__button {
+        width: 100%;
+    }
+    &-products {
+        &__inner {
+            padding: 0 20px 40px;
+            max-width: 414px;
+            margin: 0 auto;
+        }
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__slider {
+            position: relative;
+            .swiper-button-next,
+            .swiper-button-prev {
+                width: 18px;
+                height: 30px;
+                background-size: contain;
+            &:focus {
+                 outline: none;
+            }
+            &::-moz-focus-inner {
+                 border: none;
+            }
+            }
+            .swiper-button-next {
+                right: -5px;
+            }
+            .swiper-button-prev {
+                left: -5px;
+            }
+        }
+        .card-product {
+           margin: 0 20px 30px;
+        }
+    }
+}

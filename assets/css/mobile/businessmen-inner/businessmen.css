@@ -1,0 +1,32 @@
+.businessmen {
+    &-header {
+        background: url("/images/mobile/pic/Business_bg@2x.jpg") 50% 0/cover no-repeat;
+        &__desc {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 15px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.27;
+            letter-spacing: 0.47px;
+            color: #002337;
+        }
+        &__button {
+             bottom: -35px;
+             left: calc(50% - 127px);
+             a {
+                 display: block;
+                 width: 254px;
+                 text-align: center;
+             }
+        }
+    }
+    &-content {
+        .tabs {
+            justify-content: flex-start;
+            label {
+                margin-left: 74px;
+            }
+        }
+    }
+}

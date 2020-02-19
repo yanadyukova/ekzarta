@@ -1,0 +1,36 @@
+.landing-cooperation {
+    margin-bottom: 44px;
+    &__desc {
+        display: block;
+        padding: 40px 33px;
+        text-decoration: none;
+        background-image: radial-gradient(circle at 70% 3%, #03688b, #003751 64%, #002337);
+        p {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 30px;
+            font-weight: 900;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 1.88px;
+            color: #c5f0bd;
+            margin-bottom: 14px;
+        }
+        span {
+            display: block;
+            font-family: 'PF Din Text Cond Pro';
+            font-size: 17px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.35;
+            letter-spacing: 0.53px;
+            color: #ffffff;
+        }
+    }
+    &__image {
+        background: url("/images/desktop/pic/5@2x.jpg") 50% 50%/cover no-repeat;
+        width: 100%;
+        height: 208px;
+    }
+}

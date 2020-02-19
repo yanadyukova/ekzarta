@@ -1,0 +1,155 @@
+.technology {
+    &-header {
+        position: relative;
+        overflow: hidden;
+        &__desc {
+            padding: 27px 33px 91px;
+            background-image: radial-gradient(circle at 143% 0, #03688b, #003751 64%, #002337);
+            ul {
+                max-width: 414px;
+                margin: 0 auto;
+                li {
+                    list-style: none;
+                    font-family: 'PF DinDisplay Pro';
+                    font-size: 18px;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.17;
+                    letter-spacing: 0.98px;
+                    color: #c5f0bd;
+                    margin-bottom: 27px;
+                }
+            }
+        }
+        &__title {
+             max-width: 414px;
+             margin: 0 auto;
+             line-height: 1.39;
+             letter-spacing: 0.97px;
+             color: #ffffff;
+             margin-bottom: 27px;
+        }
+        &__image {
+            @mixin i pic/technology-bg, jpg;
+            width: 100%;
+            height: 319px;
+            background-size: cover;
+        }
+        &:after {
+             position: absolute;
+             content: '';
+             background-image: url("images/desktop/icons/clouds.svg");
+             width: 512px;
+             height: 50.5px;
+             background-repeat: no-repeat;
+             background-size: contain;
+             bottom: -2px;
+        }
+    }
+    &-ekzarta {
+        max-width: 414px;
+        margin: 0 auto;
+        &__inner {
+            padding: 17px 0;
+            margin: 0 auto;
+        }
+        &__title {
+             margin-bottom: 14px;
+             text-align: center;
+        }
+        &__about {
+            p {
+                padding: 0 33px;
+                margin-bottom: 14px;
+            }
+            ul {
+                padding: 0 33px;
+                li {
+                    list-style: disc;
+                    color: #7b919e;
+                    margin-bottom: 14px;
+                    span{
+                        color: #002337;
+                    }
+                }
+            }
+        }
+        &__desc {
+            p {
+                position: relative;
+                padding: 67px 33px 0;
+                font-size: 14px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.29;
+                letter-spacing: 0.34px;
+                color: #002337;
+                &:before {
+                    position: absolute;
+                    content: '';
+                    background: url("/images/desktop/icons/logo-small.svg") 0 0/contain no-repeat;
+                    width: 65px;
+                    height: 53px;
+                    top: 0;
+                }
+            }
+            div {
+                margin-bottom: 37px;
+                text-align: center;
+                img {width: 90%;}
+            }
+        }
+    }
+    &-about {
+        position: relative;
+        background-color: #f8f6f0;
+        &__inner {
+            max-width: 414px;
+            padding: 15px 33px 5px;
+            margin: 0 auto;
+        }
+        &__item {
+            margin-bottom: 32px;
+            p {margin-bottom: 10px;}
+        }
+    }
+    &-equipment {
+        max-width: 414px;
+        margin: 0 auto;
+        &__inner {padding: 42px 0 10px;}
+        &__column {
+            p {
+                padding: 0 33px;
+                &.subtitle{font-weight: 500;}
+            }
+            div {
+                text-align: center;
+                img {
+                    max-width: 90%;
+                    margin-bottom: 58px;
+                }
+            }
+            ul {
+                margin-bottom: 53px;
+                padding: 0 33px;
+                li {
+                    margin-bottom: 17px;
+                    color: #7b919e;
+                    list-style: disc;
+                    span {color: #002337;}
+                }
+            }
+        }
+        &__button {
+            margin-top: 54px;
+            margin-bottom: 54px;
+            a {
+                padding: 24px 84px;
+                box-shadow: 0 5px 10px -5px #e61841, 0 10px 20px -5px rgba(230,24,65,.61);
+            }
+        }
+    }
+    &-video {margin: 0 auto 60px;}
+}

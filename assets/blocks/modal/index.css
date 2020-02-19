@@ -3,11 +3,6 @@
 body {
     transition: filter .5s linear;
 }
-.modal-open {
-    > *:not(.modal, .pac-container) {
-        /*filter: blur(3.5px);*/
-    }
-}
 
 .pac-container {
     z-index: 10000000 !important;
@@ -406,7 +401,6 @@ body {
             height: 26px;
             top: 14px;
             right: 14px;
-            /*border: 1px solid #211f22;*/
             border-radius: 50%;
         }
         &__inner {
@@ -483,7 +477,6 @@ body {
                 position: relative;
             }
             &-content {
-                /*@mixin i bg/4, jpg;*/
                 background-color: #fff;
                 padding: 75px 55px;
             }

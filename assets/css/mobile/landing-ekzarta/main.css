@@ -1,0 +1,61 @@
+.landing-main {
+    position: relative;
+    margin: 0 10px 14px;
+    overflow: hidden;
+    background-image: radial-gradient(circle at 66% 46%, #c8ede3, #83c1c4);
+    &__inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0 14px;
+        margin: 0 auto;
+    }
+    &__title {
+        font-family: 'PF DinDisplay Pro';
+        font-size: 25px;
+        font-weight: 900;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 1.56px;
+        color: #002337;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        padding: 0 22px;
+    }
+    &__desription {
+        margin-bottom: 20px;
+        padding: 0 22px;
+        p {
+            font-family: var(--font-base);
+            font-size: 14px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.31;
+            letter-spacing: normal;
+            color: #002337;
+        }
+    }
+    &__button {
+        padding: 0 22px;
+        a {
+            &:hover {color: #e61841;}
+        }
+    }
+    &__image {
+         width: 100%;
+         height: auto;
+    }
+    &:after {
+         position: absolute;
+         content: '';
+         background-image: url("images/desktop/icons/clouds.svg");
+         width: 512px;
+         height: 50.5px;
+         background-position: -5px 0;
+         background-repeat: no-repeat;
+         background-size: contain;
+         bottom: -2px;
+    }
+}

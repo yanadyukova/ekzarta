@@ -1,0 +1,67 @@
+.table {
+    table {
+        font-family: 'PF Din Text Cond Pro';
+        background: transparent;
+        border-collapse: collapse;
+        text-align: right;
+        caption {
+            caption-side: top;
+            text-align: left;
+            padding: 0 0 20px;
+            font-family: 'PF DinDisplay Pro';
+            font-size: 24px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.17;
+            letter-spacing: 1.3px;
+            color: #002337;
+            text-transform: uppercase;
+            span {
+                font-family: 'PF Din Text Cond Pro';
+                font-size: 13px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 2.15;
+                letter-spacing: 0.41px;
+                text-transform: none;
+            }
+        }
+        th {
+            width: 95px;
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: 0.41px;
+            color: #7b919e;
+            vertical-align: middle;
+            padding-bottom: 5px;
+            &:first-child {
+                 width: auto;
+                 text-align: left;
+            }
+        }
+        td {
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.13;
+            letter-spacing: 0.47px;
+            color: #002337;
+            padding: 9px 0;
+            transition: .3s linear;
+            border-bottom: 1px solid #e3ddcd;
+            &:first-child {
+                text-align: left;
+            }
+        }
+        tr {
+            &:hover {
+                 td {background: #c5f0bd;}
+            }
+        }
+    }
+}

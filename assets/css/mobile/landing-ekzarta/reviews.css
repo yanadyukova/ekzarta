@@ -1,0 +1,43 @@
+.landing-reviews {
+    &_medcenter {margin-bottom: 20px;}
+    &__inner {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 36px 10px 20px;
+        max-width: 414px;
+        margin: 0 auto;
+        &_medcenter {padding: 17px 10px 20px;}
+    }
+    &__title {margin-right: 65px;}
+    &__more {font-size: 14px;}
+    &__slider {
+        width: 100%;
+        .swiper {
+            &-container {}
+            &-wrapper {}
+            &-slide {
+                 background-color: #f8f6f0;
+                 padding: 18px 23px;
+            }
+            &-pagination-bullet-active {background-color: #e61841;}
+        }
+    }
+    &__review {
+        padding-bottom: 23px;
+        p {margin-bottom: 23px;}
+        span {
+            display: block;
+            opacity: 0.44;
+            font-family: 'PF DinDisplay Pro';
+            font-size: 14px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.36;
+            letter-spacing: normal;
+            text-align: right;
+            color: #000000;
+        }
+    }
+}

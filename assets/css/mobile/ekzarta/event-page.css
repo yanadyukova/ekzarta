@@ -1,0 +1,38 @@
+.event-page {
+    &__inner {
+        padding: 0 33px 60px;
+        max-width: 414px;
+        margin: 0 auto;
+    }
+    &__header {
+        margin-bottom: 30px;
+        h1 {}
+        p {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 14px;
+            font-weight: 300;
+            font-style: italic;
+            font-stretch: normal;
+            line-height: 1.36;
+            letter-spacing: 0.5px;
+            color: #7b919e;
+            margin-bottom: 30px;
+        }
+    }
+    &__body {
+         font-size: 14px;
+         font-weight: normal;
+         font-stretch: normal;
+         font-style: normal;
+         line-height: 1.29;
+         letter-spacing: 0.34px;
+         color: #002337;
+         p.phone {
+             span {white-space: nowrap;}
+         }
+    }
+    &__button {
+         display: inline-block;
+         padding: 20px 80px;
+    }
+}

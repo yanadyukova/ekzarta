@@ -1,0 +1,57 @@
+.articles {
+    position: relative;
+    z-index: 50;
+    &__inner {
+         background-color: #f8f6f0;
+         padding: 30px 10px;
+    }
+    &__title {
+         font-size: 30px;
+         font-weight: 900;
+         font-stretch: normal;
+         font-style: normal;
+         line-height: normal;
+         letter-spacing: 1.88px;
+         color: #002337;
+    }
+    &__cards {}
+    &__card {
+        display: block;
+        text-decoration: none;
+        padding: 16px 23px 0;
+        border-bottom: 1px solid rgba(174, 148, 113, 0.15);
+        span {
+            display: block;
+            margin-bottom: 5px;
+            font-family: 'PF Din Text Cond Pro';
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.46;
+            letter-spacing: 0.41px;
+            color: #7b919e;
+        }
+        h2 {
+            font-family: 'PF DinDisplay Pro';
+            font-size: 18px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.06;
+            letter-spacing: 0.5px;
+            color: #002337;
+        }
+        p {
+            font-family: 'PF Din Text Cond Pro';
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.27;
+            letter-spacing: 0.47px;
+            color: #002337;
+        }
+        &:last-child {border-bottom: none;}
+    }
+}
