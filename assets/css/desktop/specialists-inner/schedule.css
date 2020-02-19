@@ -3,9 +3,20 @@
     margin-bottom: 60px;
     &-filter {
         margin-bottom: 45px;
+        .filter__ekzarta {
+            form {
+                .form-group {
+                    &:nth-child(2) {width: 48.5%;}
+                    &:nth-child(3) {width: 30%;}
+                    &:nth-child(4) {width: 15%;}
+                    &:nth-child(5) {width: 30%;}
+                    &:nth-child(6) {width: 15%;}
+                }
+            }
+        }
     }
     &-table {
-         padding: 0 94px;
+         padding: 0 74px;
          table {
             width: 100%;
             max-width: 1440px;

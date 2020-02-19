@@ -162,7 +162,7 @@
         }
         .schedule-table {
             margin-top: 40px;
-            padding: 0 72px;
+            padding: 0;
         }
         &:before {
              position: absolute;

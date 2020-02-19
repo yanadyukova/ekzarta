@@ -75,4 +75,13 @@
               background-color: #ffffff;
          }
     }
+    &-filter {
+        .filter__ekzarta {
+            form {
+                .form-group {
+                    width: 80%;
+                }
+            }
+        }
+    }
 }
