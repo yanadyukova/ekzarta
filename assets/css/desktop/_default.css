@@ -78,6 +78,7 @@ a {
     }
     &.course-teacher {
         position: relative;
+        white-space: nowrap;
         padding-left: 20px;
         &:before {
             position: absolute;

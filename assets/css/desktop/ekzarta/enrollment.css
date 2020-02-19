@@ -48,6 +48,7 @@
                 color: #7b919e;
                 margin-bottom: 5px;
             }
+            &.name {display: none;}
         }
     }
     &__contacts {
