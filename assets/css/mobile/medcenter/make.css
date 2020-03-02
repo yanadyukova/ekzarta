@@ -26,6 +26,7 @@
         }
     }
     &__title {
+         width: 90%;
          font-family: 'PF DinDisplay Pro';
          font-size: 30px;
          font-weight: 900;
@@ -86,15 +87,14 @@
                 span {display: none;}
                 &:after {
                      position: absolute;
-                     top: calc(50% - 18px);
+                     top: 0;
                      left: calc(50% - 9px);
-                     content: '1';
                      font-family: 'PF DinDisplay Pro';
                      font-size: 30px;
                      font-weight: 900;
                      font-stretch: normal;
                      font-style: normal;
-                     line-height: normal;
+                     line-height: 44px;
                      letter-spacing: 1.88px;
                      color: #ffffff;
                 }

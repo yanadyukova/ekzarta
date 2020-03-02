@@ -1,19 +1,6 @@
 .schedule {
     margin-bottom: 60px;
-    &-filter {
-        margin-bottom: 45px;
-        .filter__ekzarta {
-            form {
-                .form-group {
-                    &:nth-child(2) {width: 100%;}
-                    &:nth-child(3) {width: 60%;}
-                    &:nth-child(4) {width: 30%;}
-                    &:nth-child(5) {width: 60%;}
-                    &:nth-child(6) {width: 30%;}
-                }
-            }
-        }
-    }
+    &-filter {margin-bottom: 45px;}
     &-table {
          &__inner {padding: 0 33px;}
          &__course {

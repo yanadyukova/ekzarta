@@ -3,7 +3,7 @@
     border-radius: 3px;
     background-color: #f8f6f0;
     max-width: 414px;
-    margin: 0 auto 20px;
+    margin: 0 auto;
     &-video {
          margin-bottom: 45px;
          &__video {

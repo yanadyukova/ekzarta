@@ -3,16 +3,16 @@
         position: relative;
         overflow: hidden;
         background-color: #f8f6f0;
-        &:after {
-             position: absolute;
-             content: '';
-             background-image: url("images/desktop/icons/clouds.svg");
-             width: 512px;
-             height: 50.5px;
-             background-repeat: no-repeat;
-             background-size: contain;
-             bottom: -2px;
-        }
+        /*&:after {*/
+             /*position: absolute;*/
+             /*content: '';*/
+             /*background-image: url("images/desktop/icons/clouds.svg");*/
+             /*width: 512px;*/
+             /*height: 50.5px;*/
+             /*background-repeat: no-repeat;*/
+             /*background-size: contain;*/
+             /*bottom: -2px;*/
+        /*}*/
         &__inner {
             position: relative;
             padding: 40px 20px 60px;
@@ -53,10 +53,7 @@
         }
     }
     &-current {
-        &__inner {
-            padding: 40px 0;
-            margin: 0 auto;
-        }
+        &__inner {margin: 0 auto;}
         &__title {
              font-family: 'PF DinDisplay Pro';
              font-size: 30px;
@@ -119,8 +116,20 @@
         }
     }
     &-past {
+        position: relative;
+        overflow: hidden;
+        &:before {
+             position: absolute;
+             content: '';
+             background-image: url("images/desktop/icons/clouds-beige.svg");
+             width: 512px;
+             height: 50.5px;
+             background-repeat: no-repeat;
+             background-size: contain;
+             bottom: -2px;
+        }
         &__inner {
-             padding: 40px 20px;
+             padding: 40px 20px 60px;
              max-width: 414px;
              margin: 0 auto;
         }
