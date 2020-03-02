@@ -1,14 +1,17 @@
 <section class="equipment-filter">
     <div class="filter__ekzarta">
         <form action="">
-            <div class="form-group form__select">
-                <label for="">Категория товаров</label>
-                <select name="" id="">
-                    <option></option>
-                    <option value="1">Экзарта</option>
-                    <option value="2">Печатная продукция</option>
-                    <option value="3">Сопутствующие товары</option>
-                </select>
+            <div class="form-group input_checkbox">
+                <input type="checkbox" id="equipment_ekzarta">
+                <label for="equipment_ekzarta">Экзарта</label>
+            </div>
+            <div class="form-group input_checkbox">
+                <input type="checkbox" id="equipment_books">
+                <label for="equipment_books">Печатная продукция</label>
+            </div>
+            <div class="form-group input_checkbox">
+                <input type="checkbox" id="equipment_related-products">
+                <label for="equipment_related-products">Сопутствующие товары</label>
             </div>
             <button class="filter__ekzarta-reset" type="reset">Сброс</button>
         </form>
