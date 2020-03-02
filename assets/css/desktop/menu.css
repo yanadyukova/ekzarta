@@ -4,9 +4,7 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 10.5px;
-    &_medcenter {
-        justify-content: flex-start;
-    }
+    &_medcenter {justify-content: flex-start;}
     &__item {
          position: relative;
          margin-right: 20px;
@@ -60,6 +58,7 @@
                 bottom: 100%;
                 left: 100%;
                 font-size: 14px;
+                line-height: 18px;
                 margin: 0;
                 background-color: #e61841;
                 color: #fff;
@@ -150,7 +149,6 @@
                 letter-spacing: 0.44px;
                 color: #002337;
                 margin-bottom: 0;
-
                 &.title {
                      font-weight: 500;
                      letter-spacing: 0.41px;

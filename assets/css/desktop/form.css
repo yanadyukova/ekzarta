@@ -127,6 +127,7 @@ button {
         input {
             appearance: none;
             position: absolute;
+            border: none;
             &:checked + label:after {
                  opacity: 1;
             }
@@ -141,7 +142,7 @@ button {
                  content: '';
                  width: 16px;
                  height: 16px;
-                 top: 3px;
+                 top: 2px;
                  left: 0;
                  background-color: #f8f6f0;
                  border-radius: 3px;
@@ -152,7 +153,7 @@ button {
                  content: '';
                  width: 6px;
                  height: 12px;
-                 top: 3px;
+                 top: 2px;
                  left: 6px;
                  border-right: 1px solid #000;
                  border-bottom: 1px solid #000;
@@ -160,6 +161,7 @@ button {
                  opacity: 0;
                  transition: opacity .1s linear;
             }
+            a {font-size: 14px;}
         }
     }
 }

@@ -78,8 +78,12 @@
     &-filter {
         .filter__ekzarta {
             form {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
                 .form-group {
-                    width: 80%;
+                    width: auto;
+                    flex-grow: 1;
                 }
             }
         }

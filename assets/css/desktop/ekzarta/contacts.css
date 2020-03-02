@@ -121,7 +121,7 @@
         }
         .swiper-slide {
             padding: 24px 35px 0 74px;
-            height: auto;
+            /*height: auto;*/
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
         }
