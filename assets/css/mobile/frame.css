@@ -57,6 +57,7 @@
 
 .tabs {
     position: relative;
+    width: 100%;
     padding-top: 10px;
     margin: 0 auto;
     &__caption {
@@ -95,6 +96,7 @@
                 text-align: center;
                 color: #e61841;
                 text-decoration: none;
+                text-transform: uppercase;
             }
         }
     }

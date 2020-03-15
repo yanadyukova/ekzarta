@@ -120,6 +120,10 @@
              line-height: normal;
          }
     }
+    .tabs {
+        padding-top: 35px;
+        &__caption {margin-bottom: 0;}
+    }
     &__reviews {
     }
     &__review {
@@ -139,6 +143,7 @@
     &__content {}
     &__form {
          position: absolute;
+         z-index: 5;
          width: 950px;
          top: -300px;
          left: calc(50% - 475px);
@@ -171,8 +176,15 @@
               &>div {
                    flex-grow: 1;
                    textarea,
-                   input {
+                   input,
+                   select {
                        width: 90%;
+                   }
+                   textarea {height: 100%;}
+                   .form__select {
+                       margin-bottom: 20px;
+                       &:after {right: 10%;}
+                       &:before {right: calc(10% + 19px);}
                    }
               }
          }

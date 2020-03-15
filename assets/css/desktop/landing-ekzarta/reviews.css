@@ -1,8 +1,6 @@
 .landing-reviews {
     background-color: #f8f6f0;
-    &_medcenter {
-        margin-bottom: 20px;
-    }
+    &_medcenter {margin-bottom: 20px;}
     &__inner {
         position: relative;
         display: flex;
@@ -10,13 +8,13 @@
         padding: 133px 71px 20px;
         max-width: 1440px;
         margin: 0 auto;
-        &_medcenter {
-             padding: 54px 71px 20px;
+        &_medcenter {padding: 54px 71px 20px;}
+        .tabs__caption {
+            padding: 0;
+            margin-bottom: 31px;
         }
     }
-    &__title {
-        margin-right: 65px;
-    }
+    &__title {margin-right: 65px;}
     &__more {}
     &__slider {
         width: 100%;

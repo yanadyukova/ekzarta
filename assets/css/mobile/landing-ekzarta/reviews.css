@@ -8,6 +8,10 @@
         max-width: 414px;
         margin: 0 auto;
         &_medcenter {padding: 17px 10px 20px;}
+        .tabs {
+            padding-top: 0;
+            &__caption {padding: 0 0 25px;}
+        }
     }
     &__title {margin-right: 65px;}
     &__more {font-size: 14px;}

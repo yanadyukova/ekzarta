@@ -1,6 +1,5 @@
 .adults {
-    &__inner {
-    }
+    &__inner {}
     &-directions {
         padding: 0 74px;
         max-width: 1440px;

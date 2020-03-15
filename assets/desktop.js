@@ -11,29 +11,19 @@ let ww = $(window).width(),
     wh = $(window).height(),
     isMobile = $('body').hasClass('mobile'),
 
-    SliderReviews = function () {
-        if (isMobile) {
-            new Swiper('.landing-reviews__slider .swiper-container', {
-                // speed: 500,
-                slidesPerView: 1.2,
-                spaceBetween: 20,
-                pagination: {
-                    el: '.swiper-pagination',
-                    dynamicBullets: true,
-                }
-            })
-        } else {
-            new Swiper('.landing-reviews__slider .swiper-container', {
-                speed: 500,
-                slidesPerView: 1.5,
-                spaceBetween: 60,
-                pagination: {
-                    el: '.swiper-pagination',
-                    dynamicBullets: true,
-                }
-            })
+    SliderReviews = new Swiper('.landing-reviews__slider .swiper-container', {
+        speed: 500,
+        slidesPerView: function () {
+            return isMobile ? 1.2 : 1.5;
+        }(),
+        spaceBetween: function () {
+            return isMobile ? 20 : 60;
+        }(),
+        pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
         }
-    }(),
+    }),
 
     SliderFunds = function () {
         if (isMobile) {
@@ -142,20 +132,16 @@ let ww = $(window).width(),
         }
     }(),
 
-    SliderCities = function () {
-        if (!isMobile) {
-            new Swiper('.map-cities .swiper-container', {
-                direction: 'vertical',
-                slidesPerView: 'auto',
-                freeMode: true,
-                draggable: true,
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                },
-                mousewheel: true,
-            });
-        }
-    }(),
+    SliderCities = new Swiper('.map-cities .swiper-container', {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        freeMode: true,
+        draggable: true,
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+        mousewheel: true,
+    }),
 
     SliderProductsCheckout = function () {
         if (isMobile) {
@@ -378,16 +364,27 @@ let ww = $(window).width(),
                 .closest('div.tabs').find('div.tabs__content').removeClass('active').eq(i).addClass('active');
         }
 
-        if (hash === '#medcenters' && !isMobile) {
+        if ((hash === '#medcenters') && !isMobile) {
             SliderCities.update();
+        }
+
+        if (hash === '#courses' && $('.landing-reviews__slider').length > 0) {
+            $.each(SliderReviews, function (i) {
+                SliderReviews[i].update();
+            });
         }
 
         $('ul.tabs__caption').on('click', 'li:not(.active) a', function() {
             $(this).parent()
                 .addClass('active').siblings().removeClass('active')
                 .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).parent().index()).addClass('active');
-            if ($(this).attr('href') === '#medcenters' && !isMobile) {
+            if (($(this).attr('href') === '#medcenters') && !isMobile) {
                 SliderCities.update();
+            }
+            if ($(this).attr('href') === '#courses' && $('.landing-reviews__slider').length > 0) {
+                $.each(SliderReviews, function (i) {
+                    SliderReviews[i].update();
+                });
             }
         });
     }(),

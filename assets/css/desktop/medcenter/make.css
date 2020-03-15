@@ -152,10 +152,11 @@
              display: block;
         }
         .form-group {
-            width: 349px;
+            &.form__select {width: 349px;}
             input[type='text'] {
-                width: 100%;
+                width: 349px;
             }
+            textarea {width: 80%;}
         }
     }
     &__branch {

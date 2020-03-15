@@ -13,11 +13,17 @@
          line-height: normal;
          letter-spacing: 2.5px;
          color: #002337;
-         margin-bottom: 65px;
+         margin-bottom: 30px;
+         text-transform: uppercase;
+    }
+    &__subtitle {
+         font-size: 30px;
+         margin-bottom: 50px;
     }
     &__cards {
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 20px;
     }
     &__card {
         width: 25%;
@@ -64,9 +70,19 @@
          letter-spacing: 0.5px;
          color: #7b919e;
     }
-    &__appointment {
+    &__buttons {
          width: 100%;
          margin-top: 10px;
+    }
+    &__button {
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        width: 280px;
+        font-size: 16px;
+        line-height: normal;
+        border-radius: 3px;
+        padding: 20px 0;
     }
     &__site {
         margin-top: 31px;
