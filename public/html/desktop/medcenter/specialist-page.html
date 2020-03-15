@@ -24,6 +24,7 @@
             <li class="menu__item menu__item_medcenter"><a href="../medcenter/services-frame.html">Услуги и цены</a></li>
             <li class="menu__item menu__item_medcenter"><a href="../medcenter/specialists.html">Специалисты</a></li>
             <li class="menu__item menu__item_medcenter"><a href="../medcenter/promotions.html">Новости и акции</a></li>
+            <li class="menu__item menu__item_medcenter"><a href="../ekzarta/pages/reviews.html">Отзывы</a></li>
             <li class="menu__item menu__item_medcenter">
                 <a href="../medcenter/contacts.html">Контакты</a>
                 <div class="menu-contacts">
@@ -89,10 +90,10 @@
             <div class="specialist__photo card__image">
                 <img src="/images/desktop/specialists/1.jpg" alt="">
             </div>
-            <!--Эту кнопку выводить только если это страница врача.
-            По логике в модалку с записью нужно выводить услуги, оказываемые данным врачом. Уточнить у Романа-->
-            <div class="specialist__appointment">
-                <a href="" class="button button_red event-page__button" data-toggle="modal" data-target=".jsModalAppointment">Записаться</a>
+            <!--Эти кнопку выводить только если это страница врача.-->
+            <div class="specialist__buttons">
+                <a href="" class="button button_red specialist__button" data-toggle="modal" data-target=".jsModalAppointment">Записаться</a>
+                <a href="" class="button specialist__button" data-toggle="modal" data-target=".jsModalAppointment">Оставить отзыв</a>
             </div>
         </div>
         <div class="specialist__info text-content">
@@ -108,6 +109,9 @@
 
             <p>Участник конференций по медицинской реабилитации и спортивной медицине, соавтор методических рекомендаций по методике «Экзарта», научный редактор первого издания на русском языке книг «Бобат-концепция. Теория и клиническая практика в неврологической реабилитации» и «Принцип Войты. Игра мышц при рефлекторном поступательном движении и в двигательном онтогенезе», литературный редактор первого издания монографии «Нарушения постурального баланса при церебральном инсульте».</p>
         </div>
+    </div>
+    <div class="specialist__certificates">
+
     </div>
     <!--Следующий блок выводить только если это страница преподавателя. Выводить ближайшие курсы этого преподавателя-->
     <div class="specialist__announcement">
@@ -334,19 +338,9 @@
                                 <div class="appointment-form__wrapper">
                                     <div class="appointment-form__body">
                                         <div data-step="1" class="appointment-form__step jsAppointmentFormStage active">
-                                            <div class="form-group form__select">
-                                                <label for="">Услуга</label>
-                                                <select name="services" id="" class="jsAppointmentFormSelect">
-                                                    <optgroup label="ОСМОТР, Консультация">
-                                                        <option value="">Прием врача по лечебной физкультуре</option>
-                                                        <option value="">Прием врача-невролога первичный</option>
-                                                        <option value="">Прием врача – травматолога-ортопеда первичный</option>
-                                                    </optgroup>
-                                                    <optgroup label="Лечебная физкультура, кинезиотерапия">
-                                                        <option value="">Индивидуальное занятие ЛФК (с применением вышеперечисленных методик)</option>
-                                                        <option value="">Индивидуальное занятие по методике Войта</option>
-                                                    </optgroup>
-                                                </select>
+                                            <div class="form-group">
+                                                <label for="">Врач, процедура или опишите в свободной форме, что Вас беспокоит</label>
+                                                <textarea name="" id="" cols="" rows="5"></textarea>
                                             </div>
                                         </div>
                                         <div data-step="2" class="appointment-form__step jsAppointmentFormStage">
