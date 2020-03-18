@@ -36,10 +36,35 @@
                         <p class="checkout__item-price checkout__item-total"><span>11295</span> Руб.</p>
                         <button class="checkout__item-delete"></button>
                     </div>
+                    <!--если покупают курс-->
+                    <div class="checkout__item course">
+                        <p class="checkout__item-name">ПНФ Модуль 1</p>
+                        <p class="checkout__item-date"><span>Дата:</span> 13.07.2019 - 17.07.2019</p>
+                        <p class="checkout__item-city"><span>Город:</span> Москва</p>
+                        <p class="checkout__item-teacher"><span>Преподаватель:</span> Кокош М.</p>
+                        <p class="checkout__item-price"><span>36000</span> Руб.</p>
+                        <p class="checkout__item-amount">
+                            <button class="button_minus" type="button" name="button"></button>
+                            <input type="text" name="name" value="1" disabled>
+                            <button class="button_plus" type="button" name="button"></button>
+                        </p>
+                        <p class="checkout__item-price checkout__item-total"><span>36000</span> Руб.</p>
+                        <button class="checkout__item-delete"></button>
+                    </div>
+                    <!--end-->
                 </div>
                 <!--<div class="basket__empty">-->
                 <!--<p>Добавьте товары</p>-->
                 <!--</div>-->
+                <div class="checkout__promocode">
+                    <div class="form-group">
+                        <label for="">Введите промокод</label>
+                        <input type="text">
+                        <button class="button button_red">Ввести</button>
+                        <div class="error">Промокод не найден</div>
+                        <div class="success">Скидка 20%</div>
+                    </div>
+                </div>
                 <div class="checkout__total">
                     <span>Итого:</span>
                     <p>3000 Руб.</p>
@@ -50,15 +75,19 @@
                 <p>Заполните форму обратной связи,<br> и наши менеджеры с вами свяжутся. </p>
                 <div class="form-group">
                     <label for="">Как к вам обращаться?</label>
-                    <input type="text">
+                    <input type="text" required placeholder="Фамилия Имя">
                 </div>
                 <div class="form-group">
                     <label for="">Номер телефона</label>
-                    <input type="text" placeholder="+7 (       ) ____-____-__-__">
+                    <input type="text" placeholder="+7 (       ) ____-____-__-__" required>
                 </div>
                 <div class="form-group">
                     <label for="">E-mail</label>
-                    <input type="text">
+                    <input type="text" required placeholder="mail@mail.ru">
+                </div>
+                <div class="form-group">
+                    <label for="">Ваш город</label>
+                    <input type="text" required placeholder="Москва">
                 </div>
                 <div class="form-group input_checkbox">
                     <input type="checkbox" checked id="checkout__agree">
@@ -74,7 +103,7 @@
 
 <section class="checkout-products">
     <div class="checkout-products__inner">
-        <p class="checkout-products__title text-title text-title_big">Вы ранее просматривали:</p>
+        <p class="checkout-products__title text-title text-title_big">С этим товаром покупают:</p>
         <div class="checkout-products__slider">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -91,7 +120,7 @@
                             </div>
                             <div class="card-product__product-info">
                                 <h3 class="card-product__product-title">Маленькое черное платье</h3>
-                                <div class="card-product__price">&#8381; 1999</div>
+                                <div class="card-product__price">1999 Руб.</div>
                             </div>
                         </div>
                     </div>
@@ -108,7 +137,7 @@
                             </div>
                             <div class="card-product__product-info">
                                 <h3 class="card-product__product-title">Маленькое черное платье</h3>
-                                <div class="card-product__price">&#8381; 1999</div>
+                                <div class="card-product__price">1999 Руб.</div>
                             </div>
                         </div>
                     </div>
@@ -125,7 +154,7 @@
                             </div>
                             <div class="card-product__product-info">
                                 <h3 class="card-product__product-title">Маленькое черное платье</h3>
-                                <div class="card-product__price">&#8381; 1999</div>
+                                <div class="card-product__price">1999 Руб.</div>
                             </div>
                         </div>
                     </div>
@@ -142,7 +171,7 @@
                             </div>
                             <div class="card-product__product-info">
                                 <h3 class="card-product__product-title">Маленькое черное платье</h3>
-                                <div class="card-product__price">&#8381; 1999</div>
+                                <div class="card-product__price">1999 Руб.</div>
                             </div>
                         </div>
                     </div>
@@ -159,13 +188,12 @@
                             </div>
                             <div class="card-product__product-info">
                                 <h3 class="card-product__product-title">Маленькое черное платье</h3>
-                                <div class="card-product__price">&#8381; 1999</div>
+                                <div class="card-product__price">1999 Руб.</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Add Arrows -->
             <div class="swiper-button-next swiper-button-black"></div>
             <div class="swiper-button-prev swiper-button-black"></div>
         </div>

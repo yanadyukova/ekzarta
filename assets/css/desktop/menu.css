@@ -89,7 +89,7 @@
                 margin-left: auto;
                 &:hover {
                     &:after {
-                     content: none;
+                     /*content: none;*/
                     }
                     .menu-contacts {
                         opacity: 1;

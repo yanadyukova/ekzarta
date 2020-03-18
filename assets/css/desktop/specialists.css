@@ -138,4 +138,9 @@
              top: -90px;
         }
     }
+    &__certificates {
+        &__inner {
+            padding: 0 74px;
+        }
+    }
 }

@@ -47,7 +47,7 @@
          padding: 20px;
          border: 1px solid #F1E7E8;
          &:hover {
-              border-color: #002337;
+              border-color: #000;
              .card-product__product-wrap:after {
                  opacity: 1;
                  transform: scale(1);
@@ -83,12 +83,10 @@
                         transition: .3s ease-in-out;
                    }
               }
-              &-info {
-                   padding-top: 15px;
-              }
+              &-info {padding-top: 15px;}
               &-title {
                    font-weight: normal;
-                   font-family: "PF DinDisplay Pro";
+                   font-family: "PF Din Text Cond Pro";
                    color: #002337;
                    font-size: 18px;
               }

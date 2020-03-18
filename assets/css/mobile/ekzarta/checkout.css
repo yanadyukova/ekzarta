@@ -40,6 +40,28 @@
         border-bottom: solid 1px #e5e5e5;
         margin-bottom: 32px;
         p {margin-bottom: 10px;}
+        &.course {
+            .checkout__item {
+                &-name,
+                &-date,
+                &-city,
+                &-teacher {
+                     width: 90%;
+                     margin-bottom: 5px;
+                     font-family: 'PF DinDisplay Pro';
+                     font-size: 14px;
+                     font-weight: 300;
+                     font-style: normal;
+                     font-stretch: normal;
+                     line-height: normal;
+                     letter-spacing: normal;
+                     color: #000000;
+                     span {color: #7b919e;}
+                }
+                &-teacher {margin-bottom: 17px;}
+                &-name {margin-bottom: 10px;}
+            }
+        }
         &-name {
              width: 90%;
              font-family: 'PF DinDisplay Pro';
@@ -105,6 +127,30 @@
                  top: calc(50% - 1px);
                  left: calc(50% - 5px);
             }
+        }
+    }
+    &__promocode {
+         display: flex;
+         justify-content: flex-end;
+        .form-group {
+            button.button_red {
+                padding: 10px 15px;
+                border-bottom: 1px solid #e61841;
+                border-radius: 6px;
+            }
+            .error,
+            .success {
+                font-family: 'PF DinDisplay Pro';
+                font-size: 12px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #e61841;
+                margin-top: 5px;
+            }
+            .success {color: #8cde98;}
         }
     }
     &__total {
