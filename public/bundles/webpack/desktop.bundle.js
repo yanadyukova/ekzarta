@@ -692,6 +692,15 @@ var ww = $(window).width(),
         });
     }
 }(),
+    SliderSertificates = new Swiper('.specialist__certificates__slider .swiper-container', {
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    spaceBetween: 30,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    }
+}),
     SliderCities = new Swiper('.map-cities .swiper-container', {
     direction: 'vertical',
     slidesPerView: 'auto',
