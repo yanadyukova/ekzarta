@@ -1,5 +1,8 @@
 .landing-reviews {
     &_medcenter {margin-bottom: 20px;}
+    &.specialist-page {
+        .landing-reviews__title {padding-left: 23px;}
+    }
     &__inner {
         position: relative;
         display: flex;
