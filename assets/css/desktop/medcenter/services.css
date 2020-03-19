@@ -1,7 +1,7 @@
 .services {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*align-items: flex-start;*/
     padding: 0 74px;
     margin-bottom: 44px;
     &-table {
@@ -36,81 +36,87 @@
          }
     }
     &-filter {
-         width: 30%;
-         height: auto;
-         margin-top: 50px;
-         border-radius: 3px;
-         background-color: #f8f6f0;
-         &__inner {}
-         ul {
-             margin: 0;
-             li {
-                 position: relative;
-                 border: 1px solid #e3ddcd;
-                 border-top: none;
-                 padding: 9px 20px 9px 40px;
-                 cursor: pointer;
-                 font-family: 'PF Din Text Cond Pro';
-                 font-size: 16px;
-                 line-height: 1.13;
-                 letter-spacing: 0.47px;
-                 transition: all .3s linear;
-                 color: #002337;
-                 &:first-child {
-                      border-top: 1px solid #e3ddcd;
-                 }
-                 &:hover {
-                      background-color: #c5f0bd;
-                 }
-                 &.active {
-                      background-color: #c5f0bd;
-                      &:before {
-                           position: absolute;
-                           content: '';
-                           width: 26px;
-                           height: 26px;
-                           left: 8px;
-                           top: 4px;
-                           background: url("/images/desktop/icons/logo-small.svg") 50% 50%/contain no-repeat;
-                      }
-                 }
-             }
-         }
-         &__block {
-              padding-bottom: 24px;
-              .form-group {
-                  padding-top: 0;
-                  margin-bottom: 5px;
-              }
-              .input_checkbox {
-                 input:checked + label:before {
-                     background-color: #c5f0bd;
-                     border: solid 1px #002337;
-                 }
-                  label {
-                      padding-left: 33px;
-                      font-family: 'PF Din Text Cond Pro';
-                      font-size: 16px;
-                      line-height: 1.27;
-                      letter-spacing: 0.47px;
-                      color: #002337;
-                      &:before {
-                           /*box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.5);*/
-                           width: 22px;
-                           height: 22px;
-                           top: -1px;
-                      }
-                      &:after {
-                           border-right: 2px solid #002337;
-                           border-bottom: 2px solid #002337;
-                           left: 8px;
-                      }
-                  }
-                  &:not(:first-child) {
-                       padding-left: 33px;
-                  }
-              }
-         }
+        margin: 25px 0;
+        .filter__ekzarta {
+            form {
+                /*.form-group {width: 25%;}*/
+            }
+        }
+         /*width: 30%;*/
+         /*height: auto;*/
+         /*margin-top: 50px;*/
+         /*border-radius: 3px;*/
+         /*background-color: #f8f6f0;*/
+         /*&__inner {}*/
+         /*ul {*/
+             /*margin: 0;*/
+             /*li {*/
+                 /*position: relative;*/
+                 /*border: 1px solid #e3ddcd;*/
+                 /*border-top: none;*/
+                 /*padding: 9px 20px 9px 40px;*/
+                 /*cursor: pointer;*/
+                 /*font-family: 'PF Din Text Cond Pro';*/
+                 /*font-size: 16px;*/
+                 /*line-height: 1.13;*/
+                 /*letter-spacing: 0.47px;*/
+                 /*transition: all .3s linear;*/
+                 /*color: #002337;*/
+                 /*&:first-child {*/
+                      /*border-top: 1px solid #e3ddcd;*/
+                 /*}*/
+                 /*&:hover {*/
+                      /*background-color: #c5f0bd;*/
+                 /*}*/
+                 /*&.active {*/
+                      /*background-color: #c5f0bd;*/
+                      /*&:before {*/
+                           /*position: absolute;*/
+                           /*content: '';*/
+                           /*width: 26px;*/
+                           /*height: 26px;*/
+                           /*left: 8px;*/
+                           /*top: 4px;*/
+                           /*background: url("/images/desktop/icons/logo-small.svg") 50% 50%/contain no-repeat;*/
+                      /*}*/
+                 /*}*/
+             /*}*/
+         /*}*/
+         /*&__block {*/
+              /*padding-bottom: 24px;*/
+              /*.form-group {*/
+                  /*padding-top: 0;*/
+                  /*margin-bottom: 5px;*/
+              /*}*/
+              /*.input_checkbox {*/
+                 /*input:checked + label:before {*/
+                     /*background-color: #c5f0bd;*/
+                     /*border: solid 1px #002337;*/
+                 /*}*/
+                  /*label {*/
+                      /*padding-left: 33px;*/
+                      /*font-family: 'PF Din Text Cond Pro';*/
+                      /*font-size: 16px;*/
+                      /*line-height: 1.27;*/
+                      /*letter-spacing: 0.47px;*/
+                      /*color: #002337;*/
+                      /*&:before {*/
+                           /*!*box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.5);*!*/
+                           /*width: 22px;*/
+                           /*height: 22px;*/
+                           /*top: -1px;*/
+                      /*}*/
+                      /*&:after {*/
+                           /*border-right: 2px solid #002337;*/
+                           /*border-bottom: 2px solid #002337;*/
+                           /*left: 8px;*/
+                      /*}*/
+                  /*}*/
+                  /*&:not(:first-child) {*/
+                       /*padding-left: 33px;*/
+                  /*}*/
+              /*}*/
+         /*}*/
     }
     &-search {
         position: absolute;

@@ -1,3 +1,44 @@
+@@include('templates/mobile/include/header-medcenter.html')
+@@include('templates/mobile/include/landing-header.html')
+
+<section class="services-filter">
+    <div class="filter__ekzarta">
+        <form action="">
+            <div class="search">
+                <div class="search__input">
+                    <input type="text" name="q" placeholder="Поиск по названию" value="">
+                </div>
+                <button class="search__button"></button>
+            </div>
+            <div class="form-group form__select">
+                <label for="">Филиал</label>
+                <select name="" id="">
+                    <option value="0">Все</option>
+                    <option value="1">Центр на ул. Казанское шоссе, д.18</option>
+                    <option value="2">Центр на ул. Республиканская</option>
+                </select>
+            </div>
+            <div class="form-group form__select">
+                <label for="">Отделение</label>
+                <select name="" id="">
+                    <option value="0">Все</option>
+                    <option value="1">Взрослое</option>
+                    <option value="2">Детское</option>
+                </select>
+            </div>
+            <div class="form-group form__select">
+                <label for="">Направление</label>
+                <select name="" id="">
+                    <option value="1">Осмотр, консультация</option>
+                    <option value="2">Лечебная физкультура, кинезиотерапия</option>
+                    <option value="3">Кинезиотерапевтическое тейпирование</option>
+                    <option value="4">Массаж</option>
+                </select>
+            </div>
+            <button class="filter__ekzarta-reset" type="reset"></button>
+        </form>
+    </div>
+</section>
 
 <section class="services">
 
@@ -152,19 +193,19 @@
         </section>
     </div>
 
-    <div class="services-filter">
-        <div class="services-filter__inner">
-            <div class="services-filter__icon">
-                <p>Фильтр</p>
-            </div>
-            <ul class="jsServicesFilter">
-                <li class="active" data-services="services_inspection">Осмотр, консультация</li>
-                <li data-services="services_kinesiotherapy">Лечебная физкультура, кинезиотерапия</li>
-                <li data-services="services_taping">Кинезиотерапевтическое тейпирование</li>
-                <li data-services="services_massage">Массаж</li>
-            </ul>
-        </div>
-    </div>
+    <!--<div class="services-filter">-->
+        <!--<div class="services-filter__inner">-->
+            <!--<div class="services-filter__icon">-->
+                <!--<p>Фильтр</p>-->
+            <!--</div>-->
+            <!--<ul class="jsServicesFilter">-->
+                <!--<li class="active" data-services="services_inspection">Осмотр, консультация</li>-->
+                <!--<li data-services="services_kinesiotherapy">Лечебная физкультура, кинезиотерапия</li>-->
+                <!--<li data-services="services_taping">Кинезиотерапевтическое тейпирование</li>-->
+                <!--<li data-services="services_massage">Массаж</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
 
 </section>
 
@@ -255,3 +296,5 @@
         </div>
     </div>
 </section>
+
+@@include('templates/mobile/include/footer.html')
