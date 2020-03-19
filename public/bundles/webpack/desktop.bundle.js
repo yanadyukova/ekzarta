@@ -694,11 +694,12 @@ var ww = $(window).width(),
 }(),
     SliderSertificates = new Swiper('.specialist__certificates__slider .swiper-container', {
     slidesPerView: 'auto',
-    centeredSlides: true,
+    freeMode: true,
+    loop: true,
     spaceBetween: 30,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
     }
 }),
     SliderCities = new Swiper('.map-cities .swiper-container', {
@@ -921,7 +922,7 @@ var ww = $(window).width(),
         SliderCities.update();
     }
 
-    if (hash === '#courses' && $('.landing-reviews__slider').length > 0) {
+    if (hash === '#courses' || hash === '#specialists' && $('.landing-reviews__slider').length > 0) {
         $.each(SliderReviews, function (i) {
             SliderReviews[i].update();
         });
@@ -932,7 +933,7 @@ var ww = $(window).width(),
         if ($(this).attr('href') === '#medcenters' && !isMobile) {
             SliderCities.update();
         }
-        if ($(this).attr('href') === '#courses' && $('.landing-reviews__slider').length > 0) {
+        if ($(this).attr('href') === '#courses' || $(this).attr('href') === '#specialists' && $('.landing-reviews__slider').length > 0) {
             $.each(SliderReviews, function (i) {
                 SliderReviews[i].update();
             });
