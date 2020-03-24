@@ -75,8 +75,8 @@ let ww = $(window).width(),
     }),
 
     SliderProduct = function() {
-        var productThumbs;
-        var productPhoto;
+        let productThumbs;
+        let productPhoto;
         if (isMobile) {
             productThumbs = new Swiper('.product__thumbs', {
                 spaceBetween: 10,
@@ -129,6 +129,53 @@ let ww = $(window).width(),
                     swiper: productThumbs,
                 },
             });
+        }
+    }(),
+
+    SliderEventPhotos = function () {
+        var listThumbs = $('.jsSliderPhotosThumbs .swiper-slide');
+        listThumbs.eq(0).addClass('active');
+
+        if ($('.jsSliderPhotosGallery .swiper-slide').length < 2) {
+            $('.jsSliderPhotosGallery .swiper-prev').hide();
+            $('.jsSliderPhotosGallery .swiper-next').hide();
+            $('.event-page__slider__foot').hide();
+        } else {
+            var photosGallery = new Swiper($('.jsSliderPhotosGallery').find('.swiper-container'), {
+                speed: 500,
+                loop: true,
+                loopedSlides: listThumbs.length,
+                navigation: {
+                    nextEl: $('.jsSliderPhotosGallery').find('.swiper-next'),
+                    prevEl: $('.jsSliderPhotosGallery').find('.swiper-prev'),
+                },
+                on: {
+                    slideChange: function () {
+                        if (photosGallery) {
+                            listThumbs.removeClass('active').eq(photosGallery.activeIndex).addClass('active');
+                        }
+                    },
+                },
+            });
+            var photosThumbs = new Swiper($('.jsSliderPhotosThumbs').find('.swiper-container'), {
+                slidesPerView: 'auto',
+                spaceBetween: 10,
+                speed: 200,
+                loop: true,
+                loopedSlides: listThumbs.length,
+                on: {
+                    init: function() {
+                        listThumbs = $('.jsSliderPhotosThumbs .swiper-slide');
+                    },
+                    click: function (event) {
+                        if (photosThumbs.clickedIndex !== undefined) {
+                            photosGallery.slideTo(photosThumbs.clickedIndex);
+                        }
+                    },
+                },
+            });
+            photosGallery.controller.control = photosThumbs;
+            photosThumbs.controller.control = photosGallery;
         }
     }(),
 

@@ -6,8 +6,7 @@
     margin: 0 auto 20px;
     &-video {
          margin-bottom: 45px;
-         &__inner {
-         }
+         &__inner {}
          &__video {
              width: 876px;
              height: 493px;
@@ -141,6 +140,22 @@
          color: #c0bbaa;
     }
     &__content {}
+    &__filters {
+        margin: 30px 74px 6px 54px;
+        padding: 20px 20px 30px;
+        background-color: #fff;
+        border: 1px solid #e61841;
+        form {
+            display: flex;
+            .form__select {
+                margin-bottom: 0;
+                margin-right: 40px;
+                min-width: 400px;
+                padding-top: 25px;
+                label {font-size: 18px;}
+            }
+        }
+    }
     &__form {
          position: absolute;
          z-index: 5;

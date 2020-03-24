@@ -28,4 +28,130 @@
          display: inline-block;
          padding: 20px 90px;
     }
+    &__slider {
+        margin-top: 35px;
+        &__inner {}
+        &__body {}
+        &__gallery {
+             display: flex;
+             align-items: center;
+             height: 450px;
+            .swiper-container {
+                width: 880px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .swiper-slide {
+                background-size: cover;
+            }
+            .swiper-prev {
+                height: 100%;
+                width: 170px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                outline: none;
+                transition: all .5s easeInOutCubic;
+                &.swiper-button-disabled {
+                     cursor: default;
+                     opacity: .15;
+                }
+                span {
+                    display: block;
+                    height: 1px;
+                    width: 110px;
+                    background: linear-gradient(to right, #e61841 0%, #ffffff 100%);
+                    position: relative;
+                    &:before {
+                         position: absolute;
+                         top: -4px;
+                         left: 0;
+                         width: 9px;
+                         height: 9px;
+                         border-top: 1px solid #e61841;
+                         border-left: 1px solid #e61841;
+                         transform: rotate(-45deg);
+                         content: '';
+                    }
+                }
+            }
+            .swiper-next {
+                height: 100%;
+                width: 170px;
+                cursor: pointer;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                outline: none;
+                transition: all .5s easeInOutCubic;
+                &.swiper-button-disabled {
+                     cursor: default;
+                     opacity: .15;
+                }
+                span {
+                    display: block;
+                    height: 1px;
+                    width: 110px;
+                    background: linear-gradient(to left, #e61841 0%, #ffffff 100%);
+                    position: relative;
+                    &:before {
+                         position: absolute;
+                         top: -4px;
+                         right: 0;
+                         width: 9px;
+                         height: 9px;
+                         border-top: 1px solid #e61841;
+                         border-right: 1px solid #e61841;
+                         transform: rotate(45deg);
+                         content: '';
+                    }
+                }
+            }
+        }
+        &__pic {
+             display: block;
+             height: 450px;
+             background-size: cover;
+             background-repeat: no-repeat;
+             background-position: 50% 50%;
+        }
+        &__foot {
+             margin-top: 40px;
+        }
+        &__thumbs {
+            .swiper-slide {
+                width: 25%;
+                cursor: pointer;
+                &.active {
+                     cursor: default;
+                    ^^^&__thumb-pic:before {
+                        opacity: 0;
+                    }
+                    ^^^&__thumb-title {
+                        color: #211f22;
+                    }
+                }
+            }
+        }
+        &__thumb {
+            &-pic {
+                 display: block;
+                 height: 164px;
+                 background-size: cover;
+                 background-repeat: no-repeat;
+                 background-position: 50% 50%;
+                 position: relative;
+                &:before {
+                     position: absolute;
+                     top: 0;
+                     left: 0;
+                     width: 100%;
+                     height: 100%;
+                     content: '';
+                     background-color: #EED9D9;
+                     opacity: .5;
+                }
+            }
+        }
+    }
 }
