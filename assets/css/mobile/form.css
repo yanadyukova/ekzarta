@@ -88,6 +88,7 @@ button {
         padding-top: 0;
         input {
             appearance: none;
+            border: none;
             position: absolute;
             &:checked + label:after {
                 opacity: 1;
@@ -126,6 +127,7 @@ button {
     &_checkbox {
         input {
             width: 0;
+            border: none;
             appearance: none;
             position: absolute;
             &:checked + label:after {

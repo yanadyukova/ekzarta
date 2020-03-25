@@ -577,6 +577,50 @@ body {
             }
         }
     }
+    .feedback {
+        &__inner {
+             padding: 20px 10px 60px;
+        }
+        &__title {
+             width: 80%;
+             font-family: 'PF DinDisplay Pro';
+             font-size: 30px;
+             font-weight: 900;
+             font-stretch: normal;
+             font-style: normal;
+             line-height: normal;
+             letter-spacing: 1.88px;
+             color: #002337;
+             text-transform: uppercase;
+             margin-bottom: 30px;
+        }
+        &__form {
+            form {
+                &>div:first-child {
+                    &>div {}
+                    .chechbox-group {
+                        display: flex;
+                        .input_radio {margin-right: 40px;}
+                    }
+                }
+                .form__select {margin-bottom: 20px;}
+                .form-group {
+                    input,
+                    textarea {width: 100%;}
+                }
+                p {
+                    font-family: 'PF DinDisplay Pro';
+                    font-size: 14px;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #002337;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 359px) {

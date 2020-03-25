@@ -40,41 +40,41 @@
 </section>
 
 <section class="reviews">
-    <div class="reviews__form">
-        <div class="reviews__form-close jsCloseReviewForm"></div>
-        <p class="reviews__form-title">Добавить отзыв</p>
-        <form action="">
-            <div class="form-group">
-                <label for="">Как вас зовут?</label>
-                <input type="text">
-            </div>
-            <div class="form-group">
-                <label for="">Ваш e-mail</label>
-                <input type="email">
-            </div>
-            <div class="form-group form__select">
-                <label for="">О чем Вы хотите оставить отзыв?*</label>
-                <select name="" id="">
-                    <option value="">Услуга</option>
-                    <option value="">Обучение</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="">Ваш отзыв</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-            </div>
-            <div class="form-group input_checkbox">
-                <input id="review__agree" type="checkbox" checked>
-                <label for="review__agree">Отправляя форму, вы соглашаетесь с <a href="">политикой
-                    конфиденциальности и пользовательским
-                    соглашением</a> данного сайта.</label>
-            </div>
-            <button class="button button_red">Отправить</button>
-        </form>
-    </div>
+    <!--<div class="reviews__form">-->
+        <!--<div class="reviews__form-close jsCloseReviewForm"></div>-->
+        <!--<p class="reviews__form-title">Добавить отзыв</p>-->
+        <!--<form action="">-->
+            <!--<div class="form-group">-->
+                <!--<label for="">Как вас зовут?</label>-->
+                <!--<input type="text">-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<label for="">Ваш e-mail</label>-->
+                <!--<input type="email">-->
+            <!--</div>-->
+            <!--<div class="form-group form__select">-->
+                <!--<label for="">О чем Вы хотите оставить отзыв?*</label>-->
+                <!--<select name="" id="">-->
+                    <!--<option value="">Услуга</option>-->
+                    <!--<option value="">Обучение</option>-->
+                <!--</select>-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<label for="">Ваш отзыв</label>-->
+                <!--<textarea name="" id="" cols="30" rows="10"></textarea>-->
+            <!--</div>-->
+            <!--<div class="form-group input_checkbox">-->
+                <!--<input id="review__agree" type="checkbox" checked>-->
+                <!--<label for="review__agree">Отправляя форму, вы соглашаетесь с <a href="">политикой-->
+                    <!--конфиденциальности и пользовательским-->
+                    <!--соглашением</a> данного сайта.</label>-->
+            <!--</div>-->
+            <!--<button class="button button_red">Отправить</button>-->
+        <!--</form>-->
+    <!--</div>-->
     <div class="reviews__title">
         <p>ОТЗЫВЫ</p>
-        <a href="javascript:void(0)" class="reviews__add jsAddReview">ДОБАВИТЬ ОТЗЫВ</a>
+        <a data-toggle="modal" data-target=".jsModalFeedback" href="" class="reviews__add jsAddReview">ДОБАВИТЬ ОТЗЫВ</a>
     </div>
     <div class="tabs">
         <ul class="tabs__caption">
@@ -83,6 +83,26 @@
         </ul>
         <div class="tabs__content active">
             <article class="treatment">
+                <div class="reviews__filters">
+                    <form action="">
+                        <div class="form-group form__select">
+                            <label for="">Филиал</label>
+                            <select name="" id="">
+                                <option value="0">Все</option>
+                                <option value="1">Центр на ул. Казанское шоссе, д.18</option>
+                                <option value="2">Центр на ул. Республиканская</option>
+                            </select>
+                        </div>
+                        <div class="form-group form__select">
+                            <label for="">Специалист</label>
+                            <select name="" id="">
+                                <option value="0">Все</option>
+                                <option value="1">Бурмистров А.Л.</option>
+                                <option value="2">Корноухов А.Е.</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
                 <div class="reviews__reviews">
                     <div class="reviews__review text-content">
                         <div class="reviews__header">
@@ -131,6 +151,26 @@
         </div>
         <div class="tabs__content">
             <article class="courses">
+                <div class="reviews__filters">
+                    <form action="">
+                        <div class="form-group form__select">
+                            <label for="">Название</label>
+                            <select name="" id="">
+                                <option value="0">Все</option>
+                                <option value="1">Экзарта Silver</option>
+                                <option value="2">Экзарта Gold</option>
+                            </select>
+                        </div>
+                        <div class="form-group form__select">
+                            <label for="">Преподаватель</label>
+                            <select name="" id="">
+                                <option value="0">Все</option>
+                                <option value="1">Бурмистров А.Л.</option>
+                                <option value="2">Корноухов А.Е.</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
                 <div class="reviews__reviews">
                     <div class="reviews__review text-content">
                         <div class="reviews__header">

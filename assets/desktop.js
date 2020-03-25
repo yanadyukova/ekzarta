@@ -426,7 +426,7 @@ let ww = $(window).width(),
             SliderCities.update();
         }
 
-        if (hash === '#courses' || hash === '#specialists' && $('.landing-reviews__slider').length > 0) {
+        if ((hash === '#courses' || hash === '#specialists') && $('.landing-reviews__slider').length > 0) {
             $.each(SliderReviews, function (i) {
                 SliderReviews[i].update();
             });
@@ -439,7 +439,7 @@ let ww = $(window).width(),
             if (($(this).attr('href') === '#medcenters') && !isMobile) {
                 SliderCities.update();
             }
-            if ($(this).attr('href') === '#courses' || $(this).attr('href') === '#specialists' && $('.landing-reviews__slider').length > 0) {
+            if (($(this).attr('href') === '#courses' || $(this).attr('href') === '#specialists') && $('.landing-reviews__slider').length > 0) {
                 $.each(SliderReviews, function (i) {
                     SliderReviews[i].update();
                 });
