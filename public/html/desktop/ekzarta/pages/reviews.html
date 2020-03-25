@@ -107,44 +107,44 @@
 </section>
 
 <section class="reviews frame-content">
-    <div class="reviews__form">
-        <div class="reviews__form-close jsCloseReviewForm"></div>
-        <form action="">
-            <div class="reviews__form-block">
-                <div class="form-group">
-                    <label for="">Ваш отзыв*</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </div>
-                <div class="reviews__form-data">
-                    <div class="form-group form__select">
-                        <label for="">О чем Вы хотите оставить отзыв?*</label>
-                        <select name="" id="">
-                            <option value="">Услуга</option>
-                            <option value="">Обучение</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Как вас зовут?*</label>
-                        <input type="text">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Ваш e-mail*</label>
-                        <input type="email">
-                    </div>
-                </div>
-            </div>
-            <div class="form-group input_checkbox">
-                <input id="review__agree" type="checkbox" checked>
-                <label for="review__agree">Отправляя форму, вы соглашаетесь с <a href="">политикой
-                    конфиденциальности и пользовательским
-                    соглашением</a> данного сайта.</label>
-            </div>
-            <button class="button button_red">Отправить</button>
-        </form>
-    </div>
+    <!--<div class="reviews__form">-->
+        <!--<div class="reviews__form-close jsCloseReviewForm"></div>-->
+        <!--<form action="">-->
+            <!--<div class="reviews__form-block">-->
+                <!--<div class="form-group">-->
+                    <!--<label for="">Ваш отзыв*</label>-->
+                    <!--<textarea name="" id="" cols="30" rows="10"></textarea>-->
+                <!--</div>-->
+                <!--<div class="reviews__form-data">-->
+                    <!--<div class="form-group form__select">-->
+                        <!--<label for="">О чем Вы хотите оставить отзыв?*</label>-->
+                        <!--<select name="" id="">-->
+                            <!--<option value="">Услуга</option>-->
+                            <!--<option value="">Обучение</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="">Как вас зовут?*</label>-->
+                        <!--<input type="text">-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="">Ваш e-mail*</label>-->
+                        <!--<input type="email">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="form-group input_checkbox">-->
+                <!--<input id="review__agree" type="checkbox" checked>-->
+                <!--<label for="review__agree">Отправляя форму, вы соглашаетесь с <a href="">политикой-->
+                    <!--конфиденциальности и пользовательским-->
+                    <!--соглашением</a> данного сайта.</label>-->
+            <!--</div>-->
+            <!--<button class="button button_red">Отправить</button>-->
+        <!--</form>-->
+    <!--</div>-->
     <div class="reviews__title">
         <p>ОТЗЫВЫ</p>
-        <a href="javascript:void(0)" class="reviews__add jsAddReview">ДОБАВИТЬ ОТЗЫВ</a>
+        <a data-toggle="modal" data-target=".jsModalFeedback" href="" class="reviews__add jsAddReview">ДОБАВИТЬ ОТЗЫВ</a>
     </div>
     <div class="tabs">
         <ul class="tabs__caption">
@@ -720,6 +720,18 @@
                                 <div>
                                     <div>
                                         <p>О чем хотите оставить отзыв:</p>
+                                        <!--Для мобильной версии-->
+                                        <div class="chechbox-group">
+                                            <div class="form-group input_radio">
+                                                <input type="radio" name="feedback" id="services" checked>
+                                                <label for="services">Услуги</label>
+                                            </div>
+                                            <div class="form-group input_radio">
+                                                <input type="radio" name="feedback" id="courses">
+                                                <label for="courses">Курсы</label>
+                                            </div>
+                                        </div>
+                                        <!--Для мобильной версии end-->
                                         <div class="form-group form__select">
                                             <label for="">Филиал</label>
                                             <select name="" id="">
@@ -746,16 +758,18 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="chechbox-group">
-                                            <div class="form-group input_radio">
-                                                <input type="radio" name="feedback" id="services" checked>
-                                                <label for="services">Услуги</label>
-                                            </div>
-                                            <div class="form-group input_radio">
-                                                <input type="radio" name="feedback" id="courses">
-                                                <label for="courses">Курсы</label>
-                                            </div>
-                                        </div>
+                                        <!--Для десктопной версии-->
+                                        <!--<div class="chechbox-group">-->
+                                            <!--<div class="form-group input_radio">-->
+                                                <!--<input type="radio" name="feedback" id="services" checked>-->
+                                                <!--<label for="services">Услуги</label>-->
+                                            <!--</div>-->
+                                            <!--<div class="form-group input_radio">-->
+                                                <!--<input type="radio" name="feedback" id="courses">-->
+                                                <!--<label for="courses">Курсы</label>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--Для десктопной версии end-->
                                         <div class="form-group">
                                             <label for="">Как вас зовут?*</label>
                                             <input type="text">
