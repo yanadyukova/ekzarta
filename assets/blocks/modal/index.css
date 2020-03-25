@@ -266,4 +266,69 @@ body {
             }
         }
     }
+    .feedback {
+        &__inner {
+             padding: 45px 74px 60px;
+             max-width: 1440px;
+             margin: 0 auto;
+        }
+        &__title {
+             font-family: 'PF DinDisplay Pro';
+             font-size: 40px;
+             font-weight: 700;
+             font-style: normal;
+             font-stretch: normal;
+             line-height: normal;
+             letter-spacing: 2.5px;
+             color: #002337;
+             text-transform: uppercase;
+             margin-bottom: 60px;
+             padding-left: 188px;
+             position: relative;
+            &:before {
+                 position: absolute;
+                 content: '';
+                 width: 155px;
+                 height: 59px;
+                 left: 0;
+                 top: -13px;
+                 background: url("/images/desktop/logo@2x.png") 50% 50%/contain no-repeat;
+            }
+        }
+        &__form {
+             width: 700px;
+             form {
+                 &>div:first-child {
+                      display: flex;
+                      justify-content: space-between;
+                      &>div {
+                          width: 45%;
+                      }
+                      p {
+                          height: 30px;
+                          text-align: right;
+                      }
+                      .chechbox-group {
+                          display: flex;
+                          .input_radio {margin-right: 40px;}
+                      }
+                 }
+                 .form__select {margin-bottom: 20px;}
+                 .form-group {
+                     input,
+                     textarea {width: 100%;}
+                 }
+                 p {
+                     font-family: 'PF DinDisplay Pro';
+                     font-size: 14px;
+                     font-weight: 400;
+                     font-style: normal;
+                     font-stretch: normal;
+                     line-height: normal;
+                     letter-spacing: normal;
+                     color: #002337;
+                 }
+             }
+        }
+    }
 }
