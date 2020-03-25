@@ -28,6 +28,13 @@
     &__card {
         width: 25%;
     }
+    &-filter {
+        .filter__ekzarta {
+            margin: 0 auto 30px;
+            padding: 0;
+            form {padding: 10px 100px 10px 20px;}
+        }
+    }
 }
 
 .specialist {

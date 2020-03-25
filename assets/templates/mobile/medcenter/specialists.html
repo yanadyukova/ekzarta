@@ -4,6 +4,29 @@
 <section class="specialists">
     <div class="specialists__inner">
         <div class="specialists__title">СПЕЦИАЛИСТЫ</div>
+        <!--Если в городе несколько филиалов-->
+        <section class="specialists-filter">
+            <div class="filter__ekzarta">
+                <form action="">
+                    <div class="search">
+                        <div class="search__input">
+                            <input type="text" name="q" placeholder="Поиск по имени" value="">
+                        </div>
+                        <button class="search__button"></button>
+                    </div>
+                    <div class="form-group form__select">
+                        <label for="">Филиал</label>
+                        <select name="" id="">
+                            <option value="0">Все</option>
+                            <option value="1">Центр на ул. Казанское шоссе, д.18</option>
+                            <option value="2">Центр на ул. Республиканская</option>
+                        </select>
+                    </div>
+                    <button class="filter__ekzarta-reset" type="reset"></button>
+                </form>
+            </div>
+        </section>
+        <!--Если в городе несколько филиалов end-->
         <div class="specialists__title specialists__subtitle">Врачи</div>
         <div class="specialists__cards">
             <a href="./specialist-page.html" class="specialists__card card">
