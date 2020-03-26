@@ -89,6 +89,18 @@
          height: 34px;
          background: url("/images/desktop/logo@2x.png") 50% 50%/contain no-repeat;
     }
+    &__city {
+        p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: #002337;
+        }
+        a {
+            font-size: 14px;
+            text-decoration: none;
+            border-bottom: 1px dashed #e61841;
+        }
+    }
     &__basket {
          width: 20px;
          height: 20px;

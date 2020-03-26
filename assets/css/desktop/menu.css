@@ -99,6 +99,33 @@
                 }
             }
          }
+         &_city {
+             position: absolute;
+             display: flex;
+             top: 15px;
+             right: 72px;
+             margin-right: 0;
+             p {
+                 margin-bottom: 0;
+                 font-family: 'PF Din Text Cond Pro';
+                 font-size: 16px;
+                 font-weight: 500;
+                 font-style: normal;
+                 font-stretch: normal;
+                 line-height: 1.38;
+                 letter-spacing: .89px;
+                 color: #002337;
+             }
+             a {
+                 margin-left: 15px;
+                 color: #e61841;
+                 border-bottom: 1px dashed #e61841;
+                 &:hover {
+                      border-bottom: none;
+                 }
+             }
+             &:after {content: none;}
+         }
     }
     &-contacts {
         visibility: hidden;

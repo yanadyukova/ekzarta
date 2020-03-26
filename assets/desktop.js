@@ -404,13 +404,20 @@ let ww = $(window).width(),
         });
     }(),
 
-    AddReview = function () {
-        $('.jsAddReview').click(function () {
-            $(this).parents('.reviews').find('.reviews__form').addClass('active');
-        });
+    // AddReview = function () {
+    //     $('.jsAddReview').click(function () {
+    //         $(this).parents('.reviews').find('.reviews__form').addClass('active');
+    //     });
+    //
+    //     $('.jsCloseReviewForm').click(function () {
+    //         $(this).parent().removeClass('active');
+    //     });
+    // }(),
 
-        $('.jsCloseReviewForm').click(function () {
-            $(this).parent().removeClass('active');
+    ChangeCity = function () {
+        $('.jsModalCityConfirmListToggle').click(function() {
+            $(this).siblings('ul').toggle();
+            return false;
         });
     }(),
 
