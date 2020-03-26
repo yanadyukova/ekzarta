@@ -948,13 +948,22 @@ var ww = $(window).width(),
         $(this).closest('.basket__item').remove();
     });
 }(),
-    AddReview = function () {
-    $('.jsAddReview').click(function () {
-        $(this).parents('.reviews').find('.reviews__form').addClass('active');
-    });
 
-    $('.jsCloseReviewForm').click(function () {
-        $(this).parent().removeClass('active');
+
+// AddReview = function () {
+//     $('.jsAddReview').click(function () {
+//         $(this).parents('.reviews').find('.reviews__form').addClass('active');
+//     });
+//
+//     $('.jsCloseReviewForm').click(function () {
+//         $(this).parent().removeClass('active');
+//     });
+// }(),
+
+ChangeCity = function () {
+    $('.jsModalCityConfirmListToggle').click(function () {
+        $(this).siblings('ul').toggle();
+        return false;
     });
 }(),
     TabSwitch = function () {

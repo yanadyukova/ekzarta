@@ -25,6 +25,9 @@
             <li class="menu__item menu__item_medcenter"><a href="../medcenter/specialists.html">Специалисты</a></li>
             <li class="menu__item menu__item_medcenter"><a href="../medcenter/promotions.html">Новости и акции</a></li>
             <li class="menu__item menu__item_medcenter"><a href="../ekzarta/pages/reviews.html">Отзывы</a></li>
+            <li class="menu__item menu__item_medcenter menu__item_city">
+                <p>Ваш город:</p>
+                <a data-toggle="modal" data-target=".jsModalCityConfirm" href="">Нижний Новгород</a></li>
             <li class="menu__item menu__item_medcenter">
                 <a href="../medcenter/contacts.html">Контакты</a>
                 <!--<div class="menu-contacts">-->
@@ -744,6 +747,27 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-default modal-city modal-city-confirm jsModalCityConfirm">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <a data-dismiss="modal" class="modal__close"></a>
+            <div class="modal-city__title">
+                <p><span>Ваш город:</span><strong>Нижний Новгород</strong></p>
+                <div>
+                    <a class="jsModalCityConfirmListToggle" href="#">Изменить</a>
+                    <ul>
+                        <li><a href="#">Нижний Новгород</a></li>
+                        <li><a href="#">Дзержинск</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-city__button">
+                <a href="#" class="active">Подтвердить</a>
             </div>
         </div>
     </div>
