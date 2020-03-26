@@ -845,6 +845,15 @@ var ww = $(window).width(),
         prevEl: '.swiper-button-prev'
     }
 }),
+    SliderContacts = new Swiper('.landing-header__contacts .swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    }
+}),
     MethodCardsMobile = function () {
     $('.methods__card').on('click', function () {
         $(this).toggleClass('show').find('p').slideToggle('slow');
