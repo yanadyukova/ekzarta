@@ -24,7 +24,7 @@
             <li class="menu__item menu__item_medcenter"><a href="../medcenter/services.html">Услуги и цены</a></li>
             <li class="menu__item menu__item_medcenter"><a href="../medcenter/specialists.html">Специалисты</a></li>
             <li class="menu__item menu__item_medcenter"><a href="../medcenter/promotions.html">Новости и акции</a></li>
-            <li class="menu__item menu__item_medcenter"><a href="../ekzarta/pages/reviews.html">Отзывы</a></li>
+            <li class="menu__item menu__item_medcenter"><a href="../medcenter/reviews.html">Отзывы</a></li>
             <li class="menu__item menu__item_medcenter menu__item_city">
                 <p>Ваш город:</p>
                 <a data-toggle="modal" data-target=".jsModalCityConfirm" href="">Нижний Новгород</a></li>
@@ -124,66 +124,238 @@
 </section>
 
 <div class="promotions__adaptiv">
-    <div class="promotions__adaptiv_block">
+    <!--<div class="promotions__adaptiv_block">-->
 
         <section class="promotions-banners">
-            <div class="promotions-banners__banner">
-                <!--<img src="" alt="">-->
-            </div>
-            <div class="promotions-banners__banner">
-                <!--<img src="" alt="">-->
-            </div>
+            <section class="landing-promotions">
+                <div class="landing-promotions__slider">
+                    <div class="promotions-slider">
+                        <div class="swiper-container">
+
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="" class="promotions-slider__slide">
+                                        <img src="/images/desktop/pic/promotions-example@2x.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="" class="promotions-slider__slide">
+                                        <img src="/images/desktop/pic/promotions-example@2x.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="" class="promotions-slider__slide">
+                                        <img src="/images/desktop/pic/promotions-example@2x.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev swiper-button-black"></div>
+                            <div class="swiper-button-next swiper-button-black"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--<div class="promotions-banners__banner">-->
+                <!--&lt;!&ndash;<img src="" alt="">&ndash;&gt;-->
+            <!--</div>-->
+            <!--<div class="promotions-banners__banner">-->
+                <!--&lt;!&ndash;<img src="" alt="">&ndash;&gt;-->
+            <!--</div>-->
         </section>
 
-        <section class="promotions-events">
+        <section class="promotions-events frame-content">
             <div class="promotions-events__inner">
                 <div class="promotions-events__title">СОБЫТИЯ</div>
-                <div class="promotions-events__event event">
-                    <p class="event__date">08 октября 2018, 14:59</p>
-                    <a href="" class="event__name">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
-                    <p class="event__desc">21 февраля 2017 года на базе центра медицинской реабилитации «Экзарта» состоится бесплатный мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей методами мануальной терапии и ЛФК. Реабилитация после операций. </p>
-                </div>
-                <div class="promotions-events__event event">
-                    <p class="event__date">08 октября 2018, 14:59</p>
-                    <a href="" class="event__name">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
-                    <p class="event__desc">21 февраля 2017 года на базе центра медицинской реабилитации «Экзарта» состоится бесплатный мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей методами мануальной терапии и ЛФК. Реабилитация после операций. </p>
-                </div>
-                <div class="promotions-events__event event">
-                    <p class="event__date">08 октября 2018, 14:59</p>
-                    <a href="" class="event__name">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
-                    <p class="event__desc">21 февраля 2017 года на базе центра медицинской реабилитации «Экзарта» состоится бесплатный мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей методами мануальной терапии и ЛФК. Реабилитация после операций. </p>
+                <div class="tabs">
+                    <ul class="tabs__caption">
+                        <li class="active"><a href="#topical">Актуальные</a></li>
+                        <li><a href="#past">Прошедшие</a></li>
+                    </ul>
+                    <div class="tabs__content active">
+                        <article class="topical">
+                            <div id="4" class="event-card">
+                                <div class="event-card__inner">
+                                    <div class="event-card__head">
+                                        <div class="event-card__controls">
+                                            <div class="event-card-button">
+                                                <a href="#" class="event-card-button__subscribe"></a>
+                                                <div class="event-card-button__share jsEventCardShare">
+                                                    <a href="#" class="event-card-button__share-link jsEventCardShareToggle"></a>
+                                                    <div class="event-card-button__share-buttons">
+                                                        <ul>
+                                                            <li><a class="fb" href="#"></a></li>
+                                                            <li><a class="vk" href="#"></a></li>
+                                                            <li><a class="ok" href="#"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="event-card-button__label"></div>
+                                            </div>
+                                        </div>
+                                        <div class="event-card__pic" style="background-image: url('/images/desktop/ekzarta@2x.png');"></div>
+                                    </div>
+                                    <div class="event-card__body">
+                                        <a href="#" class="event-card__name" title="Название мероприятия в две строки">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
+                                        <div class="event-card__list">
+                                            <ul>
+                                                <li class="clock">23 Cентября, 18:00-20:00</li>
+                                                <li class="marker">Москва, ул. Депутатская 17, офис 516</li>
+                                                <li class="free">Бесплатное участие</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="5" class="event-card beauty">
+                                <div class="event-card__inner">
+                                    <div class="event-card__head">
+                                        <div class="event-card__controls">
+                                            <div class="event-card-button">
+                                                <a href="#" class="event-card-button__subscribe"></a>
+                                                <div class="event-card-button__share jsEventCardShare">
+                                                    <a href="#" class="event-card-button__share-link jsEventCardShareToggle"></a>
+                                                    <div class="event-card-button__share-buttons">
+                                                        <ul>
+                                                            <li><a class="fb" href="#"></a></li>
+                                                            <li><a class="vk" href="#"></a></li>
+                                                            <li><a class="ok" href="#"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="event-card-button__label"></div>
+                                            </div>
+                                        </div>
+                                        <div class="event-card__pic" style="background-image: url('/images/desktop/ekzarta@2x.png');"></div>
+                                    </div>
+                                    <div class="event-card__body">
+                                        <a href="#" class="event-card__name" title="Название мероприятия в две строки">Образовательный курс по Бобат-терапии в Санкт-Петербургском педиатрическом медицинском университе</a>
+                                        <div class="event-card__list">
+                                            <ul>
+                                                <li class="clock">23 Cентября, 18:00-20:00</li>
+                                                <li class="marker">Москва, ул. Депутатская 17, офис 516</li>
+                                                <li class="free">Бесплатное участие</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="6" class="event-card skincare">
+                                <div class="event-card__inner">
+                                    <div class="event-card__head">
+                                        <div class="event-card__controls">
+                                            <div class="event-card-button">
+                                                <a href="#" class="event-card-button__subscribe"></a>
+                                                <div class="event-card-button__share jsEventCardShare">
+                                                    <a href="#" class="event-card-button__share-link jsEventCardShareToggle"></a>
+                                                    <div class="event-card-button__share-buttons">
+                                                        <ul>
+                                                            <li><a class="fb" href="#"></a></li>
+                                                            <li><a class="vk" href="#"></a></li>
+                                                            <li><a class="ok" href="#"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="event-card-button__label"></div>
+                                            </div>
+                                        </div>
+                                        <div class="event-card__pic" style="background-image: url('/images/desktop/ekzarta@2x.png');"></div>
+                                    </div>
+                                    <div class="event-card__body">
+                                        <a href="#" class="event-card__name" title="Название мероприятия">Курсы обучения методике кинезиотейпирования</a>
+                                        <div class="event-card__list">
+                                            <ul>
+                                                <li class="clock">23 Cентября, 18:00-20:00</li>
+                                                <li class="marker">Москва, ул. Депутатская 17, офис 516</li>
+                                                <li class="money">Платное участие</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="3" class="event-card opendays centre">
+                                <div class="event-card__inner">
+                                    <div class="event-card__head">
+                                        <div class="event-card__controls">
+                                            <div class="event-card-button">
+                                                <a href="#" class="event-card-button__subscribe"></a>
+                                                <div class="event-card-button__share jsEventCardShare">
+                                                    <a href="#" class="event-card-button__share-link jsEventCardShareToggle"></a>
+                                                    <div class="event-card-button__share-buttons">
+                                                        <ul>
+                                                            <li><a class="fb" href="#"></a></li>
+                                                            <li><a class="vk" href="#"></a></li>
+                                                            <li><a class="ok" href="#"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="event-card-button__label"></div>
+                                            </div>
+                                        </div>
+                                        <div class="event-card__pic" style="background-image: url('/images/desktop/ekzarta@2x.png');"></div>
+                                    </div>
+                                    <div class="event-card__body">
+                                        <a href="#" class="event-card__name" title="Название мероприятия">У детей, неспособных к нормальной двигательной активности, есть шанс!</a>
+                                        <div class="event-card__list">
+                                            <ul>
+                                                <li class="clock">23 Cентября, 18:00-20:00</li>
+                                                <li class="marker">Москва, ул. Депутатская 17, офис 516</li>
+                                                <li class="money">Платное участие</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="tabs__content">
+                        <article class="past">
+                            <div class="promotions-events__event event">
+                                <p class="event__date">08 октября 2018, 14:59</p>
+                                <a href="" class="event__name">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
+                                <p class="event__desc">21 февраля 2017 года на базе центра медицинской реабилитации «Экзарта» состоится бесплатный мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей методами мануальной терапии и ЛФК. Реабилитация после операций. </p>
+                            </div>
+                            <div class="promotions-events__event event">
+                                <p class="event__date">08 октября 2018, 14:59</p>
+                                <a href="" class="event__name">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
+                                <p class="event__desc">21 февраля 2017 года на базе центра медицинской реабилитации «Экзарта» состоится бесплатный мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей методами мануальной терапии и ЛФК. Реабилитация после операций. </p>
+                            </div>
+                            <div class="promotions-events__event event">
+                                <p class="event__date">08 октября 2018, 14:59</p>
+                                <a href="" class="event__name">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
+                                <p class="event__desc">21 февраля 2017 года на базе центра медицинской реабилитации «Экзарта» состоится бесплатный мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей методами мануальной терапии и ЛФК. Реабилитация после операций. </p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
-
-    </div>
-
-
-    <section class="promotions-events promotions-events_past">
-        <div class="promotions-events__inner promotions-events__inner_adaptiv">
-            <div class="promotions-events__title">ПРОШЕДШИЕ СОБЫТИЯ</div>
-            <div class="promotions-events__event event event_adaptiv">
-                <p class="event__date">08 октября 2018, 14:59</p>
-                <a href="" class="event__name event__name_adaptiv">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>
-                <p class="event__desc event__desc_adaptiv">21 февраля 2017 года на базе центра медицинской реабилитации «Экзарта» состоится бесплатный мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей методами мануальной терапии и ЛФК. Реабилитация после операций. </p>
-            </div>
-            <div class="promotions-events__event event event_adaptiv">
-                <p class="event__date">27.01 - 5.02</p>
-                <a href="" class="event__name event__name_adaptiv">Образовательный курс по Бобат-терапии в Санкт-Петербургском педиатрическом медицинском университе</a>
-                <p class="event__desc event__desc_adaptiv">С 27 января по 5 февраля в Санкт-Петербургском государственном педиатрическом медицинском университете пройдет первый образовательный курс по подготовке Бобат-терапевтов.</p>
-            </div>
-            <div class="promotions-events__event event event_adaptiv">
-                <p class="event__date">27.01 - 5.02</p>
-                <a href="" class="event__name event__name_adaptiv">Образовательный курс по Бобат-терапии в Санкт-Петербургском педиатрическом медицинском университе</a>
-                <p class="event__desc event__desc_adaptiv">С 27 января по 5 февраля в Санкт-Петербургском государственном педиатрическом медицинском университете пройдет первый образовательный курс по подготовке Бобат-терапевтов.</p>
-            </div>
-            <div class="promotions-events__event event event_adaptiv">
-                <p class="event__date">27.01 - 5.02</p>
-                <a href="" class="event__name event__name_adaptiv">Образовательный курс по Бобат-терапии в Санкт-Петербургском педиатрическом медицинском университе</a>
-                <p class="event__desc event__desc_adaptiv">С 27 января по 5 февраля в Санкт-Петербургском государственном педиатрическом медицинском университете пройдет первый образовательный курс по подготовке Бобат-терапевтов.</p>
-            </div>
-        </div>
-    </section>
+    <!--</div>-->
+    <!--<section class="promotions-events promotions-events_past">-->
+        <!--<div class="promotions-events__inner promotions-events__inner_adaptiv">-->
+            <!--<div class="promotions-events__title">ПРОШЕДШИЕ СОБЫТИЯ</div>-->
+            <!--<div class="promotions-events__event event event_adaptiv">-->
+                <!--<p class="event__date">08 октября 2018, 14:59</p>-->
+                <!--<a href="" class="event__name event__name_adaptiv">Мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей» в Нижнем Новгороде</a>-->
+                <!--<p class="event__desc event__desc_adaptiv">21 февраля 2017 года на базе центра медицинской реабилитации «Экзарта» состоится бесплатный мастер-класс «Реабилитация при заболеваниях суставов нижних конечностей методами мануальной терапии и ЛФК. Реабилитация после операций. </p>-->
+            <!--</div>-->
+            <!--<div class="promotions-events__event event event_adaptiv">-->
+                <!--<p class="event__date">27.01 - 5.02</p>-->
+                <!--<a href="" class="event__name event__name_adaptiv">Образовательный курс по Бобат-терапии в Санкт-Петербургском педиатрическом медицинском университе</a>-->
+                <!--<p class="event__desc event__desc_adaptiv">С 27 января по 5 февраля в Санкт-Петербургском государственном педиатрическом медицинском университете пройдет первый образовательный курс по подготовке Бобат-терапевтов.</p>-->
+            <!--</div>-->
+            <!--<div class="promotions-events__event event event_adaptiv">-->
+                <!--<p class="event__date">27.01 - 5.02</p>-->
+                <!--<a href="" class="event__name event__name_adaptiv">Образовательный курс по Бобат-терапии в Санкт-Петербургском педиатрическом медицинском университе</a>-->
+                <!--<p class="event__desc event__desc_adaptiv">С 27 января по 5 февраля в Санкт-Петербургском государственном педиатрическом медицинском университете пройдет первый образовательный курс по подготовке Бобат-терапевтов.</p>-->
+            <!--</div>-->
+            <!--<div class="promotions-events__event event event_adaptiv">-->
+                <!--<p class="event__date">27.01 - 5.02</p>-->
+                <!--<a href="" class="event__name event__name_adaptiv">Образовательный курс по Бобат-терапии в Санкт-Петербургском педиатрическом медицинском университе</a>-->
+                <!--<p class="event__desc event__desc_adaptiv">С 27 января по 5 февраля в Санкт-Петербургском государственном педиатрическом медицинском университете пройдет первый образовательный курс по подготовке Бобат-терапевтов.</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</section>-->
 
 </div>
 <footer class="footer">
@@ -732,6 +904,56 @@
             </div>
             <div class="modal-city__button">
                 <a href="#" class="active">Подтвердить</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade modal-default branch jsModalBranchInfo">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a data-dismiss="modal" class="modal__close"></a>
+                <div class="branch__contacts">
+                    <div class="branch__title">
+                        <p class="text-title text-title_big">Центр реабилитации на Республиканской</p>
+                    </div>
+                    <div class="branch__address">
+                        <p>г. Нижний Новгород,
+                            Казанское шоссе, д.18, корпус 1</p>
+                    </div>
+                    <div class="branch__phones-number">
+                        <p>Телефоны:</p>
+                        <p>(831) 429-01-15</p>
+                        <p>(831) 230-50-18</p>
+                    </div>
+                    <div class="branch__phones-button">
+                        <a href="" class="button button_red">ЗАКАЗАТЬ ЗВОНОК</a>
+                    </div>
+                    <div class="branch__email"><a href="">ekzarta@madin.ru</a></div>
+                    <div class="branch__schedule">
+                        <p>Пн-Пт — с 8.00 до 20.00</p>
+                        <p>Сб — по записи, с 8.00 до 14.00</p>
+                        <p>Вс — выходной день.</p>
+                    </div>
+                </div>
+                <div class="branch__details frame-content">
+
+                    <div class="tabs">
+                        <ul class="tabs__caption">
+                            <li class="active"><a href="#path">Как пройти</a></li>
+                            <li><a href="#photo">Фото</a></li>
+                        </ul>
+
+                        <div class="tabs__content active">
+                            <article class="path"></article>
+                        </div>
+                        <div class="tabs__content">
+                            <article class="photo"></article>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
