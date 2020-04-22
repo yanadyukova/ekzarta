@@ -13,15 +13,28 @@
                  height: 95px;
                  background-repeat: repeat-x;
                  bottom: -20px;
-             }
+            }
         }
     }
+    &-body {
+        padding: 0 74px;
+    }
     &-block {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        /*margin-bottom: 20px;*/
+        margin-right: 20px;
+        margin-left: 20px;
         margin-bottom: 35px;
+        box-shadow: 0 2px 5px 0 rgba(82,65,30,.19), 0 5px 18px 0 rgba(174,148,113,.22);
         &__inner {
-             padding: 0 74px;
-             max-width: 1440px;
-             margin: 0 auto;
+             /*padding: 0 74px;*/
+             /*max-width: 1440px;*/
+             /*margin: 0 auto;*/
+            width: 520px;
+            padding: 20px;
+
         }
         &__title {}
         &__row {
@@ -35,11 +48,22 @@
             }
         }
         &__contacts {
-            padding-left: 74px;
-            display: flex;
-            &>div {
-                width: 40%;
-                margin-right: 80px;
+            /*padding-left: 74px;*/
+            /*display: flex;*/
+            /*&>div {*/
+                /*width: 40%;*/
+                /*margin-right: 80px;*/
+            /*}*/
+            >p {
+                margin-top: 20px;
+                a {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    border-bottom: 1px dashed #e61841;
+                    &:hover {
+                        border-bottom: none;
+                    }
+                }
             }
         }
         &__phones {

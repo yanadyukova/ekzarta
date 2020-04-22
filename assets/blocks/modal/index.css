@@ -435,4 +435,50 @@ body {
              }
         }
     }
+    &.branch {
+        .modal-body {
+            display: flex;
+        }
+        .modal-content {
+            width: auto;
+            padding: 30px 55px;
+        }
+        .branch {
+            &__contacts {
+                 width: 40%;
+                >div {
+                    margin-bottom: 20px;
+                    >p {
+                        font-size: 18px;
+                        font-weight: 300;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+            &__details {
+                 width: 60%;
+            }
+            &__title {
+                p {
+                    font-size: 24px !important;
+                    font-weight: normal;
+                    text-transform: none;
+                }
+            }
+            &__phones-number {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 20px;
+            }
+            &__phones-button {
+                 display: inline-block;
+                 vertical-align: middle;
+                a {
+                    display: inline-block;
+                }
+            }
+
+        }
+
+    }
 }
